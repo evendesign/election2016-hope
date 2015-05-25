@@ -1,0 +1,19 @@
+.header {
+
+  padding: rhythm(1) 0;
+
+  .logo {
+    @include trailer(0);
+    a {
+      display: block;
+      color: #444;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+
+
+
+}

@@ -5,13 +5,18 @@
 
 
 // ==== component ====
-@import "component/button";
-@import "component/form";
-@import "component/pagination";
+@import "component/slick";
+// @import "component/button";
+// @import "component/form";
+// @import "component/pagination";
 
 
 // ==== partial ====
-
+@import "partial/header";
+// @import "partial/tile-block";
+// @import "partial/intro-block";
+// @import "partial/category-list";
+// @import "partial/team-list";
 
 // ==== page ====
 
