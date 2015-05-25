@@ -1,0 +1,59 @@
+.intro-block {
+  margin: 0 auto;
+  padding: rhythm(2) 0;
+  max-width: 440px;
+
+  .intro-block-title {
+    text-align: center;
+    @include adjust-font-size-to(20px, 1);
+    @include trailer(0.5);
+  }
+
+  .intro-block-text {
+    @include adjust-font-size-to(15px);
+  }
+
+  @include at-breakpoint($pad) {
+    padding: rhythm(4) 0;
+    .intro-block-title {
+      @include adjust-font-size-to(24px, 1);
+      @include trailer(1);
+    }
+
+    .intro-block-text {
+      @include adjust-font-size-to(16px);
+    }
+
+  }
+
+  @include at-breakpoint($desktop) {
+
+
+    .intro-block-title {
+      @include adjust-font-size-to(32px, 1.25);
+      @include trailer(1.5);
+    }
+
+    .intro-block-text {
+      @include adjust-font-size-to(18px, 1.15);
+    }
+
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    max-width: 640px;
+    padding: rhythm(8) 0;
+
+    .intro-block-title {
+      @include adjust-font-size-to(36px, 1.5);
+      @include trailer(2);
+    }
+
+    .intro-block-text {
+      @include adjust-font-size-to(20px, 1.25);
+    }
+
+  }
+
+
+}
