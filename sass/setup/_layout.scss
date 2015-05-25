@@ -7,8 +7,8 @@ $grid-padding   : $gutter-width;
 
 // add media
 $phone          : $total-columns;
-$pad            : 8;
-$desktop        : 12;
+$pad            : 640px 8;
+$desktop        : 960px 12;
 $wide-desktop        : 16;
 
 
@@ -19,6 +19,10 @@ $page-container: ".container";
 // @import "layout-debug";
 
 // ---- container seqtting ----
+.page {
+  overflow: hidden;
+}
+
 $container-style: fluid;
 #{$page-container} {
   @include container($phone, $pad ,$desktop);
