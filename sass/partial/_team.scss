@@ -1,0 +1,187 @@
+.team {
+
+  .team-cover {
+    @include box-sizing(border-box);
+    position: relative;
+    padding: rhythm(6) 24px rhythm(8);
+    background-color: #444;
+    color: white;
+    text-align: center;
+  }
+
+  .team-title {
+    @include adjust-font-size-to(24px, 1);
+    @include trailer(0.5);
+    font-weight: bold;
+  }
+
+  .team-name {
+    @include adjust-font-size-to(15px, 2/3);
+    color: #ddd;
+  }
+
+  .team-location {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 24px;
+    .location-icon {
+      display: block;
+      margin: 0 auto 6px;
+      width: 48px;
+      opacity: 0.75;
+    }
+    .location-text {
+      display: block;
+      margin: 0 auto;
+      @include adjust-font-size-to(15px);
+      color: #ccc;
+    }
+  }
+
+  .team-content {
+    padding: 24px 0;
+  }
+
+  .team-intro {
+    @include trailer(1);
+    h3 {
+      @include adjust-font-size-to(20px, 1);
+      color: black;
+      @include trailer(1);
+    }
+    h4 {
+      @include adjust-font-size-to(16px);
+      color: black;
+      @include trailer(1);
+    }
+  }
+
+  .team-info-title {
+    @include adjust-font-size-to(20px);
+    color: black;
+  }
+
+  .team-info-list {
+    @include reset-list-style;
+    margin-top: 6px;
+    @include adjust-font-size-to(15px);
+  }
+
+  .team-info-item {
+    padding: 6px 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .team-info-item-title {
+    display: block;
+    color: black;
+    font-weight: bold;
+  }
+
+
+  @include at-breakpoint($pad) {
+
+    .team-cover {
+      padding: rhythm(8) 48px rhythm(10);
+    }
+
+    .team-title {
+      @include adjust-font-size-to(32px, 1.25);
+      @include trailer(0.5);
+    }
+
+    .team-name {
+      @include adjust-font-size-to(20px, 1);
+      color: #ddd;
+    }
+
+    .team-content {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: rhythm(2) 0;
+    }
+
+    .team-intro {
+      @include trailer(2);
+      font-size: 18px;
+      line-height: 1.5;
+      h3 {
+        @include adjust-font-size-to(24px, 1);
+        @include trailer(1.25);
+      }
+      h4, p {
+        @include trailer(1.25);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+      b {
+
+      }
+    }
+
+    .team-info-title {
+      @include adjust-font-size-to(24px, 1);
+      color: black;
+    }
+
+    .team-info-list {
+      @include reset-list-style;
+      margin-top: 18px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .team-info-item {
+      padding: 12px 0;
+      border-top: 1px solid #ddd;
+    }
+
+  }
+
+  @include at-breakpoint($desktop) {
+    .team-content {
+      max-width: 1140px;
+    }
+    .team-info {
+      @include span-columns(4 omega);
+    }
+    .team-intro {
+      @include box-sizing(border-box);
+      padding-right: 12px;
+      @include span-columns(8);
+    }
+
+  }
+
+
+  @include at-breakpoint($wide-desktop) {
+
+    .team-cover {
+      padding: rhythm(10) 0 rhythm(12);
+    }
+
+    .team-title {
+      @include adjust-font-size-to(48px, 2);
+      @include trailer(0.5);
+    }
+
+    .team-name {
+      @include adjust-font-size-to(24px, 1);
+      color: #ddd;
+    }
+
+    .team-location {
+      .location-icon {
+        width: 60px;
+      }
+      .location-text {
+        @include adjust-font-size-to(16px);
+      }
+    }
+  }
+
+
+
+}
