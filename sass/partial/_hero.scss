@@ -1,0 +1,31 @@
+.hero {
+  background-color: #444;
+
+  .hero-slide {
+    margin: 0 auto;
+    max-width: 1512px;
+  }
+
+  .hero-slide-item {
+    height: 90vh;
+    min-height: 640px;
+  }
+
+  .hero-slide-item + .hero-slide-item {
+    border-left: 1px solid white;
+  }
+
+  .tile {
+    @include box-sizing(border-box);
+    height: 100%;
+    color: white;
+  }
+  .tile_m {
+    height: 50%;
+  }
+  .tile_m + .tile_m {
+    border-top: 1px solid white;
+  }
+
+
+}
