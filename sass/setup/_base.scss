@@ -60,13 +60,13 @@ body {
   @include trailer(1);
 }
 h1 {
-  @include adjust-font-size-to(32px, 1.5);
+  @include adjust-font-size-to(36px, 1.5);
 }
 h2 {
-  @include adjust-font-size-to(24px, 1.25);
+  @include adjust-font-size-to(28px, 1.25);
 }
 h3 {
-  @include adjust-font-size-to(18px, 1);
+  @include adjust-font-size-to(20px, 1);
 }
 h4 {
   @include adjust-font-size-to(16px, 1);
@@ -195,5 +195,4 @@ hr, .divider {
 
 img {
   max-width: 100%;
-  // @include trailer(1);
 }

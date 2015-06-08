@@ -142,17 +142,16 @@
 
   @include at-breakpoint($desktop) {
     .team-content {
-      max-width: 1140px;
+      max-width: 800px;
     }
-    .team-info {
-      @include span-columns(4 omega);
-    }
-    .team-intro {
-      @include box-sizing(border-box);
-      padding-right: 12px;
-      @include span-columns(8);
-    }
-
+    // .team-info {
+    //   @include span-columns(4 omega);
+    // }
+    // .team-intro {
+    //   @include box-sizing(border-box);
+    //   padding-right: 12px;
+    //   @include span-columns(8);
+    // }
   }
 
 

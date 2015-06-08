@@ -1,101 +1,26 @@
 .team-list {
   @include reset-list-style;
 
-  .team-item {
+  .team-list-item {
     max-width: 440px;
     margin: 0 auto rhythm(1);
-     > a {
-      display: block;
-      color: #444;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .team-item-header {
-    position: relative;
-    display: block;
-    width: 100%;
-    padding-top: 75%;
-    background-color: #444;
-  }
-
-  .team-item-header-inner {
-    @include box-sizing(border-box);
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    @include translateY(-50%);
-    padding: 0 24px;
-    text-align: center;
-  }
-
-  .country-icon {
-    display: block;
-    width: 48px;
-    margin: 0 auto rhythm(0.75);
-    opacity: 0.75;
-  }
-
-
-  .team-solgan {
-    @include adjust-font-size-to(20px, 1);
-    font-weight: bold;
-    color: white;
-    @include trailer(0.125);
-  }
-
-  .team-name {
-    display: inline-block;
-    // margin-top: 18px;
-    // border-top: 1px solid #999;
-    // padding-top: 12px;
-    // @include trailer(0.5);
-    color: #ddd;
-  }
-
-
-  .team-item-content {
-    padding: 24px;
-    border: 1px solid #ddd;
-    border-top: none;
-    // background-color: #f1f1f1;
-  }
-
-  .team-item-meta {
-    @include reset-list-style;
-    @include pie-clearfix;
-    @include adjust-font-size-to(15px);
-    color: #777;
-    li {
-      float: left;
-      margin-right: 6px;
-      @include trailer(0.5);
-    }
-  }
-
-  .team-item-text {
-    height: 72px;
-    color: #444;
-    overflow: hidden;
   }
 
   @include at-breakpoint($pad) {
-    .team-item {
+    .team-list-item {
       max-width: none;
       @include isolate-grid(4);
     }
   }
 
   @include at-breakpoint($desktop) {
-    .team-item {
+    .team-list-item {
       @include isolate-grid(4);
     }
   }
 
   @include at-breakpoint($wide-desktop) {
-    .team-item {
+    .team-list-item {
       @include isolate-grid(4);
     }
   }

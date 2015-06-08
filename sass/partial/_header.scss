@@ -1,19 +1,22 @@
 .header {
 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
   padding: rhythm(1) 0;
 
   .logo {
     @include trailer(0);
     a {
       display: block;
-      color: #444;
+      color: white;
       &:hover {
         text-decoration: none;
       }
     }
   }
-
-
-
 
 }

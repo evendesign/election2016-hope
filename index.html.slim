@@ -15,18 +15,14 @@
 
     ul.team-list
       - 12.times do |i|
-        li.team-item: a href="/team/"
-          .team-item-header
-            .team-item-header-inner
-              img.country-icon src="/images/country-icon.png"
-              .team-solgan= zh_lorem_words(5 + rand(10))
-              .team-name 團隊名稱
-          .team-item-content
-            ul.team-item-meta
-              li 所屬分類
-              li.address 團隊地點
-              li.industry 團隊產業
-            .team-item-text= zh_lorem_paragraph
+        li.team-list-item: a href=""
+          a.card href="/team/"
+            .card-header
+              .card-header-inner
+                .card-title= zh_lorem_words(5 + rand(10))
+                .card-subtitle= zh_lorem_words(5 + rand(10))
+            .card-content
+              .card-text= zh_lorem_paragraph
 
 
 
