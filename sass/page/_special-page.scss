@@ -1,0 +1,64 @@
+.sp-rule {
+  @include box-sizing(border-box);
+  @include leader(4);
+  max-width: 800px;
+  @include at-breakpoint($desktop) {
+    padding: 0 48px;
+  }
+}
+
+.preface {
+  @include trailer(2);
+  position: relative;
+  text-align: center;
+  color: $color-black;
+  p {
+    @include adjust-font-size-to(18px, 1.25);
+  }
+}
+
+.rule {
+  @include trailer(2);
+  text-align: center;
+  .rule-label {
+    @include trailer(.5);
+    @include adjust-font-size-to(15px);
+    font-weight: bold;
+    color: $color-gray-dark;
+  }
+  .rule-content {
+    @include trailer();
+    @include adjust-font-size-to(18px, 1.25);
+  }
+  .rule-notice {
+    @include adjust-font-size-to(13px);
+    font-weight: bold;
+  }
+}
+
+.submit-form {
+  @include trailer(2);
+  .submit-title {
+    @include trailer(2);
+    text-align: center;
+  }
+  .extra-part {
+    @include leader();
+    font-weight: bold;
+  }
+  @include at-breakpoint($pad) {
+    .form-control, .form-tip, .form-error {
+      width: 80%;
+    }
+  }
+}
+
+.preface + .rule, .rule + .submit-form {
+  &:before {
+    content: "";
+    display: block;
+    width: 25%;
+    margin: 48px auto;
+    border-top: 2px solid $color-gray-white;
+  }
+}
