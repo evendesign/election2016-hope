@@ -81,19 +81,23 @@
           label.form-label 團隊人物 1 介紹
           .form-content
             textarea.form-control rows="4" placeholder="100字以內"
-        - 2.upto(5) do |i|
-          .form-row
-            label.form-label 團隊人物 #{i} 姓名
-            .form-content
-              input.form-control type="text"
-          .form-row
-            label.form-label 團隊人物 #{i} 照片
-            .form-content
-              input type="file"
-          .form-row
-            label.form-label 團隊人物 #{i} 介紹
-            .form-content
-              textarea.form-control rows="4" placeholder="100字以內"
+        .form-row
+          .form-content
+            a.add-more-member data-toggle="collapse" href="#more-member" 增加更多團隊人物
+        .collapse#more-member
+          - 2.upto(5) do |i|
+            .form-row
+              label.form-label 團隊人物 #{i} 姓名
+              .form-content
+                input.form-control type="text"
+            .form-row
+              label.form-label 團隊人物 #{i} 照片
+              .form-content
+                input type="file"
+            .form-row
+              label.form-label 團隊人物 #{i} 介紹
+              .form-content
+                textarea.form-control rows="4" placeholder="100字以內"
         .form-row
           .form-content
             .extra-part 以下資料供在地希望編輯聯絡團隊用，不會公布在網站上

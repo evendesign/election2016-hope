@@ -18,3 +18,8 @@ $('.slick-slider').slick({
   ]
 });
 
+ if ( $('.add-more-member').length != 0 ) {
+  $('.add-more-member').on("click", function(){
+    $(this).remove();
+  });
+ }
