@@ -274,6 +274,16 @@ img { max-width: 100%; }
   .form-label { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 25%; padding-right: 12px; line-height: 36px; text-align: right; }
   .form-content { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: right; width: 75%; line-height: 36px; }
   .form-control { width: auto; } }
+.collapse { display: none; }
+
+.collapse.in { display: block; }
+
+tr.collapse.in { display: table-row; }
+
+tbody.collapse.in { display: table-row-group; }
+
+.collapsing { position: relative; height: 0; overflow: hidden; -webkit-transition-timing-function: ease; -o-transition-timing-function: ease; transition-timing-function: ease; -webkit-transition-duration: 1s; -o-transition-duration: 1s; transition-duration: 1s; -webkit-transition-property: height, visibility; -o-transition-property: height, visibility; transition-property: height, visibility; }
+
 .pagination { margin: 0; padding: 0; border: 0; list-style: none; }
 .pagination:after { content: ""; display: table; clear: both; }
 .pagination li { display: inline-block; }
