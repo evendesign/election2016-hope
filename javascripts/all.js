@@ -1,3 +1,6 @@
+
+$('.hero-video-bg').YTPlayer();
+
 $('.slick-slider').slick({
   infinite: true,
   arrows: true,

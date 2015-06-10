@@ -1,9 +1,7 @@
 - @page_name = "homepage"
 
 .hero
-  video.hero-video-bg autoplay="autoplay"  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" loop="loop"
-    source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm"
-    source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4"
+  .hero-video-bg.player data-property="{videoURL:'http://youtu.be/eoGOGhLVDs8',containment:'.hero',autoPlay:true, mute:true, startAt:0, quality:'hd720' , opacity:1, showYTLogo:false, showControls:false}"
   .hero-slide.slick-slider
     .hero-slide-item
       a.tile.tile_primary href="#": .tile-inner
@@ -50,7 +48,7 @@
       - 12.times do |i|
         li.team-list-item: a href=""
           a.card href="/team/"
-            .card-header style="background-image: url('http://placeimg.com/400/400/nature/#{rand(20)}');"
+            .card-header
               .card-city
                 .card-city-icon
                   img src="/images/map/taipei.svg"

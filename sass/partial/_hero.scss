@@ -6,25 +6,13 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  .hero-video-bg {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    background-position: center;
-    background-size: cover;
-    max-width: none;
-  }
-
   .hero-slide {
-    background-color: rgba(black, 0.6);
+    background-color: rgba(black, 0.2);
+    @include transition(background-color 0.5s);
   }
 
   .hero-slide-item {
-    height: 480px;
+    height: 440px;
     border-bottom: 2px solid rgba(white, 0.3);
   }
 
