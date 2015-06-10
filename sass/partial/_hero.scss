@@ -1,31 +1,131 @@
 .hero {
-  background-color: #444;
+  position: relative;
+  background-color: black;
+  margin: 0 -1px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .hero-video-bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    max-width: none;
+  }
 
   .hero-slide {
-    margin: 0 auto;
-    max-width: 1512px;
+    background-color: rgba(black, 0.6);
   }
 
   .hero-slide-item {
-    height: 90vh;
-    min-height: 640px;
+    height: 480px;
+    border-bottom: 2px solid rgba(white, 0.3);
   }
 
-  .hero-slide-item + .hero-slide-item {
-    border-left: 1px solid white;
+  .slick-prev, .slick-next {
+    display: none !important;
   }
 
-  .tile {
-    @include box-sizing(border-box);
-    height: 100%;
-    color: white;
-  }
-  .tile_m {
-    height: 50%;
-  }
-  .tile_m + .tile_m {
-    border-top: 1px solid white;
+  .slick-dots {
+    @include reset-list-style;
+    padding: rhythm(1) 0;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: 0 6px;
+      vertical-align: middle;
+    }
+    button {
+      display: block;
+      @include border-radius(6px);
+      background-color: white;
+      border: none;
+      background-color: rgba(white, 0.3);
+      width: 12px;
+      height: 12px;
+      font-size: 0;
+      line-height: 0;
+      outline: none;
+      @include transition(background-color 0.5s);
+      &:hover {
+        background-color: rgba(white, 0.9);
+      }
+    }
+    .slick-active {
+      button {
+        background-color: rgba(white, 0.9);
+      }
+    }
   }
 
+  @include at-breakpoint($pad) {
+    .hero-slide-item {
+      height: 640px;
+    }
+  }
+
+
+
+  @include at-breakpoint($desktop) {
+    margin: 0;
+
+    .hero-slide {
+      padding: 0 96px 0;
+    }
+
+    .hero-slide-item {
+      min-height: 640px;
+      height: 90vh;
+    }
+
+    .slick-prev, .slick-next {
+      display: block !important;
+      position: absolute;
+      top: 0;
+      bottom: 72px;
+      border: none;
+      padding: 0;
+      outline: none;
+      width: 96px;
+      background-color: rgba(white, 0.3);
+      color: rgba(white, 0);
+      @include transition(background-color 0.5s);
+      &:hover {
+        background-color: rgba(white, 0);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .slick-prev {
+      text-align: left;
+      left: 0;
+      &:after {
+        left: 24px;
+        @include replace-text-with-svg(arrow-prev);
+      }
+    }
+
+    .slick-next {
+      text-align: right;
+      right: 0;
+      &:after {
+        right: 24px;
+        @include replace-text-with-svg(arrow-next);
+      }
+    }
+  }
 
 }

@@ -1,6 +1,7 @@
 $('.slick-slider').slick({
   infinite: true,
-  arrows: false,
+  arrows: true,
+  dots: true,
   slidesToShow: 1,
   mobileFirst: true,
   responsive: [
@@ -10,9 +11,14 @@ $('.slick-slider').slick({
         slidesToShow: 2
       }
     },{
-      breakpoint: 1024,
+      breakpoint: 1440,
       settings: {
         slidesToShow: 3
+      }
+    },{
+      breakpoint: 1760,
+      settings: {
+        slidesToShow: 4
       }
     }
   ]
