@@ -447,7 +447,9 @@ tbody.collapse.in { display: table-row-group; }
 .gallery .gallery-item-block_2 .gallery-item { width: 50%; padding-top: 30%; }
 .gallery .gallery-item-block_3 .gallery-item { width: 33.3333%; padding-top: 19.9999%; }
 
-.sp-rule { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-top: 96px; max-width: 800px; }
+.submit { text-align: center; }
+
+.sp-rule { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin-top: 96px; padding-top: 0px; padding-bottom: 0px; margin-bottom: 96px; max-width: 800px; }
 @media (min-width: 960px) { .sp-rule { padding: 0 48px; } }
 .sp-rule .preface { margin-bottom: 48px; position: relative; text-align: center; color: #444444; }
 .sp-rule .preface p { font-size: 18px; line-height: 30px; }
@@ -455,8 +457,5 @@ tbody.collapse.in { display: table-row-group; }
 .sp-rule .rule .rule-label { margin-bottom: 12px; font-size: 15px; line-height: 24px; font-weight: bold; color: #999999; }
 .sp-rule .rule .rule-content { margin-bottom: 24px; font-size: 18px; line-height: 30px; }
 .sp-rule .rule .rule-notice { font-size: 13px; line-height: 24px; font-weight: bold; }
-.sp-rule .submit-form { margin-bottom: 48px; }
-.sp-rule .submit-form .submit-title { margin-bottom: 48px; text-align: center; }
-.sp-rule .submit-form .extra-part { margin-top: 24px; font-weight: bold; }
-@media (min-width: 640px) { .sp-rule .submit-form .form-control, .sp-rule .submit-form .form-tip, .sp-rule .submit-form .form-error { width: 80%; } }
+.sp-rule .btn_submit { font-size: 21px; line-height: 48px; padding: 6px 72px; }
 .sp-rule .preface + .rule:before, .sp-rule .rule + .submit-form:before { content: ""; display: block; width: 25%; margin: 48px auto; border-top: 2px solid #eeeeee; }

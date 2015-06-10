@@ -1,6 +1,10 @@
+.submit {
+  text-align: center;
+}
+
 .sp-rule {
   @include box-sizing(border-box);
-  @include leader(4);
+  @include rhythm(4,0,0,4);
   max-width: 800px;
   @include at-breakpoint($desktop) {
     padding: 0 48px;
@@ -34,22 +38,27 @@
     }
   }
 
-  .submit-form {
-    @include trailer(2);
-    .submit-title {
-      @include trailer(2);
-      text-align: center;
-    }
-    .extra-part {
-      @include leader();
-      font-weight: bold;
-    }
-    @include at-breakpoint($pad) {
-      .form-control, .form-tip, .form-error {
-        width: 80%;
-      }
-    }
+  .btn_submit {
+    @include adjust-font-size-to(21px);
+    padding: 6px 72px;
   }
+
+  // .submit-form {
+  //   @include trailer(2);
+  //   .submit-title {
+  //     @include trailer(2);
+  //     text-align: center;
+  //   }
+  //   .extra-part {
+  //     @include leader();
+  //     font-weight: bold;
+  //   }
+  //   @include at-breakpoint($pad) {
+  //     .form-control, .form-tip, .form-error {
+  //       width: 80%;
+  //     }
+  //   }
+  // }
 
   .preface + .rule, .rule + .submit-form {
     &:before {
