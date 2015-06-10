@@ -23,6 +23,12 @@ $code-scroll-shadow-weight: .3;
 
 @include establish-baseline; // Establishes a font baseline for the given font-size.
 
+%jingxihei {
+  font-family: "ARUDJingXiHeiB5-MD","Helvetica Neue", "Helvetica", "Arial", "STHeitiTC-Light","Microsoft JhengHei", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 %avenir {
   font-family: "AvenirNext-DemiBoldItalic", "Avenir-HeavyOblique", "Arial", "STHeitiTC-Light", sans-serif;
   font-weight: 300;
@@ -46,7 +52,7 @@ $code-scroll-shadow-weight: .3;
 }
 
 body {
-  @extend %helvetica;
+  @extend %jingxihei;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
