@@ -23,16 +23,21 @@ $page-container: ".container";
   overflow: hidden;
 }
 
-$container-style: fluid;
+// $container-style: fluid;
 #{$page-container} {
-  @include container($phone, $pad ,$desktop);
+
+  @include container();
 
   @include at-breakpoint($pad) {
     padding: 0 48px;
+    @include set-container-width;
+  }
+
+  @include at-breakpoint($desktop) {
+    @include set-container-width;
   }
 
   @include at-breakpoint($wide-desktop) {
-    $container-style: magic;
     @include set-container-width;
   }
 }
