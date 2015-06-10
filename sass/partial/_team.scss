@@ -3,16 +3,45 @@
   .team-cover {
     @include box-sizing(border-box);
     position: relative;
-    padding: rhythm(6) 24px rhythm(8);
+    min-height: 568px;
+    padding: 0 24px;
     background-color: #444;
     color: white;
     text-align: center;
   }
-
   .team-title {
-    @include adjust-font-size-to(24px, 1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    @include translate(-50%, -50%);
+  }
+  .team-slogan {
+    @include adjust-font-size-to(24px, 1.25);
     @include trailer(0.5);
     font-weight: bold;
+  }
+  .team-video-play {
+    display: block;
+    position: relative;
+    text-indent: -119988px;
+    font-size: 0;
+    width: 56px;
+    height: 56px;
+    margin: 24px auto;
+    border: 2px solid white;
+    @include border-radius(100%);
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -12px 0 0 -8px;
+      border: 12px solid transparent;
+      border-right: none;
+      border-left: 21px solid white;
+    }
+    &:focus { outline: none; }
   }
 
   .team-name {
@@ -20,7 +49,7 @@
     color: #ddd;
   }
 
-  .team-location {
+  .team-info {
     position: absolute;
     text-align: center;
     left: 0;
@@ -34,61 +63,180 @@
     }
     .location-text {
       display: block;
-      margin: 0 auto;
-      @include adjust-font-size-to(15px);
+    }
+    span {
+      display: inline-block;
+      padding: 0 3px;
+      @include adjust-font-size-to(13px, .75);
+      font-weight: bold;
       color: #ccc;
     }
   }
 
   .team-content {
-    padding: 24px 0;
-  }
-
-  .team-intro {
-    @include trailer(1);
+    padding: 48px 0;
+    #{headings()} {
+      text-align: center;
+    }
     h3 {
-      @include adjust-font-size-to(20px, 1);
+      @include adjust-font-size-to(21px, 1);
       color: black;
-      @include trailer(1);
+      @include trailer(1.25);
     }
     h4 {
       @include adjust-font-size-to(16px);
       color: black;
-      @include trailer(1);
+      @include trailer(1.25);
     }
   }
 
-  .team-info-title {
-    @include adjust-font-size-to(20px);
-    color: black;
+  .team-intro {
+    @include trailer(1);
   }
 
-  .team-info-list {
-    @include reset-list-style;
-    margin-top: 6px;
-    @include adjust-font-size-to(15px);
+  .team-preface {
+    position: relative;
+    max-width: 600px;
+    width: 80%;
+    margin: 0 auto 72px;
+    @include adjust-font-size-to(16px);
+    color: $color-black-light;
+    &:before {
+      content: '“';
+      position: absolute;
+      top: -24px;
+      left: -48px;
+      @include adjust-font-size-to(96px);
+      color: $color-gray-light;
+    }
+    &:after {
+      content: '”';
+      position: absolute;
+      top: -24px;
+      right: -48px;
+      @include adjust-font-size-to(96px);
+      color: $color-gray-light;
+    }
   }
 
-  .team-info-item {
-    padding: 6px 0;
-    border-top: 1px solid #ddd;
+  .team-member {
+    position: relative;
+    max-width: 1520px;
+    overflow: hidden;
+    margin: 0 auto 72px;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      z-index: 1000;
+      top: 0;
+      bottom: 0;
+      width: 64px;
+    }
+    &:before {
+      left: 0;
+      @include background(linear-gradient(to left, rgba(white, 0), rgba(white, 1)));
+    }
+    &:after {
+      right: 0;
+      @include background(linear-gradient(to right, rgba(white, 0), rgba(white, 1)));
+    }
+    .title {
+      @include trailer();
+      @include adjust-font-size-to(24px);
+      text-align: center;
+    }
+    .member-list {
+      position: relative;
+      padding: 0 48px;
+    }
+    .member {
+      display: inline-block;
+      padding: 0 18px;
+      vertical-align: top;
+    }
+    .slick-track {
+      margin: 0 auto;
+    }
+    .slick-prev, .slick-next {
+      @include reset-box-model;
+      position: absolute;
+      z-index: 1200;
+      top: 0;
+      bottom: 0;
+      width: 64px;
+      @include hide-text();
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: .7;
+      &:focus { outline: none; }
+      &:hover { opacity: 1; }
+    }
+    .slick-prev {
+      left: 0;
+      background-image: url("/images/member-arrow-prev.png");
+      background-image: none, url("/images/member-arrow-prev.svg");
+
+    }
+    .slick-next {
+      right: 0;
+      background-image: url("/images/member-arrow-next.png");
+      background-image: none, url("/images/member-arrow-next.svg");
+    }
   }
 
-  .team-info-item-title {
-    display: block;
-    color: black;
-    font-weight: bold;
+  .team-info-card {
+    @include pie-clearfix;
+    overflow: hidden;
+    background-color: #F1F1F1;
+    @include border-radius(5px);
+    .team-photo {
+      display: none;
+    }
+    .team-info-inner {
+      @include box-sizing(border-box);
+      display: inline-block;
+      width: 100%;
+      padding: 32px;
+    }
+    .team-name {
+      @include adjust-font-size-to(24px, 1.25);
+      color: $color-black;
+    }
+    .team-location {
+      @include adjust-font-size-to(13px);
+      font-weight: bold;
+      color: $color-black-light;
+    }
+    .team-info-list {
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 12px 0 0;
+      border-top: 1px solid $color-gray-light;
+    }
+    li { @include trailer(.5); }
+    .label {
+      display: block;
+      width: 100px;
+      @include adjust-font-size-to(13px);
+      font-weight: bold;
+      color: $color-black-light;
+    }
+    .info-content {
+      display: block;
+      @include adjust-font-size-to(15px);
+    }
   }
 
 
   @include at-breakpoint($pad) {
 
     .team-cover {
-      padding: rhythm(8) 48px rhythm(10);
+      padding: 0 48px;
     }
 
-    .team-title {
-      @include adjust-font-size-to(32px, 1.25);
+    .team-slogan {
+      @include adjust-font-size-to(32px, 1.5);
       @include trailer(0.5);
     }
 
@@ -96,53 +244,74 @@
       @include adjust-font-size-to(20px, 1);
       color: #ddd;
     }
-
-    .team-content {
-      max-width: 768px;
-      margin: 0 auto;
-      padding: rhythm(2) 0;
+    .team-preface {
+      @include adjust-font-size-to(20px, 1.35);
+      margin: 0 auto 96px;
     }
 
-    .team-intro {
-      @include trailer(2);
-      font-size: 18px;
-      line-height: 1.5;
+    .team-member {
+      margin: 0 auto 96px;
+    }
+
+    .team-content {
+      margin: 0 auto;
+      padding: rhythm(3) 0;
+      .container { max-width: 768px; }
       h3 {
-        @include adjust-font-size-to(24px, 1);
-        @include trailer(1.25);
+        @include adjust-font-size-to(27px, 1.4);
+        @include trailer(1.5);
       }
-      h4, p {
-        @include trailer(1.25);
-        font-size: 18px;
-        line-height: 1.5;
+      h4 {
+        @include trailer(1.5);
+        @include adjust-font-size-to(18px, 1.125);
       }
       b {
 
       }
     }
 
-    .team-info-title {
-      @include adjust-font-size-to(24px, 1);
-      color: black;
+    .team-intro {
+      @include trailer(2);
+      @include adjust-font-size-to(18px, 1.125);
+      p {
+        @include trailer(1.5);
+        @include adjust-font-size-to(20px, 1.35);
+      }
     }
 
-    .team-info-list {
-      @include reset-list-style;
-      margin-top: 18px;
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    .team-info-item {
-      padding: 12px 0;
-      border-top: 1px solid #ddd;
+    .team-info-card {
+      li { @include trailer(0); }
+      .label {
+        display: inline-block;
+        @include adjust-font-size-to(15px, 1.1);
+        font-weight: normal;
+      }
+      .info-content {
+        display: inline-block;
+        @include adjust-font-size-to(15px, 1.1);
+      }
     }
 
   }
 
   @include at-breakpoint($desktop) {
     .team-content {
-      max-width: 800px;
+      .container { max-width: 800px; }
+    }
+    .team-cover {
+      height: 90vh;
+    }
+    .team-info-card {
+      .team-photo {
+        float: left;
+        display: block;
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+      .team-info-inner {
+        width: calc( 100% - 300px );
+      }
     }
     // .team-info {
     //   @include span-columns(4 omega);
@@ -158,10 +327,9 @@
   @include at-breakpoint($wide-desktop) {
 
     .team-cover {
-      padding: rhythm(10) 0 rhythm(12);
     }
 
-    .team-title {
+    .team-slogan {
       @include adjust-font-size-to(48px, 2);
       @include trailer(0.5);
     }
