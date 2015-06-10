@@ -1,0 +1,21 @@
+.homepage {
+
+  @include at-breakpoint($pad) {
+    .header {
+      .container {
+        max-width: none;
+        padding: 0 rhythm(1);
+      }
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .header {
+      .container {
+        max-width: none;
+        padding: 0 rhythm(6);
+      }
+    }
+  }
+
+}

@@ -5,7 +5,7 @@ html lang="zh-TW"
     = render "/layout_siteinfo"
     = render "/layout_og"
   body
-    .page
+    .page class="#{@page_name}"
       = render "/partial/header"
       = yield
     = render "/partial/footer"
