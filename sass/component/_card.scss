@@ -1,50 +1,100 @@
 .card {
   display: block;
-  text-align: center;
+  text-align: left;
+  @extend %subpixel;
+  @include border-radius(10px);
+  @include box-shadow(0px 0px 10px rgba(black, 0.2));
   &:hover {
     text-decoration: none;
   }
 }
+
 .card-header {
   position: relative;
   padding-top: 100%;
   width: 100%;
   height: 0;
-  background-color: #777;
+  background-color: #444;
   @include border-radius(10px 10px 0 0);
+  @include background-size(cover);
+  background-repeat: no-repeat;
+  background-position: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.125);
+    @include border-radius(10px 10px 0 0);
+    @include background-image(linear-gradient(to bottom, rgba(black, 0), rgba(black, 0.6)));
+    @include transition(background-color 0.25s);
+  }
+  .card:hover &:before {
+    background-color: rgba(black, 0.5);
+  }
 }
+
 
 .card-header-inner {
   position: absolute;
-  top: 50%;
   left: 0;
   right: 0;
+  bottom: 0;
   padding: 24px;
-  @include translateY(-50%);
+}
+
+.card-city {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  padding: 12px;
+}
+
+.card-city-icon {
+  float: right;
+  img {
+    display: block;
+    width: 60px;
+    height: 60px;
+  }
+}
+.card-city-name {
+  clear: both;
+  margin-right: 8px;
+  text-align: right;
+  font-size: 13px;
+  line-height: 1;
+  color: white;
 }
 
 .card-title {
-  @include trailer(0.125);
-  @include adjust-font-size-to(20px);
+  @include adjust-font-size-to(24px, 1.25);
   color: white;
-  font-weight: bold;
+  @include trailer(0.35);
 }
 
-.card-subtitle {
-  @include adjust-font-size-to(16px);
-  color: rgba(white, 0.5);
+.card-category {
+  @include adjust-font-size-to(15px, 3/4);
+  color: white;
 }
 
 .card-content {
   padding: 24px;
-  background-color: #f3f3f3;
+  background-color: #f1f1f1;
   @include border-radius(0 0 10px 10px);
 }
 
+.card-subtitle {
+  @include adjust-font-size-to(20px);
+  color: black;
+  @include trailer(0.5);
+}
+
 .card-text {
-  @include adjust-font-size-to(16px);
-  color: #444;
+  @include adjust-font-size-to(15px);
+  color: #777;
   height: 72px;
   overflow: hidden;
-  text-align: left;
 }

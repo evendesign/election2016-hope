@@ -4,12 +4,11 @@
   @include background-size(cover);
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #f3f3f3;
 }
 
 .block-title {
-  @include adjust-font-size-to(36px, 1.5);
-  @include trailer(0.125);
+  @include adjust-font-size-to(32px, 1.25);
+  @include trailer(0.5);
 }
 
 .block-subtitle {
@@ -19,6 +18,7 @@
 
 .block-text {
   @include leader(1);
+  @include trailer(2);
   @include adjust-font-size-to(16px);
   max-width: 440px;
   margin-left: auto;

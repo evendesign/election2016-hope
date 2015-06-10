@@ -1,8 +1,11 @@
-.team-list {
-  @include reset-list-style;
+.team-list-block {
+
+  .team-list {
+    @include reset-list-style;
+  }
 
   .team-list-item {
-    max-width: 440px;
+    max-width: 400px;
     margin: 0 auto rhythm(1);
   }
 
