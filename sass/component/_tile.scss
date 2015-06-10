@@ -1,0 +1,179 @@
+.tile {
+  display: block;
+  position: relative;
+  @include box-sizing(border-box);
+  height: 50%;
+  color: white;
+  border: 1px solid rgba(white, 0.3);
+  border-top: none;
+  @extend %subpixel;
+  @include transition(background-color 0.25s);
+  &:hover {
+    color: white;
+    background-color: rgba(black, 0.5);
+  }
+}
+
+.tile + .tile {
+  border-top: 1px solid rgba(white, 0.3);
+  border-bottom: 0;
+}
+
+.tile-inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: rhythm(1);
+}
+
+.tile-title {
+  @include adjust-font-size-to(20px, 1);
+  @include trailer(0.25);
+}
+
+.tile-subtitle {
+  @include adjust-font-size-to(15px, 3/4);
+}
+
+.tile-text {
+  @include adjust-font-size-to(13px, 1);
+}
+
+.tile-meta {
+  @include adjust-font-size-to(13px, 3/4);
+}
+
+// ==== Tile Modifiers ====
+// tile_primary
+.tile_primary {
+  border-bottom: 0;
+  height: 100%;
+
+  .tile-title {
+    @include adjust-font-size-to(28px, 1.25);
+    @include trailer(1);
+  }
+  .tile-subtitle {
+    @include trailer(0.5);
+    border-bottom: 1px solid white;
+    @include padding-trailer(0.5);
+  }
+}
+// tile_event 生活節
+.tile_event {
+  text-align: right;
+
+  .tile-content {
+    float: right;
+    margin-right: 24px;
+  }
+
+  .tile-icon {
+    float: right;
+    @include replace-text-with-svg(tile-event-icon);
+  }
+
+  .tile-title {
+    @include trailer(0.5);
+  }
+  .tile-text {
+    @include adjust-font-size-to(13px, 3/4);
+  }
+}
+
+// tile_submit 徵選投稿
+.tile_submit {
+
+  .tile-icon {
+    float: left;
+    margin-right: 24px;
+    @include replace-text-with-svg(tile-submit-icon);
+  }
+
+  .tile-title {
+    @include trailer(0.75);
+  }
+  .tile-text {
+    @include adjust-font-size-to(13px, 3/4);
+  }
+}
+
+// tile_team 團隊
+.tile_team {
+  .tile-content {
+    border-left: 2px solid white;
+    padding-left: 12px;
+    overflow: hidden;
+  }
+  .tile-icon {
+    margin-right: 12px;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(white, 0.25);
+    float: left;
+  }
+  .tile-subtitle {
+    display: none;
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .tile-inner {
+    padding: rhythm(2);
+  }
+
+  .tile-title {
+    @include adjust-font-size-to(24px, 1);
+  }
+
+  .tile-subtitle {
+    @include adjust-font-size-to(18px, 3/4);
+  }
+
+  .tile-text {
+    @include adjust-font-size-to(15px, 1);
+  }
+
+  .tile_primary {
+    .tile-title {
+      @include adjust-font-size-to(32px, 1.5);
+      @include trailer(1.5);
+    }
+    .tile-subtitle {
+      @include trailer(0.75);
+      @include padding-trailer(0.75);
+    }
+  }
+
+  .tile_event {
+    .tile-icon {
+      float: right;
+      width: 84px;
+      height: 84px;
+    }
+    .tile-title {
+      @include trailer(1);
+    }
+    .tile-text {
+      @include adjust-font-size-to(15px, 3/4);
+    }
+  }
+
+  .tile_submit {
+    .tile-text {
+      @include adjust-font-size-to(15px, 3/4);
+    }
+  }
+
+  .tile_team {
+    .tile-meta {
+      @include trailer(1);
+    }
+    .tile-subtitle {
+      display: block;
+    }
+  }
+
+}
+
