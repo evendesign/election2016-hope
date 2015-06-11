@@ -5,6 +5,8 @@
 }
 
 .member-avatar {
+  position: relative;
+  overflow: hidden;
   display: inline-block;
   @include trailer(0.25);
   width: 80%;
@@ -12,6 +14,13 @@
   padding-top: 80%;
   @include border-radius(50%);
   background-color: #ddd;
+  img {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .member-name {
