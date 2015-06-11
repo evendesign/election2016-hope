@@ -153,6 +153,16 @@ button::-moz-focus-inner {
   padding: 0;
   border: 0; }
 
+button.mfp-close {
+  font-size: 0;
+  text-indent: -119988px;
+  overflow: hidden;
+  background-image: url("/images/close.png");
+  background-image: none, url("/images/close.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
 .mfp-close {
   width: 44px;
   height: 44px;
@@ -202,7 +212,7 @@ button::-moz-focus-inner {
   top: 50%;
   margin-top: -55px;
   padding: 0;
-  width: 90px;
+  width: 75px;
   height: 110px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
   .mfp-arrow:active {
@@ -219,33 +229,35 @@ button::-moz-focus-inner {
     left: 0;
     top: 0;
     margin-top: 35px;
-    margin-left: 35px;
-    border: medium inset transparent; }
-  .mfp-arrow:after, .mfp-arrow .mfp-a {
-    border-top-width: 13px;
-    border-bottom-width: 13px;
-    top: 8px; }
-  .mfp-arrow:before, .mfp-arrow .mfp-b {
-    border-top-width: 21px;
-    border-bottom-width: 21px;
-    opacity: 0.7; }
+    margin-left: 35px; }
+  .mfp-arrow:after, .mfp-arrow .mfp-a { }
+  .mfp-arrow:before, .mfp-arrow .mfp-b { }
 
 .mfp-arrow-left {
   left: 0; }
   .mfp-arrow-left:after, .mfp-arrow-left .mfp-a {
-    border-right: 17px solid #FFF;
-    margin-left: 31px; }
-  .mfp-arrow-left:before, .mfp-arrow-left .mfp-b {
-    margin-left: 25px;
-    border-right: 27px solid #3F3F3F; }
+    width: 40px;
+    height: 62px;
+    background-image: url("/images/gallery-arrow-prev.png");
+    background-image: none, url("/images/gallery-arrow-prev.svg");
+    background-repeat: no-repeat;
+  }
+  .mfp-arrow-left:before, .mfp-arrow-left .mfp-b { }
 
 .mfp-arrow-right {
   right: 0; }
   .mfp-arrow-right:after, .mfp-arrow-right .mfp-a {
-    border-left: 17px solid #FFF;
-    margin-left: 39px; }
+    width: 40px;
+    height: 62px;
+    margin-left: 0;
+    margin-right: 35px;
+    background-image: url("/images/gallery-arrow-next.png");
+    background-image: none, url("/images/gallery-arrow-next.svg");
+    background-repeat: no-repeat; }
   .mfp-arrow-right:before, .mfp-arrow-right .mfp-b {
-    border-left: 27px solid #3F3F3F; }
+    margin-left: 0;
+    margin-right: 35px;
+  }
 
 .mfp-iframe-holder {
   padding-top: 40px;
