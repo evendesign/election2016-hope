@@ -18,12 +18,15 @@
 
 // ==== partial ====
 @import "partial/header";
+@import "partial/footer";
+@import "partial/scale-content";
 @import "partial/hero";
-@import "partial/intro-block";
+// @import "partial/event-block";
 @import "partial/category-list";
 @import "partial/team-list-block";
 @import "partial/team";
 @import "partial/gallery";
+@import "partial/site-info";
 
 // ==== page ====
 // @import "page/homepage";

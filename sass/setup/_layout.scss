@@ -19,8 +19,16 @@ $page-container: ".container";
 // @import "layout-debug";
 
 // ---- container seqtting ----
+body {
+  background-color: #183840;
+}
+
 .page {
   overflow: hidden;
+}
+
+.page-inner {
+  background-color: white;
 }
 
 // $container-style: fluid;
