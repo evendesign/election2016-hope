@@ -1,6 +1,6 @@
 # Require any additional compass plugins here.
 require 'slim'
-Slim::Engine.set_default_options :pretty => true, :disable_escape => true, :format => :html5
+Slim::Engine.set_default_options :pretty => false, :disable_escape => true, :format => :html5
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -32,5 +32,6 @@ the_hold_options = {
   :token => "229f2b40d4f17f98f142318250a75f20", # 你的密碼
   :project => "election2016-hope", # 專案名稱, 會變成 http://your-project-name.evenwu.the-hold.handlino.com/
   # :project_site_password => "rgdesign", # 密碼，這一行拿掉的話就沒有密碼
-  :host => "http://the-hold.handlino.com/"
+  :host => "http://the-hold.handlino.com/",
+  :cname => "demo-light.unfoldgroup.com"
 }
