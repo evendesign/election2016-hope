@@ -1,4 +1,6 @@
 
+$('.auto-break-text').macho();
+
 $('.hero-video-bg').YTPlayer();
 
 $('.slick-slider').slick({
