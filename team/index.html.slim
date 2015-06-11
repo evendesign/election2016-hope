@@ -1,11 +1,25 @@
 .team
   .team-cover
-    .team-title 認識土地最好的方法，是生活。
-    .team-name 老寮工作房
-    .team-location
+    .team-title
+      .team-slogan 認識土地最好的方法，是生活。
+      .team-name 老寮工作房
+      a.team-video-play href="https://www.youtube.com/watch?v=eoGOGhLVDs8" 播放影片
+    .team-info
       img.location-icon src="/images/country-icon.png"
       span.location-text 苗栗縣南莊鄉
+      span.industry 製造業
+      span.since 成立於 1960 年
   .team-content
+    .container
+      p.team-preface 於是他們揮別大都市，選擇落腳在南庄，有人回到從小成長的家鄉、有人來到這山林尋找自己的夢，他們捲起袖子開始將老房子打造成讓更多人願意停留的基地，在這裡掀起農村的寧靜革命，這是一種新的生活方式，以在地為核心的堅持。
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - 5.times do |i|
+          .member
+            .member-avatar
+            .member-name= zh_lorem_name
+            .member-intro 最適合中國人。把我們龍頭割去！忘記他的伴侶，這是如何的決意！呢個禮拜，光明已在前頭，盲目地前進！
     .container
       .team-intro
         h3 我是文章小標題
@@ -40,6 +54,31 @@
 
         p 過去有人在山林間的寮中暫歇，現在，有人選擇長期居住在老寮，串起了一整個農村聚落，也重新定義了在地生活的方式。
 
+      .team-info-card
+        img.team-photo src="http://lorem.me/400x400/"
+        .team-info-inner
+          .team-name 老寮工作房
+          .team-location 苗栗縣南莊鄉
+          ul.team-info-list
+            li
+              span.label 所屬產業
+              span.info-content 製造業
+            li
+              span.label 團隊成立年
+              span.info-content 西元 1960 年
+            li
+              span.label 團隊規模
+              span.info-content 一個老闆 兩個員工
+            li
+              span.label 團隊地址
+              span.info-content 苗栗縣南莊鄉南江村22鄰南江街50號
+            li
+              span.label 團隊網站
+              span.info-content http://light.iing.tw
+            li
+              span.label Facebook
+              span.info-content http://www.facebook.com/light-iing-tw
+
       / .team-info
       /   .team-info-title 團隊資訊
       /   ul.team-info-list
@@ -62,25 +101,26 @@
       /         |、
       /         a href="#" Facebook
 
-      .team-member
-        .team-member-item
-        .team-member-item
-        .team-member-item
-
 .gallery
   .container
     .gallery-item-block
       .gallery-item
-        .gallery-item-inner
+        a.gallery-item-inner href="http://lorem.me/1600x960/"
+          img src="http://lorem.me/1600x960/"
     .gallery-item-block.gallery-item-block_2
       .gallery-item
-        .gallery-item-inner
+        a.gallery-item-inner href="http://lorem.me/1600x960/"
+          img src="http://lorem.me/1600x960/"
       .gallery-item
-        .gallery-item-inner
+        a.gallery-item-inner href="http://lorem.me/1600x960/"
+          img src="http://lorem.me/1600x960/"
     .gallery-item-block.gallery-item-block_3
       .gallery-item
-        .gallery-item-inner
+        a.gallery-item-inner href="http://lorem.me/1600x960/"
+          img src="http://lorem.me/1600x960/"
       .gallery-item
-        .gallery-item-inner
+        a.gallery-item-inner href="http://lorem.me/1600x960/"
+          img src="http://lorem.me/1600x960/"
       .gallery-item
-        .gallery-item-inner
+        a.gallery-item-inner href="http://lorem.me/1600x960/"
+          img src="http://lorem.me/1600x960/"

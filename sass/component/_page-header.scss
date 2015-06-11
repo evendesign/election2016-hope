@@ -8,11 +8,11 @@
 }
 
 .page-header-title {
-  @include adjust-font-size-to(48px, 2);
+  @include adjust-font-size-to(44px, 2);
 }
 
 .page-header-text {
-  @include leader(2);
+  @include leader(1);
   @include adjust-font-size-to(20px, 1);
   max-width: 768px;
   margin-left: auto;

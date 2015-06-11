@@ -9,6 +9,7 @@
 @import "component/card";
 @import "component/button";
 @import "component/form";
+@import "component/collapse";
 @import "component/pagination";
 @import "component/member";
 @import "component/page-header";
@@ -26,5 +27,6 @@
 
 // ==== page ====
 @import "page/homepage";
+@import "page/special-page";
 
 // ==== inbox ====
