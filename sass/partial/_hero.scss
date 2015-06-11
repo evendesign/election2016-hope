@@ -22,7 +22,7 @@
 
   .slick-dots {
     @include reset-list-style;
-    padding: rhythm(1) 0;
+    padding: rhythm(0.5) 0 rhythm(0.75);
     text-align: center;
     li {
       display: inline-block;
@@ -55,6 +55,9 @@
   @include at-breakpoint($pad) {
     .hero-slide-item {
       height: 640px;
+    }
+    .slick-dots {
+      padding: rhythm(1) 0;
     }
   }
 

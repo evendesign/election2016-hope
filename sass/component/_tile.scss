@@ -87,6 +87,7 @@
     float: left;
     margin-right: 24px;
     @include replace-text-with-svg(tile-submit-icon);
+
   }
 
   .tile-title {
@@ -99,6 +100,9 @@
 
 // tile_team 團隊
 .tile_team {
+  .tile-inner {
+    padding-left: 14px;
+  }
   .tile-content {
     border-left: 2px solid white;
     padding-left: 12px;
@@ -108,8 +112,8 @@
     margin-right: 12px;
     width: 48px;
     height: 48px;
-    background-color: rgba(white, 0.25);
     float: left;
+    @include opacity(0.9);
   }
   .tile-subtitle {
     display: none;
@@ -130,11 +134,11 @@
   }
 
   .tile-title {
-    @include adjust-font-size-to(24px, 1);
+    @include adjust-font-size-to(24px, 1.15);
   }
 
   .tile-subtitle {
-    @include adjust-font-size-to(18px, 3/4);
+    @include adjust-font-size-to(18px);
   }
 
   .tile-text {
@@ -173,6 +177,16 @@
   }
 
   .tile_team {
+    .tile-inner {
+      padding-left: 38px;
+    }
+    .tile-icon {
+      width: 60px;
+      height: 60px;
+    }
+    .tile-title {
+      @include trailer(0.25);
+    }
     .tile-meta {
       @include trailer(1);
     }
