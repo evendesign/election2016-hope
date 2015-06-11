@@ -6,7 +6,27 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  .hero-bg-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 80;
+  }
+  .hero-bg-slide-item {
+    position: absolute;
+    height: 440px;
+    padding-bottom: 54px; // 對應 slide-dot 所產生的高度
+  }
+
+  .mbYTP_wrapper {
+    z-index: 90 !important;
+  }
+
   .hero-slide {
+    position: relative;
+    z-index: 100;
     background-color: rgba(black, 0.2);
     @include transition(background-color 0.5s);
   }
@@ -53,6 +73,10 @@
   }
 
   @include at-breakpoint($pad) {
+    .hero-bg-slide-item {
+      height: 640px;
+      padding-bottom: 72px;
+    }
     .hero-slide-item {
       height: 640px;
     }
@@ -65,6 +89,15 @@
 
   @include at-breakpoint($desktop) {
     margin: 0;
+
+    .hero-bg-slide {
+      display: none;
+    }
+
+    .hero-bg-slide-item {
+      height: 90vh;
+      padding-bottom: 72px;
+    }
 
     .hero-slide {
       padding: 0 96px 0;
