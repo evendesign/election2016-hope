@@ -19,7 +19,6 @@
   .team-slogan {
     @include adjust-font-size-to(24px, 1.25);
     @include trailer(0.5);
-    font-weight: bold;
   }
   .team-video-play {
     display: block;
@@ -105,7 +104,7 @@
       content: '“';
       position: absolute;
       top: -24px;
-      left: -48px;
+      left: -96px;
       @include adjust-font-size-to(96px);
       color: $color-gray-light;
     }
@@ -113,7 +112,7 @@
       content: '”';
       position: absolute;
       top: -24px;
-      right: -48px;
+      right: -96px;
       @include adjust-font-size-to(96px);
       color: $color-gray-light;
     }
