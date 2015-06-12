@@ -10,7 +10,7 @@ var scale_content = function(){
   var doc = $(document);
   var body = $('body');
   var page = $('.page');
-  var desktop_breakpoint = 960;
+  var desktop_breakpoint = 1025;
   body.addClass('scale-content');
 
   function push_page(){
