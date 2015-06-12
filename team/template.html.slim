@@ -1,43 +1,46 @@
-- team_slogan = "認識土地最好的方法，是吃土。"
-- team_name = "老寮工作房"
-- team_video = "https://www.youtube.com/watch?v=eoGOGhLVDs8"
+- team_file_name = "團隊檔案名稱"
+
+- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- team_slogan = "主標題"
+- team_name = "團隊名稱"
+- team_video = "https://www.youtube.com/watch?v=ixQE9RPnM‐I"
 
 - team_location_icon = "/images/map/miaoli.svg"
-- team_location_text = "苗栗縣南莊鄉"
-- team_address = "苗栗縣南莊鄉南江村22鄰南江街50號"
+- team_location_text = "團隊簡短地址_苗栗縣南莊鄉"
+- team_address = "團隊完整地址_苗栗縣南莊鄉南江村22鄰南江街50號"
 - team_industry = "製造業"
-- team_since = "成立於 1960 年"
-- team_website = "http://light.iing.tw"
-- team_facebook_page = "http://www.facebook.com/light-iing-tw"
+- team_since = "成立年"
+- team_website = "http://www.moundgetw.com"
+- team_facebook_page = "https://www.facebook.com/mountainge2014"
 
-- team_preface = "於是他們揮別大都市，選擇落腳在南庄，有人回到從小成長的家鄉、有人來到這山林尋找自己的夢，他們捲起袖子開始將老房子打造成讓更多人願意停留的基地，在這裡掀起農村的寧靜革命，這是一種新的生活方式，以在地為核心的堅持。"
+- team_preface = "團段簡短介紹"
 
-- team_member_amount = "一個老闆 兩個員工"
+- team_member_amount = "團隊規模"
 - team_members = [\
   [ \
-    "http://placeimg.com/400/400/any",\
-    "姓名",\
-    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+    "/images/team/#{team_file_name}/#{team_file_name}_figure_QiuXingwei.jpg",\
+    "人名",\
+    "人物簡介",\
   ],\
   [ \
-    "http://placeimg.com/400/400/any",\
-    "姓名",\
-    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+    "/images/team/#{team_file_name}/#{team_file_name}_figure_LiuJingjie.jpg",\
+    "人名",\
+    "人物簡介",\
   ],\
   [ \
-    "http://placeimg.com/400/400/any",\
-    "姓名",\
-    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+    "/images/team/#{team_file_name}/#{team_file_name}_figure_ZhouYaxuan.jpg",\
+    "人名",\
+    "人物簡介",\
   ],\
   [ \
-    "http://placeimg.com/400/400/any",\
-    "姓名",\
-    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+    "/images/team/#{team_file_name}/#{team_file_name}_figure_LiuMengcheng.jpg",\
+    "人名",\
+    "人物簡介",\
   ],\
   [ \
-    "http://placeimg.com/400/400/any",\
-    "姓名",\
-    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+    "/images/team/#{team_file_name}/#{team_file_name}_figure_ZhengYiqian.jpg",\
+    "人名",\
+    "人物簡介",\
   ] \
 ]
 - team_photo_01 = "http://lorem.me/1600x960/"
@@ -52,7 +55,7 @@
 - team_photo_10 = "http://lorem.me/1600x960/"
 
 .team
-  .team-cover
+  .team-cover style="background-image:url('#{team_cover}');"
     .team-title
       .team-slogan #{team_slogan}
       .team-name #{team_name}
