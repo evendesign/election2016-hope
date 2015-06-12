@@ -8,7 +8,7 @@ $grid-padding   : $gutter-width;
 // add media
 $phone          : $total-columns;
 $pad            : 640px 8;
-$desktop        : 960px 12;
+$desktop        : 1025px 12;
 $wide-desktop        : 16;
 
 
@@ -29,7 +29,7 @@ body {
 
 .page-inner {
   background-color: white;
-  min-height: 100vh;
+  min-height: 110vh; // 避免頁面內容不足以撐滿一個畫面的時候，導致 footer 無法正常使用的問題。
 }
 
 // $container-style: fluid;
@@ -43,6 +43,7 @@ body {
   }
 
   @include at-breakpoint($desktop) {
+    padding: 0 rhythm(4);
     @include set-container-width;
   }
 
