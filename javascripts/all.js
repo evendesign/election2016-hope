@@ -179,8 +179,8 @@ if ( $('.member-list').length != 0 ) {
   });
 }
 
-if ( $('.gallery-item-inner').length != 0 ) {
-  $('.gallery-item-inner').magnificPopup({
+if ( $('.gallery-item').length != 0 ) {
+  $('.gallery-item').magnificPopup({
     type:'image',
     removalDelay: 300,
     mainClass: 'mfp-fade',
