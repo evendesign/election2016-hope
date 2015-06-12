@@ -6,8 +6,21 @@
     min-height: 568px;
     padding: 0 24px;
     background-color: #444;
+    @include background-size(cover);
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(black, 0.45);
+      @include background-image(linear-gradient(to bottom, rgba(black, 0) 50%, rgba(black, 0.35)));
+    }
   }
   .team-title {
     position: absolute;
@@ -30,6 +43,11 @@
     margin: 24px auto;
     border: 2px solid white;
     @include border-radius(100%);
+    @include opacity(0.75);
+    @include transition(opacity 0.25s);
+    &:hover {
+      @include opacity(1);
+    }
     &:before {
       content: "";
       position: absolute;
@@ -56,8 +74,8 @@
     bottom: 24px;
     .location-icon {
       display: block;
-      margin: 0 auto 6px;
-      width: 48px;
+      margin: 0 auto;
+      width: 72px;
       opacity: 0.75;
     }
     .location-text {
@@ -168,8 +186,10 @@
       background-position: center;
       background-repeat: no-repeat;
       opacity: .7;
+      @include transition(opacity 0.25s);
       &:focus { outline: none; }
       &:hover { opacity: 1; }
+      &.slick-disabled { opacity: 0.25; }
     }
     .slick-prev {
       left: 0;
@@ -241,7 +261,6 @@
 
     .team-name {
       @include adjust-font-size-to(20px, 1);
-      color: #ddd;
     }
     .team-preface {
       @include adjust-font-size-to(20px, 1.35);
@@ -300,6 +319,15 @@
     .team-cover {
       height: 90vh;
     }
+    .team-slogan {
+      @include adjust-font-size-to(40px, 1.75);
+      @include trailer(0.5);
+    }
+
+    .team-name {
+      @include adjust-font-size-to(22px, 1);
+      color: #ddd;
+    }
     .team-info-card {
       .team-photo {
         float: left;
@@ -312,21 +340,10 @@
         width: calc( 100% - 300px );
       }
     }
-    // .team-info {
-    //   @include span-columns(4 omega);
-    // }
-    // .team-intro {
-    //   @include box-sizing(border-box);
-    //   padding-right: 12px;
-    //   @include span-columns(8);
-    // }
   }
 
 
   @include at-breakpoint($wide-desktop) {
-
-    .team-cover {
-    }
 
     .team-slogan {
       @include adjust-font-size-to(48px, 2);
@@ -338,14 +355,6 @@
       color: #ddd;
     }
 
-    .team-location {
-      .location-icon {
-        width: 60px;
-      }
-      .location-text {
-        @include adjust-font-size-to(16px);
-      }
-    }
   }
 
 
