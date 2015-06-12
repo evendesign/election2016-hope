@@ -24,11 +24,12 @@ body {
 }
 
 .page {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .page-inner {
   background-color: white;
+  min-height: 100vh;
 }
 
 // $container-style: fluid;
