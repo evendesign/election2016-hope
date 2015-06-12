@@ -13,31 +13,83 @@ var scale_content = function(){
   var desktop_breakpoint = 960;
   body.addClass('scale-content');
 
+  function push_page(){
+    push = 'translate(0,'+ (150 - $(window).height() + 'px') +')';
+    page.css({
+      "-webkit-transform": push,
+      "transform": push
+    });
+    body.addClass('is-scaled');
+  }
+  function reset_page(){
+    page.css({
+      "-webkit-transform": 'translate(0,0)',
+      "transform": 'translate(0,0)'
+    });
+    body.removeClass('is-scaled');
+  }
+
   $(window).on('scroll', function(){
     var scrolling = doc.scrollTop();
-    var touch_bottom = body.height() - $(window).height();
-    if (scrolling >= touch_bottom) {
+    var touch_bottom = body.height() - $(window).height() - $('.site-info').outerHeight();
+    if ( scrolling >= touch_bottom ) {
       var viewport_width = $(window).width();
       if (viewport_width >= desktop_breakpoint) {
-        var x = -($(window).height() * 0.8) + 'px';
-        page.css('transform', 'translateY('+x+')');
-        body.addClass('is-scaled');
+        push_page();
       }
     } else {
-      body.removeClass('is-scaled');
-      page.css('transform', 'translateY(0)');
+      reset_page();
     }
   });
 
   $(window).resize(function() {
+    var scrolling = doc.scrollTop();
+    var touch_bottom = body.height() - $(window).height() - $('.site-info').outerHeight();
     var viewport_width = $(window).width();
-    if (viewport_width < desktop_breakpoint) {
+    if (viewport_width < desktop_breakpoint ) {
       body.removeClass('scale-content');
-      page.css('transform', 'translateY(0)');
+      reset_page();
+    } else if (viewport_width >= desktop_breakpoint && scrolling < touch_bottom) {
+      body.addClass('scale-content');
+      reset_page();
     } else {
       body.addClass('scale-content');
+      push_page();
+      $("html, body").scrollTop(doc.height());
     }
   });
+
+  // var doc = $(document);
+  // var body = $('body');
+  // var page = $('.page');
+  // var desktop_breakpoint = 960;
+  // body.addClass('scale-content');
+
+  // $(window).on('scroll', function(){
+  //   var scrolling = doc.scrollTop();
+  //   var touch_bottom = body.height() - $(window).height();
+  //   if (scrolling >= touch_bottom) {
+  //     var viewport_width = $(window).width();
+  //     if (viewport_width >= desktop_breakpoint) {
+  //       var x = -($(window).height() * 0.8) + 'px';
+  //       page.css('transform', 'translateY('+x+')');
+  //       body.addClass('is-scaled');
+  //     }
+  //   } else {
+  //     body.removeClass('is-scaled');
+  //     page.css('transform', 'translateY(0)');
+  //   }
+  // });
+
+  // $(window).resize(function() {
+  //   var viewport_width = $(window).width();
+  //   if (viewport_width < desktop_breakpoint) {
+  //     body.removeClass('scale-content');
+  //     page.css('transform', 'translateY(0)');
+  //   } else {
+  //     body.addClass('scale-content');
+  //   }
+  // });
 }
 
 //
@@ -62,6 +114,12 @@ if( is_mobile == true) {
   scale_content();
 
 }
+
+// scroll to top
+$("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
 
 // 解決漏一字問題
 $('.auto-break-text').macho();
