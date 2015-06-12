@@ -1,114 +1,24 @@
+- @page_name = "thanks-page"
+
+/ .message-block
+/   .message-card
+/     .message-card-title 感謝您的投稿!!
+/     .message-card-text 地希望線上博覽會已經收到您的團隊申請資料！我們會儘速審理資料，或跟您聯絡確認資料細節
+/     a.btn.btn_primary href="/" 回到首頁
+
+
+/ .page-header.page-header_large.page-header_black-bg
+/   .container
+/   	h1.page-header-title 有夢想的地方，就有希望
+/   	p.page-header-text 募集點亮台灣的100種方式
+
 .page-header.page-header_large.page-header_black-bg
   .container
-	h1.page-header-title 有夢想的地方，就有希望
-	.page-header-text 募集點亮台灣的100種方式
-
-.submit
-  .container.sp-rule
-	.thanks
-		h2 感謝您
-		p 在地希望線上博覽會已經收到您的團隊申請資料！我們會儘速審理資料，或跟您聯絡確認資料細節。
-		a.btn.btn_primary href="/" 回到首頁
-	/ .submit-form
-	/   h2.submit-title 投稿
-	/   form
-	/     .form-row.is_required
-	/       label.form-label 團隊 / 公司名稱
-	/       .form-content
-	/         input.form-control type="text"
-	/     .form-row.is_required
-	/       label.form-label 分類
-	/       .form-content
-	/         select.form-select
-	/           option value="item" 藝術文化
-	/           option value="item" 在地滋味
-	/           option value="item" 生活工藝
-	/           option value="item" 社會創新
-	/     .form-row.is_required
-	/       label.form-label 地點
-	/       .form-content
-	/         input.form-control type="text" placeholder="如：XX縣XX鄉"
-	/     .form-row
-	/       label.form-label 詳細地址
-	/       .form-content
-	/         input.form-control type="text" placeholder="如：XX縣XX鄉XX路XX號"
-	/     .form-row
-	/       label.form-label 影片
-	/       .form-content
-	/         input.form-control type="text" placeholder="YouTube 影片連結網址"
-	/     .form-row
-	/       label.form-label Facebook Page
-	/       .form-content
-	/         input.form-control type="text" placeholder="Facebook 粉絲團連結網址"
-	/     .form-row
-	/       label.form-label 團隊網站
-	/       .form-content
-	/         input.form-control type="text" placeholder="官方網站網址"
-	/     .form-row.is_required
-	/       label.form-label 創辦時間
-	/       .form-content
-	/         select.form-select
-	/           - 105.times do |i|
-	/             option value="item" #{2015-i}
-	/     .form-row.is_required
-	/       label.form-label 規模
-	/       .form-content
-	/         input.form-control type="text" placeholder="如：五個年輕人、一間工廠、一座牧場等"
-	/     .form-row.is_required
-	/       label.form-label 團隊故事
-	/       .form-content
-	/         textarea.form-control rows="4" placeholder="700字以內"
-	/     .form-row.is_required
-	/       label.form-label 團隊照片
-	/       .form-content
-	/         - 10.times do |i|
-	/           input type="file"
-	/         .form-tip
-	/           p 請至少上傳 5 張照片，最多 10 張。
-	/     .form-row.is_required
-	/       label.form-label 團隊人物 1 姓名
-	/       .form-content
-	/         input.form-control type="text"
-	/     .form-row.is_required
-	/       label.form-label 團隊人物 1 照片
-	/       .form-content
-	/         input type="file"
-	/     .form-row.is_required
-	/       label.form-label 團隊人物 1 介紹
-	/       .form-content
-	/         textarea.form-control rows="4" placeholder="100字以內"
-	/     .form-row
-	/       .form-content
-	/         a.add-more-member data-toggle="collapse" href="#more-member" 增加更多團隊人物
-	/     .collapse#more-member
-	/       - 2.upto(5) do |i|
-	/         .form-row
-	/           label.form-label 團隊人物 #{i} 姓名
-	/           .form-content
-	/             input.form-control type="text"
-	/         .form-row
-	/           label.form-label 團隊人物 #{i} 照片
-	/           .form-content
-	/             input type="file"
-	/         .form-row
-	/           label.form-label 團隊人物 #{i} 介紹
-	/           .form-content
-	/             textarea.form-control rows="4" placeholder="100字以內"
-	/     .form-row
-	/       .form-content
-	/         .extra-part 以下資料供在地希望編輯聯絡團隊用，不會公布在網站上
-	/     .form-row.is_required
-	/       label.form-label 聯絡人姓名
-	/       .form-content
-	/         input.form-control type="text"
-	/     .form-row.is_required
-	/       label.form-label 聯絡電話
-	/       .form-content
-	/         input.form-control type="text"
-	/     .form-row.is_required
-	/       label.form-label Email
-	/       .form-content
-	/         input.form-control type="text"
-	/     .form-row
-	/       .form-content.action
-	/         button.btn.btn_primary 送出
+    h1.page-header-title 感謝您的投稿
+    p.page-header-text 在地希望線上博覽會已經收到您的團隊申請資料！我們會儘速審理資料，或跟您聯絡確認資料細節
+    a.btn.btn_primary href="/" 回到首頁
+/ .block
+/   .container
+/     h2.block-title 感謝您的投稿
+/     p.block-text 在地希望線上博覽會已經收到您的團隊申請資料！我們會儘速審理資料，或跟您聯絡確認資料細節
+/     a.btn.btn_primary href="/" 回到首頁
