@@ -12,18 +12,21 @@
 }
 
 .block-subtitle {
+  @include trailer(1);
   @include adjust-font-size-to(20px, 1);
   color: #aaa;
 }
 
 .block-text {
-  @include leader(1);
-  @include trailer(2);
   @include adjust-font-size-to(16px);
   max-width: 440px;
   margin-left: auto;
   margin-right: auto;
   color: #777;
+}
+
+.block-content {
+  @include leader(2);
 }
 
 .block_large {

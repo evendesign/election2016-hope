@@ -1,5 +1,5 @@
 .page-header {
-  padding: rhythm(4) 0;
+  padding: rhythm(4) 0 rhythm(2);
   text-align: center;
   @include background-size(cover);
   background-position: center;
@@ -8,12 +8,13 @@
 }
 
 .page-header-title {
-  @include adjust-font-size-to(44px, 2);
+  @include adjust-font-size-to(28px, 1.25);
+  @include trailer(0);
 }
 
 .page-header-text {
-  @include leader(1);
-  @include adjust-font-size-to(20px, 1);
+  @include leader(0.5);
+  @include adjust-font-size-to(15px, 1);
   max-width: 768px;
   margin-left: auto;
   margin-right: auto;
@@ -31,5 +32,49 @@
 }
 
 .page-header_large {
-  padding: rhythm(8) 0;
+  padding: rhythm(6) 0 rhythm(5);
+}
+
+
+@include at-breakpoint($pad) {
+
+  .page-header {
+    padding: rhythm(6) 0 rhythm(5);
+  }
+
+  .page-header-title {
+    @include adjust-font-size-to(36px, 1.5);
+  }
+  .page-header-text {
+    @include leader(1);
+    @include adjust-font-size-to(20px, 1);
+  }
+
+  .page-header_black-bg {
+    background-color: #444;
+    .page-header-title {
+      color: white;
+    }
+    .page-header-text {
+      color: #ddd;
+    }
+  }
+
+  .page-header_large {
+    padding: rhythm(8) 0;
+  }
+
+  @include at-breakpoint($desktop) {
+
+    .page-header-title {
+      @include adjust-font-size-to(44px, 2);
+    }
+    .page-header-text {
+      @include leader(1);
+      @include adjust-font-size-to(24px, 1);
+    }
+
+  }
+
+
 }
