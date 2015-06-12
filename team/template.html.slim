@@ -1,0 +1,152 @@
+- team_slogan = "認識土地最好的方法，是吃土。"
+- team_name = "老寮工作房"
+- team_video = "https://www.youtube.com/watch?v=eoGOGhLVDs8"
+
+- team_location_icon = "/images/map/miaoli.svg"
+- team_location_text = "苗栗縣南莊鄉"
+- team_address = "苗栗縣南莊鄉南江村22鄰南江街50號"
+- team_industry = "製造業"
+- team_since = "成立於 1960 年"
+- team_website = "http://light.iing.tw"
+- team_facebook_page = "http://www.facebook.com/light-iing-tw"
+
+- team_preface = "於是他們揮別大都市，選擇落腳在南庄，有人回到從小成長的家鄉、有人來到這山林尋找自己的夢，他們捲起袖子開始將老房子打造成讓更多人願意停留的基地，在這裡掀起農村的寧靜革命，這是一種新的生活方式，以在地為核心的堅持。"
+
+- team_member_amount = "一個老闆 兩個員工"
+- team_members = [\
+  [ \
+    "http://placeimg.com/400/400/any",\
+    "姓名",\
+    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+  ],\
+  [ \
+    "http://placeimg.com/400/400/any",\
+    "姓名",\
+    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+  ],\
+  [ \
+    "http://placeimg.com/400/400/any",\
+    "姓名",\
+    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+  ],\
+  [ \
+    "http://placeimg.com/400/400/any",\
+    "姓名",\
+    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+  ],\
+  [ \
+    "http://placeimg.com/400/400/any",\
+    "姓名",\
+    "簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹簡短介紹",\
+  ] \
+]
+- team_photo_01 = "http://lorem.me/1600x960/"
+- team_photo_02 = "http://lorem.me/1600x960/"
+- team_photo_03 = "http://lorem.me/1600x960/"
+- team_photo_04 = "http://lorem.me/1600x960/"
+- team_photo_05 = "http://lorem.me/1600x960/"
+- team_photo_06 = "http://lorem.me/1600x960/"
+- team_photo_07 = "http://lorem.me/1600x960/"
+- team_photo_08 = "http://lorem.me/1600x960/"
+- team_photo_09 = "http://lorem.me/1600x960/"
+- team_photo_10 = "http://lorem.me/1600x960/"
+
+.team
+  .team-cover
+    .team-title
+      .team-slogan #{team_slogan}
+      .team-name #{team_name}
+      a.team-video-play href="#{team_video}" 播放影片
+    .team-info
+      img.location-icon src="#{team_location_icon}"
+      span.location-text #{team_location_text}
+      span.industry #{team_industry}
+      span.since #{team_since}
+  .team-content
+    .container
+      p.team-preface #{team_preface}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_members.each do |team_member|
+          .member
+            .member-avatar
+              img src="#{team_member[0]}"
+            .member-name = "#{team_member[1]}"
+            .member-intro = "#{team_member[2]}"
+    .container
+      .team-intro
+        / 團隊內文編輯處 start ---------------------------------------------------------------
+        h3 大標題
+        p 內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落
+        h4 小標題
+        b 段落標題
+        p 內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落
+        b 段落標題
+        p 內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落內文段落
+        / 團隊內文編輯處 end ----------------------------------------------------------(看三小)
+
+      .team-info-card
+        img.team-photo src="http://lorem.me/400x400/"
+        .team-info-inner
+          .team-name #{team_name}
+          .team-location #{team_location_text}
+          ul.team-info-list
+            li
+              span.label 所屬產業
+              span.info-content #{team_industry}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_since}
+            li
+              span.label 團隊規模
+              span.info-content #{team_member_amount}
+            li
+              span.label 團隊地址
+              span.info-content #{team_address}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_website}" #{team_website}
+            li
+              span.label Facebook
+              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_02}"
+          img src="#{team_photo_02}"
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_03}"
+          img src="#{team_photo_03}"
+    .gallery-item-block.gallery-item-block_3
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_04}"
+          img src="#{team_photo_04}"
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_05}"
+          img src="#{team_photo_05}"
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_06}"
+          img src="#{team_photo_06}"
+    .gallery-item-block.gallery-item-block_2
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_07}"
+          img src="#{team_photo_07}"
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_08}"
+          img src="#{team_photo_08}"
+    .gallery-item-block
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_01}"
+          img src="#{team_photo_01}"
+    .gallery-item-block.gallery-item-block_2
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_09}"
+          img src="#{team_photo_09}"
+      .gallery-item
+        a.gallery-item-inner href="#{team_photo_10}"
+          img src="#{team_photo_10}"
+
