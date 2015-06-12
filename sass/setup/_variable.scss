@@ -1,4 +1,8 @@
 // ---- Base Color ----
+
+$color-primary : #50B584;
+
+
 // gray
 $color-black-dark : black;
 $color-black : #444;
@@ -9,16 +13,13 @@ $color-gray-light   : #ddd;
 $color-gray-white   : #eee;
 
 // blue
-$color-blue-light   : #dee9ef;
-$color-blue         : #53caf5;
-$color-blue-dark    : darken($color-blue, 10%);
-
+$color-blue         : #57C0C7;
+$color-blue-dark    : #4AA6AC;
 
 // red
 $color-red: #E65E50;
 $color-red-dark: #CB5246;
 $color-red-light: lighten($color-red, 10%);
-
 
 // text-color
 $text-black         : #444;
@@ -27,4 +28,4 @@ $text-gray          : #8a8a8a;
 $text-gray-light    : lighten($text-gray, 15%);
 
 // ---- box model
-$global-radius-width: 3px;
+$global-radius-width: 5px;
