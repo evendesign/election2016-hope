@@ -1,0 +1,44 @@
+.activity {
+  @include rhythm(0,2,2,0);
+  background-color: $color-gray-white;
+  .activity-item {
+    @include pie-clearfix;
+    @include box-sizing(border-box);
+    padding: 12px 0;
+  }
+  .activity-icon {
+    float: left;
+    width: 64px;
+  }
+  .activity-info {
+    float: right;
+    width: calc(100% - 64px);
+    .type, .title {
+      @include adjust-font-size-to(21px, 1.4);
+    }
+    .description {
+
+      &:before {
+        content: "";
+        display: block;
+        @include rhythm(.4,0,0,.4);
+        border-top: 1px solid $color-gray;
+      }
+    }
+  }
+  @include at-breakpoint($pad) {
+    .activity-item {
+      float: left;
+      width: 50%;
+      padding: 24px;
+      &:nth-child(3n) { clear: left; }
+    }
+  }
+  @include at-breakpoint($desktop) {
+    .activity-item {
+      width: 25%;
+      &:nth-child(3n) { clear: none; }
+      &:nth-child(5n) { clear: left; }
+    }
+  }
+}

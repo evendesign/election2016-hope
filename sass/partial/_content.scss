@@ -28,9 +28,9 @@
     @include trailer();
   }
   .rule-notice {
-    @include adjust-font-size-to(13px);
+    @include rhythm(1,0,0,1);
+    @include adjust-font-size-to(15px);
     font-weight: bold;
-    @include trailer(1);
   }
 
   .preface + .rule {
