@@ -29,7 +29,6 @@ body {
 
 .page-inner {
   background-color: white;
-  min-height: 110vh; // 避免頁面內容不足以撐滿一個畫面的時候，導致 footer 無法正常使用的問題。
 }
 
 // $container-style: fluid;

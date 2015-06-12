@@ -12,6 +12,7 @@
     }
 
     .page-inner {
+      min-height: 110vh; // 避免頁面內容不足以撐滿一個畫面的時候，導致 footer 無法正常使用的問題。
       @include transform-origin(center, bottom);
       @include transition(transform .2s .5s, border-radius .2s .5s);
       @include box-shadow(0 0 50px rgba(black, .5));
