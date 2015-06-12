@@ -1,0 +1,71 @@
+.content {
+  padding: rhythm(2) 0 rhythm(0);
+
+  .content-inner {
+    margin: 0 auto;
+     max-width: 768px;
+     text-align: center;
+  }
+
+  .preface {
+    @include trailer(2);
+    position: relative;
+    text-align: center;
+    color: $color-black;
+  }
+
+  .rule {
+    @include trailer(2);
+    text-align: center;
+  }
+  .rule-label {
+    @include trailer(.5);
+    @include adjust-font-size-to(15px);
+    font-weight: bold;
+    color: $color-gray-dark;
+  }
+  .rule-content {
+    @include trailer();
+  }
+  .rule-notice {
+    @include adjust-font-size-to(13px);
+    font-weight: bold;
+  }
+
+  .preface + .rule {
+    &:before {
+      content: "";
+      display: block;
+      width: 25%;
+      margin: 48px auto;
+      border-top: 2px solid $color-gray-white;
+    }
+  }
+
+  .action {
+    @include trailer(2);
+  }
+
+  .btn_submit {
+    @include adjust-font-size-to(21px);
+    padding: 6px 72px;
+  }
+
+
+
+  @include at-breakpoint($pad) {
+
+    padding: rhythm(4) 0 rhythm(2);
+
+    p {
+      @include adjust-font-size-to(18px, 1.25);
+    }
+
+
+
+  }
+
+
+
+
+}
