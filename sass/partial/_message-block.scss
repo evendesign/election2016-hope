@@ -1,0 +1,76 @@
+.message-block {
+  padding: rhythm(6) 0;
+  background-color: #444;
+  @include background-size(cover); // multiple: comma-delimited:
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('http://placeimg.com/1600/1200/any');
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.5);
+  }
+  .message {
+    position: relative;
+    z-index: 10;
+    padding: rhythm(2) rhythm(1);
+    color: black;
+    background-color: rgba(white, .85);
+    @include border-radius(10px);
+    text-align: center;
+  }
+
+  .message-title {
+    @include adjust-font-size-to(24px, 1.15);
+    @include trailer(0.5);
+  }
+  .message-text {
+    @include adjust-font-size-to(15px);
+    @include trailer(0.75);
+  }
+
+  @include at-breakpoint($pad) {
+    padding: rhythm(8) 0;
+    .message {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: rhythm(4);
+    }
+    .message-title {
+      @include adjust-font-size-to(36px, 1.5);
+      @include trailer(1);
+    }
+    .message-text {
+      @include adjust-font-size-to(18px, 1.15);
+      @include trailer(1);
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    .is-scaled & {
+      @include border-radius(0 0 10px 10px);
+      overflow: hidden;
+    }
+
+    .message {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0;
+      @include translateY(-72.5%);
+      z-index: 1000;
+    }
+
+  }
+
+
+}
