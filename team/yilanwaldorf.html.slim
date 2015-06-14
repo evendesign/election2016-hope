@@ -8,7 +8,7 @@
 - team_location_icon = "/images/map/miaoli.svg"
 - team_location_text = "宜蘭縣冬山鄉"
 - team_address = "宜蘭縣冬山鄉"
-- team_industry = "社會創新"
+- team_category = "社會創新"
 - team_since = "1976"
 - team_website = "http://blog.ilc.edu.tw/blog/blog/25783"
 - team_facebook_page = "https://www.facebook.com/cixin.waldorf"
@@ -48,7 +48,7 @@
     .team-info
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
-      span.industry #{team_industry}
+      span.industry #{team_category}
       span.since #{team_since}
   .team-content
     .container
@@ -80,7 +80,7 @@
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_industry}
+              span.info-content #{team_category}
             li
               span.label 團隊成立年
               span.info-content #{team_since}

@@ -8,7 +8,7 @@
 - team_location_icon = "/images/map/miaoli.svg"
 - team_location_text = "台南市中西區"
 - team_address = "台南市中西區南門路21號"
-- team_industry = "在地關懷"
+- team_category = "社會創新"
 - team_since = "2013"
 - team_website = "http://www.punplace.tw/"
 - team_facebook_page = "https://www.facebook.com/PunPlace"
@@ -43,7 +43,7 @@
     .team-info
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
-      span.industry #{team_industry}
+      span.industry #{team_category}
       span.since #{team_since}
   .team-content
     .container
@@ -75,7 +75,7 @@
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_industry}
+              span.info-content #{team_category}
             li
               span.label 團隊成立年
               span.info-content #{team_since}

@@ -8,7 +8,7 @@
 - team_location_icon = "/images/map/miaoli.svg"
 - team_location_text = "團隊簡短地址_苗栗縣南莊鄉"
 - team_address = "團隊完整地址_苗栗縣南莊鄉南江村22鄰南江街50號"
-- team_industry = "製造業"
+- team_category = "製造業"
 - team_since = "成立年"
 - team_website = "http://www.moundgetw.com"
 - team_facebook_page = "https://www.facebook.com/mountainge2014"
@@ -63,7 +63,7 @@
     .team-info
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
-      span.industry #{team_industry}
+      span.industry #{team_category}
       span.since #{team_since}
   .team-content
     .container
@@ -97,7 +97,7 @@
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_industry}
+              span.info-content #{team_category}
             li
               span.label 團隊成立年
               span.info-content #{team_since}

@@ -8,7 +8,7 @@
 - team_location_icon = "/images/map/miaoli.svg"
 - team_location_text = "澎湖縣西嶼鄉"
 - team_address = ""
-- team_industry = "在地滋味"
+- team_category = "在地滋味"
 - team_since = "2003"
 - team_website = "http://www.thofood.com"
 - team_facebook_page = "https://www.facebook.com/thofood"
@@ -54,7 +54,7 @@
     .team-info
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
-      span.industry #{team_industry}
+      span.industry #{team_category}
       span.since #{team_since}
   .team-content
     .container
@@ -88,7 +88,7 @@
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_industry}
+              span.info-content #{team_category}
             li
               span.label 團隊成立年
               span.info-content #{team_since}

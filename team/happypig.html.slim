@@ -8,7 +8,7 @@
 - team_location_icon = "/images/map/miaoli.svg"
 - team_location_text = "雲林縣林內鄉"
 - team_address = "雲林縣林內鄉烏塗村"
-- team_industry = "在地滋味"
+- team_category = "在地滋味"
 - team_since = "1985"
 - team_website = "http://www.sypigfarm.com.tw/"
 - team_facebook_page = ""
@@ -48,7 +48,7 @@
     .team-info
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
-      span.industry #{team_industry}
+      span.industry #{team_category}
       span.since #{team_since}
   .team-content
     .container
@@ -85,7 +85,7 @@
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_industry}
+              span.info-content #{team_category}
             li
               span.label 團隊成立年
               span.info-content #{team_since}
