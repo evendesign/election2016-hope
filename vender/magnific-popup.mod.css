@@ -264,8 +264,13 @@ button.mfp-close {
   padding-bottom: 40px; }
   .mfp-iframe-holder .mfp-content {
     line-height: 0;
-    width: 100%;
-    max-width: 1600px; }
+    max-width: 1600px;
+    width: 100%; }
+    @media (min-width: 1025px) {
+      .mfp-iframe-holder .mfp-content {
+        width: 80%;
+      }
+    }
   .mfp-iframe-holder .mfp-close {
     top: -40px; }
 
