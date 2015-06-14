@@ -1,0 +1,47 @@
+.pager {
+  @include pie-clearfix;
+  text-align: center;
+  @include padding-trailer(2);
+  .prev { float: left; }
+  .next { float: right; }
+  a {
+    display: inline-block;
+    vertical-align: top;
+    @include adjust-font-size-to(15px);
+    text-decoration: none;
+    color: $color-black-light;
+    cursor: pointer;
+    border-bottom: 2px solid $color-gray-white;
+    @include transition(border-bottom .25s);
+    &:hover { border-bottom-color: darken($color-gray-white, 10%); }
+  }
+
+  @include at-breakpoint($pad) {
+    .container { max-width: 768px; }
+    .prev:before, .next:after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 14px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .prev:before {
+      margin-right: 3px;
+      background-image: url("/images/pager-prev.png");
+      background-image: none, url("/images/pager-prev.svg");
+    }
+    .next:after {
+      margin-left: 3px;
+      background-image: url("/images/pager-next.png");
+      background-image: none, url("/images/pager-next.svg");
+    }
+    a { @include adjust-font-size-to(18px); }
+  }
+
+  @include at-breakpoint($desktop) {
+    @include padding-trailer(4);
+    // a { @include adjust-font-size-to(20px); }
+  }
+}
