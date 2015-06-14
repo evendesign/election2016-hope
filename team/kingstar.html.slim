@@ -2,7 +2,7 @@
 - team_file_name = "kingstar"
 
 - team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
-- team_slogan = "駕著遙控車，一路朝世界躍進"
+- @team_slogan = "駕著遙控車，一路朝世界躍進"
 - team_name = "金詩達遙控車廠"
 - team_video = "https://www.youtube.com/watch?v=Mfh-_YZnqsY"
 
@@ -43,7 +43,7 @@
 .team
   .team-cover style="background-image:url('#{team_cover}');"
     .team-title
-      .team-slogan #{team_slogan}
+      .team-slogan #{@team_slogan}
       .team-name #{team_name}
       a.team-video-play href="#{team_video}" 播放影片
     .team-info

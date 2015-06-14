@@ -1,7 +1,7 @@
 - team_file_name = "團隊檔案名稱"
 
 - team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
-- team_slogan = "主標題"
+- @team_slogan = "主標題"
 - team_name = "團隊名稱"
 - team_video = "https://www.youtube.com/watch?v=ixQE9RPnM‐I"
 
@@ -57,7 +57,7 @@
 .team
   .team-cover style="background-image:url('#{team_cover}');"
     .team-title
-      .team-slogan #{team_slogan}
+      .team-slogan #{@team_slogan}
       .team-name #{team_name}
       a.team-video-play href="#{team_video}" 播放影片
     .team-info
