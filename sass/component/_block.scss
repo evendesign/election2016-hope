@@ -1,5 +1,5 @@
 .block {
-  padding: rhythm(4) 0;
+  padding: rhythm(2) 0;
   text-align: center;
   @include background-size(cover);
   background-position: center;
@@ -7,13 +7,13 @@
 }
 
 .block-title {
-  @include adjust-font-size-to(32px, 1.25);
+  @include adjust-font-size-to(20px, 2/3);
   @include trailer(0.5);
 }
 
 .block-subtitle {
   @include trailer(1);
-  @include adjust-font-size-to(20px, 1);
+  @include adjust-font-size-to(15px, 2/3);
   color: #aaa;
   &:after {
     content: '';
@@ -27,7 +27,7 @@
 }
 
 .block-text {
-  @include adjust-font-size-to(16px);
+  @include adjust-font-size-to(15px);
   max-width: 440px;
   margin-left: auto;
   margin-right: auto;
@@ -58,25 +58,25 @@
   }
 }
 
+@include at-breakpoint($pad) {
+  .block {
+    padding: rhythm(3) 0;
+  }
+}
+
 @include at-breakpoint($wide-desktop) {
 
   .block-title {
-    @include adjust-font-size-to(44px, 2);
+    @include adjust-font-size-to(24px, 1);
     @include trailer(0.5);
   }
 
   .block-subtitle {
     @include trailer(1.5);
-    @include adjust-font-size-to(24px, 1);
-    color: #aaa;
-    &:after {
-      width: 72px;
-      margin: rhythm(2) auto;
-    }
+    @include adjust-font-size-to(15px, 1);
   }
 
   .block-text {
-    @include adjust-font-size-to(18px, 1.25);
     max-width: 640px;
   }
 

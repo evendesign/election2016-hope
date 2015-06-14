@@ -334,14 +334,14 @@ tbody.collapse.in { display: table-row-group; }
 @media (min-width: 640px) and (min-width: 1512px) { .page-header { padding: 288px 0; }
   .page-header-title { font-size: 44px; line-height: 48px; }
   .page-header-text { margin-top: 24px; font-size: 24px; line-height: 24px; } }
-.block { padding: 96px 0; text-align: center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center; background-repeat: no-repeat; }
+.block { padding: 48px 0; text-align: center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center; background-repeat: no-repeat; }
 
-.block-title { font-size: 32px; line-height: 30px; margin-bottom: 12px; }
+.block-title { font-size: 20px; line-height: 16px; margin-bottom: 12px; }
 
-.block-subtitle { margin-bottom: 24px; font-size: 20px; line-height: 24px; color: #aaa; }
+.block-subtitle { margin-bottom: 24px; font-size: 15px; line-height: 16px; color: #aaa; }
 .block-subtitle:after { content: ''; display: block; width: 48px; height: 2px; background-color: black; margin: 24px auto; }
 
-.block-text { font-size: 16px; line-height: 24px; max-width: 440px; margin-left: auto; margin-right: auto; color: #777; margin-bottom: 24px; }
+.block-text { font-size: 15px; line-height: 24px; max-width: 440px; margin-left: auto; margin-right: auto; color: #777; margin-bottom: 24px; }
 
 .block-content { margin-top: 48px; }
 
@@ -352,10 +352,10 @@ tbody.collapse.in { display: table-row-group; }
 .block_black-bg .block-subtitle { color: #999; }
 .block_black-bg .block-text { color: #ddd; }
 
-@media (min-width: 1512px) { .block-title { font-size: 44px; line-height: 48px; margin-bottom: 12px; }
-  .block-subtitle { margin-bottom: 36px; font-size: 24px; line-height: 24px; color: #aaa; }
-  .block-subtitle:after { width: 72px; margin: 48px auto; }
-  .block-text { font-size: 18px; line-height: 30px; max-width: 640px; } }
+@media (min-width: 640px) { .block { padding: 72px 0; } }
+@media (min-width: 1512px) { .block-title { font-size: 24px; line-height: 24px; margin-bottom: 12px; }
+  .block-subtitle { margin-bottom: 36px; font-size: 15px; line-height: 24px; }
+  .block-text { max-width: 640px; } }
 .tile { display: block; position: relative; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; height: 50%; color: white; border: 1px solid rgba(255, 255, 255, 0.3); border-top: none; }
 .tile:hover { color: white; }
 
@@ -499,7 +499,7 @@ tbody.collapse.in { display: table-row-group; }
 .hero .hero-bg-slide { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 80; }
 .hero .hero-bg-slide-item { position: absolute; height: 440px; padding-bottom: 54px; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center center; }
 .hero .mbYTP_wrapper { z-index: 90 !important; }
-.hero .hero-slide { position: relative; z-index: 100; background-color: rgba(0, 0, 0, 0.2); -webkit-transition: background-color 0.5s; -moz-transition: background-color 0.5s; -o-transition: background-color 0.5s; transition: background-color 0.5s; }
+.hero .hero-slide { position: relative; z-index: 100; background-color: rgba(0, 0, 0, 0.4); -webkit-transition: background-color 0.5s; -moz-transition: background-color 0.5s; -o-transition: background-color 0.5s; transition: background-color 0.5s; }
 .hero .hero-slide-item { height: 440px; }
 .hero .slick-prev, .hero .slick-next { display: none !important; }
 .hero .slick-dots { margin: 0; padding: 0; border: 0; list-style: none; padding: 12px 0 18px; text-align: center; }
@@ -647,7 +647,7 @@ tbody.collapse.in { display: table-row-group; }
 .homepage .block-group:after { content: ""; display: table; clear: both; }
 .homepage .event-block { background-color: #f1f1f1; }
 .homepage .team-list { margin: 0; padding: 0; border: 0; list-style: none; }
-.homepage .team-list-item { max-width: 400px; margin: 0 auto 24px; }
+.homepage .team-list-item { max-width: 400px; margin: 0 auto 48px; }
 @media (min-width: 640px) { .homepage .team-list-item { max-width: none; width: 48.3871%; float: left; margin-right: 3.22581%; margin-right: -100%; }
   .homepage .team-list-item:nth-child(2n + 1) { margin-left: 0%; clear: left; }
   .homepage .team-list-item:nth-child(2n + 2) { margin-left: 51.6129%; clear: none; } }
