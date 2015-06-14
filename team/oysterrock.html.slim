@@ -1,7 +1,7 @@
 - team_file_name = "oysterrock"
 
 - team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
-- team_slogan = "一群傻瓜結作夥,譜出漁村的搖滾樂"
+- team_slogan = "一群傻瓜結作夥，譜出漁村的搖滾樂"
 - team_name = "蚵寮小搖滾"
 - team_video = "https://www.youtube.com/watch?v=apugtMpjfEY"
 
@@ -13,7 +13,7 @@
 - team_website = ""
 - team_facebook_page = "https://www.facebook.com/smalloysterrock"
 
-- team_preface = "想讓更多人認識自己的家鄉,想讓還留在家鄉的人更喜歡自己生活的地方。就這樣,一場全台灣最本土、最「哈扣」的搖滾音樂節,在蚵寮誕生了。"
+- team_preface = "想讓更多人認識自己的家鄉，想讓還留在家鄉的人更喜歡自己生活的地方。就這樣，一場全台灣最本土、最「哈扣」的搖滾音樂節，在蚵寮誕生了。"
 
 - team_member_amount = "一個村落"
 - team_members = [\
@@ -44,7 +44,7 @@
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
       span.industry #{team_category}
-      span.since #{team_since}
+      span.since= "成立於 #{team_since} 年"
   .team-content
     .container
       p.team-preface #{team_preface}
@@ -70,7 +70,7 @@
 
 
       .team-info-card
-        img.team-photo src="http://lorem.me/400x400/"
+        img.team-photo src="/images/team/#{team_file_name}/#{team_file_name}_bg_s.jpg"
         .team-info-inner
           .team-name #{team_name}
           .team-location #{team_location_text}
@@ -122,3 +122,4 @@
       a.gallery-item href="#{team_photo_10}"
         .gallery-item-inner style="background-image: url('#{team_photo_10}');"
 
+= render "/team/team-page-bottom"

@@ -64,7 +64,7 @@
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
       span.industry #{team_category}
-      span.since #{team_since}
+      span.since= "成立於 #{team_since} 年"
   .team-content
     .container
       p.team-preface #{team_preface}
@@ -90,7 +90,7 @@
         / 團隊內文編輯處 end ----------------------------------------------------------(看三小)
 
       .team-info-card
-        img.team-photo src="http://lorem.me/400x400/"
+        img.team-photo src="/images/team/#{team_file_name}/#{team_file_name}_bg_s.jpg"
         .team-info-inner
           .team-name #{team_name}
           .team-location #{team_location_text}
@@ -142,3 +142,4 @@
       a.gallery-item href="#{team_photo_10}"
         .gallery-item-inner style="background-image: url('#{team_photo_10}');"
 
+= render "/team/team-page-bottom"

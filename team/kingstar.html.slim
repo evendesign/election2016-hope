@@ -1,7 +1,7 @@
 - team_file_name = "kingstar"
 
 - team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
-- team_slogan = "駕著遙控車,一路朝世界躍進"
+- team_slogan = "駕著遙控車，一路朝世界躍進"
 - team_name = "金詩達遙控車廠"
 - team_video = "https://www.youtube.com/watch?v=Mfh-_YZnqsY"
 
@@ -13,7 +13,7 @@
 - team_website = ""
 - team_facebook_page = ""
 
-- team_preface = "大人玩遙控車,比小孩子還認真!桃園蘆竹一家夢工廠,設計製造出一台台精緻的遙控車。靠著技術創新和高品質的客製服務,把製造業加入了研發與服務業的精神,在國際市場展現台灣的競爭力。"
+- team_preface = "大人玩遙控車，比小孩子還認真！桃園蘆竹一家夢工廠，設計製造出一台台精緻的遙控車。靠著技術創新和高品質的客製服務，把製造業加入了研發與服務業的精神，在國際市場展現台灣的競爭力。"
 
 - team_member_amount = "一家公司"
 - team_members = [\
@@ -49,7 +49,7 @@
       img.location-icon src="#{team_location_icon}"
       span.location-text #{team_location_text}
       span.industry #{team_category}
-      span.since #{team_since}
+      span.since= "成立於 #{team_since} 年"
   .team-content
     .container
       p.team-preface #{team_preface}
@@ -73,7 +73,7 @@
         / 團隊內文編輯處 end ----------------------------------------------------------(看三小)
 
       .team-info-card
-        img.team-photo src="http://lorem.me/400x400/"
+        img.team-photo src="/images/team/#{team_file_name}/#{team_file_name}_bg_s.jpg"
         .team-info-inner
           .team-name #{team_name}
           .team-location #{team_location_text}
@@ -125,3 +125,4 @@
       a.gallery-item href="#{team_photo_10}"
         .gallery-item-inner style="background-image: url('#{team_photo_10}');"
 
+= render "/team/team-page-bottom"
