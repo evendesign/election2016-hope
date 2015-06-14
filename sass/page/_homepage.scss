@@ -1,21 +1,43 @@
 .homepage {
 
-  @include at-breakpoint($pad) {
-    .header {
-      .container {
-        max-width: none;
-        padding: 0 rhythm(1);
-      }
-    }
+  .event-block {
+    background-color: #f1f1f1;
   }
 
-  @include at-breakpoint($desktop) {
-    .header {
-      .container {
+  .submit-block {
+
+  }
+
+  .team-list-block {
+    .team-list {
+      @include reset-list-style;
+    }
+
+    .team-list-item {
+      max-width: 400px;
+      margin: 0 auto rhythm(1);
+    }
+
+    @include at-breakpoint($pad) {
+      .team-list-item {
         max-width: none;
-        padding: 0 rhythm(6);
+        @include isolate-grid(4);
       }
     }
+
+    @include at-breakpoint($desktop) {
+      .team-list-item {
+        @include isolate-grid(4);
+      }
+    }
+
+    @include at-breakpoint($wide-desktop) {
+      .team-list-item {
+        @include isolate-grid(4);
+      }
+    }
+
   }
+
 
 }

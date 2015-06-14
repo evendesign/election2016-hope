@@ -21,9 +21,7 @@
 @import "partial/footer";
 @import "partial/scale-content";
 @import "partial/hero";
-@import "partial/event-block";
 @import "partial/category-list";
-@import "partial/team-list-block";
 @import "partial/team";
 @import "partial/gallery";
 @import "partial/site-info";
@@ -31,7 +29,7 @@
 @import "partial/message-block";
 
 // ==== page ====
-// @import "page/homepage";
+@import "page/homepage";
 @import "page/event-page";
 
 // ==== inbox ====
