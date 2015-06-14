@@ -244,6 +244,13 @@
     .info-content {
       display: block;
       @include adjust-font-size-to(15px);
+      &:empty {
+        pointer-events: none;
+        &:before {
+          content: "目前尚無資料";
+          color: $color-gray;
+        }
+      }
     }
   }
 
