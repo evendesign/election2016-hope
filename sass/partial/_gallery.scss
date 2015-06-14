@@ -1,6 +1,6 @@
 .gallery {
 
-  @include padding-trailer(2);
+  @include padding-trailer(1);
 
   .gallery-item-block {
     @include pie-clearfix;
@@ -42,7 +42,7 @@
 
   @include at-breakpoint($desktop) {
 
-    @include padding-trailer(4);
+    @include padding-trailer(2);
 
     .gallery-item-block_3 {
       .gallery-item {
