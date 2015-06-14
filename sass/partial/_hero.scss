@@ -18,6 +18,8 @@
     position: absolute;
     height: 440px;
     padding-bottom: 54px; // 對應 slide-dot 所產生的高度
+    @include background-size(cover);
+    background-position: center center;
   }
 
   .mbYTP_wrapper {
@@ -33,7 +35,6 @@
 
   .hero-slide-item {
     height: 440px;
-    border-bottom: 2px solid rgba(white, 0.3);
   }
 
   .slick-prev, .slick-next {
@@ -42,7 +43,7 @@
 
   .slick-dots {
     @include reset-list-style;
-    padding: rhythm(0.5) 0 rhythm(0.75);
+    padding: 12px 0 18px;
     text-align: center;
     li {
       display: inline-block;
@@ -81,7 +82,8 @@
       height: 640px;
     }
     .slick-dots {
-      padding: rhythm(1) 0;
+      padding: 23px 0;
+      border-top: 2px solid rgba(white,.3);
     }
   }
 
@@ -106,6 +108,7 @@
     .hero-slide-item {
       min-height: 640px;
       height: 90vh;
+      border-bottom: 2px solid rgba(white,.3);
     }
 
     .slick-prev, .slick-next {
@@ -149,6 +152,9 @@
         right: 24px;
         @include replace-text-with-svg(arrow-next);
       }
+    }
+    .slick-dots {
+      border: none;
     }
   }
 
