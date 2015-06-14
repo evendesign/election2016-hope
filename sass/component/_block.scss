@@ -15,6 +15,14 @@
   @include trailer(1);
   @include adjust-font-size-to(20px, 1);
   color: #aaa;
+  &:after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    background-color: black;
+    margin: rhythm(1) auto;
+  }
 
 }
 
@@ -49,4 +57,26 @@
   }
 }
 
+@include at-breakpoint($desktop) {
 
+  .block-title {
+    @include adjust-font-size-to(44px, 2);
+    @include trailer(0.5);
+  }
+
+  .block-subtitle {
+    @include trailer(1.5);
+    @include adjust-font-size-to(24px, 1);
+    color: #aaa;
+    &:after {
+      width: 72px;
+      margin: rhythm(2) auto;
+    }
+  }
+
+  .block-text {
+    @include adjust-font-size-to(18px, 1.25);
+    max-width: 640px;
+  }
+
+}
