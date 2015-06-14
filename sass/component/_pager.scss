@@ -9,7 +9,6 @@
     vertical-align: top;
     @include adjust-font-size-to(15px);
     text-decoration: none;
-    color: $color-black-light;
     cursor: pointer;
     border-bottom: 2px solid $color-gray-white;
     @include transition(border-bottom .25s);
@@ -42,6 +41,6 @@
 
   @include at-breakpoint($desktop) {
     @include padding-trailer(4);
-    // a { @include adjust-font-size-to(20px); }
+    a { @include adjust-font-size-to(20px); }
   }
 }
