@@ -8,7 +8,7 @@
 }
 /* overlay animate in */
 .mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
+  opacity: 0.95;
 }
 /* overlay animate out */
 .mfp-fade.mfp-bg.mfp-removing {
@@ -41,9 +41,9 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed;
-  background: #0b0b0b;
-  opacity: 0.8;
-  filter: alpha(opacity=80); }
+  background: #fff;
+  opacity: 0.95;
+  filter: alpha(opacity=95); }
 
 .mfp-wrap {
   top: 0;
@@ -316,7 +316,7 @@ img.mfp-img {
     width: auto;
     height: auto;
     z-index: -1;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    /*box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);*/
     background: #444; }
   .mfp-figure small {
     color: #BDBDBD;
