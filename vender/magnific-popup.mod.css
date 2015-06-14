@@ -172,8 +172,8 @@ button.mfp-close {
   top: 0;
   text-decoration: none;
   text-align: center;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
+  /*opacity: 0.65;*/
+  /*filter: alpha(opacity=65);*/
   padding: 0 0 18px 10px;
   color: #FFF;
   font-style: normal;
@@ -206,8 +206,8 @@ button.mfp-close {
 
 .mfp-arrow {
   position: absolute;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
+  /*opacity: 0.65;*/
+  /*filter: alpha(opacity=65);*/
   margin: 0;
   top: 50%;
   margin-top: -55px;
