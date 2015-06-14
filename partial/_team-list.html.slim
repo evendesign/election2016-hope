@@ -1,0 +1,19 @@
+ul.team-list
+  - 12.times do |i|
+    li.team-list-item: a href=""
+      a.card href="/team/"
+        .card-header style="background-image: url('/images/team-cover-small.jpg');"
+          .card-city
+            .card-city-icon
+              img src="/images/map/taipei.svg"
+            .card-city-name 台北市中山區
+          .card-header-inner
+            .card-title.auto-break-text= zh_lorem_words(5 + rand(10))
+            .card-category 生活工藝
+        .card-content
+          .card-subtitle.auto-break-text= zh_lorem_words(5 + rand(10))
+          .card-text.auto-break-text= zh_lorem_paragraph
+
+
+
+

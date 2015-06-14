@@ -65,22 +65,4 @@
       .block-subtitle.auto-break-text 不願放棄的地方，就有希望
       .block-text.auto-break-text 這片土地的每個角落，都有人在實現夢想。每個夢想，都是點亮台灣的希望之光。未來不在他方，希望就在家鄉。這裡是我們的家，這些是我們的故事。
     .block-content
-      ul.team-list
-        - 12.times do |i|
-          li.team-list-item: a href=""
-            a.card href="/team/"
-              .card-header style="background-image: url('/images/team-cover-small.jpg');"
-                .card-city
-                  .card-city-icon
-                    img src="/images/map/taipei.svg"
-                  .card-city-name 台北市中山區
-                .card-header-inner
-                  .card-title.auto-break-text= zh_lorem_words(5 + rand(10))
-                  .card-category 生活工藝
-              .card-content
-                .card-subtitle.auto-break-text= zh_lorem_words(5 + rand(10))
-                .card-text.auto-break-text= zh_lorem_paragraph
-
-
-
-
+      = render "/partial/team-list"
