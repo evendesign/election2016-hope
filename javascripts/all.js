@@ -79,7 +79,7 @@ if( is_mobile == true) {
 
 } else {
 
-  // scale_content();
+  scale_content();
 
 }
 
