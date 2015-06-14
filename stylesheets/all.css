@@ -322,9 +322,10 @@ tbody.collapse.in { display: table-row-group; }
 
 .page-header-text { margin-top: 12px; font-size: 15px; line-height: 24px; max-width: 768px; margin-left: auto; margin-right: auto; color: #777; }
 
-.page-header_black-bg { background-color: #444; }
-.page-header_black-bg .page-header-title { color: white; }
-.page-header_black-bg .page-header-text { color: #ddd; }
+.page-header_black-bg { position: relative; background-color: #444; }
+.page-header_black-bg:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.45); background-image: -webkit-gradient(linear, to bottom, to top, color-stop(50%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.35))); background-image: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35)); background-image: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35)); background-image: -o-linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35)); background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.35)); }
+.page-header_black-bg .page-header-title { position: relative; color: white; }
+.page-header_black-bg .page-header-text { position: relative; color: #ddd; }
 
 .page-header_large { padding: 144px 0 120px; }
 
