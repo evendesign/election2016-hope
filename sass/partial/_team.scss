@@ -93,18 +93,17 @@
 
   .team-content {
     padding: 48px 0;
-    #{headings()} {
-      text-align: center;
-    }
     h3 {
       @include adjust-font-size-to(21px, 1);
       color: black;
+      text-align: center;
       @include trailer(1.25);
     }
     h4 {
       @include adjust-font-size-to(16px);
       color: black;
-      @include trailer(1.25);
+      @include trailer(1);
+      font-weight: bold;
     }
   }
 
@@ -292,7 +291,7 @@
       }
       h4 {
         @include trailer(1.5);
-        @include adjust-font-size-to(18px, 1.125);
+        @include adjust-font-size-to(20px, 1.35);
       }
       b {
 
