@@ -187,12 +187,9 @@ a {
   }
 }
 
-.break-all {
-  @include word-break(break-all);
-}
 
 // divider
-hr, .divider {
+hr {
   @include leader(1);
   @include trailer(1);
   border-top: 1px solid $divider-color;

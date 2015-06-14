@@ -1,5 +1,5 @@
 .content {
-  padding: rhythm(2) 0 rhythm(0);
+  padding: rhythm(2) 0;
 
   .content-inner {
     margin: 0 auto;
@@ -7,56 +7,40 @@
      text-align: center;
   }
 
-  .preface {
-    @include trailer(2);
-    position: relative;
-    text-align: center;
-    color: $color-black;
-  }
-
-  .rule {
-    @include trailer(2);
-    text-align: center;
-  }
-  .rule-label {
+  h4 {
     @include trailer(.5);
     @include adjust-font-size-to(15px);
     font-weight: bold;
     color: $color-gray-dark;
   }
-  .rule-content {
-    @include trailer();
-  }
-  .rule-notice {
+  .notice {
     @include rhythm(1,0,0,1);
     @include adjust-font-size-to(15px);
     font-weight: bold;
   }
 
-  .preface + .rule {
-    &:before {
-      content: "";
-      display: block;
-      width: 25%;
-      margin: 48px auto;
-      border-top: 2px solid $color-gray-white;
-    }
+  .divide:before {
+    content: "";
+    display: block;
+    width: 25%;
+    margin: 48px auto;
+    border-top: 2px solid $color-gray-white;
   }
 
   .action {
     @include trailer(2);
+    .btn_submit {
+      @include adjust-font-size-to(21px);
+      padding: 6px 72px;
+    }
   }
 
-  .btn_submit {
-    @include adjust-font-size-to(21px);
-    padding: 6px 72px;
-  }
 
 
 
   @include at-breakpoint($pad) {
 
-    padding: rhythm(4) 0 rhythm(2);
+    padding: rhythm(4) 0;
 
     p {
       @include adjust-font-size-to(18px, 1.25);
