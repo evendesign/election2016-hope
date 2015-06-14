@@ -1,7 +1,13 @@
 .activity {
-  @include rhythm(0,3,3,0);
-  background-color: $color-gray-white;
+  @include rhythm(0,2,2,0);
+  background-color: #f1f1f1;
   .container { max-width: 1368px; }
+  .activity-title {
+    @include adjust-font-size-to(28px, 1.2);
+    @include trailer(1);
+    text-align: center;
+    color: black;
+  }
   .activity-item {
     @include pie-clearfix;
     @include box-sizing(border-box);
@@ -19,7 +25,7 @@
       @include adjust-font-size-to(21px, 1.4);
     }
     .description {
-
+      @include adjust-font-size-to(15px);
       &:before {
         content: "";
         display: block;
@@ -29,6 +35,11 @@
     }
   }
   @include at-breakpoint($pad) {
+    @include rhythm(0,3,3,0);
+    .activity-title {
+      @include adjust-font-size-to(36px, 1.5);
+      @include trailer(1);
+    }
     .activity-list {
       @include pie-clearfix;
     }
