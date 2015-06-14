@@ -35,15 +35,6 @@
   [\
     "solar",\
   ],\
-  [\
-    "pangcah",\
-  ],\
-  [\
-    "thofood",\
-  ],\
-  [\
-    "nantoutea",\
-  ],\
 ]
 
 .share-button
@@ -54,7 +45,7 @@
 
 .pager
   .container
-    - if @team_order < 0
+    - if @team_order == 1
       span.prev 上一個團隊
     - else
       a.prev href="/team/#{team_order_list[@team_order - 2]}.html" 上一個團隊
