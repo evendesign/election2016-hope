@@ -1,5 +1,5 @@
 .page-header {
-  padding: rhythm(4) 0 rhythm(2);
+  padding: rhythm(5) 0 rhythm(4);
   text-align: center;
   @include background-size(cover);
   background-position: center;
@@ -31,22 +31,19 @@
   }
 }
 
-.page-header_large {
-  padding: rhythm(6) 0 rhythm(5);
-}
 
 
 @include at-breakpoint($pad) {
 
   .page-header {
-    padding: rhythm(6) 0 rhythm(5);
+    padding: rhythm(8) 0;
   }
 
   .page-header-title {
     @include adjust-font-size-to(36px, 1.5);
   }
   .page-header-text {
-    @include leader(1);
+    @include leader(0.75);
     @include adjust-font-size-to(20px, 1);
   }
 
@@ -60,12 +57,11 @@
     }
   }
 
-  .page-header_large {
-    padding: rhythm(8) 0;
-  }
 
-  @include at-breakpoint($desktop) {
-
+@include at-breakpoint($wide-desktop) {
+    .page-header {
+      padding: rhythm(12) 0;
+    }
     .page-header-title {
       @include adjust-font-size-to(44px, 2);
     }

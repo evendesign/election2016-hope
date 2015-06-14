@@ -1,0 +1,8 @@
+.message-page {
+
+  @include at-breakpoint($desktop) {
+    .scale-content & .page-inner {
+      min-height: 75vh;
+    }
+  }
+}
