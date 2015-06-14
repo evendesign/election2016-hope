@@ -82,7 +82,6 @@
 .tile_event {
   .tile-icon {
     background-image: url("/images/local-light-life-festival.png");
-    @include background-size(cover);
   }
 }
 
