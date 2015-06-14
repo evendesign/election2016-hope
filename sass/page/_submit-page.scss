@@ -1,0 +1,13 @@
+.submit-page {
+  .join-local-light {
+    @include replace-text-with-scalable-svg(join-local-light-big);
+    margin: 0 auto rhythm(1);
+    max-width: 350px;
+    width: 75%;
+  }
+  @include at-breakpoint($pad) {
+    .join-local-light {
+      margin: 0 auto rhythm(2);
+    }
+  }
+}

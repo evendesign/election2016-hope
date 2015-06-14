@@ -1,3 +1,27 @@
+.event-page {
+  .page-header {
+    background-position: 50% 10%;
+  }
+  .local-light-life-festival-logo {
+    display: block;
+    max-width: 200px;
+    width: 75%;
+    margin: rhythm(-0.5) auto rhythm(1);
+  }
+  @include at-breakpoint($pad) {
+    .local-light-life-festival-logo {
+      max-width: 300px;
+      margin: rhythm(0) auto rhythm(2);
+    }
+  }
+  @include at-breakpoint($wide-desktop) {
+    .local-light-life-festival-logo {
+      max-width: 400px;
+      margin: rhythm(0) auto rhythm(3);
+    }
+  }
+}
+
 .activity {
   @include rhythm(1,2,1,0);
   background-color: #f1f1f1;
