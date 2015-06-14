@@ -458,8 +458,8 @@ tbody.collapse.in { display: table-row-group; }
 @media (min-width: 1025px) { .footer .site { padding: 0 24px; } }
 
 .scale-content { position: relative; }
-@media (min-width: 1025px) { .scale-content .page { position: relative; z-index: 105; -webkit-transition: -webkit-transform 0.2s; -webkit-transition-delay: 0.5s; -moz-transition: -moz-transform 0.2s 0.5s; -o-transition: -o-transform 0.2s 0.5s; transition: transform 0.2s 0.5s; }
-  .scale-content .page-inner { min-height: 110vh; -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; -ms-transform-origin: center bottom; -o-transform-origin: center bottom; transform-origin: center bottom; -webkit-transition: -webkit-transform 0.2s, border-radius 0.2s; -webkit-transition-delay: 0.5s, 0.5s; -moz-transition: -moz-transform 0.2s 0.5s, border-radius 0.2s 0.5s; -o-transition: -o-transform 0.2s 0.5s, border-radius 0.2s 0.5s; transition: transform 0.2s 0.5s, border-radius 0.2s 0.5s; -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
+@media (min-width: 1025px) { .scale-content .page { position: relative; z-index: 105; -webkit-transition: -webkit-transform 0.2s; -webkit-transition-delay: 0.3s; -moz-transition: -moz-transform 0.2s 0.3s; -o-transition: -o-transform 0.2s 0.3s; transition: transform 0.2s 0.3s; }
+  .scale-content .page-inner { min-height: 110vh; -webkit-transform-origin: center bottom; -moz-transform-origin: center bottom; -ms-transform-origin: center bottom; -o-transform-origin: center bottom; transform-origin: center bottom; -webkit-transition: -webkit-transform 0.2s, border-radius 0.2s; -webkit-transition-delay: 0.3s, 0.3s; -moz-transition: -moz-transform 0.2s 0.3s, border-radius 0.2s 0.3s; -o-transition: -o-transform 0.2s 0.3s, border-radius 0.2s 0.3s; transition: transform 0.2s 0.3s, border-radius 0.2s 0.3s; -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); }
   .scale-content .site-info { display: block; opacity: 0; -webkit-transition: opacity 0.3s; -moz-transition: opacity 0.3s; -o-transition: opacity 0.3s; transition: opacity 0.3s; }
   .scale-content .footer { padding: 0; position: absolute; left: 0; right: 0; bottom: 0; padding-top: 400px; height: 100vh; min-height: 600px; z-index: 100; }
   .scale-content .footer:before { left: -10%; bottom: -10%; width: 50%; padding-top: 50%; height: 0; -webkit-transform: translate(-100%, 100%) rotate(-120deg); -moz-transform: translate(-100%, 100%) rotate(-120deg); -ms-transform: translate(-100%, 100%) rotate(-120deg); -o-transform: translate(-100%, 100%) rotate(-120deg); transform: translate(-100%, 100%) rotate(-120deg); -webkit-transition: 0.3s; -moz-transition: 0.3s; -o-transition: 0.3s; transition: 0.3s; max-width: 700px; background-position: left bottom; }
@@ -538,9 +538,9 @@ tbody.collapse.in { display: table-row-group; }
 .team .team-content h3 { font-size: 21px; line-height: 24px; color: black; margin-bottom: 30px; }
 .team .team-content h4 { font-size: 16px; line-height: 24px; color: black; margin-bottom: 30px; }
 .team .team-intro { margin-bottom: 24px; }
-.team .team-preface { position: relative; max-width: 600px; width: 80%; margin: 0 auto 72px; font-size: 16px; line-height: 24px; color: #666666; }
-.team .team-preface:before { content: '“'; position: absolute; top: -24px; left: -96px; font-size: 96px; line-height: 120px; color: #dddddd; }
-.team .team-preface:after { content: '”'; position: absolute; top: -24px; right: -96px; font-size: 96px; line-height: 120px; color: #dddddd; }
+.team .team-preface { position: relative; max-width: 600px; width: 80%; margin: 0 auto 72px; font-size: 16px; line-height: 24px; color: #4aa6ac; font-weight: bold; }
+.team .team-preface:before { font-weight: normal; content: '“'; position: absolute; top: -24px; left: -96px; font-size: 96px; line-height: 120px; color: #dddddd; }
+.team .team-preface:after { font-weight: normal; content: '”'; position: absolute; top: -24px; right: -96px; font-size: 96px; line-height: 120px; color: #dddddd; }
 .team .team-member { position: relative; max-width: 1520px; overflow: hidden; margin: 0 auto 72px; }
 .team .team-member:before, .team .team-member:after { content: ""; position: absolute; z-index: 1000; top: 0; bottom: 0; width: 64px; }
 .team .team-member:before { left: 0; background: -webkit-gradient(linear, to left, to right, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, #ffffff)); background: -webkit-linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff); background: -moz-linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff); background: -o-linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff); background: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff); }
@@ -686,7 +686,7 @@ tbody.collapse.in { display: table-row-group; }
 
 @media (min-width: 1025px) { .scale-content .message-page .page-inner { min-height: 75vh; } }
 
-.page-inner { position: relative; padding-bottom: 30%; overflow: hidden; }
-.page-inner:before, .page-inner:after { content: ''; position: absolute; bottom: 0; margin-bottom: 5%; width: 100%; height: 0; padding-bottom: 20%; background-repeat: no-repeat; background-position: bottom; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.page-inner { position: relative; padding-bottom: 50%; overflow: hidden; }
+.page-inner:before, .page-inner:after { content: ''; position: absolute; bottom: 0; margin-bottom: 10%; width: 100%; height: 0; padding-bottom: 20%; background-repeat: no-repeat; background-position: bottom; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .page-inner:before { left: -24px; background-image: url("/images/left.png"); background-image: none, url("/images/left.svg"); background-position: left bottom; }
 .page-inner:after { right: -24px; background-image: url("/images/right.png"); background-image: none, url("/images/right.svg"); background-position: right bottom; }

@@ -118,8 +118,10 @@
     width: 80%;
     margin: 0 auto 72px;
     @include adjust-font-size-to(16px);
-    color: $color-black-light;
+    color: $color-blue-dark;
+    font-weight: bold;
     &:before {
+      font-weight: normal;
       content: '“';
       position: absolute;
       top: -24px;
@@ -128,6 +130,7 @@
       color: $color-gray-light;
     }
     &:after {
+      font-weight: normal;
       content: '”';
       position: absolute;
       top: -24px;
