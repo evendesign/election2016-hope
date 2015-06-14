@@ -1,0 +1,32 @@
+.share-button {
+  text-align: center;
+  @include padding-trailer(2);
+  span {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 0;
+    @include adjust-font-size-to(16px);
+    font-weight: bold;
+    color: $color-gray;
+    &:before {
+      content: "";
+      display: block;
+      width: 72px;
+      margin: 0 auto;
+      padding-bottom: 24px;
+      border-top: 2px solid $color-gray-light;
+    }
+  }
+  .fb-share, .tweet {
+    @include inline-block();
+    @include filter(brightness(0%));
+    opacity: .25;
+    &:hover {
+      @include filter(brightness(100%));
+      opacity: 1;
+    }
+  }
+  .fb-share { @include replace-text-with-svg("icon-share-facebook"); }
+  .tweet { @include replace-text-with-svg("icon-share-twitter"); }
+}
