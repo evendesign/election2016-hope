@@ -1,3 +1,43 @@
+/ - teams = [\
+/   [ \
+/     "/images/team/#{team_file_name}/#{team_file_name}_bg_s.jpg",\
+/     "/images/map/taipei.svg",\
+/     "台北市中山區",\
+/     "老寮工作坊",\
+/     "帶著世界回到家鄉，開始農村的寧靜革命",\
+/     "在苗栗南庄，有一群年輕人相信著，認識土地最好的方式，是生活；他們相信老房子雖老，那是過去生活在這裡的時光痕跡。這些過往的痕跡決定了我們現在的模樣。",\
+/   ],\
+/   [ \
+/     "/images/team/#{team_file_name}/#{team_file_name}_figure_LiuJingjie.jpg",\
+/     "人名",\
+/     "人物簡介",\
+/   ],\
+/   [ \
+/     "/images/team/#{team_file_name}/#{team_file_name}_figure_ZhouYaxuan.jpg",\
+/     "人名",\
+/     "人物簡介",\
+/   ],\
+/   [ \
+/     "/images/team/#{team_file_name}/#{team_file_name}_figure_LiuMengcheng.jpg",\
+/     "人名",\
+/     "人物簡介",\
+/   ],\
+/   [ \
+/     "/images/team/#{team_file_name}/#{team_file_name}_figure_ZhengYiqian.jpg",\
+/     "人名",\
+/     "人物簡介",\
+/   ] \
+/ ]
+
+
+/ - teams.each do |team|
+/   .member
+/     .member-avatar
+/       img src="#{team_member[0]}"
+/     .member-name = "#{team_member[1]}"
+/     .member-intro = "#{team_member[2]}"
+
+
 ul.team-list
   - 12.times do |i|
     li.team-list-item: a href=""
