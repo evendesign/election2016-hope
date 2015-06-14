@@ -1,3 +1,42 @@
+- team_order_list = [\
+  [\
+    "mountainlodge",\
+  ],\
+  [\
+    "secondhand",\
+  ],\
+  [\
+    "oysterrock",\
+  ],\
+  [\
+    "shoesparty",\
+  ],\
+  [\
+    "happypig",\
+  ],\
+  [\
+    "kingstar",\
+  ],\
+  [\
+    "yilanwaldorf",\
+  ],\
+  [\
+    "tcrecall",\
+  ],\
+  [\
+    "gandan",\
+  ],\
+  [\
+    "mangogame",\
+  ],\
+  [\
+    "punplace",\
+  ],\
+  [\
+    "solar",\
+  ],\
+]
+
 .share-button
   .container
     span 分享團隊故事
@@ -5,6 +44,13 @@
     a.tweet href="http://twitter.com/share?text=在地希望啦啦啦&amp;url=http://light.iing.tw" target="_blank" twitter 推文
 .pager
   .container
-    a.prev href="/" 上一個團隊
-    a.team-list href="/" 返回團隊列表
-    a.next href="/" 下一個團隊
+    - if @team_order < 0
+      span.prev 上一個團隊
+    - else
+      a.prev href="/team/#{team_order_list[@team_order - 2]}.html" 上一個團隊
+    a.team-list href="/#team-list" 返回團隊列表
+    - if @team_order >= team_order_list.length
+      span.next 下一個團隊
+    - else
+      a.next href="/team/#{team_order_list[@team_order]}.html" 下一個團隊
+
