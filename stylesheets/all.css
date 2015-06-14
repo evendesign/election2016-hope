@@ -373,24 +373,12 @@ tbody.collapse.in { display: table-row-group; }
 
 .tile_primary { position: relative; border-bottom: 0; height: 100%; }
 .tile_primary .tile-title { position: absolute; top: 96px; padding: 0 24px; font-size: 18px; line-height: 24px; margin-bottom: 24px; }
-.tile_primary .tile-icon { padding-bottom: 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-logotype.png?1434310559'); background-repeat: no-repeat; background-position: 50% 50%; width: 244px; height: 90px; background-image: none, url('/images/local-light-logotype.svg?1434310559'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.tile_primary .tile-icon { padding-bottom: 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-logotype.png?1434311571'); background-repeat: no-repeat; background-position: 50% 50%; width: 244px; height: 90px; background-image: none, url('/images/local-light-logotype.svg?1434311571'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .tile_primary .tile-content { position: absolute; bottom: 24px; padding: 0 24px; }
 
-<<<<<<< HEAD
-.tile_event { text-align: right; }
-.tile_event .tile-content { float: right; margin-right: 24px; }
-.tile_event .tile-icon { float: right; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/tile-event-icon.png?1434307963'); background-repeat: no-repeat; background-position: 50% 50%; width: 72px; height: 72px; background-image: none, url('/images/tile-event-icon.svg?1434307963'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.tile_event .tile-title { margin-bottom: 12px; }
-.tile_event .tile-text { font-size: 13px; line-height: 18px; }
-
-.tile_submit .tile-icon { float: left; margin-right: 24px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/tile-submit-icon.png?1434307963'); background-repeat: no-repeat; background-position: 50% 50%; width: 41px; height: 60px; background-image: none, url('/images/tile-submit-icon.svg?1434307963'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-.tile_submit .tile-title { margin-bottom: 18px; }
-.tile_submit .tile-text { font-size: 13px; line-height: 18px; }
-=======
 .tile_event .tile-icon, .tile_submit .tile-icon { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: contain; background-repeat: no-repeat; background-position: center center; }
 
 .tile_event .tile-icon { background-image: url("/images/local-light-life-festival.png"); background-image: none, url("/images/local-light-life-festival.svg"); }
->>>>>>> origin/feature/hero-layout
 
 .tile_submit .tile-icon { background-image: url("/images/join-local-light.png"); background-image: none, url("/images/join-local-light.svg"); }
 
@@ -435,18 +423,10 @@ tbody.collapse.in { display: table-row-group; }
 
 .header { position: absolute; top: 0; left: 0; right: 0; z-index: 1000; padding: 12px 14px; }
 .header .logo { margin-bottom: 0px; font-size: 24px; line-height: 24px; font-weight: bold; }
-<<<<<<< HEAD
-.header .logo a { display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo-white-small.png?1434307963'); background-repeat: no-repeat; background-position: 50% 50%; width: 154px; height: 45px; background-image: none, url('/images/logo-white-small.svg?1434307963'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; color: white; }
-.header .logo a:hover { text-decoration: none; }
-@media (min-width: 640px) { .header { padding: 24px; }
-  .header .logo a { text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/logo-white.png?1434307963'); background-repeat: no-repeat; background-position: 50% 50%; width: 258px; height: 68px; background-image: none, url('/images/logo-white.svg?1434307963'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; } }
-@media (min-width: 1025px) { .header { padding: 24px 144px; } }
-=======
-.header .logo a { display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-web-logo.png?1434307803'); background-repeat: no-repeat; background-position: 50% 50%; width: 70px; height: 65px; background-image: none, url('/images/local-light-web-logo.svg?1434307803'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; color: white; }
+.header .logo a { display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-web-logo.png?1434311571'); background-repeat: no-repeat; background-position: 50% 50%; width: 70px; height: 65px; background-image: none, url('/images/local-light-web-logo.svg?1434311571'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; color: white; }
 .header .logo a:hover { text-decoration: none; }
 @media (min-width: 640px) { .header { padding: 24px; } }
 @media (min-width: 1025px) { .header { padding: 24px 120px; } }
->>>>>>> origin/feature/hero-layout
 
 .footer { position: relative; padding: 72px 0 360px; background-color: #183840; color: #ddd; text-align: center; overflow: hidden; background-image: radial-gradient(circle at 85% 85%, #2b6f69 5%, #183840 40%); }
 .footer:after { content: ""; display: table; clear: both; }
