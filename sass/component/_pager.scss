@@ -4,16 +4,19 @@
   @include padding-trailer(2);
   .prev { float: left; }
   .next { float: right; }
-  a {
+  a, span {
     display: inline-block;
     vertical-align: top;
     @include adjust-font-size-to(15px);
+  }
+  a {
     text-decoration: none;
     cursor: pointer;
     border-bottom: 2px solid $color-gray-white;
     @include transition(border-bottom .25s);
     &:hover { border-bottom-color: darken($color-gray-white, 10%); }
   }
+  span { color: $color-gray; }
 
   @include at-breakpoint($pad) {
     .container { max-width: 768px; }
@@ -36,11 +39,11 @@
       background-image: url("/images/pager-next.png");
       background-image: none, url("/images/pager-next.svg");
     }
-    a { @include adjust-font-size-to(18px); }
+    a,span { @include adjust-font-size-to(18px); }
   }
 
   @include at-breakpoint($desktop) {
     @include padding-trailer(4);
-    a { @include adjust-font-size-to(20px); }
+    a,span { @include adjust-font-size-to(20px); }
   }
 }

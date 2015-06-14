@@ -414,15 +414,17 @@ tbody.collapse.in { display: table-row-group; }
 .pager:after { content: ""; display: table; clear: both; }
 .pager .prev { float: left; }
 .pager .next { float: right; }
-.pager a { display: inline-block; vertical-align: top; font-size: 15px; line-height: 24px; text-decoration: none; cursor: pointer; border-bottom: 2px solid #eeeeee; -webkit-transition: border-bottom 0.25s; -moz-transition: border-bottom 0.25s; -o-transition: border-bottom 0.25s; transition: border-bottom 0.25s; }
+.pager a, .pager span { display: inline-block; vertical-align: top; font-size: 15px; line-height: 24px; }
+.pager a { text-decoration: none; cursor: pointer; border-bottom: 2px solid #eeeeee; -webkit-transition: border-bottom 0.25s; -moz-transition: border-bottom 0.25s; -o-transition: border-bottom 0.25s; transition: border-bottom 0.25s; }
 .pager a:hover { border-bottom-color: #d4d4d4; }
+.pager span { color: #aaaaaa; }
 @media (min-width: 640px) { .pager .container { max-width: 768px; }
   .pager .prev:before, .pager .next:after { content: ""; display: inline-block; width: 10px; height: 14px; background-size: 100%; background-repeat: no-repeat; background-position: center; }
   .pager .prev:before { margin-right: 3px; background-image: url("/images/pager-prev.png"); background-image: none, url("/images/pager-prev.svg"); }
   .pager .next:after { margin-left: 3px; background-image: url("/images/pager-next.png"); background-image: none, url("/images/pager-next.svg"); }
-  .pager a { font-size: 18px; line-height: 24px; } }
+  .pager a, .pager span { font-size: 18px; line-height: 24px; } }
 @media (min-width: 1025px) { .pager { padding-bottom: 96px; }
-  .pager a { font-size: 20px; line-height: 24px; } }
+  .pager a, .pager span { font-size: 20px; line-height: 24px; } }
 
 .share-button { text-align: center; padding-bottom: 48px; }
 .share-button span { position: relative; display: block; margin: 0 auto; padding: 12px 0; font-size: 16px; line-height: 24px; font-weight: bold; color: #aaaaaa; }
