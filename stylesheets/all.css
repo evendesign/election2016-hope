@@ -378,7 +378,7 @@ tbody.collapse.in { display: table-row-group; }
 
 .tile_event .tile-icon, .tile_submit .tile-icon { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: contain; background-repeat: no-repeat; background-position: center center; }
 
-.tile_event .tile-icon { background-image: url("/images/local-light-life-festival.png"); background-image: none, url("/images/local-light-life-festival.svg"); }
+.tile_event .tile-icon { background-image: url("/images/local-light-life-festival.png"); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 .tile_submit .tile-icon { background-image: url("/images/join-local-light.png"); background-image: none, url("/images/join-local-light.svg"); }
 
