@@ -9,9 +9,9 @@
   overflow: hidden;
   display: inline-block;
   @include trailer(0.25);
-  width: 80%;
+  width: 70%;
   height: 0;
-  padding-top: 80%;
+  padding-top: 70%;
   @include border-radius(50%);
   background-color: #ddd;
   img {
@@ -31,7 +31,7 @@
 }
 
 .member-intro {
-  @include adjust-font-size-to(16px);
+  @include adjust-font-size-to(13px);
   white-space: normal;
   text-align: left;
 }

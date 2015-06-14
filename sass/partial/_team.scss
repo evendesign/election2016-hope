@@ -29,7 +29,8 @@
     width: 100%;
     @include translate(-50%, -50%);
   }
-  .team-slogan {
+  .team-slogan.auto-break-text {
+    padding: 0 1em;
     @include adjust-font-size-to(24px, 1.25);
     @include trailer(0.5);
   }
@@ -164,7 +165,7 @@
     }
     .member-list {
       position: relative;
-      padding: 0 48px;
+      padding: 0 72px;
     }
     .member {
       display: inline-block;
@@ -189,7 +190,7 @@
       @include transition(opacity 0.25s);
       &:focus { outline: none; }
       &:hover { opacity: 1; }
-      &.slick-disabled { opacity: 0.25; }
+      &.slick-disabled { display: none !important; }
     }
     .slick-prev {
       left: 0;
@@ -261,7 +262,7 @@
       padding: 0 48px;
     }
 
-    .team-slogan {
+    .team-slogan.auto-break-text {
       @include adjust-font-size-to(32px, 1.5);
       @include trailer(0.5);
     }
@@ -340,7 +341,7 @@
     .team-cover {
       height: 90vh;
     }
-    .team-slogan {
+    .team-slogan.auto-break-text {
       @include adjust-font-size-to(40px, 1.75);
       @include trailer(0.5);
     }
@@ -366,7 +367,7 @@
 
   @include at-breakpoint($wide-desktop) {
 
-    .team-slogan {
+    .team-slogan.auto-break-text {
       @include adjust-font-size-to(48px, 2);
       @include trailer(0.5);
     }
