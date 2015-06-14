@@ -32,10 +32,12 @@
 
 .tile-subtitle {
   @include adjust-font-size-to(15px, 3/4);
+  @include trailer(0);
 }
 
 .tile-text {
   @include adjust-font-size-to(13px, 3/4);
+  @include trailer(0);
 }
 
 .tile-meta {
