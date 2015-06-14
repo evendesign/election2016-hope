@@ -16,7 +16,7 @@
 
   .team-list-item {
     max-width: 400px;
-    margin: 0 auto rhythm(1);
+    margin: 0 auto rhythm(2);
   }
 
   @include at-breakpoint($pad) {

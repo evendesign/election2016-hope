@@ -6,7 +6,7 @@
   right: 0;
   z-index: 1000;
 
-  padding: rhythm(0.5) rhythm(1);
+  padding: rhythm(0.5) rhythm(.6);
 
   .logo {
     @include trailer(0);
@@ -14,7 +14,7 @@
     font-weight: bold;
     a {
       display: block;
-      @include replace-text-with-svg(logo-white-small);
+      @include replace-text-with-svg(local-light-web-logo);
       color: white;
       &:hover {
         text-decoration: none;
@@ -24,15 +24,10 @@
 
   @include at-breakpoint($pad) {
     padding: rhythm(1);
-    .logo {
-      a {
-        @include replace-text-with-svg(logo-white);
-      }
-    }
   }
 
   @include at-breakpoint($desktop) {
-    padding: rhythm(1) rhythm(6);
+    padding: rhythm(1) rhythm(5);
   }
 
 
