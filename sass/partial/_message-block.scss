@@ -38,7 +38,7 @@
     .message {
       max-width: 540px;
       margin: 0 auto;
-      padding: rhythm(4);
+      padding: rhythm(3.5) rhythm(3);
     }
     .message-title {
       @include adjust-font-size-to(36px, 1.5);
@@ -51,11 +51,9 @@
   }
 
   @include at-breakpoint($desktop) {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    @include box-sizing(border-box);
+    height: 110vh;
+    min-height: 720px;
     .is-scaled & {
       @include border-radius(0 0 10px 10px);
       overflow: hidden;
@@ -63,10 +61,10 @@
 
     .message {
       position: absolute;
-      top: 50%;
+      top: 40%;
       right: 0;
       left: 0;
-      @include translateY(-72.5%);
+      @include translateY(-50%);
       z-index: 1000;
     }
 
