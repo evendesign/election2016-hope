@@ -1,42 +1,63 @@
 .homepage {
 
+
+  .block-group {
+    @include pie-clearfix;
+
+  }
+
   .event-block {
     background-color: #f1f1f1;
   }
 
-  .submit-block {
-
+  .team-list {
+    @include reset-list-style;
   }
 
-  .team-list-block {
-    .team-list {
-      @include reset-list-style;
-    }
+  .team-list-item {
+    max-width: 400px;
+    margin: 0 auto rhythm(1);
+  }
 
+  @include at-breakpoint($pad) {
     .team-list-item {
-      max-width: 400px;
-      margin: 0 auto rhythm(1);
+      max-width: none;
+      @include isolate-grid(4);
     }
+  }
 
-    @include at-breakpoint($pad) {
-      .team-list-item {
-        max-width: none;
-        @include isolate-grid(4);
+  @include at-breakpoint($desktop) {
+    .block-group {
+      background-color: #f1f1f1;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+        width: 2px;
+        background-color: white;
       }
     }
-
-    @include at-breakpoint($desktop) {
-      .team-list-item {
-        @include isolate-grid(4);
-      }
+    .event-block, .submit-block {
+      @include box-sizing(border-box);
+      width: 50%;
+      float: left;
     }
-
-    @include at-breakpoint($wide-desktop) {
-      .team-list-item {
-        @include isolate-grid(4);
-      }
+    .event-block {
+      background-color: transparent;
     }
+    .team-list-item {
+      @include isolate-grid(4);
+    }
+  }
 
+  @include at-breakpoint($wide-desktop) {
+    .team-list-item {
+      @include isolate-grid(4);
+    }
   }
 
 

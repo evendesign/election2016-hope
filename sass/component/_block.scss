@@ -32,6 +32,7 @@
   margin-left: auto;
   margin-right: auto;
   color: #777;
+  @include trailer();
 }
 
 .block-content {
@@ -57,7 +58,7 @@
   }
 }
 
-@include at-breakpoint($desktop) {
+@include at-breakpoint($wide-desktop) {
 
   .block-title {
     @include adjust-font-size-to(44px, 2);

@@ -90,10 +90,3 @@
   @include trailer(0.5);
   text-align: center;
 }
-
-.card-text {
-  @include adjust-font-size-to(15px);
-  color: #777;
-  height: 72px;
-  overflow: hidden;
-}
