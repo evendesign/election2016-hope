@@ -5,6 +5,8 @@
     margin: 0 auto;
     max-width: 768px;
     text-align: center;
+    position: relative;
+    z-index: 50;
   }
 
   h4 {
@@ -40,14 +42,14 @@
 
   @include at-breakpoint($pad) {
 
+    padding: rhythm(4) 0;
+
     .content-inner_head {
       @include margin-leader(-8);
       padding: rhythm(2) rhythm(2) 0;
       background-color: white;
       @include border-radius(10px 10px 0 0);
     }
-
-    padding: rhythm(4) 0;
 
     p {
       @include adjust-font-size-to(18px, 1.25);
