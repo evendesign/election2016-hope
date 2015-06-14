@@ -1,7 +1,7 @@
 - @team_order = 6
 - team_file_name = "kingstar"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "駕著遙控車，一路朝世界躍進"
 - team_name = "金詩達遙控車廠"
 - team_video = "https://www.youtube.com/watch?v=Mfh-_YZnqsY"
@@ -41,7 +41,7 @@
 - team_photo_10 = "/images/team/#{team_file_name}/#{team_file_name}_053.jpg"
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}

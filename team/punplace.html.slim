@@ -1,7 +1,7 @@
 - @team_order = 11
 - team_file_name = "punplace"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "老房子與 3D 列印機，化身夢想孕育基地"
 - team_name = "胖地數位空間"
 - team_video = "https://www.youtube.com/watch?v=1llm1bQN5Qg"
@@ -35,7 +35,7 @@
 
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}

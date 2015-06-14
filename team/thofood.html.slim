@@ -1,7 +1,7 @@
 - @team_order = 14
 - team_file_name = "thofood"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "行過死蔭幽谷，他立志帶給更多人幸福健康"
 - team_name = "天和鮮物"
 - team_video = ""
@@ -36,7 +36,7 @@
 - team_photo_10 = "http://lorem.me/1600x960/"
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}

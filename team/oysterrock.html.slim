@@ -1,7 +1,7 @@
 - @team_order = 3
 - team_file_name = "oysterrock"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "一群傻瓜結作夥，譜出漁村的搖滾樂"
 - team_name = "蚵寮小搖滾"
 - team_video = "https://www.youtube.com/watch?v=apugtMpjfEY"
@@ -36,7 +36,7 @@
 - team_photo_10 = "/images/team/#{team_file_name}/#{team_file_name}_020.jpg"
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}

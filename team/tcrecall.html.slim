@@ -1,7 +1,7 @@
 - @team_order = 8
 - team_file_name = "tcrecall"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "習以為常的生活中，就有安靜的小革命"
 - team_name = "全面罷免"
 - team_video = "https://www.youtube.com/watch?v=3y6KHRipafQ"
@@ -46,7 +46,7 @@
 - team_photo_10 = "/images/team/tcrecall/tcrecall_019.jpg"
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}

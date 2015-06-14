@@ -1,7 +1,7 @@
 - @team_order = 4
 - team_file_name = "shoesparty"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "父女搭擋，重燃製鞋職人的驕傲與堅持"
 - team_name = "Shoes Party 鞋靴派對"
 - team_video = "https://www.youtube.com/watch?v=QvFcY4XxJoU"
@@ -44,7 +44,7 @@
 
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}

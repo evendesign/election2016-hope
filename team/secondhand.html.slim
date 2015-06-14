@@ -1,7 +1,7 @@
 - @team_order = 2
 - team_file_name = "secondhand"
 
-- team_cover = "/images/team/#{team_file_name}/#{team_file_name}_bg.jpg"
+- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
 - @team_slogan = "四個年輕人，讓小鎮也有超過 600 人規模的二手市集"
 - team_name = "通霄二手市集"
 - team_video = "https://www.youtube.com/watch?v=ixQE9RPnM-I"
@@ -45,7 +45,7 @@
 
 
 .team
-  .team-cover style="background-image:url('#{team_cover}');"
+  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
     .team-title
       .team-slogan.auto-break-text #{@team_slogan}
       .team-name #{team_name}
