@@ -22,11 +22,24 @@
 }
 
 .page-header_black-bg {
+  position: relative;
   background-color: #444;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(black, 0.45);
+    @include background-image(linear-gradient(to bottom, rgba(black, 0) 50%, rgba(black, 0.35)));
+  }
   .page-header-title {
+    position: relative;
     color: white;
   }
   .page-header-text {
+    position: relative;
     color: #ddd;
   }
 }
