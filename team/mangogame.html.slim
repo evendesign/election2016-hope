@@ -1,7 +1,7 @@
 - @team_order = 10
 - team_file_name = "mangogame"
 
-- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
+- @team_cover = "/images/team/#{team_file_name}/"
 - @team_slogan = "古城裡的 running man，用實境遊戲訴說地方的美好"
 - team_name = "芒果遊戲工作室"
 - team_video = "https://www.youtube.com/watch?v=1llm1bQN5Qg"
@@ -19,27 +19,27 @@
 - team_member_amount = "五個員工"
 - team_members = [\
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_city.jpg",\
+    "/images/team/#{team_file_name}/figure_city.jpg",\
     "張騏威（城市說書人）",\
     "總監。在城市中遊蕩的說書人，總是能看到別人看不到的謎底。",\
   ],\
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_zombie.jpg",\
+    "/images/team/#{team_file_name}/figure_zombie.jpg",\
     "楊慶之（殭屍先生）",\
     "企劃。古蹟中徘徊的不明生物，已經有太多玩家與路人受到驚嚇。",\
   ],\
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_pork.jpg",\
+    "/images/team/#{team_file_name}/figure_pork.jpg",\
     "徐苡庭（冷凍黑豬肉）",\
     "企劃。敦厚老實的，家人老師眼中的好青年。",\
   ],\
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_yotena.jpg",\
+    "/images/team/#{team_file_name}/figure_yotena.jpg",\
     "林子雲（憂顛娜女神）",\
     "美術。笑點製造機，總是有太多牛頭不對馬嘴的點子使大家瘋狂。",\
   ],\
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_moeten.jpg",\
+    "/images/team/#{team_file_name}/figure_moeten.jpg",\
     "田偉賢（萌田）",\
     "行政。辦公室常駐行政神，有條不紊地處理各種雜務讓凡人感到嘆為觀止。",\
   ] \
@@ -56,7 +56,7 @@
 - team_photo_10 = "/images/team/mangogame/mangogame_015.jpg"
 
 .team
-  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
+  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{@team_slogan}
       h2.team-name #{team_name}
@@ -87,7 +87,7 @@
         p 芒果遊戲工作室希望在未來的路上，能繼續說，幫城市說，說出一個又一個可能已經被人遺忘的故事。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/#{team_file_name}_bg_s.jpg"
+        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_name}
           .team-location #{team_location_text}

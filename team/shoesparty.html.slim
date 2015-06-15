@@ -1,7 +1,7 @@
 - @team_order = 4
 - team_file_name = "shoesparty"
 
-- @team_cover = "/images/team/#{team_file_name}/#{team_file_name}"
+- @team_cover = "/images/team/#{team_file_name}/"
 - @team_slogan = "父女搭擋，重燃製鞋職人的驕傲與堅持"
 - team_name = "Shoes Party 鞋靴派對"
 - team_video = "https://www.youtube.com/watch?v=QvFcY4XxJoU"
@@ -19,32 +19,32 @@
 - team_member_amount = "一間工廠、一個新品牌"
 - team_members = [\
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_01.jpg",\
+    "/images/team/#{team_file_name}/figure_01.jpg",\
     "曹錫安",\
     "1978 年於台中大里創立連萬鞋業，製鞋以外銷出口為導向，客戶主要位於日本、歐洲，草創初期只有 4 名員工一起打拚，於 1981 年遷回現址彰化員林，極盛期人員曾達 200 人。",\
   ], \
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_02.jpg",\
+    "/images/team/#{team_file_name}/figure_02.jpg",\
     "製鞋老師傅",\
     "連萬鞋業 35 年歷史中不可或缺的角色，給予一張鞋子的圖片，便能開模、打板，但因為人才斷層，有可能後繼無人。",\
   ], \
   [ \
-    "/images/team/#{team_file_name}/#{team_file_name}_figure_03.jpg",\
+    "/images/team/#{team_file_name}/figure_03.jpg",\
     "曹詩怡",\
     "連萬鞋廠的第二代，2007 年創辦網拍鞋子品牌「Shoes Party 鞋靴派對」，應對大規模製鞋產業的外移，轉型為少量多樣的細緻手工生產。",\
   ], \
 ]
 
-- team_photo_01 = "/images/team/#{team_file_name}/#{team_file_name}_001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/#{team_file_name}_002.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/#{team_file_name}_003.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/#{team_file_name}_004.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/#{team_file_name}_005.jpg"
-- team_photo_06 = "/images/team/#{team_file_name}/#{team_file_name}_009.jpg"
+- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_file_name}/009.jpg"
 
 
 .team
-  .team-cover style="background-image:url('#{@team_cover}_bg.jpg');"
+  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{@team_slogan}
       h2.team-name #{team_name}
@@ -77,7 +77,7 @@
         p 「Shoes Party 鞋靴派對」想要證明，台灣也可以有精緻的品牌好鞋，賣一雙鞋，賣的不只是鞋和服務，還有製鞋職人的堅持與價值 ，那是一種專屬於台灣的在地溫度。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/#{team_file_name}_bg_s.jpg"
+        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_name}
           .team-location #{team_location_text}
