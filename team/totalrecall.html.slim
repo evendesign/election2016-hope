@@ -3,7 +3,7 @@
 
 - @team_cover = "/images/team/#{team_file_name}/"
 - @team_slogan = "習以為常的生活中，就有安靜的小革命"
-- team_name = "全面罷免"
+- @team_name = "全面罷免"
 - team_video = "https://www.youtube.com/watch?v=3y6KHRipafQ"
 
 - team_location_icon = "/images/map/taichung.svg"
@@ -49,7 +49,7 @@
   .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{@team_slogan}
-      h2.team-name #{team_name}
+      h2.team-name #{@team_name}
       a.team-video-play href="#{team_video}" 播放影片
     .team-info
       img.location-icon src="#{team_location_icon}"
@@ -79,7 +79,7 @@
       .team-info-card
         img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
         .team-info-inner
-          .team-name #{team_name}
+          .team-name #{@team_name}
           .team-location #{team_location_text}
           ul.team-info-list
             li
