@@ -1,0 +1,140 @@
+- @team_order = 15
+- team_file_name = "kendama"
+
+- @team_cover = "/images/team/#{team_file_name}/"
+- @team_slogan = "來了就捨不得離開，研究生串連城市的故事"
+- @team_name = "見域工作室"
+- team_video = "https://www.youtube.com/watch?v=ZyUxVyfclWk"
+
+- team_location_icon = "/images/map/hsinchucity.svg"
+- team_location_text = "新竹市北區舊城區"
+- team_address = "新竹市北區舊城區"
+- team_category = "藝術文化"
+- team_since = "2014"
+- team_website = ""
+- team_facebook_page = "https://www.facebook.com/kendama.hc"
+
+- team_preface = "「見域」，是「看見地方」的意思，更是一種古老的童玩「劍玉」的同音詞。透過一系列的行動計畫，打開一扇看新竹的窗，向城市學習、向社區學習，讓大家看見過去所從未見到的、開始深度地認識所身處的城市——新竹。"
+
+- team_member_amount = "14人，一個工作室，一本期刊"
+- team_members = [\
+  [ \
+    "/images/team/#{team_file_name}/figure_001.jpg",\
+    "莊重遠",\
+    "991年生，永和人，清大人社畢業，台大城鄉所碩一。<br>常常無可救藥的樂觀與悲觀，喜歡鹹豆漿、舞台劇、漫畫還有各種幼稚的事。大學五年在新竹打滾，到很後來才真的看見新竹，才喜歡上新竹的風，也不小心把最好的時光留在這裡了。",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_002.jpg",\
+    "謝爾庭",\
+    "新竹人，清大社會所碩二，負責網站策畫與刊物編輯。<br>一個活在話語當中的人，喜歡思考，偶爾書寫，與自己和世界對話。總害怕自己對一切漠然，長大後卻發現對故鄉所知甚少。希望這座二十年如一日的城市，能重新說起話來：讓人走看，停留，乃至安身立命。",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_003.jpg",\
+    "吳君薇",\
+    "1991年生，高雄人。<br>寫過一點字，認得一些音樂，看過幾部電影，策過幾個展。喜歡洋洋說過的：「我不知道的事情太多了，所以，你知道我以後想做什麼嗎？我要去告訴別人他們不知道的事，給別人看他們看不到的東西。我想，這樣一定天天都很好玩。」",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_004.jpg",\
+    "黃喆亮",\
+    "台中烏日人，清大物理系五年級。<br>最喜歡在城市裡晃來晃去，是那種一講起老屋與舊城會眼神閃閃發光的老屋控。在新竹生活了快五年，著迷於新竹舊城的魅力，希望能夠替這些老事物盡點心力、對當前的都市發展方向稍稍推移，也在這舊城留下點自己活過的足跡。",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_005.jpg",\
+    "林宗德",\
+    "1991年生，台北人，清大電機系畢，服役中。<br>大學以前對新竹的印象只有火車站跟內灣，因為習慣在運輸工具上昏睡，導致對兩點間的連線一無所知。平日忙著無所事事，因為覺得自己沒有非回不可的家鄉，所以只想為了和喜愛的人們一起吃飯生活努力。",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_006.jpg",\
+    "王昱登",\
+    "台中海線人，目前就讀清大人文社會學士班。<br>一開始可能因為天氣的關係很難喜歡上新竹，但在和這個城市相處之中，被意外地、默默地吸引住了。如果說待在一個地方或喜歡一個城市需要一個理由來說服自己，對於新竹，就是這些應該被記錄下來的故事吧！",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_007.jpg",\
+    "陳虹羽",\
+    "1992年生，新北市人，住在新竹第五年，目前就讀清大人類所。<br>喜歡一個人旅行，在路途中聽音樂，看著遼闊的場景放空。以前總覺得新竹是個無聊的城市，但後來發現只是不夠瞭解它。想做的事總是突如其來的出現。",\
+  ],\
+ ]
+- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_file_name}/006.png"
+- team_photo_07 = "/images/team/#{team_file_name}/007.png"
+
+.team
+  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{@team_slogan}
+      h2.team-name #{@team_name}
+      a.team-video-play href="#{team_video}" 播放影片
+    .team-info
+      img.location-icon src="#{team_location_icon}"
+      span.location-text #{team_location_text}
+      span.industry #{team_category}
+      span.since= "成立於 #{team_since} 年"
+  .team-content
+    .container
+      p.team-preface #{team_preface}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_members.each do |team_member|
+          .member
+            .member-avatar
+              img src="#{team_member[0]}"
+            .member-name = "#{team_member[1]}"
+            .member-intro = "#{team_member[2]}"
+    .container
+      .team-intro
+        p 對許多人而言，新竹並不像一個「生活」的城市，而只像是暫時居所，人們生活在此，卻往往像是過客。這座城市，似乎正在遺忘過去豐富輝煌的文史，唯有改變現況，才有可能真正、真正地實現「幸福城市」的夢想。《貢丸湯》是我們的第一波小小嚐試，透過獨立製作、出版一本專屬於新竹的刊物，深入地了解城市歷史、關心城市現況、共同討論城市未來發展。
+        p 除了刊物之外，見域Kendama團隊希望打造一個包含「故事×數據×參與」的網站平台。在這裡，你可以從每項吃喝玩樂的介紹文中，了解一段又一段屬於新竹的故事與文化。此外，有簡單的數據與視覺化圖表，讓你一邊查景點，一邊了解在地正夯的議題，真正成為「新竹通」。最後，互動社群功能讓你也能參與到這項平台之中：告訴我們你還想知道什麼、告訴大家你發現了什麼。
+        p 我們希望成為認識新竹的入口，讓故事帶領旅人或市民，發現更多值得傳頌的故事。文化源自日常生活，網絡則始於每日的眼神交會。是這樣的念頭，讓我們執意在新竹舊城區經營一處閱讀與休憩空間，讓自己深植於舊城、從生活中看見舊城的種種立體面貌。我們期待它成為新竹人交流的公共空間，分享彼此眼中的舊城、一同思考，城市將往何處前進。同時，這也將是城市的節點，串連在地的老店與職人，與來訪新竹的旅人分享舊城的美好；我們也企圖將空間共享給對新竹未來有相同理念的團體與個人，一同努力與激盪多元的想法。
+        p 和我們一起讓這座城市重新活起來吧！讓我們一起，把人找回來、把故事傳出去，串連每一處亮點，以行動力找回新竹百年古城的榮耀，讓更多人感受到這座城市的價值。
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{@team_name}
+          .team-location #{team_location_text}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_category}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_since}
+            li
+              span.label 團隊規模
+              span.info-content #{team_member_amount}
+            li
+              span.label 團隊地址
+              span.info-content #{team_address}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_website}" #{team_website}
+            li
+              span.label Facebook
+              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+
+= render "/team/team-page-bottom"
