@@ -1,0 +1,115 @@
+- @team_order = 13
+- team_file_name = "far-east-war-1592"
+
+- @team_cover = "/images/team/#{team_file_name}/"
+- @team_slogan = "帶給玩家「不只是桌遊」的體驗，將台產桌遊推廣至全世界"
+- @team_name = "壬辰之戰"
+- team_video = false
+
+- team_location_icon = "/images/map/taipei.svg"
+- team_location_text = "台北市"
+- team_address = "台北市"
+- team_category = "藝術文化"
+- team_since = "2010"
+- team_website = "http://blog.ilc.edu.tw/blog/blog/25783"
+- team_facebook_page = "https://www.facebook.com/cixin.waldorf"
+
+- team_preface = "《壬辰之戰》是一款由台灣團隊設計的歷史戰棋桌遊，企劃費時五年，以史詩般的古代東亞戰爭作為遊戲主軸，呈現開闊的格局。並以深度策略的遊戲機制來面向國際，希望將台產桌遊推廣至全世界。"
+
+- team_member_amount = "7人"
+- team_members = [\
+  [ \
+    "/images/team/#{team_file_name}/figure_001.jpg",\
+    "外星汪",\
+    "設計師。台北人。台大化工系畢業後，跟多數同學一樣成為竹科新貴，但相較於長時間的面對螢幕，他更嚮往人與人面對面最直接的互動。在這樣的渴望下，他開始在數百款的德國桌上遊戲中學習、穿梭，並決定參與《壬辰之戰》的製作。",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_002.jpg",\
+    "KJ",\
+    "製作人。台北人。在金融業多年，但跟基金漲跌相比，更喜歡悠遊於歷史的浪漫中，深信鑽探歷史可以得到反思。五年來一直希望製作一款東方版的大型戰棋桌上遊戲，來證明台灣也可以跳脫小品桌遊的框架。這個希望，今年即將實現。",\
+  ],\
+  [ \
+    "/images/team/#{team_file_name}/figure_003.jpg",\
+    "小伍",\
+    "顧問。新北人。任職於公股銀行的小伍，在穩定的生活之中，他的創作爆發力無處釋放。他希望透過桌遊表達自己的理念、精神，其發表的政治桌遊「美麗島風雲」為台灣本土桌遊中最暢銷的作品，同時他也是2014年柯P「溫蒂妮桌遊」的製作者。",\
+  ],\
+ ]
+- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
+
+.team
+  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{@team_slogan}
+      h2.team-name #{@team_name}
+      a.team-video-play href="#{team_video}" 播放影片
+    .team-info
+      img.location-icon src="#{team_location_icon}"
+      span.location-text #{team_location_text}
+      span.industry #{team_category}
+      span.since= "成立於 #{team_since} 年"
+  .team-content
+    .container
+      p.team-preface #{team_preface}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_members.each do |team_member|
+          .member
+            .member-avatar
+              img src="#{team_member[0]}"
+            .member-name = "#{team_member[1]}"
+            .member-intro = "#{team_member[2]}"
+    .container
+      .team-intro
+        p 打開宜蘭慈心小學教室裡的黑板，像是一幅又一幅刻印上去的美麗圖畫。這不是裝飾，而是每日課堂上的教材。這所強調自然學習的學校，學生沒有課本，他們從課堂上的互動吸收學習。每一位學生有一本工作本，記錄自己的學習軌跡，老師也透過工作本來掌握學生的狀況。
+        p 慈心華德福創辦人張純淑說：「自己的孩子要上幼兒園時，她才發現太多的幼兒園在做小學的再版教育，孩子不會快樂。她就想，能不能有一個有天、有地的環境，能讓孩子自然成長。」19歲就開始教書的她，有著一顆非常溫柔又極其堅強的心。因為不忍見到教育讓孩子的成長之路變成蒼白的，她發願給孩子創建一個快樂學習的環境。
+        p 30年前，純淑和一群老師們合力創辦了慈心幼兒園，這樣的教育獲得越來越多家長認同，一步一步，2002年陸續開辦慈心小學，成立全台唯一所公辦民營的華德福中學，2011年也獲得宜蘭縣政府實驗教育審議審查通過，與南澳高中合辦高中實驗班。讓學生和家長在國高中升學考試最緊迫的階段，也可以有另一種選擇。
+        p 對慈心的老師們而言，學校是啟迪生命的場所。他們研習華德福教育理論，老師們每週開會，研發出適合台灣孩子的教案。這所學校裡，孩子學習，老師們也持續學習，家長也是重要的參與者。從一般學校轉入慈心，比較不能適應的反而是家長，家長總是會問:「我的孩子在班上排名第幾？」但慈心的孩子不穿制服，也不用考試來決定成績，每位學生在學期拿到的成績單沒有分數，而是一整本集合各科老師的質性評語。「家長、學生、老師一起參與教學」，這是慈心的教學理念，教育到底要教的是什麼？不是硬梆梆的資訊填鴨，而是面對生命的態度。慈心的家長與老師也隨著孩子們的成長繼續學習如何更自在地生活著。
+        p 所有人都會同意教育是百年大計，整個社會都認為台灣的教育制度需要改革，然而究竟要改成什麼樣子至今仍是爭議。慈心華德福是一種嘗試，當我們為教改制度爭辯不休時，不妨回到原點想想:教育的本質是什麼？我們究竟想教給孩子什麼？
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{@team_name}
+          .team-location #{team_location_text}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_category}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_since}
+            li
+              span.label 團隊規模
+              span.info-content #{team_member_amount}
+            li
+              span.label 團隊地址
+              span.info-content #{team_address}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_website}" #{team_website}
+            li
+              span.label Facebook
+              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
