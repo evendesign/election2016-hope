@@ -236,20 +236,22 @@
       padding: 12px 0 0;
       border-top: 1px solid $color-gray-light;
     }
-    li { @include trailer(.5); }
+    li {
+      @include trailer(.5);
+      @include nowrap;
+    }
+
     .label {
       display: block;
       width: 100px;
       @include adjust-font-size-to(13px);
       font-weight: bold;
       color: $color-black-light;
+
     }
     .info-content {
       display: block;
       @include adjust-font-size-to(15px);
-      a {
-        @include nowrap;
-      }
       &:empty {
         pointer-events: none;
         &:before {
