@@ -1,0 +1,123 @@
+- @team_order = 14
+- team_file_name = "tailamsiok"
+
+- @team_cover = "/images/team/#{team_file_name}/"
+- @team_slogan = "不只是孩子的，也是屬於大人的教育空間"
+- @team_name = "胖地數位空間"
+- team_video = false
+
+- team_location_icon = "/images/map/tainan.svg"
+- team_location_text = "台南市"
+- team_address = "台南市"
+- team_category = "社會創新"
+- team_since = "2014"
+- team_website = "http://tailamsiok.blogspot.tw/"
+- team_facebook_page = "https://www.facebook.com/groups/1552806631616686/"
+
+- team_preface = "教育不是只能在權威與開放之間二選一，在台南塾，我們盼望著一條路，一條「教育者－父母－小孩」三方合作的路。教育就是合作、是攜手並進，共度一段人生旅途。"
+
+- team_member_amount = "2個教育者，一群爸爸媽媽，一群小孩"
+- team_members = [\
+    [\
+      "/images/team/#{team_file_name}/figure_001.jpg",\
+      "士哲",\
+      "台南市安南區溪頂寮人。兒時頑劣不堪，是老師眼中的頭痛人物。大學在新竹投入體制外教育，總遙想台南，這個升學主義氾濫的故鄉。回到台南後，繼續教育實踐，希望台南的孩子能被好好對待，在開放的視野和文化中學習、長大。",\
+    ],\
+    [\
+      "/images/team/#{team_file_name}/figure_002.jpg",\
+      "家蓁",\
+      "台南市鹽水人。保有彈性，成為自己，是無盡的追求。大學深耕原住民族部落，至今依然，藉由陪伴，步步看見，體會在地文化與認同，也思辨起教育的更多可能。帶著這份探尋，回到台南，希冀透過溫柔實踐，重建「人」的圖像。",\
+    ],\
+  ]
+- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_file_name}/006.jpg"
+- team_photo_07 = "/images/team/#{team_file_name}/007.jpg"
+
+
+.team
+  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{@team_slogan}
+      h2.team-name #{@team_name}
+      a.team-video-play href="#{team_video}" 播放影片
+    .team-info
+      img.location-icon src="#{team_location_icon}"
+      span.location-text #{team_location_text}
+      span.industry #{team_category}
+      span.since= "成立於 #{team_since} 年"
+  .team-content
+    .container
+      p.team-preface #{team_preface}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_members.each do |team_member|
+          .member
+            .member-avatar
+              img src="#{team_member[0]}"
+            .member-name = "#{team_member[1]}"
+            .member-intro = "#{team_member[2]}"
+    .container
+      .team-intro
+        p 教育不是只能在權威與開放之間二選一，在台南塾，我們盼望著一條路，一條「教育者－父母－小孩」三方合作的路。教育就是合作，是攜手並進，共度一段人生旅途。
+        p 合作，得先要對等。在台南塾，教育被當成是這樣的事情。在教室裡面，教育者沒有額外的權威，他不能命令小孩要做什麼，不要做什麼，當然也不能處罰小孩、責罵小孩。在台南塾，糾紛出現的時候，我們試著用講理的討論，細緻的照顧情緒，陪伴孩子度過難關。教育者和家長分享彼此的教育理念，分享教育的喜悅和困難，一同討論解決的辦法。在台南塾，我們希望拿掉「老師」、「學生」、「家長」的包袱，回到一個人的身份，去思考、去體驗、去實踐，去快樂傷悲。
+        p 相信這些理念的人們，對這些實踐好奇的人們，和偶然踏進來的人們，來到了台南塾，教育就在相遇中發生。
+        p 平日，我們進行「通識課」。我們設計各種科學、藝術、思想、文化、工藝的課程，讓孩子們多方體驗，然後自主的決定研究目標，發展專題研究。未來，我們還想設計更多不同的主題課，寫作、法律、哲學、歷史、社會，與孩子一起做、學、想。
+        p 假日，我們舉辦「Liām台南」和「動腳動手」。Liām台南用故事和傳統的「唸歌」（liām-koa），帶孩子走進府城的大街小巷，與城外的田野海洋，瞭解台南的歷史文化，學做一個台南人。動腳動手則帶小孩徒步旅行，走到更遙遠的小徑，尋訪不同的生活，故事，傳奇。或者拜訪傳承手藝的老師傅，學習珍貴的文化結晶。在旅途中，孩子們不斷與人，與環境對話，張開眼睛，發揮對世界的好奇。
+        p 空閒時間，大人們自己跑進巷弄鄉野間，找尋自己文化的根柢。走進廟宇裡，訪問能人異士，閱讀史料和研究。或者，教育者和爸媽一起讀著書，討論教育議題，討論文學，哲學，討論各自的人生。台南塾不只是孩子的，也是屬於大人的教育空間。
+        p 寒假暑假，我們則上山下海，與孩子跑遍台灣各鄉鎮，由孩子自訂行程，自助旅行。和孩子們一起走到河邊，尋找河流的故事，研究河流的污染問題。和孩子們一起拍動畫，自己攝影導演。還有，還有更多更多。
+        p 各種各樣的事情，繼續在台南塾發生。希望台南的孩子能在穩穩的陪伴下，一同貼近自己、成為自己，感受足夠的溫柔，於是能好好地，擔起未來。
+        a href="https://plus.google.com/photos/100552221095360228581/albums/6137983473943897841/6137996407836302978?pid=6137996407836302978&oid=100552221095360228581"「Liām台南」課程影片
+        p 關於旅行，總能化為好多種形式來分享心情。有時候，我們會用一首自己編寫的「唸歌」（liām-koa），把旅行中所見，唸唱給孩子們聽。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{@team_name}
+          .team-location #{team_location_text}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_category}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_since}
+            li
+              span.label 團隊規模
+              span.info-content #{team_member_amount}
+            li
+              span.label 團隊地址
+              span.info-content #{team_address}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_website}" #{team_website}
+            li
+              span.label Facebook
+              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+
+
+= render "/team/team-page-bottom"
