@@ -247,6 +247,9 @@
     .info-content {
       display: block;
       @include adjust-font-size-to(15px);
+      a {
+        @include nowrap;
+      }
       &:empty {
         pointer-events: none;
         &:before {
