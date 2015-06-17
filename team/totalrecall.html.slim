@@ -1,19 +1,19 @@
 - @team_id = 7
 
-- team_file_name = team_data[@team_id]['file_name']
-- team_photo_01 = "/images/team/#{team_file_name}/002.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/004.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/005.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/006.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/010.png"
-- team_photo_06 = "/images/team/#{team_file_name}/009.jpg"
-- team_photo_07 = "/images/team/#{team_file_name}/008.jpg"
-- team_photo_08 = "/images/team/#{team_file_name}/011.jpg"
-- team_photo_09 = "/images/team/#{team_file_name}/015.jpg"
-- team_photo_10 = "/images/team/#{team_file_name}/019.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/005.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/006.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/010.png"
+- team_photo_06 = "/images/team/#{team_en_name}/009.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/008.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/011.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/015.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/019.jpg"
 
 .team
-  .team-cover style="background-image:url('/images/team/#{team_file_name}/bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
       h2.team-name #{team_data[@team_id]['name']}
@@ -33,7 +33,7 @@
         - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="/images/team/#{team_file_name}/figure_#{team_member['figure_file_name']}.jpg"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
             .member-name = "#{team_member['name']}"
             .member-intro = "#{team_member['intro']}"
     .container
@@ -45,7 +45,7 @@
         p 經過整整八個月的努力，今年 1 月 11 日終於完成一階段連署，並在 FlyingV 成功達募款 20 萬，志工們殷切地發起「全面罷免 2：極速罷免去」。將近 1 萬份的連署書，每一份都是一份認同和支持的力量。雖然最後沒有達成罷免，但是台灣的公民力量正在茁壯，他們決定繼續聚在一起，用自己的雙手，為他們心愛的台中這座城市注入能量。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}

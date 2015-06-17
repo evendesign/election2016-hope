@@ -1,19 +1,19 @@
 - @team_id = 8
 
-- team_file_name = team_data[@team_id]['file_name']
-- team_photo_01 = "/images/team/#{team_file_name}/010.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/014.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/030.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/031.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/033.jpg"
-- team_photo_06 = "/images/team/#{team_file_name}/044.jpg"
-- team_photo_07 = "/images/team/#{team_file_name}/059.jpg"
-- team_photo_08 = "/images/team/#{team_file_name}/060.jpg"
-- team_photo_09 = "/images/team/#{team_file_name}/061.jpg"
-- team_photo_10 = "/images/team/#{team_file_name}/065.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/010.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/014.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/030.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/031.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/033.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/044.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/059.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/060.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/061.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/065.jpg"
 
 .team
-  .team-cover style="background-image:url('/images/team/#{team_file_name}/bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
       h2.team-name #{team_data[@team_id]['name']}
@@ -33,7 +33,7 @@
         - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="/images/team/#{team_file_name}/figure_#{team_member['figure_file_name']}.jpg"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
             .member-name = "#{team_member['name']}"
             .member-intro = "#{team_member['intro']}"
     .container
@@ -46,7 +46,7 @@
         p 甘丹創新是一群勇於創造的年輕人，希望透過設計與創新來塑造屬於台灣未來的新時尚產業。結合台灣逐漸沒落的工藝師傳統技法與設計師的當代設計能量，思考、探索新世代的品味風格，開拓創新概念的『新傳統工藝』模式，進而打造出具有文化意涵及具有創意的創新產品，再透過 3D 列印與雷射切割所帶動的快速革新，加上與各地自造空間緊密結合，讓甘丹的設計本質與工藝能量，形成不同以往的 DIY 風潮，推動一波新型態的經濟產業。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}

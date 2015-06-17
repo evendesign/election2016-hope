@@ -1,17 +1,17 @@
 - @team_id = 10
 
-- team_file_name = team_data[@team_id]['file_name']
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
-- team_photo_06 = "/images/team/#{team_file_name}/006.jpg"
-- team_photo_07 = "/images/team/#{team_file_name}/007.jpg"
-- team_photo_08 = "/images/team/#{team_file_name}/009.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/006.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/007.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/009.jpg"
 
 .team
-  .team-cover style="background-image:url('/images/team/#{team_file_name}/bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
       h2.team-name #{team_data[@team_id]['name']}
@@ -31,7 +31,7 @@
         - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="/images/team/#{team_file_name}/figure_#{team_member['figure_file_name']}.jpg"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
             .member-name = "#{team_member['name']}"
             .member-intro = "#{team_member['intro']}"
     .container
@@ -43,7 +43,7 @@
         p 喜愛台南，不僅僅可以優閒地生活在這裡，你也可以在這裡發揮創造力，從事創新經濟。古都裡，一群年輕人將科技結合在地特色，一場即將改變整個產業模式的實驗正悄悄展開......
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}

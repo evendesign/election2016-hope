@@ -1,14 +1,14 @@
 - @team_id = 12
 
-- team_file_name = team_data[@team_id]['file_name']
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/005.jpg"
 
 .team
-  .team-cover style="background-image:url('/images/team/#{team_file_name}/bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
       h2.team-name #{team_data[@team_id]['name']}
@@ -28,7 +28,7 @@
         - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="/images/team/#{team_file_name}/figure_#{team_member['figure_file_name']}.jpg"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
             .member-name = "#{team_member['name']}"
             .member-intro = "#{team_member['intro']}"
     .container
@@ -43,7 +43,7 @@
         p 《壬辰之戰》團隊希望推出超越世界水準的桌上遊戲，也希望給桌遊玩家具有國際視野的遊戲體驗。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}

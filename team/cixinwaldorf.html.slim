@@ -1,19 +1,19 @@
 - @team_id = 6
 
-- team_file_name = team_data[@team_id]['file_name']
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/006.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/012.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/019.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/020.jpg"
-- team_photo_06 = "/images/team/#{team_file_name}/023.jpg"
-- team_photo_07 = "/images/team/#{team_file_name}/029.jpg"
-- team_photo_08 = "/images/team/#{team_file_name}/031.jpg"
-- team_photo_09 = "/images/team/#{team_file_name}/034.jpg"
-- team_photo_10 = "/images/team/#{team_file_name}/039.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/006.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/012.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/019.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/020.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/023.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/029.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/031.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/034.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/039.jpg"
 
 .team
-  .team-cover style="background-image:url('/images/team/#{team_file_name}/bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
       h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
       h2.team-name #{team_data[@team_id]['name']}
@@ -33,7 +33,7 @@
         - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="/images/team/#{team_file_name}/figure_#{team_member['figure_file_name']}.jpg"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
             .member-name = "#{team_member['name']}"
             .member-intro = "#{team_member['intro']}"
     .container
@@ -45,7 +45,7 @@
         p 所有人都會同意教育是百年大計，整個社會都認為台灣的教育制度需要改革，然而究竟要改成什麼樣子至今仍是爭議。慈心華德福是一種嘗試，當我們為教改制度爭辯不休時，不妨回到原點想想:教育的本質是什麼？我們究竟想教給孩子什麼？
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}

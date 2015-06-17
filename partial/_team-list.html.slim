@@ -1,8 +1,8 @@
 ul.team-list
   - team_data.each do |team|
     li.team-list-item
-      a.card href="/team/#{team['file_name']}.html"
-        .card-header style="background-image: url('/images/team/#{team['file_name']}/bg_s.jpg');"
+      a.card href="/team/#{team['en_name']}.html"
+        .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
           .card-city
             .card-city-icon
               img src="/images/map/#{team['map']}.svg"
