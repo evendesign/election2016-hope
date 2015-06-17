@@ -60,7 +60,7 @@
     .team-title
       h2.team-slogan.auto-break-text #{@team_slogan}
       h2.team-name #{@team_name}
-      - if team_video == true
+      - if team_video != false
         a.team-video-play href="#{team_video}" 播放影片
     .team-info
       img.location-icon src="#{team_location_icon}"
