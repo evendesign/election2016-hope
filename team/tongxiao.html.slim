@@ -1,73 +1,34 @@
-- @team_id = 2
-- team_file_name = "tongxiao"
+- @team_id = 1
 
-- @team_cover = "/images/team/#{team_file_name}/"
-- @team_slogan = "四個年輕人，讓小鎮也有超過 600 人規模的二手市集"
-- @team_name = "通霄二手市集"
-- team_video = "https://www.youtube.com/watch?v=ixQE9RPnM-I"
-
-- team_location_icon = "/images/map/miaoli.svg"
-- team_location_text = "苗栗縣通霄鎮"
-- team_address = "苗栗縣通霄鎮"
-- team_category = "社會創新"
-- team_since = "2014"
-- team_website = ""
-- team_facebook_page = "https://www.facebook.com/MigrationFeedback"
-
-- team_preface = "通霄開始舉辦第一場實驗性市集時，吸引了很多「嫁」出去的媽媽回來。她們說，終於有除了過年以外的機會可以回娘家了，跟家人吃上一頓飯是多麼的幸福。"
-
-- team_member_amount = "4 人"
-- team_members = [\
-  [ \
-    "/images/team/#{team_file_name}/figure_002.jpg",\
-    "湘伶",\
-    "苗栗通霄人，因為從小跟阿公阿嬤生活在一起而愛上了農村，開始記錄起鄉間的影像，在變動劇烈的現代生活中，試圖留下每一刻的記憶。",\
-  ],\
-  [ \
-    "/images/team/#{team_file_name}/figure_001.jpg",\
-    "vic",\
-    "苗栗頭份人。因為參加「我在旅行」的活動而愛上台灣這片土地，喜歡冒險尋找新奇的事物，發現自己也可以藉由自己的專長與經驗貢獻苗栗一些東西。",\
-  ],\
-  [ \
-    "/images/team/#{team_file_name}/figure_003.jpg",\
-    "智峰",\
-    "苗栗通霄人，從小在通霄這座老鎮長大，發現老鎮年輕人口流失嚴重，於是在彼此號召下，希望利用課餘時間做一些事情讓家鄉不一樣。",\
-  ],\
-  [ \
-    "/images/team/#{team_file_name}/figure_004.jpg",\
-    "新哲",\
-    "苗栗通霄人，剛成為新鮮人而離開家鄉讀書，卻有一顆向著家的心，如果可以讓老鎮有什麼改變，他願意不斷的嘗試！",\
-  ],\
-]
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
-
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
 
 .team
-  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
-      h2.team-slogan.auto-break-text #{@team_slogan}
-      h2.team-name #{@team_name}
-      - if team_video != false
-        a.team-video-play href="#{team_video}" 播放影片
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
     .team-info
-      img.location-icon src="#{team_location_icon}"
-      span.location-text #{team_location_text}
-      span.industry #{team_category}
-      span.since= "成立於 #{team_since} 年"
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
   .team-content
     .container
-      p.team-preface #{team_preface}
+      p.team-preface #{team_data[@team_id]['preface']}
     .team-member
       h3 團隊介紹
       .member-list
-        - team_members.each do |team_member|
+        - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="#{team_member[0]}"
-            .member-name = "#{team_member[1]}"
-            .member-intro = "#{team_member[2]}"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
     .container
       .team-intro
         p 長期以來，通霄一直是個老年人口居多的小鎮，年輕人多半因為求學而離鄉到外地讀書，畢業後也順勢在外地就業，尋找自己安身立命之處。不只通霄面臨這樣的問題，因為工作機會的短缺而促使鄉間青年外流已經成為台灣的常態。
@@ -87,29 +48,29 @@
         p 為喜歡藝術、熱愛台灣的朋友們，打造不平凡的夢想與展現原創力的小舞台，展現屬於自己的獨特創意，讓我們展現光芒的同時，也一起為這塊土地努力！
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
-          .team-name #{@team_name}
-          .team-location #{team_location_text}
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_category}
+              span.info-content #{team_data[@team_id]['category']}
             li
               span.label 團隊成立年
-              span.info-content #{team_since}
+              span.info-content #{team_data[@team_id]['since']}
             li
               span.label 團隊規模
-              span.info-content #{team_member_amount}
+              span.info-content #{team_data[@team_id]['member_amount']}
             li
               span.label 團隊地址
-              span.info-content #{team_address}
+              span.info-content #{team_data[@team_id]['address']}
             li
               span.label 團隊網站
-              a.info-content href="#{team_website}" #{team_website}
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
             li
               span.label Facebook
-              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
 
 .gallery
   .container

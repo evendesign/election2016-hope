@@ -1,69 +1,36 @@
-- @team_id = 13
-- team_file_name = "far-east-war-1592"
+- @team_id = 12
 
-- @team_cover = "/images/team/#{team_file_name}/"
-- @team_slogan = "帶給玩家「不只是桌遊」的體驗，將台產桌遊推廣至全世界"
-- @team_name = "壬辰之戰"
-- team_video = false
-
-- team_location_icon = "/images/map/taipei.svg"
-- team_location_text = "台北市"
-- team_address = "台北市"
-- team_category = "藝術文化"
-- team_since = "2010"
-- team_website = ""
-- team_facebook_page = "https://www.facebook.com/few1592"
-
-- team_preface = "《壬辰之戰》是一款由台灣團隊設計的歷史戰棋桌遊，企劃費時五年，以史詩般的古代東亞戰爭作為遊戲主軸，呈現開闊的格局。並以深度策略的遊戲機制來面向國際，希望將台產桌遊推廣至全世界。"
-
-- team_member_amount = "7人"
-- team_members = [\
-  [ \
-    "/images/team/#{team_file_name}/figure_001.jpg",\
-    "外星汪",\
-    "設計師。台北人。台大化工系畢業後，跟多數同學一樣成為竹科新貴，但相較於長時間的面對螢幕，他更嚮往人與人面對面最直接的互動。在這樣的渴望下，他開始在數百款的德國桌上遊戲中學習、穿梭，並決定參與《壬辰之戰》的製作。",\
-  ],\
-  [ \
-    "/images/team/#{team_file_name}/figure_002.jpg",\
-    "KJ",\
-    "製作人。台北人。在金融業多年，但跟基金漲跌相比，更喜歡悠遊於歷史的浪漫中，深信鑽探歷史可以得到反思。五年來一直希望製作一款東方版的大型戰棋桌上遊戲，來證明台灣也可以跳脫小品桌遊的框架。這個希望，今年即將實現。",\
-  ],\
-  [ \
-    "/images/team/#{team_file_name}/figure_003.jpg",\
-    "小伍",\
-    "顧問。新北人。任職於公股銀行的小伍，在穩定的生活之中，他的創作爆發力無處釋放。他希望透過桌遊表達自己的理念、精神，其發表的政治桌遊「美麗島風雲」為台灣本土桌遊中最暢銷的作品，同時他也是2014年柯P「溫蒂妮桌遊」的製作者。",\
-  ],\
- ]
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/005.jpg"
 
 .team
-  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
-      h2.team-slogan.auto-break-text #{@team_slogan}
-      h2.team-name #{@team_name}
-      - if team_video != false
-        a.team-video-play href="#{team_video}" 播放影片
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
     .team-info
-      img.location-icon src="#{team_location_icon}"
-      span.location-text #{team_location_text}
-      span.industry #{team_category}
-      span.since= "成立於 #{team_since} 年"
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
   .team-content
     .container
-      p.team-preface #{team_preface}
+      p.team-preface #{team_data[@team_id]['preface']}
     .team-member
       h3 團隊介紹
       .member-list
-        - team_members.each do |team_member|
+        - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="#{team_member[0]}"
-            .member-name = "#{team_member[1]}"
-            .member-intro = "#{team_member[2]}"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
     .container
       .team-intro
         p 《壬辰之戰》是一款由台灣團隊設計的歷史戰棋桌遊。
@@ -76,29 +43,29 @@
         p 《壬辰之戰》團隊希望推出超越世界水準的桌上遊戲，也希望給桌遊玩家具有國際視野的遊戲體驗。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
-          .team-name #{@team_name}
-          .team-location #{team_location_text}
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_category}
+              span.info-content #{team_data[@team_id]['category']}
             li
               span.label 團隊成立年
-              span.info-content #{team_since}
+              span.info-content #{team_data[@team_id]['since']}
             li
               span.label 團隊規模
-              span.info-content #{team_member_amount}
+              span.info-content #{team_data[@team_id]['member_amount']}
             li
               span.label 團隊地址
-              span.info-content #{team_address}
+              span.info-content #{team_data[@team_id]['address']}
             li
               span.label 團隊網站
-              a.info-content href="#{team_website}" #{team_website}
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
             li
               span.label Facebook
-              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
 
 .gallery
   .container

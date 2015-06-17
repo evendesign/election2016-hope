@@ -1,69 +1,41 @@
-- @team_id = 7
-- team_file_name = "cixinwaldorf"
+- @team_id = 6
 
-- @team_cover = "/images/team/#{team_file_name}/"
-- @team_slogan = "不忍孩子的成長路蒼白，一群老師自己辦出一所學校"
-- @team_name = "宜蘭華德福"
-- team_video = "https://www.youtube.com/watch?v=iQllRlftcBw"
-
-- team_location_icon = "/images/map/yilan.svg"
-- team_location_text = "宜蘭縣冬山鄉"
-- team_address = "宜蘭縣冬山鄉"
-- team_category = "社會創新"
-- team_since = "1976"
-- team_website = "http://blog.ilc.edu.tw/blog/blog/25783"
-- team_facebook_page = "https://www.facebook.com/cixin.waldorf"
-
-- team_preface = "宜蘭慈心小學教室裡的黑板，像是一幅又一幅刻印上去的美麗圖畫。這不是裝飾，而是每日課堂上的教材。這所強調自然學習的學校，學生沒有課本，他們從課堂上的互動吸收學習。每一位學生有一本工作本，記錄自己的學習軌跡，老師也透過工作本來掌握學生的狀況，在這所學校裡，有天、有地，孩子自然成長。"
-
-- team_member_amount = "幼兒園、小學、國中、高中實驗班"
-- team_members = [\
-  [ \
-    "/images/team/#{team_file_name}/figure_ZhangChunshu.jpg",\
-    "張純淑",\
-    "慈心華德福中小學創辦人。從小在宜蘭鄉下成長，從小就和土地有緊密的接觸，而在當了老師之後，察覺現行的教育制度讓孩子失去和土地接觸的能力；張純淑相信孩子的知識不是用教的，而是要讓他們自己真正去體驗。她創辦慈心幼兒園三十餘年，多年來致力於台灣教育運動、環境保育與健康社群的營造。",\
-  ],\
-  [ \
-    "/images/team/#{team_file_name}/figure_WangZhihong.jpg",\
-    "王智弘",\
-    "慈心華德福學校校長。大學唸的是電機系，因為對教育有興趣，研究所轉讀教育科系，一路唸到教育博士。碩士期間來到宜蘭，被老師和家長的熱情感動，加入慈心。他認為教育的熱情不只是喜歡孩子，而是對生命有熱情，慈心老師們是一個學習型組織，老師之間相互滋養。",\
-  ],\
- ]
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/006.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/012.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/019.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/020.jpg"
-- team_photo_06 = "/images/team/#{team_file_name}/023.jpg"
-- team_photo_07 = "/images/team/#{team_file_name}/029.jpg"
-- team_photo_08 = "/images/team/#{team_file_name}/031.jpg"
-- team_photo_09 = "/images/team/#{team_file_name}/034.jpg"
-- team_photo_10 = "/images/team/#{team_file_name}/039.jpg"
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/006.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/012.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/019.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/020.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/023.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/029.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/031.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/034.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/039.jpg"
 
 .team
-  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
-      h2.team-slogan.auto-break-text #{@team_slogan}
-      h2.team-name #{@team_name}
-      - if team_video != false
-        a.team-video-play href="#{team_video}" 播放影片
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
     .team-info
-      img.location-icon src="#{team_location_icon}"
-      span.location-text #{team_location_text}
-      span.industry #{team_category}
-      span.since= "成立於 #{team_since} 年"
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
   .team-content
     .container
-      p.team-preface #{team_preface}
+      p.team-preface #{team_data[@team_id]['preface']}
     .team-member
       h3 團隊介紹
       .member-list
-        - team_members.each do |team_member|
+        - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="#{team_member[0]}"
-            .member-name = "#{team_member[1]}"
-            .member-intro = "#{team_member[2]}"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
     .container
       .team-intro
         p 打開宜蘭慈心小學教室裡的黑板，像是一幅又一幅刻印上去的美麗圖畫。這不是裝飾，而是每日課堂上的教材。這所強調自然學習的學校，學生沒有課本，他們從課堂上的互動吸收學習。每一位學生有一本工作本，記錄自己的學習軌跡，老師也透過工作本來掌握學生的狀況。
@@ -73,29 +45,29 @@
         p 所有人都會同意教育是百年大計，整個社會都認為台灣的教育制度需要改革，然而究竟要改成什麼樣子至今仍是爭議。慈心華德福是一種嘗試，當我們為教改制度爭辯不休時，不妨回到原點想想:教育的本質是什麼？我們究竟想教給孩子什麼？
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
-          .team-name #{@team_name}
-          .team-location #{team_location_text}
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_category}
+              span.info-content #{team_data[@team_id]['category']}
             li
               span.label 團隊成立年
-              span.info-content #{team_since}
+              span.info-content #{team_data[@team_id]['since']}
             li
               span.label 團隊規模
-              span.info-content #{team_member_amount}
+              span.info-content #{team_data[@team_id]['member_amount']}
             li
               span.label 團隊地址
-              span.info-content #{team_address}
+              span.info-content #{team_data[@team_id]['address']}
             li
               span.label 團隊網站
-              a.info-content href="#{team_website}" #{team_website}
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
             li
               span.label Facebook
-              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
 
 .gallery
   .container

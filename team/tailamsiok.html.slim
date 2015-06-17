@@ -1,67 +1,38 @@
-- @team_id = 14
-- team_file_name = "tailamsiok"
+- @team_id = 13
 
-- @team_cover = "/images/team/#{team_file_name}/"
-- @team_slogan = "不只是孩子的，也是屬於大人的教育空間"
-- @team_name = "台南塾"
-- team_video = false
-
-- team_location_icon = "/images/map/tainan.svg"
-- team_location_text = "台南市"
-- team_address = "台南市"
-- team_category = "社會創新"
-- team_since = "2014"
-- team_website = "http://tailamsiok.blogspot.tw/"
-- team_facebook_page = "https://www.facebook.com/groups/1552806631616686/"
-
-- team_preface = "教育不是只能在權威與開放之間二選一，在台南塾，我們盼望著一條路，一條「教育者－父母－小孩」三方合作的路。教育就是合作、是攜手並進，共度一段人生旅途。"
-
-- team_member_amount = "2 個教育者，一群爸爸媽媽，一群小孩"
-- team_members = [\
-    [\
-      "/images/team/#{team_file_name}/figure_001.jpg",\
-      "士哲",\
-      "台南市安南區溪頂寮人。兒時頑劣不堪，是老師眼中的頭痛人物。大學在新竹投入體制外教育，總遙想台南，這個升學主義氾濫的故鄉。回到台南後，繼續教育實踐，希望台南的孩子能被好好對待，在開放的視野和文化中學習、長大。",\
-    ],\
-    [\
-      "/images/team/#{team_file_name}/figure_002.jpg",\
-      "家蓁",\
-      "台南市鹽水人。保有彈性，成為自己，是無盡的追求。大學深耕原住民族部落，至今依然，藉由陪伴，步步看見，體會在地文化與認同，也思辨起教育的更多可能。帶著這份探尋，回到台南，希冀透過溫柔實踐，重建「人」的圖像。",\
-    ],\
-  ]
-- team_photo_01 = "/images/team/#{team_file_name}/001.jpg"
-- team_photo_02 = "/images/team/#{team_file_name}/002.jpg"
-- team_photo_03 = "/images/team/#{team_file_name}/003.jpg"
-- team_photo_04 = "/images/team/#{team_file_name}/004.jpg"
-- team_photo_05 = "/images/team/#{team_file_name}/005.jpg"
-- team_photo_06 = "/images/team/#{team_file_name}/006.jpg"
-- team_photo_07 = "/images/team/#{team_file_name}/007.jpg"
-
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/006.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/007.jpg"
 
 .team
-  .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
     .team-title
-      h2.team-slogan.auto-break-text #{@team_slogan}
-      h2.team-name #{@team_name}
-      - if team_video != false
-        a.team-video-play href="#{team_video}" 播放影片
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
     .team-info
-      img.location-icon src="#{team_location_icon}"
-      span.location-text #{team_location_text}
-      span.industry #{team_category}
-      span.since= "成立於 #{team_since} 年"
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
   .team-content
     .container
-      p.team-preface #{team_preface}
+      p.team-preface #{team_data[@team_id]['preface']}
     .team-member
       h3 團隊介紹
       .member-list
-        - team_members.each do |team_member|
+        - team_data[@team_id]['member'].each do |team_member|
           .member
             .member-avatar
-              img src="#{team_member[0]}"
-            .member-name = "#{team_member[1]}"
-            .member-intro = "#{team_member[2]}"
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
     .container
       .team-intro
         p 教育不是只能在權威與開放之間二選一，在台南塾，我們盼望著一條路，一條「教育者－父母－小孩」三方合作的路。教育就是合作，是攜手並進，共度一段人生旅途。
@@ -75,29 +46,29 @@
         a href="https://plus.google.com/photos/100552221095360228581/albums/6137983473943897841/6137996407836302978?pid=6137996407836302978&amp;oid=100552221095360228581"「Liām台南」課程影片
         p 關於旅行，總能化為好多種形式來分享心情。有時候，我們會用一首自己編寫的「唸歌」（liām-koa），把旅行中所見，唸唱給孩子們聽。
       .team-info-card
-        img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
         .team-info-inner
-          .team-name #{@team_name}
-          .team-location #{team_location_text}
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
           ul.team-info-list
             li
               span.label 團隊類型
-              span.info-content #{team_category}
+              span.info-content #{team_data[@team_id]['category']}
             li
               span.label 團隊成立年
-              span.info-content #{team_since}
+              span.info-content #{team_data[@team_id]['since']}
             li
               span.label 團隊規模
-              span.info-content #{team_member_amount}
+              span.info-content #{team_data[@team_id]['member_amount']}
             li
               span.label 團隊地址
-              span.info-content #{team_address}
+              span.info-content #{team_data[@team_id]['address']}
             li
               span.label 團隊網站
-              a.info-content href="#{team_website}" #{team_website}
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
             li
               span.label Facebook
-              a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
 
 .gallery
   .container
