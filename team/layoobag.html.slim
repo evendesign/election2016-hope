@@ -1,0 +1,101 @@
+- @team_id = 15
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/006.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 在台南孔廟小巷中，「layoo 來喲」設計團隊相信，認識台灣最好的方式，就是透過每個人每天都不離身的產品——包包。他們相信使用包包的方式，能傳達台灣人的生活美學。不論是包包的特殊外型，精緻的車縫與用料，多樣的收納功能，這些使用痕跡都傳達了台灣人生活的態度與文化美學。
+        p 於是他們研究文化建築，把孔廟變成包包，這個創意使他們獲獎無數。他們更研究台灣人使用包包的收納習慣，設計出可以變形，可以收納13個夾層的旅行包，讓來到台灣的遊客，驚豔於這些外型充滿台灣文化感，功能卻又如此符合現代人生活需求的包包。這些，都存在於一條不起眼的小巷內。
+        p 讓更多人感動的，是他們對工藝的堅持，在台南小巷裡掀起手作職人的革命，打破大陸大量生產的模式，轉而以限量製作，在地職人傳承香火的概念，一方面讓擁有精湛技藝的老師傅重回工作崗位，一方面培植年輕人向師傅學習技藝，並透過手作體驗傳達給每一位來台灣的遊客，這是一種嶄新的品牌價值，以在地職人為核心的堅持。
+        h4 老屋空間
+        p 只要走進孔廟老街旁的小巷，就像走進了迷宮，但你微笑觀察，在地的阿公阿嬤都會熱情地跟你打招呼。很多人來到「layoo 來喲」店門口，第一句話就是：「請問要脫鞋嗎？」進門後，第一句話就是：「好像回到阿嬤家！」
+        p 選擇這棟小房子當起點的原因，就是她帶來「阿嬤家的溫暖」。你一進門看到的是磨石子浴缸，抬頭看到的是天井，裸露的紅磚牆是留白，往地下看是釦子地磚。包包們安靜地住在檜木老衣櫃裡，不用豪華的裝潢，不用花俏的摩登，「layoo 來喲」相信感動自己的，也會感動別人。
+        h4 手工包袋作坊
+        p 「layoo 來喲」團隊將手工製包的技藝，不藏私地開班授課，在地的技藝要能廣泛流傳，唯有透過多元的學習與創造，因此他們決定透過彼此交流學習讓這些技藝繼續活在每一個到訪layoo的旅人手中。
+        h4 手作職人修業旅遊
+        p 什麼是職人修業旅行？「layoo 來喲」認為如果要真正了解職人製包技藝，而不是走馬看花的觀光旅遊，就應該要住在台南。因此，「layoo 來喲」提供你修業旅行的宿舍，讓你在製包之餘，還能看看台南人怎麼生活、這裡有哪些產業、這裡的歷史文化——因為台南的常民生活就是一本精采的旅行書。
+        h4 文創節慶
+        p 定期舉辦各種文創活動，以遊戲、手作分享、演講的形式，看見更多文化創新的可能，也激發自己的創作靈感。
+        h4 在地全球化通路
+        p 「layoo 來喲」深信，要傳播文化和生活態度不能只是在地喊口號，而是要透過實用的產品，連結起全球的通路，讓商業也能成為傳遞文化的方式。因此，「layoo 來喲」團隊致力於國內外的通路合作，並在過程中，與各個文化品牌，如台南知名古蹟林百貨進行聯名製作。
+        p 過去有人認為台灣沒有品牌，現在，有人選擇用一條小巷創造奇蹟。從小巷出發，走向全球，重新定義了台灣品牌的可能性。
+        h4 相關影片
+        ul
+          li: a href="https://www.youtube.com/watch?v=j5z4dkoSIF4" 來喲！台南夢
+          li: a href="https://www.youtube.com/watch?v=s1HoHqxaPUo" 來喲！為柬埔寨的孩子而縫
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+
+
+= render "/team/team-page-bottom"
