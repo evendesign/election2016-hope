@@ -4,7 +4,7 @@
 / - @team_cover = "/images/team/#{team_file_name}/"
 / - @team_slogan = "主標題"
 / - @team_name = "團隊名稱"
-/ - team_video = "https://www.youtube.com/watch?v=ixQE9RPnM‐I"
+/ - team_data[@team_id]['video'] = "https://www.youtube.com/watch?v=ixQE9RPnM‐I"
 
 / - team_location_icon = "/images/map/miaoli.svg"
 / - team_location_text = "團隊簡短地址_苗栗縣南莊鄉"
@@ -56,20 +56,20 @@
 / - team_photo_10 = "http://lorem.me/1600x960/"
 
 / .team
-/   .team-cover style="background-image:url('#{@team_cover}bg.jpg');"
+/   .team-cover style="background-image:url('/images/team/#{team_file_name}/bg.jpg');"
 /     .team-title
-/       h2.team-slogan.auto-break-text #{@team_slogan}
-/       h2.team-name #{@team_name}
-/       - if team_video != false
-        / a.team-video-play href="#{team_video}" 播放影片
+/       h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+/       h2.team-name #{team_data[@team_id]['name']}
+/       - if team_data[@team_id]['video'] != false
+        / a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
 /     .team-info
-/       img.location-icon src="#{team_location_icon}"
-/       span.location-text #{team_location_text}
-/       span.industry #{team_category}
-/       span.since= "成立於 #{team_since} 年"
+/       img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+/       span.location-text #{team_data[@team_id]['location']}
+/       span.industry #{team_data[@team_id]['category']}
+/       span.since= "成立於 #{team_data[@team_id]['since']} 年"
 /   .team-content
 /     .container
-/       p.team-preface #{team_preface}
+/       p.team-preface #{team_data[@team_id]['preface']}
 /     .team-member
 /       h3 團隊介紹
 /       .member-list
@@ -92,27 +92,27 @@
 /       .team-info-card
 /         img.team-photo src="/images/team/#{team_file_name}/bg_s.jpg"
 /         .team-info-inner
-/           .team-name #{@team_name}
-/           .team-location #{team_location_text}
+/           .team-name #{team_data[@team_id]['name']}
+/           .team-location #{team_data[@team_id]['location']}
 /           ul.team-info-list
 /             li
 /               span.label 團隊類型
-/               span.info-content #{team_category}
+/               span.info-content #{team_data[@team_id]['category']}
 /             li
 /               span.label 團隊成立年
-/               span.info-content #{team_since}
+/               span.info-content #{team_data[@team_id]['since']}
 /             li
 /               span.label 團隊規模
-/               span.info-content #{team_member_amount}
+/               span.info-content #{team_data[@team_id]['member_amount']}
 /             li
 /               span.label 團隊地址
-/               span.info-content #{team_address}
+/               span.info-content #{team_data[@team_id]['address']}
 /             li
 /               span.label 團隊網站
-/               a.info-content href="#{team_website}" #{team_website}
+/               a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
 /             li
 /               span.label Facebook
-/               a.info-content href="#{team_facebook_page}" #{team_facebook_page}
+/               a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
 
 / .gallery
 /   .container

@@ -1,0 +1,81 @@
+- team_id = 0
+
+- team_photo_01 = "/images/team/#{team_data[team_id]["file_name"]}/001.jpg"
+- team_photo_02 = "/images/team/#{team_data[team_id]["file_name"]}/002.jpg"
+- team_photo_03 = "/images/team/#{team_data[team_id]["file_name"]}/003.jpg"
+- team_photo_04 = "/images/team/#{team_data[team_id]["file_name"]}/004.jpg"
+- team_photo_05 = "/images/team/#{team_data[team_id]["file_name"]}/005.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_data[team_id]["file_name"]}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[team_id]["slogan"]}
+      h2.team-name #{team_data[team_id]["name"]}
+      a.team-video-play href="#{team_data[team_id]["video"]}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[team_id]["map"]}.svg"
+      span.location-text #{team_data[team_id]["location_text"]}
+      span.industry #{team_data[team_id]["category"]}
+      span.since= "成立於 #{team_data[team_id]["since"]} 年"
+  .team-content
+    .container
+      p.team-preface #{team_data[team_id]["preface"]}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[team_id]["member"].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_data[team_id]["file_name"]}/figure_#{team_member['figure_file_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 打開宜蘭慈心小學教室裡的黑板，像是一幅又一幅刻印上去的美麗圖畫。這不是裝飾，而是每日課堂上的教材。這所強調自然學習的學校，學生沒有課本，他們從課堂上的互動吸收學習。每一位學生有一本工作本，記錄自己的學習軌跡，老師也透過工作本來掌握學生的狀況。
+        p 慈心華德福創辦人張純淑說：「自己的孩子要上幼兒園時，她才發現太多的幼兒園在做小學的再版教育，孩子不會快樂。她就想，能不能有一個有天、有地的環境，能讓孩子自然成長。」19歲就開始教書的她，有著一顆非常溫柔又極其堅強的心。因為不忍見到教育讓孩子的成長之路變成蒼白的，她發願給孩子創建一個快樂學習的環境。
+        p 30年前，純淑和一群老師們合力創辦了慈心幼兒園，這樣的教育獲得越來越多家長認同，一步一步，2002年陸續開辦慈心小學，成立全台唯一所公辦民營的華德福中學，2011年也獲得宜蘭縣政府實驗教育審議審查通過，與南澳高中合辦高中實驗班。讓學生和家長在國高中升學考試最緊迫的階段，也可以有另一種選擇。
+        p 對慈心的老師們而言，學校是啟迪生命的場所。他們研習華德福教育理論，老師們每週開會，研發出適合台灣孩子的教案。這所學校裡，孩子學習，老師們也持續學習，家長也是重要的參與者。從一般學校轉入慈心，比較不能適應的反而是家長，家長總是會問:「我的孩子在班上排名第幾？」但慈心的孩子不穿制服，也不用考試來決定成績，每位學生在學期拿到的成績單沒有分數，而是一整本集合各科老師的質性評語。「家長、學生、老師一起參與教學」，這是慈心的教學理念，教育到底要教的是什麼？不是硬梆梆的資訊填鴨，而是面對生命的態度。慈心的家長與老師也隨著孩子們的成長繼續學習如何更自在地生活著。
+        p 所有人都會同意教育是百年大計，整個社會都認為台灣的教育制度需要改革，然而究竟要改成什麼樣子至今仍是爭議。慈心華德福是一種嘗試，當我們為教改制度爭辯不休時，不妨回到原點想想:教育的本質是什麼？我們究竟想教給孩子什麼？
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_data[team_id]["file_name"]}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[team_id]["name"]}
+          .team-location #{team_data[team_id]["location_text"]}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[team_id]["category"]}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[team_id]["since"]}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[team_id]["member_amount"]}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[team_id]["address"]}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[team_id]["website"]}" #{team_data[team_id]["website"]}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[team_id]["facebook_page"]}" #{team_data[team_id]["facebook_page"]}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+/ = render "/team/team-page-bottom"
