@@ -1,0 +1,109 @@
+- @team_id = 17
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/001.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/002.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/003.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/004.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/005.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/006.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/007.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 多扶接送成立於 2009 年，為臺灣第一家民營的復康巴士，以「無障礙環境的全面連結」做為服務宗旨，為行動上需要特別照護的「孕、幼、老、輪」提供交通服務，讓行動不便者能夠自主掌握「行的需求」。
+        p 在過去，「行動不便者」與「照護者」，常常遇到公車難等、公辦復康巴士難訂、計程車不願意載輪椅，以及孕婦與孩童的乘車安全等問題，造成時間上的浪費與身心上的折磨，更因此而縮減了自己的行動範圍，窄化了自己的生活圈，因此多扶接送的服務，就是要解決「孕、幼、老、輪」族群的交通問題，把每一個乘客當成自己的家人來悉心照顧。
+        p 多扶接送的服務初衷，就是源於創辦人的遺憾。
+        p 因此我們堅持以愛心、耐心、同理心來服務客人，即使客人行程延誤，造成調度困難，多扶接送也不會和公費復康巴士一樣有扣點、拒載的罰則，而是會想盡辦法協調車輛，確保每一個客人都能夠安心出門，開心回家
+        p 雖然多扶接送的服務能解決輪椅朋友的交通難題，但受限於臺灣有許多沒電梯的老舊公寓，居住其中的長者、病患，經常因為行動不便，足不出戶，甚者忍住傷痛、病痛，非到緊要關頭不願就醫。為解決此困境，多扶接送引進爬梯機服務，突破了行動不便者踏出家門的最後一哩路，希望藉由多扶接送的服務，家，不再是輪椅朋友的牢籠。
+        p 現在，多扶接送創立滿六年，多扶希冀連結其他產業，共同投入無障礙服務的領域，創辦人許佐夫秉持著「只以健康人為中心的社會，絕不是個健康的社會。」、「只有障礙的環境，沒有障礙的人。」的理念，矢志將臺灣打造為亞洲無障礙服務的最佳典範。
+        h4 多扶接送首創輪椅接送服務的四大創新特點：
+        b 一、無身份限制
+        p 不需領有「身心障礙手冊」等證明，只要是行動不方便的朋友們，如老年人、身障者、病人、孕婦與兒童，以及肢體受傷者等，均可預約。
+        b 二、無提前預約限制
+        p 無論是長期配合、短期需求或是臨時有突發狀況，不限定提前預約天數，可配合立刻調度車輛前往服務。
+        b 三、無區域限制
+        p 多扶接送可跨縣市接送行動不方便的朋友們，服務完全無區域限制。
+        b 四、無用途限制
+        p 除了就醫、就學、就養與就業等基本的交通需求之外，多扶接送還可服務行動不便的朋友探訪親友、從事休閒活動及無障礙旅遊服務等各式用途。
+        h4 【獲獎認證紀錄】
+        b 2013
+        p 獲臺北市政府產業發展局推薦，獲選為財政部證券櫃檯買賣中心創櫃版第一波合法募資企業。榮獲 2013 第三屆經理人月刊臺灣中小企業社會責任獎「顧客權益與服務能量組」得獎企業之肯定。
+        b 2012
+        p 執行長許佐夫先生榮獲經理人月刊「2012 Taiwan Top 100 MVP經理人」榮譽。
+        b 2011
+        p 連續三年獲得臺北大眾捷運股份有限公司指定輪椅接駁服務公司。
+        h4 相關影片
+        p: a href="https://www.youtube.com/watch?v=DNWs6BJPD6w" 多扶接送服務說明
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+
+= render "/team/team-page-bottom"

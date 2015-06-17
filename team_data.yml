@@ -457,3 +457,22 @@
       figure_en_name: "004"
       name: "蕭定"
       intro: "台中南屯人。因為想要觸摸台灣經濟最真實的肌理，一腳踏進了百年前曾創造了外銷奇蹟的坪林茶產業，從此一路走進茶山。"
+-
+  en_name: "duofu"
+  slogan: "「只有障礙的環境，沒有障礙的人。」多扶爲行動不便者打開有尊嚴的路"
+  name: "多扶接送"
+  video: "https://www.youtube.com/watch?v=iaIbguMUBao"
+  map: "taipei"
+  location: "台北市文山區"
+  address: "台北市文山區羅斯福路五段 195 號"
+  category: "社會創新"
+  since: "2009"
+  website: "http://www.duofu.com.tw/"
+  facebook_page: "https://www.facebook.com/DOUFU.TAIWAN"
+  preface: "多扶接送為臺灣第一家民營的復康巴士，以「無障礙環境的全面連結」做為服務宗旨，為行動上需要特別照護的「孕、幼、老、輪」提供客製化交通服務，讓行動不便者不僅能夠自主掌握「行的需求」，也能自己決定「行的方式」。"
+  member_amount: "27人公司"
+  member:
+    -
+      figure_en_name: "001"
+      name: "許佐夫 Jeff"
+      intro: "多扶接送的創辦人，在投身無障礙服務前是紀錄片編導。在十二年的傳播製片工作中，對無障礙服務一無所知。直到有一天，Jeff 九十多歲的客家外婆生病受傷，需以輪椅代步後，他才赫然驚覺臺灣的環境對行動不便者非常不友善。因此，Jeff 毅然決然地投身無障礙服務，成立臺灣第一家民營的復康巴士。"
