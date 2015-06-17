@@ -212,9 +212,7 @@
     overflow: hidden;
     background-color: #F1F1F1;
     @include border-radius(5px);
-    .team-photo {
-      display: none;
-    }
+    .team-photo { display: none; }
     .team-info-inner {
       @include box-sizing(border-box);
       display: inline-block;
@@ -238,7 +236,6 @@
     }
     li {
       @include trailer(.5);
-      @include nowrap;
     }
 
     .label {
@@ -252,6 +249,7 @@
     .info-content {
       display: block;
       @include adjust-font-size-to(15px);
+      @include ellipsis;
       &:empty {
         pointer-events: none;
         &:before {
@@ -367,6 +365,9 @@
       }
       .team-info-inner {
         width: calc( 100% - 300px );
+      }
+      .info-content {
+        width: calc( 100% - 100px );
       }
     }
   }
