@@ -1,138 +1,14 @@
-- teams = [\
-  [ \
-    "mountainlodge",\
-    "miaoli",\
-    "苗栗縣南庄鄉",\
-    "老寮工作坊",\
-    "生活工藝",\
-    "帶著世界回到家鄉，開始農村的寧靜革命",\
-  ],\
-  [ \
-    "tongxiao",\
-    "miaoli",\
-    "苗栗縣通霄鎮",\
-    "通霄二手市集",\
-    "社會創新",\
-    "四個年輕人，讓小鎮也有超過600人規模的二手市集",\
-  ],\
-  [ \
-    "smalloysterrock",\
-    "kaohsiung",\
-    "高雄市梓官區",\
-    "蚵寮小搖滾",\
-    "藝術文化",\
-    "一群傻瓜結作夥，譜出漁村的搖滾樂",\
-  ],\
-  [ \
-    "shoesparty",\
-    "changhua",\
-    "彰化縣員林市",\
-    "Shoes Party鞋靴派對",\
-    "生活工藝",\
-    "父女搭擋，重燃製鞋職人的驕傲與堅持",\
-  ],\
-  [ \
-    "sypigfarm",\
-    "yilan",\
-    "雲林縣林內鄉",\
-    "三源牧場",\
-    "在地滋味",\
-    "吃優格、聽莫札特長大的快樂豬",\
-  ],\
-  [ \
-    "kingstar",\
-    "taoyuan",\
-    "桃園市蘆竹區",\
-    "金詩達遙控車廠",\
-    "生活工藝",\
-    "駕著遙控車，一路朝世界躍進",\
-  ],\
-  [ \
-    "cixinwaldorf",\
-    "yilan",\
-    "宜蘭縣冬山鄉",\
-    "宜蘭華德福",\
-    "社會創新",\
-    "不忍孩子的成長路蒼白，一群老師自己辦出一所學校",\
-  ],\
-  [ \
-    "totalrecall",\
-    "taichung",\
-    "台中市",\
-    "全面罷免",\
-    "在地關懷",\
-    "習以為常的生活中，就有安靜的小革命",\
-  ],\
-  [ \
-    "gandandesign",\
-    "tainan",\
-    "台南市仁德區",\
-    "甘丹創新",\
-    "生活工藝",\
-    "打造自己的設計品牌和巷子裡的木工廠",\
-  ],\
-  [ \
-    "mangogame",\
-    "tainan",\
-    "台南市",\
-    "芒果遊戲工作室",\
-    "藝術文化",\
-    "古城裡的 running man，用實境遊戲訴說地方的美好",\
-  ],\
-  [ \
-    "punplace",\
-    "tainan",\
-    "台南市中西區",\
-    "胖地數位空間",\
-    "社會創新",\
-    "老房子與3D列印機，化身夢想孕育基地",\
-  ],\
-  [ \
-    "sunrise",\
-    "pingtung",\
-    "屏東縣",\
-    "養水種電達人",\
-    "社會創新",\
-    "太陽底下的新鮮事，台灣綠能的春天",\
-  ],\
-  [ \
-    "far-east-war-1592",\
-    "taipei",\
-    "台北市",\
-    "壬辰之戰",\
-    "藝術文化",\
-    "帶給玩家「不只是桌遊」的體驗，將台產桌遊推廣至全世界",\
-  ],\
-  [ \
-    "tailamsiok",\
-    "tainan",\
-    "台南市",\
-    "台南塾",\
-    "社會創新",\
-    "不只是孩子的，也是屬於大人的教育空間",\
-  ],\
-  [ \
-    "kendama",\
-    "hsinchucity",\
-    "新竹市北區",\
-    "見域工作室",\
-    "藝術文化",\
-    "來了就捨不得離開，研究生串連城市的故事",\
-  ],\
-]
-
-
 ul.team-list
-  - teams.each do |team_item|
+  - team_data.each do |team|
     li.team-list-item
-      a.card href="/team/#{team_item[0]}.html"
-        .card-header style="background-image: url('/images/team/#{team_item[0]}/bg_s.jpg');"
+      a.card href="/team/#{team['file_name']}.html"
+        .card-header style="background-image: url('/images/team/#{team['file_name']}/bg_s.jpg');"
           .card-city
             .card-city-icon
-              img src="/images/map/#{team_item[1]}.svg"
-            .card-city-name= "#{team_item[2]}"
+              img src="/images/map/#{team['map']}.svg"
+            .card-city-name= "#{team['location']}"
           .card-header-inner
-            h3.card-title.auto-break-text= "#{team_item[3]}"
-            .card-category= "#{team_item[4]}"
+            h3.card-title.auto-break-text= "#{team['name']}"
+            .card-category= "#{team['category']}"
         .card-content
-          h4.card-subtitle.auto-break-text= "#{team_item[5]}"
+          h4.card-subtitle.auto-break-text= "#{team['slogan']}"
