@@ -90,6 +90,7 @@
 
 
   @include at-breakpoint($desktop) {
+    background-image: url('/images/hero-bg.jpg');
     margin: 0;
 
     .hero-bg-slide {
