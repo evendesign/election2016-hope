@@ -91,6 +91,14 @@
     }
   }
 
+  .fb-like-block {
+    display: block;
+    margin: 0 auto rhythm(2);
+    width: 100px;
+    height: 86px;
+    text-align: center;
+  }
+
   .team-content {
     padding: 48px 0;
     h3 {
@@ -274,6 +282,9 @@
 
     .team-name {
       @include adjust-font-size-to(20px, 1);
+    }
+    .fb-like-block {
+      margin: 0 auto rhythm(3);
     }
     .team-preface {
       @include adjust-font-size-to(20px, 1.35);
