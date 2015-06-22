@@ -9,7 +9,7 @@
     z-index: 50;
   }
 
-  h4 {
+  h3 {
     @include trailer(.5);
     @include adjust-font-size-to(15px);
     font-weight: bold;
