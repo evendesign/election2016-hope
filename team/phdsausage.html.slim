@@ -1,0 +1,85 @@
+- @team_id = 20
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 近日來，食品安全問題受到國人重視，海洋大學學生創業團隊在教育部智慧生活創新創業育成平台試辦計畫輔導下成立博士香腸商行，利用在地食材，以天然的原料，不添加人工添加劑的原則開發食品，希望讓消費者吃得安心，找回食物天然的美味。
+        p 全臺灣鎖管的產量約有八成以上都是由大基隆地區所捕獲的，在「吃在地、食當季」的理念下，學生以在地食材——鎖管開發創意料理，同時也選用當地盛產的石化菜做為創作的食材，開發出高粱酒香腸、鎖管香腸、寒天素餃、鎖管丸、小卷等產品。
+        p 堅持手工做的高粱酒香腸及鎖管香腸是採用電宰溫體豬腿肉、鎖管，加金門高粱酒、糖、鹽、肉桂等香料醃製，利用天然腸衣灌香腸，純手工製作，不添加防腐劑、色素及亞硝酸鹽等人工添加劑，需冷凍保存。
+        p 鎖管丸則是以基隆盛產的鎖管及天婦羅鯊魚漿混合製作成丸子，不添加硼砂等食品添加劑，保留鎖管Q彈的口感及天婦羅的美味，可油炸或煮湯。
+        p 追求健康素食的民眾越來越多，新開發的寒天素餃，利用八斗子地區盛產的石花菜添加在高麗菜的內餡中，以香椿調味，減少油的添加，同時增加滑順的口感，可作煎餃或蒸餃。
+        p 小卷這項產品則是改良基隆漁村早年特有的家常小吃，過去漁家利用鎖管（小卷）代替豬肉做成的肉卷，經過學生的改良，將豆皮改成麵皮，增加酥脆的口感，採用基隆盛產的魚漿加上洋蔥及香料調味，加入鎖管，捲成條狀，外型類似淡水的蝦捲，外皮酥脆，內餡像口感像雞卷、龍鳳腿，還可以吃到鎖管。
+        a href="https://www.youtube.com/watch?v=lD8wElvbpRs" target="_blank" 中視新聞採訪報導
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"

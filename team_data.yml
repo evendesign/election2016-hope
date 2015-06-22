@@ -495,3 +495,49 @@
       figure_en_name: "SuXiulian"
       name: "蘇秀蓮"
       intro: "40歲，鶴岡部落阿美族人，邦查有機農場創辦人。年輕時在大台北四處打零工，1998年回到花蓮，希望透過務農尋求穩定的生活。個性風趣幽默，總是給身邊的人帶來歡笑。在蘇秀蓮溫暖的笑容背後，有一顆無比堅強的心，結束一段婚姻後，她靠著自己的力量開啟更燦爛的人生。"
+-
+  en_name: "succulentps"
+  slogan: "經過時空的鍛造，創造獨一無二的水泥花器"
+  name: "肉肉栽培研究所"
+  video: false
+  map: "kaohsiung"
+  location: "高雄市鳳山區"
+  address: "高雄市鳳山區中山西路364-1號16樓"
+  category: "生活工藝"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/succulentPS"
+  preface: "致力於手作多肉植栽的工作室，將用心設計過的水泥藝術，結合植物療癒的能量分享給大家，目前有販售多肉植株、水泥花器與相關設計商品。"
+  member_amount: "兩個年輕人、一個工作室、一塊很小的苗圃"
+  member:
+    -
+      figure_en_name: "01"
+      name: "鍾佳其"
+      intro: "負責水泥花器的創意開發，以及品牌視覺設計。"
+    -
+      figure_en_name: "02"
+      name: "張簡駿赫"
+      intro: "負責多肉植物栽培，植物相關養護知識。"
+-
+  en_name: "phdsausage"
+  slogan: "博士生用在地食材做出天然的美味香腸"
+  name: "博士香腸"
+  video: false
+  map: "keelungcity"
+  location: "基隆市"
+  address: "基隆市中正區北寧路二號海洋大學"
+  category: "在地滋味"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/pages/%E5%8D%9A%E5%A3%AB%E9%A6%99%E8%85%B8/1585129038385292?fref=ts"
+  preface: "海洋大學學生創業團隊在教育部智慧生活創新創業育成平台試辦計畫輔導下，成立博士香腸商行，利用在地食材，以天然的原料，不添加人工添加劑的原則開發食品，希望讓消費者吃得安心，找回食物天然的美味。"
+  member_amount: "學生微型創業"
+  member:
+    -
+      figure_en_name: "01"
+      name: "陳銘仁"
+      intro: "海洋大學海洋生物研究所博士，開發創意食品，輔導學生團隊微型創業。"
+    -
+      figure_en_name: "02"
+      name: "陳博文"
+      intro: "博士香腸商行店長，負責食品製作販售。"
