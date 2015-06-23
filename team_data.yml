@@ -588,3 +588,22 @@
       figure_en_name: "02"
       name: "何應爵"
       intro: "台南人。<br>台北生活 15 年，往返南北之間，試圖在兩個不同步調的城市之間找到平衡的創意工作者，期待能透過「茶」這平台與本地不同的創作單位合作，在日常生活與設計工作中發現更多獨特美好的可能。"
+-
+  en_name: "howdytw"
+  slogan: "設計師離開電腦，走進鄉村發想土地文創"
+  name: "好心地文創有限公司"
+  video: "https://www.youtube.com/watch?v=Czyai0GqyLw"
+  map: "taichung"
+  location: "臺中市"
+  address: "臺中市"
+  category: "生活工藝"
+  since: "2013"
+  website: "http://www.howdy.tw"
+  facebook_page: "https://www.facebook.com/howdytw"
+  preface: "好心地文創前身為一家單純的設計公司，創建於 2008 年，創辦人兼執行長黃奕杰希冀在傳統產業裡尋求設計注入的可能，他認為：「如果要把土地創意談得更加徹底，那就必須讓設計師離開電腦，真正走進台灣鄉下。」"
+  member_amount: "一位想證明台灣有好物的年輕創業家"
+  member:
+    -
+      figure_en_name: "01"
+      name: "黃奕杰"
+      intro: "雲林科技大學博士生，專攻文化創意產業，現為好心地文創執行長。"

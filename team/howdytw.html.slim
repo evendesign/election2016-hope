@@ -1,0 +1,84 @@
+- @team_id = 22
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 「小店不小，要做護植土地創意的土地公廟。」
+        p 土地公是全台灣最多分身的神祇，無論多麼城陲鄉野之地，總能見其支部設立，親達現地守護鄉土。而當人們談論設計產業的同時，能否也回歸土地公精神，把圖紙談兵化做培植土地創作的能力。
+        p 好心地文創前身為一家單純的設計公司，創建於 2008 年，創辦人兼執行長黃奕杰希冀在傳統產業裡尋求設計注入的可能，認為：「如果要把土地創意談得更加徹底，那就必須讓設計師離開電腦，真正走進台灣鄉下。」於是在 2013 年成立了第一家台灣在地文產概念店「好,的」，以實地踏察挖掘台灣的 Hidden Art，同時，也協助育成微型工藝及食農品牌。
+        p 在與工藝家共進的過程中，好心地文創感受台灣土地創意受到理解認同的喜悅，也確信台灣土地創意的不可取代性。經過兩年多試驗，好心地文創終於在 2015 年展開分身護植計劃，走入更貼近創意源頭的南方，在高雄駁二藝術特區開設「好,的 駁二旗艦店」，正式踏出「一城一店、限地文產」的第一步。
+        p 不同於台中概念店，「好,的 駁二旗艦店」以土地為文化之根，透過實體場域展現高雄城市的縱紋脈向，展現「土生工藝」、「食農生活」、「好事育成」精神。「好,的」位在國際觀光熱點的駁二藝術特區內，亦以土地創意結成的豐美果實悅近來遠。Say Howdy, and enjoy it! 
+        p ※ Howdy 源自美國南方日常招呼語「hello」之意，南方人亦以好客聞名，其諧音中文口語好的，隱含著將設計變成「呷飽未」那般常民生活自然而然的好習慣。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
