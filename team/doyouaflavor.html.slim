@@ -1,0 +1,96 @@
+- @team_id = 23
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 人生百味誕生於 2014 年 3 月學運的街頭，由數位關心社會弱勢議題年輕人發起，於 2015 年 2 月正式登記成立有限公司計畫以社會企業形式，永續發展食物與弱勢相關議題。
+        p 我們希望以工作機會與食物交流為主軸，編織出在社會福利法外的社會保護網。2015 開始組織街頭弱勢街賣者，成為街頭通路品牌「人生百味」，透過銷售具有理念的在地良品，計畫於 2016 年 6 月達成收支平衡，並在過程中將多餘的營利，將「石頭湯計畫」從每月一次的活動，轉變為以社區實體食堂的方式實現，即為「共煮共食廚房」，讓多餘食材與需要食物的人，以更有系統的方式被串連。
+        h4 工作機會：街頭友善通路
+        p 在城市街頭常會看到許多銷售口香糖、日用品、玉蘭花的弱勢街賣者，我們拜訪、組織街賣者，並合作開發台灣在地生產的良品，作為街賣產品，並招募各領域專家討論改善裝備與環境，希望改變街頭風景，讓過去弱勢的街賣者成為一份穩定的工作，更成為台灣風土的一扇窗。
+        h4 食物交流：石頭湯活動
+        p 人生百味募集廚房、參與者、過剩食材，共同烹煮後，與需要的人共享美好的一餐。我們認為不同於其他動物，人在吃飯時是最放下心防的。我們喜歡分享，喜歡約朋友一起吃飯，在用餐期間暢聊談心。
+        p 然而，當我們遇到街友，或其他外形與自己不同的人的時候，卻不敢直視，深怕相交的眼神顯得侵略、冒犯對方。但是，這樣的迴避，卻也突顯許多社會普遍不敢面對的問題。人生百味邀請每一個人，透過石頭湯計畫，用一碗簡單、美味、健康的料理，一起走向平常只敢在一定距離外偷偷觀察的人們。
+        a target="_blank" href="https://www.youtube.com/watch?v=FG-h26AnMHg" 人生百味影片
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
