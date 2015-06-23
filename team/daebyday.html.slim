@@ -1,0 +1,92 @@
+- @team_id = 21
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 生活久了，才會慢慢地知道自己想過什麼樣的日子，喝茶也是。
+        p 曾任 4A 廣告公司 account 與知名設計公司 art 十多年的兩個人，或許是厭倦了廣告設計產業的生態，來自相關領域但擁有不同專業的兩人合夥 coworking，透過一個跟茶與日子有關的 tea project 去實踐，並在跌跌撞撞的創業過程中重新發現台灣茶與在地生活的美好。
+        p 茶日子 Dae by Day 引用台灣話的「茶 Dae」象徵過日子的「Day」，期待發掘出日常生活中符合台灣氣味的產品，例如（Dae 005 白玉蘭包種茶）開發初期，腦中的畫面便是路邊兜售白玉蘭的阿桑，以及計程車上熟悉的白玉蘭香氣，除了是最貼近日常的氣味，也是我們在台灣生活的共同記憶。
+        p 因為賣的是自己家人朋友都能喝的茶，所以尋茶的過程中不斷與茶廠溝通，了解台灣各種茶葉的來源與原料的出處，是否有添加人工香料，配合不同的產地與產季，也曾因為花東山區出產的野菊受氣候影響欠收，導致預定到貨的新品延後上市而傷透腦筋…… 兩人分工合作解決從生產端到銷售端的所有問題，這一切如人飲水，冷暖自知。從頭到尾嚴格把關，經過一杯又一杯不斷地試喝並調整配方，都是為了讓每一號茶都能發揮其最佳的味道及口感，雖然說茶要簡單喝，但製茶的過程卻是一門複雜的學問！
+        p 茶日子 Dae by Day 以365 個日子為靈感，一個日子一種茶味，希望未來能發展出 365 種好茶配方，雖然 100% 以台灣茶為基底，在品牌識別上使用簡單明瞭的阿拉伯數字卻是國際共通的語言。包裝材質傳遞簡樸溫潤的手感，如同茶杯在手中溫熱的感受，局部點綴華美的細節，是為了符合國人以茶送禮的需求，並不時與台灣其他年輕的插畫家或剪紙藝術家合作，希望透過他們的眼光重新去觀看「喝茶」這一件事。這才深刻理解：喝茶，的的確確是一種體會日子的方式。
+        p 「茶日子，日日是好日」既是品牌的初衷也是我們對未來日子的期待，期待每次跟國內外朋友初見面，遞上自家商品的時候都能夠自信地說出：「請喝茶，喝一杯台灣好茶。」
+
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"

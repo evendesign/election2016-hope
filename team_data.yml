@@ -565,3 +565,26 @@
       figure_en_name: "02"
       name: "陳博文"
       intro: "博士香腸商行店長，負責食品製作販售。"
+-
+  en_name: "daebyday"
+  slogan: "「日子要簡單過，茶要簡單喝。」廣告人與設計人攜手推出台灣在地好茶"
+  name: "茶日子 Dae by Day"
+  video: false
+  map: "taipei"
+  location: "台北"
+  address: "台北"
+  category: "在地滋味"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/DaebyDay.teafor365days"
+  preface: "曾任 4A 廣告公司 account 與知名設計公司 art 十多年的兩個人，或許是厭倦了廣告設計產業的生態，來自相關領域但擁有不同專業的兩人合夥，透過一個跟茶與日子有關的創業計畫，在跌跌撞撞的創業過程中，重新發現台灣茶與在地生活的美好。"
+  member_amount: "兩個人"
+  member:
+    -
+      figure_en_name: "01"
+      name: "翁啟倫"
+      intro: "台北人。<br>美國完成 MBA 學位，並在外商廣告公司經營國際知名品牌多年，決定創業卻選擇從傳統的茶產業出發，重新定義舊價值的過程之中，期待能從最日常的生活中發現本土品牌的新價值。"
+    -
+      figure_en_name: "02"
+      name: "何應爵"
+      intro: "台南人。<br>台北生活 15 年，往返南北之間，試圖在兩個不同步調的城市之間找到平衡的創意工作者，期待能透過「茶」這平台與本地不同的創作單位合作，在日常生活與設計工作中發現更多獨特美好的可能。"
