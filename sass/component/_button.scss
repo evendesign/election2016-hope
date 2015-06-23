@@ -27,7 +27,7 @@
   @include user-select(none);
   color: $color-black;
   background-color: $color-gray-light;
-  @include transition(border .25s, background-color .25s);
+  @include transition(border .25s, background-color .25s, color .25s);
   &:hover {
     text-decoration: none;
     color: $color-black;
@@ -78,10 +78,12 @@
 }
 
 .btn_outline {
+  color: $color-black-dark;
   border-color: $color-black;
   background-color: transparent;
   &:hover {
-    border-color: $color-black;
+    border-color: $color-primary;
+    color: $color-primary;
     background-color: transparent;
   }
   &:disabled , &.is-disabled {
