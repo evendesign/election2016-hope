@@ -1,0 +1,31 @@
+.submit-box {
+  padding: rhythm(1.5) rhythm(1);
+  background-color: #f1f1f1;
+  text-align: center;
+  .submit-box-title {
+    color: black;
+    @include trailer(1);
+  }
+  .submit-box-action {
+    padding: rhythm(.25) rhythm(1);
+    @extend %subpixel;
+  }
+  @include at-breakpoint($desktop) {
+    padding: rhythm(2);
+    .submit-box-title {
+      display: inline-block;
+      margin-right: 72px;
+      @include trailer(0);
+      vertical-align: middle;
+      @include adjust-font-size-to(18px);
+      br {
+        display: none;
+      }
+    }
+    .submit-box-action {
+      display: inline-block;
+      @include adjust-font-size-to(16px);
+      padding: rhythm(.25) rhythm(2);
+    }
+  }
+}
