@@ -1,5 +1,5 @@
 ul.team-list
-  - team_data.each do |team|
+  - team_data.reverse_each do |team|
     li.team-list-item
       a.card href="/team/#{team['en_name']}.html"
         .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
