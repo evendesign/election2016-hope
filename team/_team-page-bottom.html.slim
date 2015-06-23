@@ -5,14 +5,19 @@
     a.tweet href="https://twitter.com/intent/tweet?hashtags=LightUpTaiwan,點亮台灣,在地希望&amp;text=點亮台灣的100種方式 — 在地希望線上博覽會：#{team_data[@team_id]['slogan']}&amp;url=http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html/&amp;via=iingwen" target="_blank" twitter 推文
 
 .pager
-  .container
-    - if @team_id == 0
-      span.prev 上一個團隊
-    - else
-      a.prev href="/team/#{team_data[@team_id - 1]['en_name']}.html" 上一個團隊
-    a.team-list href="/#team-list" 返回團隊列表
-    - if @team_id == team_data.length - 1
-      span.next 下一個團隊
-    - else
-      a.next href="/team/#{team_data[@team_id + 1]['en_name']}.html" 下一個團隊
+  - if @team_id == 0
+    span.pager-item.prev.is-disabled
+      .pager-title 上一個團隊
+  - else
+    a.pager-item.prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+      span.pager-title 上一個團隊
+
+  a.pager-item.team-list href="/#team-list" 返回團隊列表
+
+  - if @team_id == team_data.length - 1
+    span.pager-item.next.is-disabled
+      .pager-title 下一個團隊
+  - else
+    a.pager-item.next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+      span.pager-title 下一個團隊
 

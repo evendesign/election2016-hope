@@ -1,49 +1,94 @@
 .pager {
   @include pie-clearfix;
-  text-align: center;
   @include padding-trailer(2);
-  .prev { float: left; }
-  .next { float: right; }
-  a, span {
+  text-align: center;
+  .pager-item {
     display: inline-block;
     vertical-align: top;
     @include adjust-font-size-to(15px);
+    border-bottom: 2px solid #f1f1f1;
+    @include transition(color .25s);
+    color: black;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: none;
+    }
+    &.is-disabled {
+      color: $color-gray;
+      border-bottom: none;
+    }
+
   }
-  a {
-    text-decoration: none;
-    cursor: pointer;
-    border-bottom: 2px solid $color-gray-white;
-    @include transition(border-bottom .25s);
-    &:hover { border-bottom-color: darken($color-gray-white, 10%); }
+  .team-list {
+    margin: 0 12px;
   }
-  span { color: $color-gray; }
+
+  .pager-title {
+    display: block;
+  }
 
   @include at-breakpoint($pad) {
-    .container { max-width: 768px; }
-    .prev:before, .next:after {
-      content: "";
-      display: inline-block;
-      width: 10px;
-      height: 14px;
-      background-size: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
+    position: relative;
+    .team-list {
+      line-height: rhythm(1) - 2px;
+      margin: 0 24px;
+    }
+    .prev, .next {
+      border-bottom: none;
+    }
+    .pager-title {
+      background-color: #f1f1f1;
     }
     .prev:before {
-      margin-right: 3px;
-      background-image: url("/images/pager-prev.png");
-      background-image: none, url("/images/pager-prev.svg");
+      content: '';
+      display: block;
+      float: left;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 8px 12px 0;
+      border-color: transparent #f1f1f1 transparent transparent;
     }
-    .next:after {
-      margin-left: 3px;
-      background-image: url("/images/pager-next.png");
-      background-image: none, url("/images/pager-next.svg");
+    .prev .pager-title {
+      float: left;
+      padding: rhythm(0) rhythm(0.5) 0 rhythm(0.25);
     }
-    a,span { @include adjust-font-size-to(18px); }
+    .next:before {
+      content: '';
+      display: block;
+      float: right;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 12px 0px 12px 8px;
+      border-color: transparent transparent transparent #f1f1f1;
+    }
+    .next .pager-title {
+      float: right;
+      padding: rhythm(0) rhythm(0.25) 0 rhythm(0.5);
+    }
   }
 
   @include at-breakpoint($desktop) {
     @include padding-trailer(4);
-    a,span { @include adjust-font-size-to(20px); }
+    .pager-item {
+      @include adjust-font-size-to(18px, 1.5);
+    }
+    .team-list {
+      line-height: rhythm(1.5) - 2px;
+    }
+    .prev:before {
+      border-width: 18px 12px 18px 0;
+    }
+    .prev .pager-title {
+      padding: rhythm(0) rhythm(0.75) 0 rhythm(0.5);
+    }
+    .next:before {
+      border-width: 18px 0px 18px 12px;
+    }
+    .next .pager-title {
+      padding: rhythm(0) rhythm(0.5) 0 rhythm(0.75);
+    }
   }
 }
