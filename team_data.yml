@@ -684,3 +684,22 @@
       figure_en_name: "001"
       name: "盧志遠"
       intro: "民國 77 年出生，高職畢業，就讀科系是資料處理科，非科班出身，因對美髮深感興趣，而選擇半工半讀當起美髮學徒。"
+-
+  en_name: "radicalization"
+  slogan: "台灣首創抗爭街頭品牌，用音樂改變世界"
+  name: "激進工作室"
+  video: "https://www.youtube.com/watch?v=BSVlaiKZlw4"
+  map: "taipei"
+  location: "台北市"
+  address: "台北市大安區敦化南路一段200號12樓之2"
+  category: "藝術文化"
+  since: "2011"
+  website: "http://revolt.com.tw"
+  facebook_page: "https://www.facebook.com/radicalization"
+  preface: "受到電影 V for Vendetta《Ｖ怪客》的影響所創立。品牌以音樂改變世界為精神象徵，堅定勇氣捍衛自己中心思想以及對世界人權的關懷，立志成為街頭社會運動行動主義的指標。"
+  member_amount: "一個工作團隊"
+  member:
+    -
+      figure_en_name: "01"
+      name: "陳威仲"
+      intro: "拷秋勤樂團成員／激進工作室負責人/內地搖滾創辦人"
