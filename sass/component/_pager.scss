@@ -1,7 +1,8 @@
 .pager {
   @include pie-clearfix;
-  @include padding-trailer(2);
   text-align: center;
+  @include padding-trailer(4);
+
   .pager-item {
     display: inline-block;
     vertical-align: top;
@@ -9,7 +10,6 @@
     border-bottom: 2px solid #f1f1f1;
     @include transition(color .25s);
     color: black;
-
     &:hover {
       color: $color-primary;
       text-decoration: none;
@@ -71,7 +71,8 @@
   }
 
   @include at-breakpoint($desktop) {
-    @include padding-trailer(4);
+
+
     .pager-item {
       @include adjust-font-size-to(18px, 1.5);
     }

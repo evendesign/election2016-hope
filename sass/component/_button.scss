@@ -82,13 +82,23 @@
   border-color: $color-black;
   background-color: transparent;
   &:hover {
-    border-color: $color-primary;
-    color: $color-primary;
+    color: $color-black-dark;
+    border-color: $color-black-dark;
+
     background-color: transparent;
   }
   &:disabled , &.is-disabled {
     color: $color-gray-dark;
     border-color: $color-gray-light;
     background-color: transparent;
+  }
+}
+
+.btn_outline-primary {
+  color: $color-primary;
+  border-color: $color-primary;
+  &:hover {
+    color: $color-primary;
+    border-color: $color-primary;
   }
 }
