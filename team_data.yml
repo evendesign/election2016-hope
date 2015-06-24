@@ -665,3 +665,22 @@
       figure_en_name: "002"
       name: "吳亞軒"
       intro: "1987 年生。在台北賃居多年，是一個嚮往城市霓虹，也眷戀農野炊煙的女孩。心理學研究所畢，現為使用體驗設計師。"
+-
+  en_name: "ucahairsalon"
+  slogan: "22 歲就創辦美髮店，用手藝讓高雄更美麗"
+  name: "尤卡髮廊"
+  video: "https://www.youtube.com/watch?v=WDqpqcFXSDg"
+  map: "kaohsiung"
+  location: "高雄市"
+  address: "高雄市新興區民享街127號"
+  category: "生活工藝"
+  since: "2010"
+  website: ""
+  facebook_page: "https://www.facebook.com/UCAhairsalon"
+  preface: "雖然在高雄，美似乎不是重點產業，但我們總希望有特色時尚時髦的品味在高雄也可以發光發熱。美髮是一種行動藝術，它不只頂在每個人的頭上，也走在每條路上。"
+  member_amount: "目前約 40 幾個年輕人，三間髮廊"
+  member:
+    -
+      figure_en_name: "001"
+      name: "盧志遠"
+      intro: "民國 77 年出生，高職畢業，就讀科系是資料處理科，非科班出身，因對美髮深感興趣，而選擇半工半讀當起美髮學徒。"

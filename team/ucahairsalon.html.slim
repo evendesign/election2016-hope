@@ -1,0 +1,84 @@
+- @team_id = 25
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 我總是在想，若能做自己喜歡做的事情、又能賺到錢真的是太美好了。投入美髮產業後，發現這產業有非常多的問題，也觀察到學校以及實務上有許多落差，因為身處在高雄，坦白說資訊以及資源都不及於台北，在學習當上設計師的這條路上可能是因為男生的關係，受到的支持與鼓勵總相對比較少。
+        p 在當兵之前很快就當上了設計師，當兵的時候也意外地當了替代役，當上替代役其實有很多可以自我閱讀的時間，那時候正在思考是否該自己創業，想自己打造一個環境、一個有自我風格的美髮店，我覺得，台灣的美髮技術一直都很好，甚至比日本好，比韓國好，比很多國家都還優秀，但我們卻不斷的覺得自己比別人不好。
+        p 美髮工作間非常的冗長，對我而言這樣的產業並不健康，我覺得身為七年級生的年輕人，有必要知道自己喜歡的而且需要改變的在哪裡，如何帶領團隊甚至從自身開始改變跟影響這個產業的形象。
+        p 因為替代役當的是社會役，因此也間接了了解許多社福機構的需求，在投入這產業時候也常常在想，我們這麼「表面」的工作，我們能為這個社會貢獻甚麼，我們又能付出甚麼，我想最大的工作對我們而言是改變市容吧，擁有好看的髮型會讓自己擁有很愉悅的心情，也因為這樣的關係認識許多社會機構，再加上客戶的邀請，我們進入了很多社福機構以及火車站附近替過街友做免費的義剪，每當剪完的時候看到他們充滿著感激跟感謝，甚至讓自己變得更舒服的時候，心理面總是更踏實更有安慰，能靠著一技之長創業並且給予更多人幸福感是很快樂的事情。
+        p 2010 年的時候創辦了尤卡，當時只有兩個人，那一年，我只有 22 歲，創業資金非常的艱辛。但我覺得台灣的美髮環境實在有問題，想要自己打造一個美髮環境。在 2014 年的時候我們開了第二間店，利用青年就業貸款，今年（2015 年）我們準備開第三間店，我們從兩個人到現在約 40 幾位員工，從零散做到現在有組織性的做事情。在高雄，美幾乎不像是重點的產業，但我們總希望有特色時尚時髦的品味在高雄也可以發光發熱。美髮是一種行動藝術，它不只是頂在每個人的頭上，也走在每條路上。我不是就讀本科系的，但我很熱愛髮型設計，我們曾經開玩笑說：「天哪！我們的工作對於這個社會一點貢獻都沒有。」但我卻衷心的希望改善的這個產業，想改善這產業的教育，學校的教育與髮廊的經營模式。我們店叫做尤卡，用 Unique & Create & Art 組成，用了這三個單字的英文前開頭的 UCA 英文翻成中文而變成了尤卡。
+        p 目前我們擁有三間沙龍，我們還在不斷努力地前進，我們希望能在高雄用美麗發光，用藝術設計之美看到高雄。我們也更致力於做產業的投入，即便這一路上有非常多的辛苦，但我們相信對的思想需要擁有一份大的勇氣，為年輕一輩的我們努力，為草莓族這個名詞負責。我們相信我們有無限的希望以及勇氣，因為我們熱愛我們自已的工作，我們也用心投入我們的工作，我們要讓美髮可以是服務可以是設計，創造更多美的事物。"
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
