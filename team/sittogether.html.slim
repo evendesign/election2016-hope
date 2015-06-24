@@ -1,0 +1,103 @@
+- @team_id = 24
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 我們是一對在三芝長大，歷經家庭變故後，在台北賃居多年的兄妹檔，因為深刻感受自身與當代青年朋友的諸多困境，於是合夥成立來坐夥「共活／共享／共創空間」。
+        p 來坐夥的三個理念：
+        ol
+          li 共活－找到像家人般的一群朋友，提供情感上的支持。
+          li 共享－和陌生人間建立信任、彼此分享有形或無形資源。
+          li 共創－我或許不行，但我們就可以，共同創造與實踐夢想。
+
+        p 我們期盼以此空間作為媒介，除提供基本的場地租借服務，以及促進人際交流之外，也同時實踐三個目標：
+        ol
+          li 社會創新：作為引注社會議題並推動行動計劃的基地。
+          li 共同創作：作為創業實驗與傳遞理念價值的舞台。
+          li 社區營造：作為串聯在地資源與連結人情的據點。
+
+        p 來坐夥已開幕四個月餘，目前每月定期舉辦多種議題之講座／工作坊／讀書會／共食活動等，另有幾項專案進行中：
+
+        h4 百大職人計畫
+        p 訪談各領域職人的工作內容、入行過程、落差調適、充實方向等，並將過程錄影，預計未來上網公開，希望幫助目前在學學生或初入社會者了解社會職場實際情況、職涯的發展規劃、未來工作的可能面貌等；並搭配舉辦各式職業討論論壇、工作坊，刺激人們對於職業的想像。
+
+        h4 共享共學小聚：
+        p 由數位來自不同領域，同樣樂於學習分享的成員組成，每周固定聚會，分享彼此所學、經歷，並討論各式創新創業議題，促發思考與串聯資源。
+
+        h4 小人物大教室：
+        p 小人物也很有料，不必功成名就便能分享所學，每個人都有才能與經驗值得分享。我們嘗試挖掘出更多有料的民間小人物，站出來分享自己的故事，促進人際分享交流並打破偏見迷思。
+
+        p 規劃中的專案，則有「城市再生系列論壇」、「慢食學堂」、「坐夥大學（在地知識傳承）」等，過程除日漸累積我們的資源與能量，也鼓舞更多夥伴提案與實踐更多行動計劃。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"

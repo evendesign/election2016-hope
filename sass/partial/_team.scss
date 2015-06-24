@@ -307,8 +307,9 @@
         @include trailer(1.5);
         @include adjust-font-size-to(20px, 1.35);
       }
-      b {
-
+      ul, ol {
+        @include leader(1.5);
+        @include trailer(1.5);
       }
     }
 
