@@ -1,0 +1,94 @@
+- @team_id = 28
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        h4 LOGO
+        p 北歐有個神話故事，人一生所有的際遇，都會在離開世界後成為回憶，不論是走過的路，或是帶給大家的想念，而一輩子的所有美好時光，都會存放在25:01這個超脫三度空間的凝結時刻裡。
+        p 2012 年的 6 月，創辦人陳郁翔取材這則神話故事，願品牌能陪伴每個人走過美好時光，做個配角，成就每個參與品牌的支持者與創作者。
+        h4 核心價值 
+        p「讓有才華的人有口飯吃，能更有力量帶著夢想繼續前進。」這是25:01一直在投入的事情，也從來沒有因為商場的現實利益而改變初衷，對我們來說，每個創作都值得存在和備受關注。我們一直很珍惜跟創作人合作的機會，也盡量幫他們爭取各種曝光和公平的酬勞，並且給他們舒服的創作環境，尤其是版權歸屬的部分，永遠都是選擇對創作人最有利的做法。
+        o 在台灣做藝術很辛苦，若創作人吃不飽，那我們就一起挨餓，若25:01有機會發光發熱，那品牌也會帶著所有創作人高飛。
+        h4 如何運作
+        p 衣服只是載體，創造營收的環節，重要的是將資金用來支持所有創作者催生作品，包括插畫創作、影片拍攝、樂團曲目和 MV，都是我們一直在做的事情，最重要的，想辦法支持公益團體，讓這一群有理想的人可以被更多人看見。
+        p 這三年來，我們合作的對象有二十多位插畫家、兩位導演、三組樂團，幫助過五個公益團體，並帶著品牌遊走各大校園演講，終於在 2015 年，獲得關鍵評論網的肯定，頒發未來大人物的頭銜，也是張惠妹演唱會 AMEIZING TOUR 和「前進烏托邦巡迴演唱會」彩虹公益商品的協助單位。
+        h4 25:01合作的創作人
+        p 自2012年6月15日成立那刻起，我們邀請許多插畫家、地下樂團、影像創作人等，透過不同的專案合作，結合25:01的產品，盡情發揮，包括：插畫家 KONE，插畫家 HAN，插畫家披薩來了，插畫家 Q 'c 'L 起士牛奶，插畫家 ROBBIE SU，插畫家 jasferlin，插畫家 kukz'D'，插畫家 szynn zaii，插畫家皮卡，插畫家椏梓，插畫家廖光祖，樂團新墨鏡，樂團紅鞋丹尼，樂團柒拾趴，導演蘇尚珄，導演曾崇倫。
+        p 其中，導演蘇尚珄成功進入劉美力工作團隊，並成立後生公寓，現在已成為專職導演，還有柒拾趴樂團順利發片，便成為 KKBOX 的發燒星，都證明當初品牌為創作人所做的事情是真的能幫助他們發展的，有意義的。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+
+= render "/team/team-page-bottom"
