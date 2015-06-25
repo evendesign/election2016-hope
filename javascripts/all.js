@@ -170,3 +170,27 @@ if ( $('.team-video-play').length != 0 ) {
     mainClass: 'mfp-fade'
   });
 }
+
+
+// 偵測是否有分類列表
+if ( $('.category-list').length != 0 ) {
+  var options = {
+    valueNames: ['filter_category']
+  };
+  var category_list = new List('category-list', options);
+
+  $('#filter_category').change(function () {
+      var selection = this.value;
+      if (selection) {
+          category_list.filter(function(item) {
+              return (item.values().filter_category == selection);
+          });
+      } else {
+          category_list.filter();
+      }
+  });
+
+}
+
+
+

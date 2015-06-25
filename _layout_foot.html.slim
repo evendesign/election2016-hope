@@ -1,7 +1,16 @@
 = javascript_include_tag \
   "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", \
-  "/vender/ytplayer/jquery.mb.YTPlayer.js", \
   "/vender/jquery.magnific-popup.min.js", \
   "/vender/slick.min.js", \
-  "/vender/macho.js", \
+  "/vender/macho.js"
+
+- if @page_name == "homepage"
+  = javascript_include_tag \
+    "/vender/ytplayer/jquery.mb.YTPlayer.js"
+
+- if @page_name == "category-page"
+  = javascript_include_tag \
+    "http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"
+
+= javascript_include_tag \
   "all"

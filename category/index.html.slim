@@ -1,11 +1,34 @@
+- @page_name = "category-page"
+
 .page-header.page-header_small.page-header_black-bg
   .container
     h2.page-header-title 點亮台灣的100種方式
     p.page-header-text 不願放棄的地方，就有希望
 
-.filter-block
-  .container
+.category-list#category-list
+  .category-list-header
+    .container
+      select#filter_category
+        option value="" selected="selected" 全部
+        option value="藝術文化" 藝術文化
+        option value="社會創新" 社會創新
+        option value="生活工藝" 生活工藝
+        option value="在地滋味" 在地滋味
 
-.content
-  .container
-    = render "/partial/team-list"
+  .category-list-content
+    .container
+      ul.team-list.list
+        - team_data.reverse_each do |team|
+          li.team-list-item
+            a.card href="/team/#{team['en_name']}.html"
+              .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
+                .card-city
+                  .card-city-icon
+                    img src="/images/map/#{team['map']}.svg"
+                  .card-city-name= "#{team['location']}"
+                .card-header-inner
+                  h3.card-title.auto-break-text= "#{team['name']}"
+                  .card-category.filter_category= "#{team['category']}"
+              .card-content
+                h4.card-subtitle.auto-break-text= "#{team['slogan']}"
+
