@@ -703,3 +703,22 @@
       figure_en_name: "01"
       name: "陳威仲"
       intro: "拷秋勤樂團成員／激進工作室負責人／內地搖滾創辦人"
+-
+  en_name: "flowerforlove"
+  slogan: "以獨一無二的花與盆栽，為人們傳情"
+  name: "花羽愛"
+  video: false
+  map: "kaohsiung"
+  location: "高雄市"
+  address: "高雄市前金區文武三街99號"
+  category: "生活工藝"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/flower.forlove99"
+  preface: "每個獨一無二的作品背後都充滿了許多小故事。花羽愛工作室希望藉由花，來傳遞難以啟齒的愛意、心意甚或是歉意，讓收到的人都可以感受滿滿的愛及溫暖。"
+  member_amount: "兩個年輕人，一間工作室"
+  member:
+    -
+      figure_en_name: "01"
+      name: "莊羽涵"
+      intro: "因為喜愛花藝及文化產業，希望能讓獲得作品的人充分感受到溫度，並非商業作品所能替代的。"

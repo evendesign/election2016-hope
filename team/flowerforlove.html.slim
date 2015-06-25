@@ -1,0 +1,92 @@
+- @team_id = 27
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 以花藝設計為主體，希望藉此傳遞人與人之間各種不同的情與愛，再加上創作者本人的名字中有個輕柔和平意象的「羽」，拼湊起來，就是簡單明瞭的「花羽愛」。
+        h4 創作理念
+        p 堅持手工創作每個獨一無二的作品，而這些作品的背後都充滿了許多的小故事，也正因為這樣希望藉由花，來傳遞難以啟齒的愛意、心意甚或是歉意，讓收到的人都可以感受滿滿的愛及溫暖。
+        p 關於小盆栽的創意發想，是以現代忙錄的工作者為設想，讓人們可在有限的空間內增加綠意，但要是能適合擺放在屋內、辦公桌等，不用照射太陽少量給水即很好照料的植物，加上療癒擺件，搭配上各式不同的花器，創作出獨特的樣貌來慰癒人心。
+        h4 創作媒材
+        p 鮮花、乾燥花、不凋花、多肉植物、仙人掌、各式器皿（瓷器、木盒、玻璃器皿、紙盒…等）。 
+        p 持續注入富含時代意義的老物，與花藝植物的結合，讓現代化生活融入早期時光的溫暖。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+
+= render "/team/team-page-bottom"
