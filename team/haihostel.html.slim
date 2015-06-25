@@ -1,0 +1,84 @@
+- @team_id = 29
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 「基隆沒什麼好玩的啦！」繞著台灣五年來，最常聽到的就是這句！
+        p 回到基隆，不信邪的我們成立了女巫國際背包客生活概念館，除了挖掘出海釣行程，協助海釣業從「專帶釣手」到「新手也能上船」，這中間我們花了快一年的時間努力磨合，希望更多人踏入「海釣」這刺激的行程。
+        p 除此之外，在基隆可以嚐遍獨木舟、風帆、SUP、浮潛、潛水等生態活動，另外最近風靡許多國際背包客的「夜奔魚市行程」，帶著大家去到基隆最大半夜魚市，體驗叫賣和認識當地魚貨，再帶著豐盛沙西米和魚給漁村媽媽料理出漁村好味道，讓回去的每個背包客，最好都帶走一句「基隆真的是超好玩的啦！」  
+        p 在這裡，我們有個背包客空間。  
+        p 來這的，是世界各地的旅人，他們看過大山大海，吃遍山珍海味。 <br>這裡的船長，就算聽不懂英文還是熱心的帶著他們到來。 <br>這裡的風景，躺著就能徜徉天上星星、海上星星。 這裡的漁村，越半夜越熱鬧。 <br>這裡的魚市，出了很多連外國人都讚不絕口的新鮮魚。  
+        p 認同我們要發展基隆海岸線的「‎長潭漁村」‬，非常感謝這裡的漁村媽媽們，樂意提供位子讓來參加、深度體驗基隆的旅人休憩。這個漁村內大大小小美懷的風情，還有我們想把基隆好玩好吃好看好讚通通推薦給大家的心情，希望大家都能收到喔！  「女巫」位在基隆八斗子，以前屬於凱達格蘭族的居地。煙霧裊裊的八斗子半島被當地居民稱為 Pataw，也就是「女巫」的意思！‬‬
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"

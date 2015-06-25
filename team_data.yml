@@ -741,3 +741,49 @@
       figure_en_name: "01"
       name: "陳郁翔"
       intro: "國中學歷，清寒家庭，內心交織著改變命運的倔強和野心。"
+-
+  en_name: "haihostel"
+  slogan: "不甘旅人覺得基隆無趣，一群年輕人創立背包客棧、規劃精采行程"
+  name: "女巫國際背包客生活概念館"
+  video: false
+  map: "keelungcity"
+  location: "基隆市"
+  address: "基隆市中正區北寧路369巷21號"
+  category: "社會創新"
+  since: "2013"
+  website: ""
+  facebook_page: "http://www.facebook.com/haihostel"
+  preface: "一群來自基隆的年輕人，不甘願旅人們覺得基隆無趣，他們回到家鄉，成立女巫國際背包客生活概念館，規劃出許多精采行程，讓到基隆遊玩的旅人們，都能在離開時帶走一句：「基隆真的是超好玩的啦！」"
+  member_amount: "一群年輕人、分散在世界各國的旅人們"
+  member:
+    -
+      figure_en_name: "01"
+      name: "牛妞"
+      intro: "在這，少了他就像和世界斷了橋樑，調酒師 × 英語達人 × 設計師 集結在一身！愛與和平的海派角色，熱愛海洋運動。"
+    -
+      figure_en_name: "02"
+      name: "臉未到肚先到的肚肚"
+      intro: "致力於讓所有經過、到訪的旅人們深深愛上基隆的美。"
+    -
+      figure_en_name: "03"
+      name: "柯南"
+      intro: "七年前愛上了，就決定卯足一切死命也要把基隆推上世界一環！"
+    -
+      figure_en_name: "04"
+      name: "陳銘仁"
+      intro: "專業的創業團隊智囊團"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
