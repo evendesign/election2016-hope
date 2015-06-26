@@ -772,18 +772,26 @@
       figure_en_name: "04"
       name: "陳銘仁"
       intro: "專業的創業團隊智囊團"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-
+  en_name: "twinlandrock"
+  slogan: "「台灣的內地是南投！」音樂人打造台灣唯一不靠海的音樂祭"
+  name: "內地搖滾"
+  video: "https://www.youtube.com/watch?v=aN9kY25D6jE"
+  map: "nantou"
+  location: "南投縣"
+  address: "南投縣"
+  category: "藝術文化"
+  since: "2015"
+  website: ""
+  facebook_page: "https://www.facebook.com/TWInlandRock"
+  preface: "「內地搖滾」與南投埔里在地結合，串聯南投文化、農產、文創，企業資源，一同打造南投真正的在地精神，創造台灣唯一內陸不靠海的音樂祭。去「內地」不用出國，台灣的內地就在南投！"
+  member_amount: "台灣人的音樂祭"
+  member:
+    -
+      figure_en_name: "01"
+      name: "陳威仲"
+      intro: "激進工作室負責人"
+    -
+      figure_en_name: "02"
+      name: "KEVIN"
+      intro: "Magic Box 行銷創意"
