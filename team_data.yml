@@ -822,3 +822,22 @@
       figure_en_name: "03"
       name: "簡之郃"
       intro: "空間氛圍／視覺規劃<br>創作一個風景，來自成長的土地、出走的文化衝擊、閒蕩的生活而醞釀的養分……"
+-
+  en_name: "lelemu"
+  slogan: "他回到家鄉，開發屬於台中的生活木器物"
+  name: "樂樂木／樂物文創股份有限公司"
+  video: "https://www.youtube.com/watch?v=WLpfR1nmGs0"
+  map: "taichung"
+  location: "台中市"
+  address: "台中市北屯區宜文街 9 號 5 樓"
+  category: "生活工藝"
+  since: "2012"
+  website: ""
+  facebook_page: "https://www.facebook.com/LeLeMu?ref=hl"
+  preface: "樂樂木希望扮演一個透過設計與木工匠師們交流的平台，就像村里間熱鬧的雜貨店，展售經過設計爾後呈現的木生活器物，用樸實的手感工藝結合生活的使用，過一種「樂於與木為伍」的樂生活態度。"
+  member_amount: "1~3 人"
+  member:
+    -
+      figure_en_name: "01"
+      name: "劉孟宜"
+      intro: "豐原長大的小孩，念設計，在工作十幾年後回到家鄉尋找還在操作木藝加工的師傅們，合作開發屬於台中的生活木器物。"
