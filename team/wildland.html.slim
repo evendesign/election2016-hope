@@ -1,0 +1,80 @@
+- @team_id = 33
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 一個熱愛繪畫的女孩，由於長期與大自然接觸，對於色彩與形體，有著自己獨特的詮釋方式。非本科系出身的她，因緣際會下接觸到服裝設計與織品製作，生命的另一條道路便從此展開。2013 年成立自創品牌，取名為「野地」，一方面向給予生命養分與創作靈光的大自然致敬，另一方面更是希望自己的生活能像野地裡的生命一般，不受拘束，自由地生長出燦爛的花朵，所以作品常以花草植物等名稱命名。
+        p 在這個快速產製，並且鼓勵大量消費的現代，希望提供另一種選擇，用緩慢的誠意製作每一件商品，從選布、打版、設計到車縫，花費一到兩天的時間完成一件衣飾，加入簡約的設計與和諧的配色，回歸衣飾的純粹美感，希望每件衣飾與物品都能被使用很久，並且好好被珍惜。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
