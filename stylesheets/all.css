@@ -373,7 +373,7 @@ tbody.collapse.in { display: table-row-group; }
 
 .tile_primary { position: relative; border-bottom: 0; height: 100%; }
 .tile_primary .tile-title { position: absolute; top: 96px; padding: 0 24px; font-size: 18px; line-height: 24px; margin-bottom: 24px; }
-.tile_primary .tile-icon { padding-bottom: 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-logotype.png?1434313897'); background-repeat: no-repeat; background-position: 50% 50%; width: 244px; height: 90px; background-image: none, url('/images/local-light-logotype.svg?1434313897'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
+.tile_primary .tile-icon { padding-bottom: 12px; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-logotype.png?1435137840'); background-repeat: no-repeat; background-position: 50% 50%; width: 244px; height: 90px; background-image: none, url('/images/local-light-logotype.svg?1435137840'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
 .tile_primary .tile-content { position: absolute; bottom: 24px; padding: 0 24px; }
 
 .tile_event .tile-icon, .tile_submit .tile-icon { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: contain; background-repeat: no-repeat; background-position: center center; }
@@ -430,7 +430,7 @@ tbody.collapse.in { display: table-row-group; }
 
 .header { position: absolute; top: 0; left: 0; right: 0; z-index: 1000; padding: 12px 14px; }
 .header .logo { margin-bottom: 0px; font-size: 24px; line-height: 24px; font-weight: bold; }
-.header .logo a { display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-web-logo.png?1434313897'); background-repeat: no-repeat; background-position: 50% 50%; width: 70px; height: 65px; background-image: none, url('/images/local-light-web-logo.svg?1434313897'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; color: white; }
+.header .logo a { display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/local-light-web-logo.png?1435137840'); background-repeat: no-repeat; background-position: 50% 50%; width: 70px; height: 65px; background-image: none, url('/images/local-light-web-logo.svg?1435137840'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; color: white; }
 .header .logo a:hover { text-decoration: none; }
 @media (min-width: 640px) { .header { padding: 24px; } }
 @media (min-width: 1025px) { .header { padding: 24px 120px; } }
@@ -699,7 +699,7 @@ tbody.collapse.in { display: table-row-group; }
   .activity .activity-item:nth-child(4n+1) { clear: left; } }
 
 .submit-page .join-local-light { display: block; max-width: 400px; line-height: 0; text-indent: -119988px; overflow: hidden; text-align: left; margin: 0 auto 24px; max-width: 350px; width: 75%; }
-.submit-page .join-local-light:after { content: ""; display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/join-local-light-big.png?1434310030'); background-repeat: no-repeat; background-position: 50% 50%; width: 400px; height: 287px; background-image: none, url('/images/join-local-light-big.svg?1434310030'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 71.75%; }
+.submit-page .join-local-light:after { content: ""; display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/join-local-light-big.png?1435137840'); background-repeat: no-repeat; background-position: 50% 50%; width: 400px; height: 287px; background-image: none, url('/images/join-local-light-big.svg?1435137840'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 71.75%; }
 @media (min-width: 640px) { .submit-page .join-local-light { margin: 0 auto 48px; } }
 
 @media (min-width: 1025px) { .scale-content .message-page .page-inner { min-height: 75vh; } }
