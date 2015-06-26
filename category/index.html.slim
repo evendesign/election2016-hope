@@ -17,7 +17,7 @@
 
   .category-list-content
     .container
-      ul.team-list.list
+      ul.team-list
         - team_data.reverse_each do |team|
           li.team-list-item
             a.card href="/team/#{team['en_name']}.html"

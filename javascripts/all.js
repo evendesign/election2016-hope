@@ -175,7 +175,8 @@ if ( $('.team-video-play').length != 0 ) {
 // 偵測是否有分類列表
 if ( $('.category-list').length != 0 ) {
   var options = {
-    valueNames: ['filter_category']
+    valueNames: ['filter_category'],
+    listClass: 'team-list'
   };
   var category_list = new List('category-list', options);
 
