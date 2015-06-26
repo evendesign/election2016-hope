@@ -4,11 +4,10 @@ ul.team-list
       a.card href="/team/#{team['en_name']}.html"
         .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
           .card-city
-            .card-city-icon
-              img src="/images/map/#{team['map']}.svg"
+            .card-city-icon class="icon-map-#{team['map']}" #{team['map']}
             .card-city-name= "#{team['location']}"
           .card-header-inner
             h3.card-title.auto-break-text= "#{team['name']}"
-            .card-category= "#{team['category']}"
+            .card-category.filter_category= "#{team['category']}"
         .card-content
           h4.card-subtitle.auto-break-text= "#{team['slogan']}"
