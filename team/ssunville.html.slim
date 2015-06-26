@@ -1,0 +1,116 @@
+- @team_id = 31
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/10.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 我們可以接受在歷史交替的過程中，有些東西會消失，但是，如果我們可以留存再現這些實體，花再多的力氣來努力，是堅持，是夢想……
+        p 我們用「愛」來維護一間老眷舍。
+        p 團隊伙伴在一次偶然中得知清營巷1號屋主伯伯的故事，伯伯非常喜愛住了大半輩子的屋舍，在不得不搬走前，小心翼翼整理，在庭院後方蓋上遮蓋板防野草叢生。這天，在冬日午後，我們開啟了紅色鐵門，進了屋，感應到前屋主伯伯有多疼惜這房子，屋裡沉靜散放的美感，所自然流露的氣氛與光暈，擁有時光的獨有洗練，伯伯傳遞了敬物惜福、謙遜與感恩的心意給我們。
+        p 我們不以營利方式來使用這房舍，做為藝文交流空間，也以眷村文物原味保留為目標，不是展場的展品，而是生活物件，要用手的潤澤讓舊物展現另一種生命質地，更為質樸、歡喜、更為豐饒，也更貼近真實生活本身。
+        p 「小陽。春日子工作室」，從攝影及舊物佈置展開始，每月固定以工作室開放日模式讓來自各地的民眾與同好來訪及交流。我們曾經舉辦過這些活動：
+        p
+          b 1. 小字輩市集<br>
+          |集結各地的手作藝術家、插畫家、文創者，以互相交流。
+        p
+          b 2. 攝影、旅遊、生態雨林講座<br>
+          |邀請攝影師、旅行社領隊、生態雨林保育者前來分享
+        p
+          b 3. 嗨皮扭意兒<br>
+          |農曆新年春節佈置，以舊時的柑仔店童玩抽抽樂加上春節佈置，讓大家體驗舊時氛圍。
+        p
+          b 4. 迎馬年「睏飽再來咖啡館」、「與文學一起過新年」<br>
+          |以咖啡館型式加上樂團表演，營造友善的空間歡迎大家進入工作室。
+        p
+          b 5. 單車日<br>
+          |腳踏雙輪騎過屏東人才知道的美麗田野風景及邊品嚐鄉鎮裡傳統小吃，並推廣自行車運動。
+        p 除了舉辦活動之外，我們也結合在地其他產業，推廣屏東茶生活美學，電影講座播放，古蹟日導覽參觀，讓屏東文化被看見！
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+      a.gallery-item href="#{team_photo_10}"
+        .gallery-item-inner style="background-image: url('#{team_photo_10}');"
+
+= render "/team/team-page-bottom"

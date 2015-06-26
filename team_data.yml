@@ -795,3 +795,30 @@
       figure_en_name: "02"
       name: "KEVIN"
       intro: "Magic Box 行銷創意"
+-
+  en_name: "ssunville"
+  slogan: "三個女孩走入老房子，打造一間懷舊質樸的工作室"
+  name: "小陽。春日子"
+  video: false
+  map: "pingtung"
+  location: "屏東縣"
+  address: "屏東縣"
+  category: "藝術文化"
+  since: "2012"
+  website: ""
+  facebook_page: "https://www.facebook.com/ssunville"
+  preface: "不以營利方式來使用這房舍，做為藝文交流空間，也以眷村文物原味保留為目標，不是展場的展品，而是生活物件，要用手的潤澤讓舊物展現另一種生命質地，更為質樸、歡喜、更為豐饒，也更貼近真實生活本身。"
+  member_amount: "3個女藝文工作者、一間老眷舍"
+  member:
+    -
+      figure_en_name: "01"
+      name: "蔡依芸"
+      intro: "攝影／園丁<br>喜歡熱血過生活、喜歡讀文字、喜歡騎自行車漫遊、喜歡用底片相機拍照；一直對花草樹木懷抱著愛情；一直對舊時光裡的老物件有著莫名愛戀"
+    -
+      figure_en_name: "02"
+      name: "劉孟玲"
+      intro: "攝影／料理人<br>喜歡：料理／旅行／閱讀／手工<br>專長：攝影／記錄"
+    -
+      figure_en_name: "03"
+      name: "簡之郃"
+      intro: "空間氛圍／視覺規劃<br>創作一個風景，來自成長的土地、出走的文化衝擊、閒蕩的生活而醞釀的養分……"
