@@ -177,16 +177,16 @@ if ( $('.category-list').length != 0 ) {
 
   // 換頁功能相關設定
   var pagination_top_options = {
-    name: "category-list-pagination-top",
-    paginationClass: "category-list-pagination-top",
-    innerWindow: 5,
-    outerWindow: 2,
-    right: 2
+    name: "pagination-top",
+    paginationClass: "pagination-top",
+    innerWindow: 1,
+    outerWindow: 1
   };
   var pagination_bottom_options = {
-    name: "category-list-pagination-bottom",
-    paginationClass: "category-list-pagination-bottom",
-    innerWindow: 10
+    name: "pagination-bottom",
+    paginationClass: "pagination-bottom",
+    innerWindow: 1,
+    outerWindow: 1
   };
 
   // list.js 相關設定
@@ -221,6 +221,11 @@ if ( $('.category-list').length != 0 ) {
       });
     } else {
       category_list.filter();
+    }
+
+    // 沒有任何團隊符合篩選結果時，新增資訊
+    if (category_list.visibleItems.length == 0) {
+      $('.team-list').append('<li class="team-list-item team-list-item_no-result">沒有任何團隊符合篩選結果</li>')
     }
   }
 
