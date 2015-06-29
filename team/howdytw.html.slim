@@ -41,29 +41,11 @@
         p 不同於台中概念店，「好,的 駁二旗艦店」以土地為文化之根，透過實體場域展現高雄城市的縱紋脈向，展現「土生工藝」、「食農生活」、「好事育成」精神。「好,的」位在國際觀光熱點的駁二藝術特區內，亦以土地創意結成的豐美果實悅近來遠。Say Howdy, and enjoy it! 
         p ※ Howdy 源自美國南方日常招呼語「hello」之意，南方人亦以好客聞名，其諧音中文口語好的，隱含著將設計變成「呷飽未」那般常民生活自然而然的好習慣。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

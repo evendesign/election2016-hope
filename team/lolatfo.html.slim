@@ -46,29 +46,11 @@
           | 我們追求的生活態度也是如此簡單與堅持。
         p 2014 年，路力家器具於台灣成立了。路力取自於台語的「Lo Lat」，是台灣老一輩人對彼此付出的勞力訴說「謝謝」的問候。在台灣，其實有許多藏匿於巷弄間的工匠師傅們，擁有一身好技藝。而 Lo Lat 就想找到這些工匠師傅們並說聲：Lo Lat！我們期許自己手藝日益精進，也期待著與台灣的工匠師傅們協同合作，持續這份感動、感謝的心情。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

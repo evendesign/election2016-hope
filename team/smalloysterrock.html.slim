@@ -46,29 +46,11 @@
         p 從 2012 到 2015，第一屆辦一天的音樂節，到第三屆的三天兩夜，從單純的酒後閒聊變成全村總動員的大活動，「蚵寮小搖滾」不僅翻轉了我們對社區營造的想像，也打造出專屬於蚵寮的在地風格。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

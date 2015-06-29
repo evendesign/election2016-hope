@@ -44,29 +44,35 @@
         p 過去我們無法想像，太陽能光電跟農業有怎樣的關聯，但在再生能源成為必修題的今天，兩位屏東企業家的遠見，讓我們看見綠能的春天。
 
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
           ul.team-info-list
             li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
+              .label 團隊類型
+              .info-content
+                span #{team_data[@team_id]['category']}
             li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
+              .label 團隊成立年
+              .info-content
+                span #{team_data[@team_id]['since']}
             li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
+              .label 團隊規模
+              .info-content
+                span #{team_data[@team_id]['member_amount']}
             li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
+              .label 團隊地址
+              .info-content
+                span #{team_data[@team_id]['address']}
             li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" 旭東環保科技公司 #{team_data[@team_id]['website']}
+              .label 團隊網站
+              .info-content
+                a target="_blank" href="http://www.srise.com.tw/v2/" 旭東環保科技公司
             li
-              span.label 團隊網站
-              a.info-content target="_blank" href="http://www.sunnyrichorganic.com.tw/" 向陽健康家族 http://www.sunnyrichorganic.com.tw/
+              .label 團隊網站
+              .info-content
+                a target="_blank" href="http://www.sunnyrichorganic.com.tw/" 向陽健康家族
 
 .gallery
   .container

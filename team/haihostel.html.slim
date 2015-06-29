@@ -41,29 +41,11 @@
         p 來這的，是世界各地的旅人，他們看過大山大海，吃遍山珍海味。 <br>這裡的船長，就算聽不懂英文還是熱心的帶著他們到來。 <br>這裡的風景，躺著就能徜徉天上星星、海上星星。 這裡的漁村，越半夜越熱鬧。 <br>這裡的魚市，出了很多連外國人都讚不絕口的新鮮魚。  
         p 認同我們要發展基隆海岸線的「‎長潭漁村」‬，非常感謝這裡的漁村媽媽們，樂意提供位子讓來參加、深度體驗基隆的旅人休憩。這個漁村內大大小小美懷的風情，還有我們想把基隆好玩好吃好看好讚通通推薦給大家的心情，希望大家都能收到喔！  「女巫」位在基隆八斗子，以前屬於凱達格蘭族的居地。煙霧裊裊的八斗子半島被當地居民稱為 Pataw，也就是「女巫」的意思！‬‬
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

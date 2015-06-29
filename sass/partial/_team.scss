@@ -244,21 +244,22 @@
     }
     li {
       @include trailer(.5);
+      @include pie-clearfix;
+      padding: 3px 0;
     }
 
     .label {
       display: block;
+      margin-bottom: 3px;
       width: 100px;
-      @include adjust-font-size-to(13px);
+      @include adjust-font-size-to(13px, 3/4);
       font-weight: bold;
       color: $color-black-light;
-
     }
     .info-content {
       display: block;
-      @include adjust-font-size-to(15px);
-      @include ellipsis;
-      &:empty {
+      @include adjust-font-size-to(15px, 3/4);
+      span:empty, a:empty {
         pointer-events: none;
         &:before {
           content: "目前尚無資料";
@@ -323,15 +324,19 @@
     }
 
     .team-info-card {
-      li { @include trailer(0); }
+      li {
+        @include trailer(0);
+        padding: 6px 0;
+      }
       .label {
-        display: inline-block;
-        @include adjust-font-size-to(15px, 1.1);
+        float: left;
+        @include trailer(0);
+        @include adjust-font-size-to(15px, 3/4);
         font-weight: normal;
       }
       .info-content {
-        display: inline-block;
-        @include adjust-font-size-to(15px, 1.1);
+        overflow: hidden;
+        @include adjust-font-size-to(15px, 3/4);
       }
     }
 
@@ -368,19 +373,23 @@
       color: #ddd;
     }
     .team-info-card {
+      padding-left: 300px;
+      position: relative;
       .team-photo {
-        float: left;
+        position: absolute;
         display: block;
-        max-width: 300px;
-        width: 100%;
-        height: auto;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 300px;
+        @include background-size(cover);
+        background-position: center;
+        background-repeat: no-repeat;
       }
       .team-info-inner {
-        width: calc( 100% - 300px );
+        width: 100%;
       }
       .info-content {
-        vertical-align: top;
-        width: calc( 100% - 100px );
       }
     }
   }

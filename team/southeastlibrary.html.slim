@@ -43,29 +43,11 @@
         p 特別的是，「燦爛時光」將嘗試恐怕前無古人的二手書流動方式：不論新書還是二手書，在這兒都必須先「原價借出」，但是還書時，則可領回原價。而為了讓同一本書的前後讀者透過書籍交流，感受彼此的溫度，「燦爛時光」也鼓勵讀者在書本上畫線畫記號、寫眉批寫心得。
         p 「燦爛時光」這個名字，來自天下雜誌替已故學者成露茜所出版的傳記《燦爛時光：Lucie 的人生探索》。Lucie 一生大開大闔、勇於探索，無論身在何處，都能找到燦爛時光。畢竟，真正燦爛的不是陽光、不是星光，而是善良又好奇的靈魂。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

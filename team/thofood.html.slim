@@ -48,29 +48,11 @@
         p 劉天和不僅僅從吃魚變成養魚達人，他並親自跑遍世界學習各種食材的生產過程，甚至透過海外訂單意外接軌世界級生技、打通技術門檻，再回收魚廢料及養殖網上的海藻，讓過往被養殖業者視為廢棄物的魚廢料成為獨門的配方飼料，養出「海藻豬」及「海藻豬」。
         p 現在，除了澎湖的海上牧場外，還有嘉義的有機農場，從豬雞魚肉到蔬果米飯，舉凡要吃進口中的，劉天和都力求親力親為，讓人們能確信自己吃的食物從哪裡來，他堅持，「不只是賣食材，賣的是健康的生活」。劉天和堅持著自己的信念，憑著不妥協的毅力，終於找到可貫徹「安心食用」的養殖方式，也讓台灣人擁有更多健康的選擇。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

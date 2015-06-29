@@ -44,29 +44,11 @@
         p 我們三個創始人是高中美術班同學，後來上了不同學校的美術系，一個台師大、兩個北藝大；2008 年我們畢業之後，一起投了北藝大創新育成中心的「U-Start創業育成計畫」，由教育部提供部分創業基金。
         p 我們三個都是純藝術背景，同質性很高，對品牌來說不是一件容易的事情。我們清楚知道不可能三個人做一樣的事情，所以一開始就決定要分工。一個人負責設計企劃，一個人負責產品開發、客戶聯繫，一個負責財務規劃以及行政。一路走來，目前團隊核心成員有 15 位，加上直營店的工讀生，目前維持在 20 幾位印花樂成員。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

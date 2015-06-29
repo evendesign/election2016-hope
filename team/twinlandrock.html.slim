@@ -43,29 +43,11 @@
         p 由拷秋勤樂團成員所經營的「激進工作室」把歌詞變成實際行動，號召樂團界朋友們強行進軍台灣的內地「南投埔里」舉辦第一屆「內地搖滾」。
         p 主辦人陳威仲表示，該讓這句「台灣的內地是南投」響徹全台灣了，在主流藝人飛向他國矮化國格的同時該用音樂來宣示「主場優勢」了，而台灣是台灣絕對不是任何國家的「外地」，並邀請台灣嘻哈教主「大支」、台客精神霸主「濁水溪公社」、張睿銓等人前進台灣的內地南投演出，主辦人笑稱他國封殺的藝人就是我們的口袋名單。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

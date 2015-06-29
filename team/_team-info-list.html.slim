@@ -1,0 +1,25 @@
+ul.team-info-list
+  li
+    .label 團隊類型
+    .info-content
+      span #{team_data[@team_id]['category']}
+  li
+    .label 團隊成立年
+    .info-content
+      span #{team_data[@team_id]['since']}
+  li
+    .label 團隊規模
+    .info-content
+      span #{team_data[@team_id]['member_amount']}
+  li
+    .label 團隊地址
+    .info-content
+      span #{team_data[@team_id]['address']}
+  li
+    .label 團隊網站
+    .info-content
+      a target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+  li
+    .label Facebook
+    .info-content
+      a target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}

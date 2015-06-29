@@ -41,29 +41,11 @@
         p 2010 年的時候創辦了尤卡，當時只有兩個人，那一年，我只有 22 歲，創業資金非常的艱辛。但我覺得台灣的美髮環境實在有問題，想要自己打造一個美髮環境。在 2014 年的時候我們開了第二間店，利用青年就業貸款，今年（2015 年）我們準備開第三間店，我們從兩個人到現在約 40 幾位員工，從零散做到現在有組織性的做事情。在高雄，美幾乎不像是重點的產業，但我們總希望有特色時尚時髦的品味在高雄也可以發光發熱。美髮是一種行動藝術，它不只是頂在每個人的頭上，也走在每條路上。我不是就讀本科系的，但我很熱愛髮型設計，我們曾經開玩笑說：「天哪！我們的工作對於這個社會一點貢獻都沒有。」但我卻衷心的希望改善的這個產業，想改善這產業的教育，學校的教育與髮廊的經營模式。我們店叫做尤卡，用 Unique & Create & Art 組成，用了這三個單字的英文前開頭的 UCA 英文翻成中文而變成了尤卡。
         p 目前我們擁有三間沙龍，我們還在不斷努力地前進，我們希望能在高雄用美麗發光，用藝術設計之美看到高雄。我們也更致力於做產業的投入，即便這一路上有非常多的辛苦，但我們相信對的思想需要擁有一份大的勇氣，為年輕一輩的我們努力，為草莓族這個名詞負責。我們相信我們有無限的希望以及勇氣，因為我們熱愛我們自已的工作，我們也用心投入我們的工作，我們要讓美髮可以是服務可以是設計，創造更多美的事物。"
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container

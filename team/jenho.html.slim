@@ -41,29 +41,11 @@
         p 台灣東北角曾經是台灣海洋經濟的重要地區。位在貢寮的九孔養殖產業，全盛時期產量達約兩千公噸，產值超過 20 億。但 10 多年前因近親繁殖、病毒感染，造成九孔大量死亡。峰哥與阿銘兩兄弟，親眼看到了父親一輩子的心血毀於一旦，在心中留下很深的傷痛。
         p 峰哥毅然決然辭去了小學老師的工作，回到自家的養殖場，與父親一起重新起步。一個契機，父親的朋友給了他一些鮑魚苗，父子倆靠著以往養殖九孔的技術，成功培育了品質高檔的正港台灣鮑魚。而弟弟阿銘，目前仍是藥學的博士生，儘管父親反對，阿銘也已經決定畢業後，要重返家鄉和峰哥一起延續天然養殖。
       .team-info-card
-        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
           .team-name #{team_data[@team_id]['name']}
           .team-location #{team_data[@team_id]['location']}
-          ul.team-info-list
-            li
-              span.label 團隊類型
-              span.info-content #{team_data[@team_id]['category']}
-            li
-              span.label 團隊成立年
-              span.info-content #{team_data[@team_id]['since']}
-            li
-              span.label 團隊規模
-              span.info-content #{team_data[@team_id]['member_amount']}
-            li
-              span.label 團隊地址
-              span.info-content #{team_data[@team_id]['address']}
-            li
-              span.label 團隊網站
-              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
-            li
-              span.label Facebook
-              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+          = render "/team/team-info-list"
 
 .gallery
   .container
