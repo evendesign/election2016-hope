@@ -8,12 +8,40 @@
 .category-list#category-list
   .category-list-header
     .container
-      select#filter_category
-        option value="" selected="selected" 全部
-        option value="藝術文化" 藝術文化
-        option value="社會創新" 社會創新
-        option value="生活工藝" 生活工藝
-        option value="在地滋味" 在地滋味
+      .select-filter
+        label.select-title 選擇分類：
+        select.select-control#category_select_filter
+          option value="" selected="selected" 全部
+          option value="藝術文化" 藝術文化
+          option value="社會創新" 社會創新
+          option value="生活工藝" 生活工藝
+          option value="在地滋味" 在地滋味
+
+      .select-filter
+        label.select-title 選擇地區：
+        select.select-control#location_select_filter
+          option value="" selected="selected" 全部
+          option value="keelungcity" 基隆市
+          option value="taipei" 台北市
+          option value="newtaipeicity" 新北市
+          option value="taoyuan" 桃園市
+          option value="hsinchucity" 新竹市
+          option value="hsinchu" 新竹縣
+          option value="miaoli" 苗栗縣
+          option value="taichung" 台中市
+          option value="nantou" 南投縣
+          option value="changhua" 彰化縣
+          option value="yunlin" 雲林縣
+          option value="chiayi" 嘉義縣
+          option value="chiayicity" 嘉義市
+          option value="tainan" 台南市
+          option value="kaohsiung" 高雄市
+          option value="pingtung" 屏東縣
+          option value="taitung" 台東縣
+          option value="hualien" 花蓮縣
+          option value="yilan" 宜蘭縣
+          option value="penghu" 澎湖縣
+
 
   .category-list-content
     .container
@@ -23,11 +51,11 @@
             a.card href="/team/#{team['en_name']}.html"
               .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
                 .card-city
-                  .card-city-icon class="icon-map-#{team['map']}" #{team['map']}
+                  .card-city-icon.team_location_value class="icon-map-#{team['map']}" #{team['map']}
                   .card-city-name= "#{team['location']}"
                 .card-header-inner
                   h3.card-title.auto-break-text= "#{team['name']}"
-                  .card-category.filter_category= "#{team['category']}"
+                  .card-category.team_category_value= "#{team['category']}"
               .card-content
                 h4.card-subtitle.auto-break-text= "#{team['slogan']}"
 

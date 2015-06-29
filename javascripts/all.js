@@ -174,22 +174,41 @@ if ( $('.team-video-play').length != 0 ) {
 
 // 偵測是否有分類列表
 if ( $('.category-list').length != 0 ) {
+
+  // 換頁功能相關設定
+
+  // list.js 相關設定
   var options = {
-    valueNames: ['filter_category'],
-    listClass: 'team-list'
+    valueNames: ['team_category_value','team_location_value'],
+    listClass: 'team-list',
+    page: 12,
   };
+
   var category_list = new List('category-list', options);
 
-  $('#filter_category').change(function () {
-      var selection = this.value;
-      if (selection) {
-          category_list.filter(function(item) {
-              return (item.values().filter_category == selection);
-          });
-      } else {
-          category_list.filter();
-      }
-  });
+  // 設定 filter 規則
+  var updateList = function(){
+    var category_select_value = $("#category_select_filter").val();
+    var loaction_select_value = $("#location_select_filter").val();
+    if (category_select_value && !loaction_select_value) {
+      category_list.filter(function(item) {
+        return (item.values().team_category_value == category_select_value)
+      });
+    } else if (!category_select_value && loaction_select_value) {
+      category_list.filter(function(item) {
+        return (item.values().team_location_value == loaction_select_value)
+      });
+    } else if (category_select_value && loaction_select_value) {
+      category_list.filter(function(item) {
+        return ((item.values().team_category_value == category_select_value)
+          && (item.values().team_location_value == loaction_select_value))
+      });
+    } else {
+      category_list.filter();
+    }
+  }
+
+  $("#category_select_filter, #location_select_filter").change(updateList);
 
 }
 
