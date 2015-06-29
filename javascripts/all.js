@@ -176,12 +176,28 @@ if ( $('.team-video-play').length != 0 ) {
 if ( $('.category-list').length != 0 ) {
 
   // 換頁功能相關設定
+  var pagination_top_options = {
+    name: "category-list-pagination-top",
+    paginationClass: "category-list-pagination-top",
+    innerWindow: 5,
+    outerWindow: 2,
+    right: 2
+  };
+  var pagination_bottom_options = {
+    name: "category-list-pagination-bottom",
+    paginationClass: "category-list-pagination-bottom",
+    innerWindow: 10
+  };
 
   // list.js 相關設定
   var options = {
     valueNames: ['team_category_value','team_location_value'],
     listClass: 'team-list',
     page: 12,
+    plugins: [
+      ListPagination(pagination_top_options),
+      ListPagination(pagination_bottom_options)
+    ]
   };
 
   var category_list = new List('category-list', options);
