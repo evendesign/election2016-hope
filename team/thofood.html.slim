@@ -1,0 +1,103 @@
+- @team_id = 37
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/10.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 一個總是帶著燦爛笑容的科技業大老闆，怎麼會想要自己跑去澎湖開始養魚？
+        p 創立天和鮮物的董事長，劉天和，在 1980 年代搭上科技業蓬勃發展的列車，劉天和從冷凍空調業轉進半導體製程工程，專門生產無塵室專用管件、半導體製程系統規劃與設計製造，成為亞洲第一家 FM 認證製程排氣公司。
+        p 從修冷氣到半導體製程，劉天和的事業隨時跟著社會脈動轉變，他天天加班，天天應酬、喝酒抽煙，數十年如一日，力求完美、做到最好的打拼性格，環繞著工作的生活，賠上的是身體的本錢——他在健康檢查時發現罹患了大腸癌，前前後後進出手術房八次，最後大腸全部被切除，只能吃最好消化的魚肉，但搜尋之下發現健康無毒的食材難以取得，越瞭解越害怕，於是，在病床上的他許下心願：「我是被閻羅王放回來的......如果老天再給我一次機會，我一定要提供健康的食物給大眾。」
+        p 是這樣的信念，讓他在 2002 年大病初癒就開始尋找可以養魚的漁場，在看到澎湖的「箱網養殖場」後，便下定決心在這裏開始他的「藍海事業」，短短三個月，就迅速在澎湖建立起大型箱網養殖場，投入龐大資金飼養海鱺、龍膽石斑等，更以兩年時間養殖出台灣第一條有身分證的健康魚「天和珍鱺」；更在 2003 年成立「天和海洋開發股份有限公司」，光是海鱺的產量就佔了全球三分之一，親自控管魚苗來源、成長過程、飼料分析、魚群健康分析，並委託國際檢驗機構檢驗重金屬及藥物殘留，早在政府開始進行水產的生產履歷之前，天和海上牧場就自我要求實施嚴格的生產履歷控管。
+        p 劉天和決心要創立完全天然的食品事業，因為堅持有機的飼養方式，從魚飼料要怎麼餵、如何繁殖，到如何能讓魚好好長大，這些都要從頭摸索，往往投入了大量成本卻無法回收，就算如此，劉天和依然咬牙苦撐，魚的餵食及繁殖有賴台灣農改場的技術得以確立飼養方式，但要如何不投要也能讓魚群順利成長呢？
+        p 在長期的實驗下，劉天和發明了一種「讓魚洗澡」的方式來去除養殖魚的病蟲害，而且這樣的方式只有以海水飼養的漁場才能辦到——利用滲透壓的不同，這些大型的鹹水魚能在淡水中存活將近 20 分鐘，但魚體身上的微生病菌一碰到淡水，連一分鐘都無法存活，靠著定期讓魚在淡水中洗澡，便可杜絕養殖的魚因為病菌而死亡。
+        p 劉天和不僅僅從吃魚變成養魚達人，他並親自跑遍世界學習各種食材的生產過程，甚至透過海外訂單意外接軌世界級生技、打通技術門檻，再回收魚廢料及養殖網上的海藻，讓過往被養殖業者視為廢棄物的魚廢料成為獨門的配方飼料，養出「海藻豬」及「海藻豬」。
+        p 現在，除了澎湖的海上牧場外，還有嘉義的有機農場，從豬雞魚肉到蔬果米飯，舉凡要吃進口中的，劉天和都力求親力親為，讓人們能確信自己吃的食物從哪裡來，他堅持，「不只是賣食材，賣的是健康的生活」。劉天和堅持著自己的信念，憑著不妥協的毅力，終於找到可貫徹「安心食用」的養殖方式，也讓台灣人擁有更多健康的選擇。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+      a.gallery-item href="#{team_photo_10}"
+        .gallery-item-inner style="background-image: url('#{team_photo_10}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+
+= render "/team/team-page-bottom"

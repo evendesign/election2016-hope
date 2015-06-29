@@ -945,7 +945,22 @@
       figure_en_name: "03"
       name: "蔡玟卉"
       intro: "畢業於國立台北藝術大學美術創作研究所，主修版畫，興趣是研究老玩具。印花樂的財務行政、課程設計。"
-
-
-
-
+-
+  en_name: "thofood"
+  slogan: "走過抗癌歷程，科技老闆打造安心食材"
+  name: "天和鮮物"
+  video: "https://www.youtube.com/watch?v=f0VrgyUaoVM"
+  map: "penghu"
+  location: "澎湖縣西嶼鄉"
+  address: "澎湖縣西嶼鄉"
+  category: "在地滋味"
+  since: "2003"
+  website: "http://www.thofood.com"
+  facebook_page: "https://www.facebook.com/thofood"
+  preface: "在 1980 年代搭上科技業蓬勃發展的列車的劉天和，卻在 48 歲時發現罹患了大腸癌，八次手術後大腸全部被切除，只能吃最好消化的魚肉，但他發現健康無毒的食材難以取得，因此在病床上許下願望，決心要提供健康的食物給大眾。"
+  member_amount: "海上牧場 ＋ 食品加工廠 ＋ 很多販售據點"
+  member:
+    -
+      figure_en_name: "01"
+      name: "劉天和"
+      intro: "天和鮮物董事長，台中大安鄉人，自小家境清寒，1963 年葛樂禮颱風沖掉家產後，家境更為貧窮，小學畢業後就離家北上做冷氣空調維修學徒，一直到 24 歲退伍之後，向舅舅借了五萬元開始創業。"
