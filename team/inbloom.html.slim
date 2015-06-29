@@ -1,0 +1,97 @@
+- @team_id = 36
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 「印花樂」由三位新生代的創作者成立於 2008 年的台北。我們設計印花布、以及各式印花產品；我們的創作靈感來自自身在台灣的成長記憶、生態關懷、以及生活中被忽略的尋常事物。用所學的版畫專業，透過網版印花的方式呈現每個時代的美好事物。
+        p 我們嚮往懷舊氛圍，卻也期待能將舊記憶轉化出當代價值，融入日常生活的使用與美感體驗中。我們的團隊很年輕，充滿活力，樂於接受各種想像的可能性；期待在自己的創作之外，還能有更多意想不到的跨界合作火花。
+        p 我們將工作室設在迪化街，這是台北城中最有活力的一條老街；在這裡我們結合其他夥伴，以工作室、藝術商店、咖啡店、書店、表演空間等，共同建構出大稻埕裡的「小藝埕」。 我們年輕的身體裡住著老靈魂，希望能由內而外地、將這片土地上所積累的美好生活記憶，透過印花創作呈現給大家。
+        p 我們三個創始人是高中美術班同學，後來上了不同學校的美術系，一個台師大、兩個北藝大；2008 年我們畢業之後，一起投了北藝大創新育成中心的「U-Start創業育成計畫」，由教育部提供部分創業基金。
+        p 我們三個都是純藝術背景，同質性很高，對品牌來說不是一件容易的事情。我們清楚知道不可能三個人做一樣的事情，所以一開始就決定要分工。一個人負責設計企劃，一個人負責產品開發、客戶聯繫，一個負責財務規劃以及行政。一路走來，目前團隊核心成員有 15 位，加上直營店的工讀生，目前維持在 20 幾位印花樂成員。
+      .team-info-card
+        img.team-photo src="/images/team/#{team_en_name}/bg_s.jpg"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          ul.team-info-list
+            li
+              span.label 團隊類型
+              span.info-content #{team_data[@team_id]['category']}
+            li
+              span.label 團隊成立年
+              span.info-content #{team_data[@team_id]['since']}
+            li
+              span.label 團隊規模
+              span.info-content #{team_data[@team_id]['member_amount']}
+            li
+              span.label 團隊地址
+              span.info-content #{team_data[@team_id]['address']}
+            li
+              span.label 團隊網站
+              a.info-content target="_blank" href="#{team_data[@team_id]['website']}" #{team_data[@team_id]['website']}
+            li
+              span.label Facebook
+              a.info-content target="_blank" href="#{team_data[@team_id]['facebook_page']}" #{team_data[@team_id]['facebook_page']}
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+
+= render "/team/team-page-bottom"

@@ -918,3 +918,34 @@
       figure_en_name: "05"
       name: "Joy"
       intro: "大學讀心理，研究所念體育，到處都跑過，什麼都會修。"
+-
+  en_name: "inbloom"
+  slogan: "三個高中美術班同學，用網版印花呈現美好時代"
+  name: "印花樂藝術設計有限公司"
+  video: false
+  map: "taipei"
+  location: "台北市"
+  address: "台北市大同區迪化街一段 32 巷 10 號 5 樓"
+  category: "生活工藝"
+  since: "2015"
+  website: "http://www.inblooom.com"
+  facebook_page: "https://www.facebook.com/inblooom"
+  preface: "「印花樂」由三位新生代的創作者成立於 2008 年的台北。設計印花布、以及各式印花產品；創作靈感來自自身在台灣的成長記憶、生態關懷、以及生活中的尋常事物。用所學的版畫專業，透過網版印花的方式呈現每個時代的美好。"
+  member_amount: "三個創辦人、十五個工作夥伴、兩間直營店、一間直營專櫃"
+  member:
+    -
+      figure_en_name: "01"
+      name: "邱瓊玉"
+      intro: "畢業於國立台北藝術大學美術學系，主修繪畫，熱愛攝影。印花樂的負責人。"
+    -
+      figure_en_name: "02"
+      name: "沈奕妤"
+      intro: "畢業於國立台灣師範大學美術學系，主修設計，平時喜歡蒐集各種藝文訊息。印花樂的設計師。"
+    -
+      figure_en_name: "03"
+      name: "蔡玟卉"
+      intro: "畢業於國立台北藝術大學美術創作研究所，主修版畫，興趣是研究老玩具。印花樂的財務行政、課程設計。"
+
+
+
+
