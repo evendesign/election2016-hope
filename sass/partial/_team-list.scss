@@ -23,6 +23,8 @@
   }
 
   @include at-breakpoint($pad) {
+    @include pie-clearfix;
+
     .team-list-item {
       max-width: none;
       @include isolate-grid(4);
