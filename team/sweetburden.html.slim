@@ -1,0 +1,72 @@
+- @team_id = 39
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 「讓偶然的美好，放大成更多的感動。」
+        p SWEETBURDEN 將蠶絲皮帶入市場已有三年餘，直到現在，每當客人拿起我們的皮件在眼前端詳，總會不約而同地反覆擺動雙手，追尋著絲光的流動變化。
+        p 那帶著新奇、驚艷甚至是一見鍾情的眼神，總讓我們回想起最初的感動；這份回響與共鳴，也是我們持續前進的最大動力。
+        p 當初在試驗中發現蠶絲結合牛皮的獨特與美好，層疊閃耀的絲光，是點燃夢想的小小火光。當我們努力讓越來越多人看見這份美好，夢想也隨之逐漸茁壯。
+        p 猶記得創意市集上的熱賣，每個親身的接觸與分享；手工 DIY 皮件組在校園團體間風靡，讓我們同時感受到成就與責任；引起國際精品品牌的注目，更奠定為這份夢想打開世界之窗的信心。
+        p 一路走來，我們深深體會，壯大的夢想，需要堅強的團隊。來自四面八方的朋友，除了志同道合、義氣相挺，更在創意、設計、技術、行銷等各面向發揮所長，在多元思維的激盪與團結的力量中，讓品牌發展、成長。
+        p 同時，我們更加體認到在地人才的發掘與培育的重要性，新生代設計師身上的潛力與能量，需要時間的歷練，更需要展演的舞台。一同經歷與成長，讓產業紮根，讓創意開展。最初的美好，透過更多人的參與，成就了更大的能量與夢想。
+        p SWEETBURDEN 願將這份感動持續擴展出去。
+        p 「我們是 SWEETBURDEN，我們來自台灣！」我們驕傲地說。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
