@@ -5,6 +5,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
+  height: 440px;
+  padding-bottom: 54px;
 
   .hero-bg-slide {
     position: absolute;
@@ -34,7 +37,9 @@
   }
 
   .hero-slide-item {
+    width: 100%;
     height: 440px;
+    float: left;
   }
 
   .slick-prev, .slick-next {
@@ -74,11 +79,15 @@
   }
 
   @include at-breakpoint($pad) {
+    height: 640px;
+    padding-bottom: 72px;
+
     .hero-bg-slide-item {
       height: 640px;
       padding-bottom: 72px;
     }
     .hero-slide-item {
+      width: 50%;
       height: 640px;
     }
     .slick-dots {
@@ -92,6 +101,8 @@
   @include at-breakpoint($desktop) {
     background-image: url('/images/hero-bg.jpg');
     margin: 0;
+    height: 90vh;
+    padding-bottom: 72px;
 
     .hero-bg-slide {
       display: none;
@@ -156,6 +167,24 @@
     }
     .slick-dots {
       border: none;
+    }
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    .hero-slide-item {
+      width: 33.3333%;
+    }
+  }
+
+  @include at-breakpoint(1760px) {
+    .hero-slide-item {
+      width: 25%;
+    }
+  }
+
+  @include at-breakpoint(2220px) {
+    .hero-slide-item {
+      width: 20%;
     }
   }
 
