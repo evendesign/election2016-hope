@@ -23,6 +23,7 @@
   margin-left: auto;
   margin-right: auto;
   color: #777;
+  @include text-shadow(0px 0px 1px rgba(white, 0.1));
 }
 
 .page-header_black-bg {
