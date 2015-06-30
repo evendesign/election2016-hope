@@ -57,11 +57,11 @@
 
   }
 
-  .pagination-top {
-    display: none;
-  }
-  .pagination-bottom {
+
+
+  .pagination {
     text-align: center;
+    @include trailer(4);
   }
 
   @include at-breakpoint($pad) {
@@ -75,20 +75,16 @@
       @include trailer(0);
       margin-right: 24px;
       float: left;
+      // display: inline-block;
+      // margin: 0 12px;
     }
 
-    .pagination-bottom {
+    .pagination {
       clear: both;
     }
   }
 
   @include at-breakpoint($desktop) {
-
-    .pagination-top {
-      display: block;
-      float: right;
-    }
-
 
   }
 

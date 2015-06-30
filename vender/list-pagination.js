@@ -118,8 +118,8 @@
                 var e, f = c.matchingItems.length, i = c.i, j = c.page, k = Math.ceil(f / j), l = Math.ceil(i / j), m = a.innerWindow || 2, n = a.left || a.outerWindow || 0, o = a.right || a.outerWindow || 0;
                 o = k - o, b.clear();
                 for (var p = 1; k >= p; p++) {
-                    var q = l === p ? "is_active" : "";
-                    g.number(p, n, o, l, m) ? (e = b.add({pagination_item: p,dotted: !1})[0], q && d(e.elm).add(q), h(e.elm, p, j)) : g.dotted(p, n, o, l, m, b.size()) && (e = b.add({pagination_item: "...",dotted: !0})[0], d(e.elm).add("disabled"))
+                    var q = l === p ? "is-active" : "";
+                    g.number(p, n, o, l, m) ? (e = b.add({pagination_item: p,dotted: !1})[0], q && d(e.elm).add(q), h(e.elm, p, j)) : g.dotted(p, n, o, l, m, b.size()) && (e = b.add({pagination_item: "...",dotted: !0})[0], d(e.elm).add("is-disabled"))
                 }
             }, g = {number: function(a, b, c, d, e) {
                     return this.left(a, b) || this.right(a, c) || this.innerWindow(a, d, e)
@@ -141,7 +141,7 @@
                 })
             };
             return {init: function(d) {
-                    c = d, b = new List(c.listContainer.id, {listClass: a.paginationClass || "pagination",item: "<li><a class='pagination_item' href='#'></a></li>",valueNames: ["page", "dotted"],searchClass: "pagination-search-that-is-not-supposed-to-exist",sortClass: "pagination-sort-that-is-not-supposed-to-exist"}), c.on("updated", f), f()
+                    c = d, b = new List(c.listContainer.id, {listClass: a.paginationClass || "pagination",item: "<li><a class='pagination_item pagination-item' href='#'></a></li>",valueNames: ["page", "dotted"],searchClass: "pagination-search-that-is-not-supposed-to-exist",sortClass: "pagination-sort-that-is-not-supposed-to-exist"}), c.on("updated", f), f()
                 },name: a.name || "pagination"}
         }
     }), a.alias("component-classes/index.js", "list.pagination.js/deps/classes/index.js"), a.alias("component-classes/index.js", "classes/index.js"), a.alias("component-indexof/index.js", "component-classes/deps/indexof/index.js"), a.alias("component-event/index.js", "list.pagination.js/deps/event/index.js"), a.alias("component-event/index.js", "event/index.js"), a.alias("component-indexof/index.js", "list.pagination.js/deps/indexof/index.js"), a.alias("component-indexof/index.js", "indexof/index.js"), a.alias("list.pagination.js/index.js", "list.pagination.js/index.js"), "object" == typeof exports ? module.exports = a("list.pagination.js") : "function" == typeof define && define.amd ? define(function() {
