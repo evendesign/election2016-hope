@@ -175,28 +175,18 @@ if ( $('.team-video-play').length != 0 ) {
 // 偵測是否有分類列表
 if ( $('.category-list').length != 0 ) {
 
-  // 換頁功能相關設定
-  var pagination_top_options = {
-    name: "pagination-top",
-    paginationClass: "pagination-top",
-    innerWindow: 1,
-    outerWindow: 1
-  };
-  var pagination_bottom_options = {
-    name: "pagination-bottom",
-    paginationClass: "pagination-bottom",
-    innerWindow: 1,
-    outerWindow: 1
-  };
-
   // list.js 相關設定
   var options = {
     valueNames: ['team_category_value','team_location_value'],
     listClass: 'team-list',
     page: 12,
     plugins: [
-      ListPagination(pagination_top_options),
-      ListPagination(pagination_bottom_options)
+      ListPagination({
+        name: "pagination",
+        paginationClass: "pagination",
+        innerWindow: 1,
+        outerWindow: 1
+      })
     ]
   };
 
@@ -225,7 +215,7 @@ if ( $('.category-list').length != 0 ) {
 
     // 沒有任何團隊符合篩選結果時，新增資訊
     if (category_list.visibleItems.length == 0) {
-      $('.team-list').append('<li class="team-list-item team-list-item_no-result">沒有任何團隊符合篩選結果</li>')
+      $('.team-list').append('<li class="team-list-item_no-result">目前沒有任何團隊，符合篩選結果。<br>請你重新選擇分類或地區。<div class="no-result-img"></div></li>')
     }
   }
 
