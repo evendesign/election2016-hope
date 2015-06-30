@@ -229,6 +229,9 @@ if ( $('.category-list').length != 0 ) {
     }
   }
 
+  // 初始化團隊列表，避免頁面在切換上下一頁時，select 保留 filter 結果，但團隊列表卻沒有改善的問題。
+  updateList();
+
   $("#category_select_filter, #location_select_filter").change(updateList);
 
 }
