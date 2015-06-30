@@ -1018,4 +1018,30 @@
       figure_en_name: "04"
       name: "劉又寧"
       intro: "高雄人，東海美術研究所畢，歷任平面設計、插畫等視覺藝術相關工作，SWEETBURDEN 視覺總監。"
-
+-
+  en_name: "theedgeman"
+  slogan: "邊緣人辦市集，用商品傳達理念與能量"
+  name: "邊緣人展演市集"
+  video: "https://www.youtube.com/watch?v=_L2SSl_IRks"
+  map: "taipei"
+  location: "台北市"
+  address: "台北市"
+  category: "藝術文化"
+  since: "2009"
+  website: ""
+  facebook_page: "https://www.facebook.com/theedgeman"
+  preface: "當初，一群為創作而苦窮的設計系同學即將畢業，卻又擔心被現實社會環境吞噬理想，所以決定自行創造體制外的展演平台，也因此將自己定義為「邊緣人」，希望可以讓更多不同族群參與，和創作者交流。"
+  member_amount: "3 個血汗主辦，100 攤以上血汗攤友"
+  member:
+    -
+      figure_en_name: "01"
+      name: "黃芳瑩"
+      intro: "在你的邊緣"
+    -
+      figure_en_name: "02"
+      name: "黃懷陞"
+      intro: "在邊緣人市集擔任製圖員"
+    -
+      figure_en_name: "03"
+      name: "羅喜哲"
+      intro: "在邊緣人市集擔任人"
