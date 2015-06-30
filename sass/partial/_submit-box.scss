@@ -4,7 +4,7 @@
   padding: rhythm(1.5);
   background-color: #f1f1f1;
   text-align: center;
-  @include border-radius(50px);
+  @include border-radius(10px);
   .submit-box-title {
     color: black;
     @include trailer(1);
@@ -16,7 +16,6 @@
   @include at-breakpoint($desktop) {
     position: relative;
     z-index: 100;
-    @include border-radius(25px);
     @include leader(6);
     @include trailer(-7);
     max-width: 640px;
