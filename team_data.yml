@@ -1045,3 +1045,22 @@
       figure_en_name: "03"
       name: "羅喜哲"
       intro: "在邊緣人市集擔任人"
+-
+  en_name: "oldroot"
+  slogan: "傳統木工廠老闆開辦工作坊，扭轉了工廠命運"
+  name: "老樹根魔法木工坊"
+  video: "https://www.youtube.com/watch?v=8WqGnPrVy84"
+  map: "taichung"
+  location: "台中市"
+  address: "台中市南區樹義路 63 號"
+  category: "生活工藝"
+  since: "1996"
+  website: "http://www.mutou-wood.com/"
+  facebook_page: "https://www.facebook.com/mutouwoodtw"
+  preface: "傳統木工廠老闆江明偉六年前，接不到訂單面臨關門，一名老外上門想租機器自己做書櫃，意外給了他靈感，開啟老工廠的新生命。如今老工廠變身「老樹根魔法木工坊」，吸引新加坡等外國學生組團來遊學。"
+  member_amount: "一間傳統木工廠、一間教育的工廠、一間文創的工廠"
+  member:
+    -
+      figure_en_name: "01"
+      name: "江明偉"
+      intro: "老樹根實業有限公司總經理、老樹根魔法木工坊執行長"
