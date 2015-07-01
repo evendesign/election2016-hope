@@ -1064,3 +1064,38 @@
       figure_en_name: "01"
       name: "江明偉"
       intro: "老樹根實業有限公司總經理、老樹根魔法木工坊執行長"
+-
+  en_name: "xiaoluosi"
+  slogan: "「讓遊戲玩家做真正的主角！」桌遊團隊打造出歐美風格的精緻遊戲"
+  name: "小螺絲創意"
+  video: false
+  map: "taipei"
+  location: "台北市"
+  address: "台北市中正區西藏路 9 號"
+  category: "藝術文化"
+  since: "2015"
+  website: ""
+  facebook_page: "https://www.facebook.com/xiaoluosi"
+  preface: "來自台灣各地的小螺絲，憑藉著對桌上遊戲的熱血，帶著理想及所學的知識聚在一塊，想為大家找回在 3C 世界中漸漸流失的互動與笑聲，想讓更多的人享受桌遊的純粹歡快。"
+  member_amount: "7 顆小螺絲和一間堆滿桌遊的工作室"
+  member:
+    -
+      figure_en_name: "01"
+      name: "詹凱麟"
+      intro: "新天龍人，板橋區。專職水電維修和打東東，兼職遊戲設計。"
+    -
+      figure_en_name: "02"
+      name: "張朝馮"
+      intro: "假天龍人，專職環境股長，兼職對外 social。"
+    -
+      figure_en_name: "03"
+      name: "林侃威"
+      intro: "天龍魯蛇，專職買水餃，兼職遊戲設計。"
+    -
+      figure_en_name: "04"
+      name: "何達玖"
+      intro: "台北大直人。專職玩遊戲，兼職玩遊戲。"
+    -
+      figure_en_name: "05"
+      name: "鍾文君"
+      intro: "土生土長美濃人。專職午餐訂便當和吃零食，兼職粉絲專頁小編及活動發想。"

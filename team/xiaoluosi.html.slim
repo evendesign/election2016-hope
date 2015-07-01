@@ -1,0 +1,65 @@
+- @team_id = 42
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 做自己開心的事，也想做讓別人快樂的事。
+        p 我們是來自台灣各地的小螺絲，憑藉著對桌上遊戲的熱血，帶著理想及所學的知識聚在一塊，想為大家找回在 3C 世界中漸漸流失的互動與笑聲，想讓更多的人享受桌遊的純粹歡快，一直是小螺絲創意在設計桌遊時的準則，畢竟機制能做的變化有限，唯有人與人之間的互動能激發無限可能，每一位玩家的即興發揮才是讓遊戲好玩又好笑的靈魂！
+        p 「讓遊戲玩家做真正的主角！」是我們設計遊戲的出發點，讓桌遊成為玩樂的舞台，讓玩家的互動趣味發展出難以預測的獨特劇本。
+        p 在不斷地發想桌上遊戲的樂趣與意義時，我們也從未停止思考要怎麼要讓全世界看見台灣設計、台灣製造的桌上遊戲，因此，沒有循著一般桌遊設計師的路線與大型出版社合作，工作室成立的第一年，我們選擇包辦設計、測試、出版、行銷，希望未來能夠以小螺絲創意作為台灣桌遊的平台，吸引更多台灣設計師與我們一同分享，激盪出創意的火花，並透過我們的出版及行銷建議，讓更多的桌遊愛好者願意投入到遊戲產業中，推出更好的作品，提高台灣桌遊在全世界的能見度！
+        p 小螺絲創意即將推出的首款遊戲【MEXICO 走私】是一款黑幫角色扮演遊戲，我們發想出互動性極高的火力系統及火拼機制，並邀請角原設計團隊為我們的遊戲人物及遊戲故事背景精心打造濃厚美式漫畫風格，營造出黑幫走私的緊張刺激以及與其他玩家間結盟背叛的氛圍，希望能讓玩家感受到小螺絲出品的特有遊戲體驗。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
