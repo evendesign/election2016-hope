@@ -1,0 +1,95 @@
+.team-expo {
+
+  @include transition(opacity 0.75s);
+  @include opacity(1);
+
+  .team-expo-header {
+    @include padding-leader(1);
+    @include trailer(0.5);
+    text-align: center;
+  }
+
+  .select-filter {
+    @include trailer(0.5);
+  }
+
+  .select-title {
+    @include adjust-font-size-to(15px);
+  }
+
+  .select-control {
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      margin-top: -4px;
+      background-image: url('/images/select-arrow.png');
+      background-image: none, url('/images/select-arrow.svg');
+      width: 14px;
+      height: 8px;
+      background-position: center center;
+      @include background-size(contain);
+      opacity: 0.25;
+      background-color: #f1f1f1;
+    }
+
+    select {
+      position: relative;
+      z-index: 50;
+      cursor: pointer;
+      @include appearance(none);
+      @include box-sizing(border-box);
+      padding: 0 0 0 12px;
+      width: 110px;
+      height: 36px;
+      border: 2px solid #f1f1f1;
+      background-color: transparent;
+      font-size: 15px;
+      line-height: 32px;
+      @include transition(border-color .25s);
+      &:focus {
+        outline: none;
+      }
+    }
+
+  }
+
+  .pagination {
+    text-align: center;
+    @include trailer(4);
+  }
+
+  @include at-breakpoint($pad) {
+
+    &.is-loading {
+      @include opacity(0);
+    }
+
+    .team-expo-header {
+      @include padding-leader(2);
+      @include trailer(2);
+    }
+
+    .select-filter {
+      @include trailer(0);
+      margin-right: 24px;
+      float: left;
+    }
+
+    .pagination {
+      clear: both;
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+
+  }
+
+
+}

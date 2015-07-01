@@ -1,0 +1,67 @@
+- @page_name = "team-expo-page"
+
+.page-header.page-header_small.page-header_black-bg style="background-image: url('/images/banner-submit.jpg')"
+  .container
+    h2.page-header-title 點亮台灣的100種方式
+    p.page-header-text 不願放棄的地方，就有希望
+
+.team-expo#team-expo.is-loading
+  .team-expo-header
+    .container
+      .select-filter
+        label.select-title for="category_select_filter" 選擇分類：
+        .select-control
+          select#category_select_filter
+            option value="" selected="selected" 所有分類
+            option value="藝術文化" 藝術文化
+            option value="社會創新" 社會創新
+            option value="生活工藝" 生活工藝
+            option value="在地滋味" 在地滋味
+
+      .select-filter
+        label.select-title for="location_select_filter" 選擇地區：
+        .select-control
+          select#location_select_filter
+            option value="" selected="selected" 所有地區
+            option value="keelungcity" 基隆市
+            option value="taipei" 台北市
+            option value="newtaipeicity" 新北市
+            option value="taoyuan" 桃園市
+            option value="hsinchucity" 新竹市
+            option value="hsinchu" 新竹縣
+            option value="miaoli" 苗栗縣
+            option value="taichung" 台中市
+            option value="nantou" 南投縣
+            option value="changhua" 彰化縣
+            option value="yunlin" 雲林縣
+            option value="chiayi" 嘉義縣
+            option value="chiayicity" 嘉義市
+            option value="tainan" 台南市
+            option value="kaohsiung" 高雄市
+            option value="pingtung" 屏東縣
+            option value="taitung" 台東縣
+            option value="hualien" 花蓮縣
+            option value="yilan" 宜蘭縣
+            option value="penghu" 澎湖縣
+
+  .team-expo-content
+    .container
+      ul.team-list
+        - team_data.reverse_each do |team|
+          li.team-list-item
+            a.card href="/team/#{team['en_name']}.html"
+              .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
+                .card-city
+                  .card-city-icon.team_location_value class="icon-map-#{team['map']}" #{team['map']}
+                  .card-city-name= "#{team['location']}"
+                .card-header-inner
+                  h3.card-title.auto-break-text= "#{team['name']}"
+                  .card-category.team_category_value= "#{team['category']}"
+              .card-content
+                h4.card-subtitle.auto-break-text= "#{team['slogan']}"
+
+      ul.pagination
+
+      .submit-box
+        h4.submit-box-title 你也有好的故事？<br>加入博覽會介紹你的團隊！
+        a.submit-box-action.btn.btn_primary href="/submit/" 我要加入

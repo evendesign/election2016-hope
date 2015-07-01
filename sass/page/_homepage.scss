@@ -1,6 +1,5 @@
 .homepage {
 
-
   .block-group {
     @include pie-clearfix;
 
@@ -10,21 +9,17 @@
     background-color: #f1f1f1;
   }
 
-  .team-list {
-    @include reset-list-style;
+  .team-list-block {
+    @include trailer(2);
   }
 
-  .team-list-item {
-    max-width: 400px;
-    margin: 0 auto rhythm(2);
-  }
 
   @include at-breakpoint($pad) {
-    .team-list-item {
-      max-width: none;
-      @include isolate-grid(4);
+    .team-list-block {
+      @include trailer(1);
     }
   }
+
 
   @include at-breakpoint($desktop) {
     .block-group {
@@ -49,16 +44,6 @@
     .event-block {
       background-color: transparent;
     }
-    .team-list-item {
-      @include isolate-grid(4);
-    }
   }
-
-  @include at-breakpoint($wide-desktop) {
-    .team-list-item {
-      @include isolate-grid(4);
-    }
-  }
-
 
 }

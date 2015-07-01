@@ -12,7 +12,7 @@
     a.pager-item.prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
       span.pager-title 上一個團隊
 
-  a.pager-item.team-list href="/#team-list" 返回團隊列表
+  a.pager-item.team-list href="/team/" 返回團隊列表
 
   - if @team_id == team_data.length - 1
     span.pager-item.next.is-disabled
@@ -24,4 +24,4 @@
 .container
   .submit-box
     h4.submit-box-title 你也有好的故事？<br>加入博覽會介紹你的團隊！
-    a.submit-box-action.btn.btn_outline href="/submit/" 我要加入
+    a.submit-box-action.btn.btn_primary href="/submit/" 我要加入

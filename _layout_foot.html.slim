@@ -1,7 +1,17 @@
 = javascript_include_tag \
   "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js", \
-  "/vender/ytplayer/jquery.mb.YTPlayer.js", \
   "/vender/jquery.magnific-popup.min.js", \
   "/vender/slick.min.js", \
-  "/vender/macho.js", \
+  "/vender/macho.js"
+
+- if @page_name == "homepage"
+  = javascript_include_tag \
+    "/vender/ytplayer/jquery.mb.YTPlayer.js"
+
+- if @page_name == "team-expo-page"
+  = javascript_include_tag \
+    "/vender/list.js", \
+    "/vender/list-pagination.js"
+
+= javascript_include_tag \
   "all"

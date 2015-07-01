@@ -1,14 +1,39 @@
 ul.team-list
-  - team_data.reverse_each do |team|
+  - team_data[team_data.length - 4 .. team_data.length - 1].reverse_each do |team|
     li.team-list-item
       a.card href="/team/#{team['en_name']}.html"
         .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
           .card-city
-            .card-city-icon
-              img src="/images/map/#{team['map']}.svg"
+            .card-city-icon class="icon-map-#{team['map']}" #{team['map']}
             .card-city-name= "#{team['location']}"
           .card-header-inner
             h3.card-title.auto-break-text= "#{team['name']}"
-            .card-category= "#{team['category']}"
+            .card-category.filter_category= "#{team['category']}"
+        .card-content
+          h4.card-subtitle.auto-break-text= "#{team['slogan']}"
+  / display desktop up
+  - team_data[team_data.length - 6 .. team_data.length - 5].reverse_each do |team|
+    li.team-list-item.show-desktop-up
+      a.card href="/team/#{team['en_name']}.html"
+        .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
+          .card-city
+            .card-city-icon class="icon-map-#{team['map']}" #{team['map']}
+            .card-city-name= "#{team['location']}"
+          .card-header-inner
+            h3.card-title.auto-break-text= "#{team['name']}"
+            .card-category.filter_category= "#{team['category']}"
+        .card-content
+          h4.card-subtitle.auto-break-text= "#{team['slogan']}"
+  / display wide-desktop up
+  - team_data[team_data.length - 8 .. team_data.length - 7].reverse_each do |team|
+    li.team-list-item.show-wide-desktop-up
+      a.card href="/team/#{team['en_name']}.html"
+        .card-header style="background-image: url('/images/team/#{team['en_name']}/bg_s.jpg');"
+          .card-city
+            .card-city-icon class="icon-map-#{team['map']}" #{team['map']}
+            .card-city-name= "#{team['location']}"
+          .card-header-inner
+            h3.card-title.auto-break-text= "#{team['name']}"
+            .card-category.filter_category= "#{team['category']}"
         .card-content
           h4.card-subtitle.auto-break-text= "#{team['slogan']}"

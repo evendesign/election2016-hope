@@ -15,14 +15,14 @@
 $pagination-color: #444 !default;
 $pagination-bg-color: transparent !default;
 
-$pagination-hover-color: white !default;
-$pagination-hover-bg-color: #444 !default;
+$pagination-hover-color: black !default;
+$pagination-hover-bg-color: #f1f1f1 !default;
 
 $pagination-current-color: $pagination-hover-color !default;
 $pagination-current-bg-color: $pagination-hover-bg-color !default;
 
-$pagination-disable-color: lighten($pagination-color, 30%) !default;
-$pagination-disable-bg-color: $pagination-bg-color !default;
+$pagination-disable-color: #444 !default;
+$pagination-disable-bg-color: transparent !default;
 
 .pagination {
   @include pie-clearfix;
@@ -30,32 +30,39 @@ $pagination-disable-bg-color: $pagination-bg-color !default;
   list-style: none;
   li {
     display: inline-block;
+    margin: 0 3px;
   }
-  a, span {
+  .pagination-item {
     display: block;
-    padding: rhythm(0.125) rhythm(0.5);
+    @include border-radius(5px);
+    padding: rhythm(0.25) rhythm(0.55);
     color: $pagination-color;
     background-color: $pagination-bg-color;
     text-align: center;
     @include adjust-font-size-to(15px);
+    @include transition(color 0.25s, background-color 0.25s);
+
     &:hover {
       text-decoration: none;
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg-color;
     }
-    &.is-current {
-      color: $pagination-current-color;
-      background-color: $pagination-current-bg-color;
-    }
-    &.is-disabled {
-      color: $pagination-disable-color;
-      background-color: $pagination-disable-bg-color;
-      cursor: default;
-    }
   }
 
+  .is-active .pagination-item {
+    color: $pagination-current-color;
+    background-color: $pagination-current-bg-color;
+    cursor: default;
+  }
+  .is-disabled .pagination-item {
+    color: $pagination-disable-color;
+    background-color: $pagination-disable-bg-color;
+    cursor: default;
+  }
+
+
   @include at-breakpoint($pad) {
-    a, span {
+    .pagination-item {
       @include adjust-font-size-to(16px);
     }
   }
