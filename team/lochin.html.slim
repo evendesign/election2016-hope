@@ -1,0 +1,81 @@
+- @team_id = 43
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/10.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro = "#{team_member['intro']}"
+    .container
+      .team-intro
+        h4 美食‧文化‧時間光廊
+        p 雲林西螺「螺情」創辦人──阿珠嬤，從小就把研究料理當成生活中最大的樂趣，精心調配的中藥滷方、西螺壺底蔭油，讓滷味格外滑順爽口，拿手的功夫好菜更是讓人讚不絕口。
+        p 「螺情」為「西螺情」，螺情董事長因感念雲林擁有眾多得天獨厚的食材資源，卻未深加利用，因此飲水思源之念下於西螺設立「螺情」品牌，除了延續創辦人阿珠嬤的滷味，並主打台灣特色小吃、傳統宴席之辦桌料理、古早味零嘴、家常便菜。
+        p 而螺情西螺旗艦店，設立於西螺老街，老街建築大量使用了二十、三十年代流行的裝飾派風格（ART DECO）建築手法，並融合了部分傳統建築的裝飾細部，產生了一種兼具世紀時代感及地方情趣的特殊建築風格，駐立於指標建築──金玉成商會更是橫跨三個世紀，三崁三進式建築，集於 70 年、120 年及 80 年建築於一體，穿越美食、文化、時間光廊，讓旅客、顧客於店內用餐，猶如經歷時光膠囊。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+      a.gallery-item href="#{team_photo_10}"
+        .gallery-item-inner style="background-image: url('#{team_photo_10}');"
+
+= render "/team/team-page-bottom"
