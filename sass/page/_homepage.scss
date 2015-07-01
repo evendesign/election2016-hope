@@ -9,6 +9,18 @@
     background-color: #f1f1f1;
   }
 
+  .team-list-block {
+    @include trailer(2);
+  }
+
+
+  @include at-breakpoint($pad) {
+    .team-list-block {
+      @include trailer(1);
+    }
+  }
+
+
   @include at-breakpoint($desktop) {
     .block-group {
       background-color: #f1f1f1;
