@@ -41,3 +41,16 @@
 @import "page/message-page";
 
 // ==== inbox ====
+.show-desktop-up {
+  display: none;
+  @include at-breakpoint($desktop) {
+    display: block;
+  }
+}
+
+.show-wide-desktop-up {
+  display: none;
+  @include at-breakpoint($wide-desktop) {
+    display: block;
+  }
+}
