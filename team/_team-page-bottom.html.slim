@@ -12,7 +12,7 @@
     a.pager-item.prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
       span.pager-title 上一個團隊
 
-  a.pager-item.team-list href="/#team-list" 返回團隊列表
+  a.pager-item.team-list href="/category/" 返回團隊列表
 
   - if @team_id == team_data.length - 1
     span.pager-item.next.is-disabled
