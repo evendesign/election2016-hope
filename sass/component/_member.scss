@@ -30,9 +30,8 @@
   @include trailer(0.5);
 }
 
-.member-intro {
+.member-intro.auto-break-text {
   @include adjust-font-size-to(13px);
   white-space: normal;
-  text-align: left;
 }
 
