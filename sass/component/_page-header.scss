@@ -58,7 +58,7 @@
   }
 
   .page-header_small {
-    padding: rhythm(4) 0;
+    padding: rhythm(4) 0 rhythm(3);
   }
 
 
@@ -87,7 +87,7 @@
       padding: rhythm(12) 0;
     }
     .page-header_small {
-      padding: rhythm(6) 0;
+      padding: rhythm(6) 0 rhythm(5);
     }
     .page-header-title {
       @include adjust-font-size-to(44px, 2);
