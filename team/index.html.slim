@@ -1,12 +1,12 @@
-- @page_name = "category-page"
+- @page_name = "team-expo-page"
 
 .page-header.page-header_small.page-header_black-bg style="background-image: url('/images/banner-submit.jpg')"
   .container
     h2.page-header-title 點亮台灣的100種方式
     p.page-header-text 不願放棄的地方，就有希望
 
-.category-list#category-list.is-loading
-  .category-list-header
+.team-expo#team-expo.is-loading
+  .team-expo-header
     .container
       .select-filter
         label.select-title for="category_select_filter" 選擇分類：
@@ -44,7 +44,7 @@
             option value="yilan" 宜蘭縣
             option value="penghu" 澎湖縣
 
-  .category-list-content
+  .team-expo-content
     .container
       ul.team-list
         - team_data.reverse_each do |team|
