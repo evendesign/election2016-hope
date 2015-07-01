@@ -184,7 +184,7 @@ if ( $('.team-expo').length != 0 ) {
       ListPagination({
         name: "pagination",
         paginationClass: "pagination",
-        innerWindow: 1,
+        innerWindow: 2,
         outerWindow: 1
       })
     ]
