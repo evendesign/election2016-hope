@@ -215,7 +215,7 @@ if ( $('.category-list').length != 0 ) {
 
     // 沒有任何團隊符合篩選結果時，新增資訊
     if (category_list.visibleItems.length == 0) {
-      $('.team-list').append('<li class="team-list-item_no-result">目前沒有任何團隊，符合篩選結果。<br>請你重新選擇分類或地區。<div class="no-result-img"></div></li>')
+      $('.team-list').append('<li class="team-list-item_no-result">目前沒有任何團隊，符合篩選結果。<br>請重新選擇分類或地區。<div class="no-result-img"></div></li>')
     }
   }
 
