@@ -14,7 +14,7 @@
       - if team_data[@team_id]['video'] != false
         a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
     .team-info
-      img.location-icon src="/images/map/#{team_data[@team_id]['map']}.svg"
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
       span.location-text #{team_data[@team_id]['location']}
       span.industry #{team_data[@team_id]['category']}
       span.since= "成立於 #{team_data[@team_id]['since']} 年"
