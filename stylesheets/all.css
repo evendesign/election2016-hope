@@ -736,10 +736,10 @@ tbody.collapse.in { display: table-row-group; }
 
 .page-bottom-illustrator { position: relative; padding-bottom: 264px; overflow: hidden; }
 .page-bottom-illustrator:before, .page-bottom-illustrator:after { content: ''; position: absolute; bottom: 0; margin-bottom: 48px; width: 100%; height: 0; padding-bottom: 192px; background-repeat: no-repeat; background-position: bottom; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
-.page-bottom-illustrator:before { left: -24px; background-image: url("/images/left.png"); background-image: none, url("/images/left.svg"); background-position: left bottom; }
+.page-bottom-illustrator:before { left: -24px; background-image: url("/images/page-bottom-illustrator/left.png"); background-image: none, url("/images/page-bottom-illustrator/left.svg"); background-position: left bottom; }
 @media (min-width: 640px) { .page-bottom-illustrator { padding-bottom: 296px; }
   .page-bottom-illustrator:before, .page-bottom-illustrator:after { padding-bottom: 240px; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; }
-  .page-bottom-illustrator:after { right: -24px; background-image: url("/images/right.png"); background-image: none, url("/images/right.svg"); background-position: right bottom; } }
+  .page-bottom-illustrator:after { right: -24px; background-image: url("/images/page-bottom-illustrator/right.png"); background-image: none, url("/images/page-bottom-illustrator/right.svg"); background-position: right bottom; } }
 @media (min-width: 1025px) { .page-bottom-illustrator { padding-top: 200px; padding-bottom: 30%; }
   .page-bottom-illustrator:before, .page-bottom-illustrator:after { padding-bottom: 20%; margin-bottom: 10%; } }
 
