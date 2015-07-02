@@ -1145,3 +1145,22 @@
       figure_en_name: "03"
       name: "方min"
       intro: "去野餐戳戳手"
+-
+  en_name: "blackwhitecut"
+  slogan: "因為情人，他開了一家深夜點心鋪"
+  name: "深夜黑白切手工點心"
+  video: false
+  map: "taipei"
+  location: "台北市"
+  address: "台北市"
+  category: "在地滋味"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/blackwhitecut"
+  preface: "深愛台灣也相信愛的存在真理，在這失落的時代裡，仍然有一個我在做夢。「我想美味很難有個精準的定義，但希望自己能傳達給你們的是豐富且炙熱燙口的真心系甜點。」"
+  member_amount: "一個半年輕人在十五坪大的套房"
+  member:
+    -
+      figure_en_name: "01"
+      name: "李奇芳"
+      intro: "嗯，76 年次，來自山城南投，早上是上班族，晚上則變身為黑白切萬事通。"
