@@ -1,0 +1,74 @@
+- @team_id = 46
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 上一代離開客家庄，來到了台北打拚、工作，而這一代像我一樣失去母語的客家孩子，我想不是少數。
+        p 我的爸爸是來自花蓮吉安的客家人，媽媽則是台南閩南人，從小在家爸媽公平起見，不講客家話，也不講閩南話，導致現在我這兩種母語一個講得爛，一個講得爛到炸。
+        p 爸爸對客家文化有著強烈的認同跟驕傲，其實爸爸一直希望我能夠喜歡客家話、學會客家話，但我始終沒有契機開始。
+        p 今年農曆年回花蓮老家，聽著老爸跟叔伯們開心地用 Hakka 聊著天，我在旁邊坐著發楞，一句都聽不懂。而身邊的堂哥堂姊，多數跟我一樣，只聽得懂寥寥幾句，更不用說會講了。
+        p 或許因為自己年紀稍長了，感觸更多了，「如果我們這個世代都不再會講 Hakka，那我們的孩子呢？」
+        p 「讓爸爸這樣驕傲的客家文化，就要在我和我的孩子身邊消失了嗎？」 我想到了這件事情。很哀傷，不是嗎？
+        p 於是我決定結合自己的一些小興趣，開始試著學一點 Hakka。和同樣是客家人的未婚妻，以及另一位客家網友，一起做了【客家小吵】這個 Facebook 粉絲專頁。
+        p 結合了網友熱愛、超有共鳴的梗、時事、有趣的插畫和客家話真人發音教學，在短短幾個月就有超過 2 萬多名粉絲，一起在網路上學習客家話。
+        p 但更開心的是，因為開始畫這個粉絲團跟老爸多了好多話題，某種程度上也是促進了世代交流吧。雖然老爸一直很困惑，學「把手放在空中甩！」這種句子能幹嘛，
+        p 但看到兒子終於學會，除了三四歲時學的客家童謠之外的客家話，他真的很開心。
+        p 母語絕對不是無聊、老舊、屬於上一個世代的東西，它乘載著好多 好多情感、溫度，好多爸媽跟我們的記憶。客家話，超潮的。
+        p 自己的母語自己救。我想試著讓更多跟我一樣的失落客家孩子，重新注意到母語的美麗，結合社群網路，用各種不同的創意方法，找回母語的力量。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+
+= render "/team/team-page-bottom"
