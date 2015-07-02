@@ -19,8 +19,8 @@
 
   &:before {
     left: -24px;
-    background-image: url('/images/left.png');
-    background-image: none, url('/images/left.svg');
+    background-image: url('/images/page-bottom-illustrator/left.png');
+    background-image: none, url('/images/page-bottom-illustrator/left.svg');
     background-position: left bottom;
   }
 
@@ -32,8 +32,8 @@
     }
     &:after {
       right: -24px;
-      background-image: url('/images/right.png');
-      background-image: none, url('/images/right.svg');
+      background-image: url('/images/page-bottom-illustrator/right.png');
+      background-image: none, url('/images/page-bottom-illustrator/right.svg');
       background-position: right bottom;
     }
   }
