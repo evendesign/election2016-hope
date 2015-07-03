@@ -1256,3 +1256,22 @@
       figure_en_name: "02"
       name: "陳文偉"
       intro: "喜歡有溫度的人事物，愛收集二手老物，喜歡走入故事的台北小巷弄，透過舒喜巷的藝文展演，實踐在地生活。"
+-
+  en_name: "trois"
+  slogan: "不忍毛小孩嚴重過敏，她親手調配毛小孩安心食品"
+  name: "Trois Boulangerie - 三毛烘培坊"
+  video: false
+  map: "kaohsiung"
+  location: "高雄市左營區"
+  address: "高雄市左營區"
+  category: "在地滋味"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/TroisBoulangerie"
+  preface: "除了配合醫師治療之外，我們開始翻遍所有有關寵物的營養書籍及資料，每天製作屬於他的鮮食及零食，從吃的開始把關，改善到沒有吃藥也可以正常生活，我們堅持，毛小孩也要食用天然、健康且無添加的食品，他們值得更好的生活品質。"
+  member_amount: "一個年輕人、一間工作室"
+  member:
+    -
+      figure_en_name: "01"
+      name: "許彩金"
+      intro: "烘培坊負責人，三個毛孩子的媽"
