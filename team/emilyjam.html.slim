@@ -1,0 +1,63 @@
+- @team_id = 48
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 我原先的工作是在電子公司上班的七年級生，本身不是餐飲相關科系畢業，但是對吃的方面都非常感興趣，或許是因為自己是讀廣告設計的關係吧！對手工製作的東西都非常喜歡，尤其是「吃」的方面，除了動手做之外，也喜歡研究各式餐點料理。
+        p 最初會接觸手工果醬的原因是與朋友聚餐時，吃到了果醬女王 Christine Ferber 的薔薇玫瑰果醬，深深的對這果醬著迷，才開始接觸手工果醬，而一開始也是找許多果醬相關書籍，不論是國內還是國外果醬相關食譜來研究，並且著手烹煮，而發現法式手工果醬的做法是最能保留水果香氣的，但是糖的比例卻相當的高，做出來的果醬都過於甜膩，為了迎合比較沒有吃那麼甜的台灣人口味，自己反覆試了好幾遍降低甜度，希望能做到降低甜度比例，又不失傳統手工果醬美味，經過多次調整及透過身旁好友、網路部落客的試吃，希望能從眾多人試吃後的看法裡，找到最完美的甜度比例和需要改進的地方，而經過這一路的反覆調整，才有現在的愛蜜莉手工果醬。
+        p 因為自己非科班出身，從完全不懂開始摸索，四處拜訪果農，尋找果醬的好食材，水果方面的相關知識，除了透過於農夫直接交談中學習，也請教了一樣是果農的表姊，了解到了什麼是有機栽種、無毒栽種自然農法等相關知識，從完全陌生到漸漸熟悉，很感謝那段時間不吝賜教的果農們，大家的包容與支持 。
+        p 開始創業成立工作室販售手工果醬，我們是選擇在網路 Facebook 平台上販售，因做法有別於一般市售果醬，我們標榜的是新鮮、無添加人工添加劑、防腐劑的手工果醬，獲得許多好朋友的青睞。有時訂單一多，再加上法式果醬製作費時，那時趕工起來常常是忙到凌晨才結束，天亮了才休息，每天都只睡 4 到 5 個小時，雖然辛苦，但只要想到有這麼多人肯定我們的果醬，就覺得再辛苦也值得了。
+        p 在 2013 年時，我們也和特定幾間實體麵包店有寄賣相關的業務往來，未來的目標，希望可以與大家分享台灣果醬的各種可能，並以法式傳統果醬之作法，保存台灣當季水果的美味。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+
+
+= render "/team/team-page-bottom"
