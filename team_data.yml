@@ -1233,3 +1233,26 @@
       figure_en_name: "02"
       name: "游宣德"
       intro: "支持在地水果"
+-
+  en_name: "sukilane"
+  slogan: "兩個有著老靈魂的年輕人，訴說老城的故事"
+  name: "舒喜巷"
+  video: "https://www.youtube.com/watch?v=lCrbYjS1azA"
+  map: "newtaipeicity"
+  location: "新北市板橋區"
+  address: "新北市板橋區"
+  category: "藝術文化"
+  since: "2014"
+  website: "http://www.sukilane.com/"
+  facebook_page: "https://www.facebook.com/sukilane.tw"
+  preface: "兩個被人說呆呆的偽文青，組成了舒喜巷團隊，默默拉動理念相同的好朋友，一起把老城區故事說給更多人聽。以「小巷市集」為整合發動力，說「家」的味道，推廣有「老靈魂精神」的青年品牌，策展「老城的夢想」故事。"
+  member_amount: "兩個有老靈魂的年輕人"
+  member:
+    -
+      figure_en_name: "01"
+      name: "黃飛霖"
+      intro: "生活在淡水河岸，喜歡舊城空間內的老靈魂，創辦舒喜巷集結青年的夢想熱忱，說在地的故事。"
+    -
+      figure_en_name: "02"
+      name: "陳文偉"
+      intro: "喜歡有溫度的人事物，愛收集二手老物，喜歡走入故事的台北小巷弄，透過舒喜巷的藝文展演，實踐在地生活。"
