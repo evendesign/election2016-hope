@@ -1,17 +1,3 @@
-//
-// slim markup:
-//
-// ul.pagination
-//   li: span.is-disable &laquo;
-//   li: a.is-current href="#" 1
-//   li: a href="#"= 2
-//   li: a href="#"= 3
-//   li: a href="#"= 4
-//   li: span.is-disable …
-//   li: a href="#" &raquo;
-//
-// ===========
-
 $pagination-color: #444 !default;
 $pagination-bg-color: transparent !default;
 
@@ -59,7 +45,6 @@ $pagination-disable-bg-color: transparent !default;
     background-color: $pagination-disable-bg-color;
     cursor: default;
   }
-
 
   @include at-breakpoint($pad) {
     .pagination-item {
