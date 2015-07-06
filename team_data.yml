@@ -1317,3 +1317,31 @@
       figure_en_name: "01"
       name: "吳健國"
       intro: "工作室創立者。陶藝創作教學之前，曾為玩具製作。現在主要為釉藥的研究。"
+-
+  en_name: "moyage"
+  slogan: "闖蕩業界十年，三個基隆人回鄉開創行動導覽服務"
+  name: "行動家科技有限公司"
+  video: false
+  map: "keelungcity"
+  location: "基隆市"
+  address: "基隆市中正路 342 號"
+  category: "藝術文化"
+  since: "2014"
+  website: "http://www.moyage-tech.com/"
+  facebook_page: "https://www.facebook.com/moyage.tech"
+  preface: "「導覽家」行動導覽服務平台，透過主動推播的特性，可以輕易的將資訊傳遞到人們手中。只要來到與「導覽家」合作的展覽或是觀光景點，參觀者不必掃 QRCODE 或租用語音導覽機，只要一個 app 就能得到所有資訊。"
+  member_amount: "三個中年人，一個 APP"
+  member:
+    -
+      figure_en_name: "01"
+      name: "Wendy"
+      intro: "畢業於圖書館系。曾任職誠品網路書店、遠傳電子書平台。喜歡閱讀、喜歡與文化推廣相關的工作內容。"
+    -
+      figure_en_name: "02"
+      name: "Polo"
+      intro: "在中國工作超過十年，選擇回到台灣創業；雖然看著中國飛速成長，但相信文化應用終須在地深耕方能看到果實。"
+    -
+      figure_en_name: "03"
+      name: "Smile"
+      intro: "我存在／美學經濟，美力年代<br>我努力／life＠work<br>我喜歡／用心，看世界<br>我相信／台灣，最美的風景，是人"
+
