@@ -1275,3 +1275,26 @@
       figure_en_name: "01"
       name: "許彩金"
       intro: "烘培坊負責人，三個毛孩子的媽"
+-
+  en_name: "jhushantea"
+  slogan: "來自越南的新移民姊妹，在南投山上手工採撿優質茶葉"
+  name: "南投竹山新移民採茶班"
+  video: "https://www.youtube.com/watch?v=YMFmf57SUQ4"
+  map: "nantou"
+  location: "南投縣竹山鎮"
+  address: "南投縣竹山鎮"
+  category: "在地滋味"
+  since: "2008"
+  website: ""
+  facebook_page: ""
+  preface: "來自越南的寶蓮和美蘭，十幾年前移民到台灣，在茶園工作而相識，寶蓮是採茶班班長，美蘭負責撿茶枝班。採茶農忙期，事頭很多，她們統籌調度姊妹們的工作，常常一上山就是一個月的時間。"
+  member_amount: "一個採茶班"
+  member:
+    -
+      figure_en_name: "01"
+      name: "曾寶蓮"
+      intro: "1976 年次，來自越南，採茶班班長，2000 年左右嫁來台灣。"
+    -
+      figure_en_name: "02"
+      name: "農美蘭"
+      intro: "1981 年次，來自越南，撿茶枝班，2000 年嫁來台灣。"
