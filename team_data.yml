@@ -1298,3 +1298,22 @@
       figure_en_name: "02"
       name: "農美蘭"
       intro: "1981 年次，來自越南，撿茶枝班，2000 年嫁來台灣。"
+-
+  en_name: "liuyingtaoxiu"
+  slogan: "強調「取之自然用之自然」，做出讓茶水好喝的茶杯"
+  name: "六穎陶秀"
+  video: false
+  map: "tainan"
+  location: "台南市"
+  address: "台南市官田區大崎里 59-3 號"
+  category: "生活工藝"
+  since: "2000"
+  website: ""
+  facebook_page: "https://www.facebook.com/liuyingtaoxiu"
+  preface: "延續陶器存在的意義不在於只是裝盛，她代表著生活的品質、美感的培養。喝一口好茶，除了挑選極好茶葉，好的茶器更是不可缺少。能將陶加入生活是一件很幸福的事情！"
+  member_amount: "2 位長者與 4 位小孩組成的一個陶藝工作室"
+  member:
+    -
+      figure_en_name: "01"
+      name: "吳健國"
+      intro: "工作室創立者。陶藝創作教學之前，曾為玩具製作。現在主要為釉藥的研究。"

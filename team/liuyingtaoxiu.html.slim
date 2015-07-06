@@ -1,4 +1,4 @@
-- @team_id = 51
+- @team_id = 52
 
 - team_en_name = team_data[@team_id]['en_name']
 - team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
@@ -8,7 +8,6 @@
 - team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
 - team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
 - team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
-- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
 
 .team
   .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
@@ -37,11 +36,13 @@
             .member-intro.auto-break-text = "#{team_member['intro']}"
     .container
       .team-intro
-        p 清晨不到五點，寶蓮和她採茶班的姐妹，已經全副武裝，準備上山採茶。
-        p 在南投竹山鹿谷一帶的茶園，是享譽盛名的「凍頂茶」產地，但鄉村年輕人口外流、勞動力老化，茶園人力缺乏，而嫁來台灣的新移民女性便成為了新一波的主要勞動力。
-        p 來自越南的寶蓮和美蘭，十幾年前就移民到台灣，在茶園工作而相識，寶蓮是採茶班班長，美蘭負責撿茶枝班。採茶農忙期，事頭很多，她們統籌調渡姊妹們的工作，常常一上山就是一個月的時間。
-        p 春茶採收時節，太陽十分炙熱，姊妹們穿著厚重的長袖，頭戴斗笠，彎著腰低頭採茶，一下就滿身是汗。要喝到一杯好茶，還得經過手工挑選，回到家裡，客廳就是姊妹們的撿茶場，她們持著細心和耐性，一顆顆挑選出優質的茶葉。
-        p 南投竹山的這群新移民媽媽們，台語說得比許多人都還溜，她們在這裡用心的生活，支撐著自己的家庭，甚至也撐起茶區的採茶工作。
+        p 「天然、健康」的理念是六穎陶秀創立的起源。
+        p 父母兩人早期在學校參與陶藝教學，使用的是一般常見的化學釉藥，教學的陶藝作品也請人代為燒製。經過一段時間後，發現化工釉藥對於人體有著很大的傷害。同時，喜好泡茶的兩人，曾思考過「既然做陶，何不做出讓茶水好喝的茶杯？」於是鑽研許多書籍，嘗試循古法製作釉藥，利用樹木來製作天然的釉藥。
+        p 因此，藉由陶土可塑性與造型創作上的多變，進而研究到燒窯層面的技術，並於 2000 年在台南官田設立了工作室——六穎陶秀。
+        p 在剛開始燒製的過程中，天然釉藥與化學釉藥的穩定性、溫度變化以及燒製過程完全不一樣，讓他們一開始並沒有想像中的順利，也曾燒壞了許多的作品，這是一段辛苦的過程。從釉藥取材、燒成、研磨、過篩、調製，每一工序每一環節絲毫不得馬虎，強調「取之自然用之自然」，促使茶水在容器中能有別於以往的詮釋。
+        p 現在，以手創風格為首要設計，不單單執著於陶器上的造型，所使用的釉料更加入地方特色「菱角」，加入菱角殼碳化的成分來製作釉藥，並加入官田本地富含鐵質的紅陶，凸顯出六穎陶秀的在地化。
+        p 身為第二代的我們想要傳承對於陶的熱忱。延續陶器存在的意義不在於只是裝盛，她代表著生活的品質、美感的培養。喝一口好茶，除了挑選極好茶葉，好的茶器更是不可缺少。能將陶加入生活是一件很幸福的事情！
+        p 我們的目標在於期望能透過使「食（實）」用的嶄新型態顛覆人們心中的刻板印象，了解到器物所承載的真正價值，使文化新舊相容永續發展，思想傳承及人與人之間的交流。
       .team-info-card
         .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
@@ -58,11 +59,6 @@
         .gallery-item-inner style="background-image: url('#{team_photo_06}');"
       a.gallery-item href="#{team_photo_07}"
         .gallery-item-inner style="background-image: url('#{team_photo_07}');"
-    .gallery-item-block.gallery-item-block_2
-      a.gallery-item href="#{team_photo_02}"
-        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
-      a.gallery-item href="#{team_photo_08}"
-        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
     .gallery-item-block
       a.gallery-item href="#{team_photo_01}"
         .gallery-item-inner style="background-image: url('#{team_photo_01}');"
@@ -71,5 +67,8 @@
         .gallery-item-inner style="background-image: url('#{team_photo_04}');"
       a.gallery-item href="#{team_photo_05}"
         .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
 
 = render "/team/team-page-bottom"
