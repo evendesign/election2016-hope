@@ -1315,8 +1315,24 @@
   member:
     -
       figure_en_name: "01"
+      name: "吳健國"
+      intro: "工作室創立者。陶藝創作教學之前，曾為玩具製作。現在主要為釉藥的研究。"
+    -
+      figure_en_name: "02"
+      name: "胡秀珍"
+      intro: "工作室創立者。早期為新娘禮服設計師。創作品以完全手作為主。"
+    -
+      figure_en_name: "03"
       name: "慧萍"
-      intro: "六穎陶秀對外市集活動的主要負責人，創作品以手作為主。"
+      intro: "手作為主。六穎陶秀對外市集活動的主要負責人。"
+    -
+      figure_en_name: "04"
+      name: "聖凱"
+      intro: "拉坯為主。工作室中的機動人員。"
+    -
+      figure_en_name: "05"
+      name: "慧齊"
+      intro: "手作為主。工作室一切活動的主要記錄。"
 -
   en_name: "moyage"
   slogan: "闖蕩業界十年，三個基隆人回鄉開創行動導覽服務"
