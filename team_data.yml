@@ -1371,7 +1371,7 @@
   map: "taipei"
   location: "台北市中山區"
   address: "台北市中山區民生東路 2 段 122 號 2 樓"
-  category: ""
+  category: "生活工藝"
   since: "2012"
   website: "http://www.atom3dp.com/"
   facebook_page: "https://www.facebook.com/atom3D"
@@ -1382,3 +1382,26 @@
       figure_en_name: "01"
       name: "李曜任"
       intro: "RCA 工業設計碩士、前聯想設計師"
+-
+  en_name: "takumi"
+  slogan: "夫妻協力，推廣傳統製鞋工藝"
+  name: "匠 tAKUMI 職人專門所"
+  video: false
+  map: "taipei"
+  location: "台北市中正區"
+  address: "台北市中正區南昌路一段 126 巷 4 號 1 樓"
+  category: "生活工藝"
+  since: "2014"
+  website: "http://www.takumi.tw/"
+  facebook_page: "https://www.facebook.com/takumi.tw"
+  preface: "除了交出令客人滿意的手工訂製鞋，我們還想要做到「傳承」的工作，將傳統製鞋工藝推廣給台灣年輕人，透過教學課程讓更多人體驗製鞋的樂趣，並運用之前的電子商務以及品牌操作的行銷經驗，將台灣各領域的手作產品一起推廣出去。"
+  member_amount: "一對夫妻一間店"
+  member:
+    -
+      figure_en_name: "01"
+      name: "洪藝瑾"
+      intro: "曾任職於 Yahoo！和 Sony 擔任電子商務與品牌操作的專業行銷人，對於鞋業和皮件等傳統工藝有一定程度的瞭解，能獨立完成皮件作品。"
+    -
+      figure_en_name: "02"
+      name: "楊禮謙"
+      intro: "曾任職於日商擔任自動化控制的軟體工程師，具備獨立完成製鞋的開發生產能力。"
