@@ -1344,4 +1344,22 @@
       figure_en_name: "03"
       name: "Smile"
       intro: "我存在／美學經濟，美力年代<br>我努力／life＠work<br>我喜歡／用心，看世界<br>我相信／台灣，最美的風景，是人"
-
+-
+  en_name: "wanligreen"
+  slogan: "不願見到台灣環境被破壞，他辭工作投身環保事業"
+  name: "萬里綠生活"
+  video: false
+  map: "tainan"
+  location: "台南市"
+  address: "台南市新營區三民路 53-1 號"
+  category: "社會創新"
+  since: "2006"
+  website: "http://www.greenlifevery.com.tw"
+  facebook_page: "https://www.facebook.com/wanliegreen.sy"
+  preface: "從資源循環再生運動開始，成立了一個間資源回收廠與一間二手物寄賣小舖，將還有價值的東西，透過有效的處理再利用，讓每樣東西都獲得最大的使用，以減少地球資源的消耗。"
+  member_amount: "一個團隊、數個農場、七個合作取貨點"
+  member:
+    -
+      figure_en_name: "01"
+      name: "曾彥翔"
+      intro: "以推廣環保、永續生活為目標，致力於尋找健康、幸福、永續的生活方式。期待透過整合自然生鮮（萬里綠家庭）、永續設計（自然潮居）、循環經濟（萬里環保與樂挖寶二手）、環境教育（大自然教室），提供台南人，食、用、育、樂全方位的綠生活服務。"
