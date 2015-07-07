@@ -1363,3 +1363,22 @@
       figure_en_name: "01"
       name: "曾彥翔"
       intro: "以推廣環保、永續生活為目標，致力於尋找健康、幸福、永續的生活方式。期待透過整合自然生鮮（萬里綠家庭）、永續設計（自然潮居）、循環經濟（萬里環保與樂挖寶二手）、環境教育（大自然教室），提供台南人，食、用、育、樂全方位的綠生活服務。"
+-
+  en_name: "atom3d"
+  slogan: "台灣製造的3D列印機，掀起自造者風潮"
+  name: "ATOM 3D"
+  video: false
+  map: "taipei"
+  location: "台北市中山區"
+  address: "台北市中山區民生東路 2 段 122 號 2 樓"
+  category: ""
+  since: "2012"
+  website: "http://www.atom3dp.com/"
+  facebook_page: "https://www.facebook.com/atom3D"
+  preface: "ATOM 團隊 2013 年底以全亞洲第一台 Delta 的 3D 印表機成功的募資成功，一年多來彙整從幾百位用戶身上得到的 feedback 來投入研發更新一代產品，將所有的優點強化，並且改善不足的地方，前前後後用一年的時間開發出新一代的機器 ATOM 2.0。"
+  member_amount: "10 個年輕人"
+  member:
+    -
+      figure_en_name: "01"
+      name: "李曜任"
+      intro: "RCA 工業設計碩士、前聯想設計師"
