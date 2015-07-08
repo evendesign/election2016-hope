@@ -1456,3 +1456,22 @@
       figure_en_name: "05"
       name: "洪維檍"
       intro: "小農夫  3 號，小小小導覽員！"
+-
+  en_name: "macroglory"
+  slogan: "送貨司機辭掉穩定工作，研發出水管漏水警報器"
+  name: "光巨有限公司"
+  video: false
+  map: "taichung"
+  location: "台中市"
+  address: "台中市外埔區大馬路 408 號"
+  category: "社會創新"
+  since: "2013"
+  website: ""
+  facebook_page: "https://www.facebook.com/MacroGlory"
+  preface: "陽光、空氣、水是萬物生存三大條件，缺一不可。今年我國發生嚴重乾旱，停水議題吵得沸沸揚揚，但是卻沒人注意到管線漏水問題。他帶著自己有限的資金，投入水管漏水警報器的研發。"
+  member_amount: "一個年輕人，一間小公司"
+  member:
+    -
+      figure_en_name: "01"
+      name: "劉啟光"
+      intro: "研發產品、創立公司、市場開拓，全部都是由一個農村出身的年輕人一手包辦。雖然不被大部分的人看好，但是有幸的是能夠為自己的夢想跨出這一步。"
