@@ -1475,3 +1475,22 @@
       figure_en_name: "01"
       name: "劉啟光"
       intro: "研發產品、創立公司、市場開拓，全部都是由一個農村出身的年輕人一手包辦。雖然不被大部分的人看好，但是有幸的是能夠為自己的夢想跨出這一步。"
+-
+  en_name: "elephantfarm"
+  slogan: "離開編輯台，她將園藝治療帶來台灣"
+  name: "象山農場"
+  video: false
+  map: "taipei"
+  location: "台北市"
+  address: "台北市信義區"
+  category: "社會創新"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/GreathopeElmtfarm"
+  preface: "園藝治療簡單來說，就是用園藝調整、改善人的身、心、靈。讓人在了解植物、栽種植物的過程中，感受到植物的生命力，並得到成就感。強調建立人與大自然的良好關係，讓人能夠接受大自然的療癒能量。"
+  member_amount: "園藝治療師十人，管理員兩名"
+  member:
+    -
+      figure_en_name: "01"
+      name: "黃盛璘"
+      intro: "在 50 歲之前，是固執的金牛座，凡事相信毅力、耐力和意志力。50 歲之後，做一位助人者，發現只憑毅力、耐力和意志力是沒辦法幫助人的，得要先發展「同理心」。"
