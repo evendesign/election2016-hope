@@ -1494,3 +1494,104 @@
       figure_en_name: "01"
       name: "黃盛璘"
       intro: "在 50 歲之前，是固執的金牛座，凡事相信毅力、耐力和意志力。50 歲之後，做一位助人者，發現只憑毅力、耐力和意志力是沒辦法幫助人的，得要先發展「同理心」。"
+-
+  en_name: "violinhouse"
+  slogan: "設計師和提琴師合作，開創本土小提琴品牌"
+  name: "Violin House"
+  video: false
+  map: "taichung"
+  location: "台中市"
+  address: "台中市霧峰區坑口里光復新村"
+  category: "生活工藝"
+  since: "2015"
+  website: ""
+  facebook_page: ""
+  preface: "近年來，黃聖彥想把提琴製作工藝的技術發揚光大，開始教導學生製作小提琴。把工藝傳承作為目標，相信以社會企業跟支持文創產業的方式會有所成功，冀望未來提琴工藝能使台灣躍上國際。"
+  member_amount: "4 個執著的人"
+  member:
+    -
+      figure_en_name: "01"
+      name: "蘇德城"
+      intro: "專攻產品設計師、文創設計。"
+    -
+      figure_en_name: "02"
+      name: "連繡華"
+      intro: "南投旅遊達人。"
+    -
+      figure_en_name: "03"
+      name: "黃聖彥"
+      intro: "製琴師。"
+    -
+      figure_en_name: "04"
+      name: "曾彥學"
+      intro: "小提琴教學。"
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
