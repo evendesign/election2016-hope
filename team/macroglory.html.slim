@@ -1,0 +1,68 @@
+- @team_id = 58
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 原本只是一個平凡的送貨司機的我，月收入 5 萬的穩定生活著。就在 2012 年某日，我們收到了自來水公司的提醒，告知用水暴增有漏水疑慮。此次漏水是在我們看不到的地方，也因此造成鄰居間的糾紛、法律訴訟等等，讓我心想，為什麼沒辦法提早知道？還要等到兩個月的抄表員的通知？
+        p 當時我找遍了市面，卻沒有關於漏水偵測這方面的產品，那就不如自己來製作吧！
+        p 於是我帶著僅有的有限資金，開始投入「Antifuite 房測漏：水管漏水警報器」之研發。初期申請專利、研發設計、實驗等過程，遇到好多問題，包括資金不足、準確度調整、耐壓測試、靈敏度等。但終於一一克服，開發出原型，也帶此原型參加了 2013 國內外各大發明展，獲得二金一銀的成績。
+        p 陽光、空氣、水是萬物生存三大條件，缺一不可。今年我國發生嚴重乾旱，停水議題吵得沸沸揚揚，但是卻沒人注意到水管漏水問題。「反正就算有問題，過了一段時間水公司就會通知」，這或許是大部分的人的想法。但我的想法是：我們能不能提早知道？我們能避免很多的水資源浪費，為什麼不做？因此今年產品上市後，我們公司決定免費回饋在地學校，讓國中小能夠自我監控水管狀況，並從小開始教育孩童水資源的重要。
+        p 在臺灣，發明品能夠上市販售的，只有不到 3%，能夠賺錢的更不到 1％。更何況是小公司的我們。今年 32 歲，資金非常有限的年輕人，我已經著手了，並且已經在這不到 3％的希望之內，只求為地球環保盡一份心力。並且堅持全部 MIT，希望能為在地因人口外移的就業率，家庭代工也好。多少盡些力量。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+
+= render "/team/team-page-bottom"

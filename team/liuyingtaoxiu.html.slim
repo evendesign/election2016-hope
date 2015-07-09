@@ -1,0 +1,74 @@
+- @team_id = 52
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 「天然、健康」的理念是六穎陶秀創立的起源。
+        p 父母兩人早期在學校參與陶藝教學，使用的是一般常見的化學釉藥，教學的陶藝作品也請人代為燒製。經過一段時間後，發現化工釉藥對於人體有著很大的傷害。同時，喜好泡茶的兩人，曾思考過「既然做陶，何不做出讓茶水好喝的茶杯？」於是鑽研許多書籍，嘗試循古法製作釉藥，利用樹木來製作天然的釉藥。
+        p 因此，藉由陶土可塑性與造型創作上的多變，進而研究到燒窯層面的技術，並於 2000 年在台南官田設立了工作室——六穎陶秀。
+        p 在剛開始燒製的過程中，天然釉藥與化學釉藥的穩定性、溫度變化以及燒製過程完全不一樣，讓他們一開始並沒有想像中的順利，也曾燒壞了許多的作品，這是一段辛苦的過程。從釉藥取材、燒成、研磨、過篩、調製，每一工序每一環節絲毫不得馬虎，強調「取之自然用之自然」，促使茶水在容器中能有別於以往的詮釋。
+        p 現在，以手創風格為首要設計，不單單執著於陶器上的造型，所使用的釉料更加入地方特色「菱角」，加入菱角殼碳化的成分來製作釉藥，並加入官田本地富含鐵質的紅陶，凸顯出六穎陶秀的在地化。
+        p 身為第二代的我們想要傳承對於陶的熱忱。延續陶器存在的意義不在於只是裝盛，她代表著生活的品質、美感的培養。喝一口好茶，除了挑選極好茶葉，好的茶器更是不可缺少。能將陶加入生活是一件很幸福的事情！
+        p 我們的目標在於期望能透過使「食（實）」用的嶄新型態顛覆人們心中的刻板印象，了解到器物所承載的真正價值，使文化新舊相容永續發展，思想傳承及人與人之間的交流。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+
+= render "/team/team-page-bottom"

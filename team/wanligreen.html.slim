@@ -1,0 +1,65 @@
+- @team_id = 54
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 大學時因為加入登山社，有幸走訪台灣的心臟，見識到台灣最美的自然山林，卻也意外見證了台灣環境被破壞的歷程，梨山垃圾瀑布，震撼的畫面讓我開始反思什麼是真正安身立命的生活方式。
+        p 歷經十多年思考與學習，九年前我毅然決然辭掉原本的工作，回到家鄉台南，成立萬里環保公司，投身於環保、永續生活推廣之中。
+        p 從資源循環再生運動開始，我成立了一個間資源回收廠與一間二手物寄賣小舖，將還有價值的東西，透過有效的處理再利用，讓每樣東西都獲得最大的使用，以減少地球資源的消耗。
+        p 隨著公司運作上軌道，以及越來越多人加入，除了在消費端努力，協助物品循環使用，我們也更積極的從生產端著手，鼓勵支持友善環境的生產與設計，成立自然潮居，支持、販售永續設計商品。
+        p 在多方瞭解農業之後，我發現有機溫網室種植或許能解決人們「吃」的擔憂，卻不一定能真正回應「環境」的問題。有同樣想法的人，不只我一人，在台南有一群採取自然農法耕作的小農，然而因為露天裸地的堅持，發展出少量多樣種植的特色，無法與現有通路相契合，因此我們又成立綠家庭產銷平台，期待透過會員長期支持，共同分擔風險的方式，支持這些自然小農繼續以友善環境的方式耕作，讓更多人願意來施行自然農法，守護台灣的田野，真正讓大地恢復生機。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"

@@ -1,0 +1,83 @@
+- @team_id = 59
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/10.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 走進四獸山腳下的象山農場，眼前一片盎然綠意，讓人忘記自己身處台北市中心。這裡是園藝治療師黃盛璘的基地，一千坪的農場中，除了各種植物，還有幾個自製的烤窯。烤窯是為來這邊上課的孩子搭的，可以烤比薩、麵包等。黃盛璘希望來這邊參加課程是個開心的經驗，所以象山農場的園藝治療課程不只有栽種植物，還有窯烤、手工藝等活動。
+        p 園藝治療簡單來說，就是用園藝調整、改善人的身、心、靈。讓人在了解植物、栽種植物的過程中，感受到植物的生命力，並得到成就感。強調建立人與大自然的良好關係，讓人能夠接受大自然的療癒能量。
+        p 接觸園藝治療之前，黃盛璘做了 20 幾年的編輯。一天她突然有個聲音在問她：你還有想做而還沒做的嗎？那是什麼？再回顧一看，猛然發覺，她所有的人脈、朋友都在出版界，這 20 年來的工作經驗彷彿蓋了一座城堡。她很想離開這個城堡，出去尋找想做而還沒做的到底是什麼？於是 47 歲那年，她決定辭去工作，離開熟悉的環境，去美國尋找人生第二春。因緣際會之下，她在美國接觸到園藝治療，決定花一年的時間取得園藝治療師的認證。
+        p 回到台灣後，台灣沒有人聽過「園藝治療」，就連當時台灣心理治療協會的理事長王浩威，都對園藝治療不甚了解。王浩威鼓勵她在台灣推廣，於是她開始在一些醫院與機構開課。不過，她認為從事園藝治療，最好還是能夠有一個戶外的農場。幸運的是，一位朋友出借了三峽的一塊地，她便在那裡建立了第一個農場。後來因為交通不便等因素，她在一年前離開三峽，在四獸山下開闢了象山農場。
+        p 象山農場服務的對象以特殊族群為主，有失智老人、中輟或瀕臨中輟的青少年、精神障礙、視障、受暴婦女、自閉症兒童等。學員的第一堂課通常以植物來「打開五感」開始，因為黃盛璘相信，人是靠五感在了解外在世界，當內在世界產生挫折障礙或回難時，可以用外在世界的五感來打開內心世界。接著，就要先喜歡上植物，喜歡植物之後才會有動機去種植、照料它。課程除了栽種植物，也有大量與大自然互動的活動，這一切都是為了讓參與者能夠切身感受到大自然的療癒能量。
+        p 十年前台灣無人知道園藝治療是什麼，現在園藝治療已成為一種重要的輔助治療方式，越來越多人從中得到幫助。黃盛璘有感台灣園藝治療師的缺乏，因此在 2013 年成立臺灣園藝輔助治療協會，希望能培養更多專業的園藝治療師，讓更多人能受惠於植物與大自然的奇妙治癒能力。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+      a.gallery-item href="#{team_photo_10}"
+        .gallery-item-inner style="background-image: url('#{team_photo_10}');"
+
+= render "/team/team-page-bottom"

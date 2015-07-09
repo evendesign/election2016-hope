@@ -1,0 +1,63 @@
+- @team_id = 57
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 洪健彬，12 年前因為愛放棄台北工程師的工作，回到家鄉種起水耕蔬菜，因為水耕蔬菜好吃、乾淨，又不會損害農地，因此更加努力打拼一個無毒友善的蔬果世界。  張蕎瀅，畢業後的工作就是當立委和縣長的助理，從未換工作！因為當過立委和縣長的助理，接收到一些關於農業陳情案件，所以更知道農民的心聲，所以想去改善改變！  夫妻兩因為愛產生出「祥豪水耕教育農場」，主要以水耕方式經營農場，用科技栽培系統與技術，能夠高生產無毒安全的友善食材。並且增加教育上附加價值的效益，還有視覺上的怡情景觀應用。  我們是一對真實農夫，更是三個孩子的爹娘，一農場加二農青加三個小小農夫。我們要將「農業」轉為「產業」的理論，不只是停留生產階段更要參與製造與服務等階段，創造更廣、提升更高的農產品相關價值 ，打造充滿歡笑無毒的友善蔬果。 
+        p 一個由「愛」出發的農場，延伸為一個充滿「幸福」的農場。我們要農業改變，改變從我們開始。
+        p 讓大家都可以吃到最健康、安全的食材！
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"

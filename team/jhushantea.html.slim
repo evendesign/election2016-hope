@@ -1,0 +1,75 @@
+- @team_id = 51
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 清晨不到五點，寶蓮和她採茶班的姐妹，已經全副武裝，準備上山採茶。
+        p 在南投竹山鹿谷一帶的茶園，是享譽盛名的「凍頂茶」產地，但鄉村年輕人口外流、勞動力老化，茶園人力缺乏，而嫁來台灣的新移民女性便成為了新一波的主要勞動力。
+        p 來自越南的寶蓮和美蘭，十幾年前就移民到台灣，在茶園工作而相識，寶蓮是採茶班班長，美蘭負責撿茶枝班。採茶農忙期，事頭很多，她們統籌調渡姊妹們的工作，常常一上山就是一個月的時間。
+        p 春茶採收時節，太陽十分炙熱，姊妹們穿著厚重的長袖，頭戴斗笠，彎著腰低頭採茶，一下就滿身是汗。要喝到一杯好茶，還得經過手工挑選，回到家裡，客廳就是姊妹們的撿茶場，她們持著細心和耐性，一顆顆挑選出優質的茶葉。
+        p 南投竹山的這群新移民媽媽們，台語說得比許多人都還溜，她們在這裡用心的生活，支撐著自己的家庭，甚至也撐起茶區的採茶工作。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
