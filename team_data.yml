@@ -1567,3 +1567,100 @@
       figure_en_name: "01"
       name: "林韡勳"
       intro: "台南柳營一個小山村，有個 24 歲的男孩叫韡勳，因為想念兒時記憶中阿嬤製作的果醬，離開了台中城市，走訪台灣各地農場，開始找尋記憶中的水果味道，用果醬賦於在地水果新的價值。"
+-
+  en_name: "handinhand"
+  slogan: "結合「二手」與「手工」創作的愛好者，手手市集游牧全台"
+  name: "手_手"
+  video: "https://www.youtube.com/watch?v=xJtcxek8IOU"
+  map: "yunlin"
+  location: "雲林縣"
+  address: "雲林縣土庫鎮新庄里 182 號"
+  category: "藝術文化"
+  since: "2011"
+  website: ""
+  facebook_page: "https://www.facebook.com/handinhandmarket"
+  preface: "一群遍佈全台的台灣二手老品與手工創作愛好者，希望能夠有一個屬於年輕人的在地藝文市集，他們游牧台灣各地，集結了許多同好與充滿夢想的攤商。"
+  member_amount: "三位策辦人與全台各地協辦攤友"
+  member:
+    -
+      figure_en_name: "01"
+      name: "張軒瑋"
+      intro: "來自雲林縣，一個農業產值全國第一卻飽受工業污染成為空汙受害非常嚴重的地方。"
+    -
+      figure_en_name: "02"
+      name: "張宜翔"
+      intro: "家住台南，一個什麼東西都好吃，講話會加個膩的地方。"
+    -
+      figure_en_name: "03"
+      name: "高苑玲"
+      intro: "瑜珈很厲害。"
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
+    -
+      figure_en_name: ""
+      name: ""
+      intro: ""
