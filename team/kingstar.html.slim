@@ -31,7 +31,6 @@
           span 上一個團隊
           img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
 
-
     - if @team_id < team_data.length - 1
       a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
         .arrow-icon #{team_data[@team_id + 1]['name']}
