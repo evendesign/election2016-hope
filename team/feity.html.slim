@@ -1,0 +1,83 @@
+- @team_id = 66
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/10.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 20 幾年前，菲堤其實不是做包包起家的。最早以前是做方向盤皮套，我們以前的方向盤皮套還有出口到日本去賣，當時生意做很大，在台南小有知名度，工廠裡面還請了很多印尼工人。但因為師傅們都不懂得行銷，什麼都交給信賴的業務去負責，最後被信賴的業務背叛。他們另起爐灶開了工廠，跟我們做一模一樣的東西。
+        p 隨著方向盤皮套越來越不符合市場潮流，工廠規模萎縮到非常小，我們決定轉換跑道，開始做起牛皮手機套。2000 年在台南市的一條巷子裡面，三台針車、兩個師傅，就這樣開始了代工的路。十幾年前沒有網路、沒有智慧型手機，但我們就曾經被中華日報報導過，只因為我們的創意「手機帶著走」。
+        p 2001 年後，創意手機套慢慢地退流行了，買的人越來越少，師傅們想要轉型做包包。但因為不是做包包起家，不懂怎麼做包包，所以一開始的包款都很粗糙，連內裡都沒有。也因為只會做小東西，拼來拼去，所以做包包也用拼來拼去的方式做，一開始完全不被看好：「你們包包長的好奇怪！」「為什麼連內裡都沒有？」
+        p 「車法好粗糙喔，感覺好廉價。」「皮看起來瑕疵很多。」各種聲音都有。
+        p 其實台灣人很勇敢的就是這一點。被嫌棄，會因為自尊心很強，受挫之後逼自己勇敢。不管別人說什麼，把自己做好，做到讓別人無話可說就對了！
+        p 曾經不被看好的做法，經過我們一次次改良、變精緻之後，讓「奇怪」變成「奇特」，讓「粗糙」變成「粗曠」。奇怪與奇特、粗糙與粗曠，都只有一字之差，但是這一字之差，花了我們非常多年的時間。
+        p 特殊做法走出一條路之後我們開始接代工訂單，曾經有一段時間接很多自創品牌商品，包含打版創作與生產，製做出來的成品我們只能拿到很低廉的代工費用，品牌與成果並不是我們可以享用的果實。有一些款式從頭到尾都是我們繳盡腦汁的原創，卻要被廠商坐享其利，而且不得將自己的原創款式再做給別人，導致最後工廠的利潤被單一廠商綁死，2008 年工廠即將面臨倒閉的絕路之下，我們才創了 Feity 這個品牌。
+        p 默默在巷子裡耕耘了 20 年，我們一直覺得歡喜做，甘願受，有一天老天爺會看到努力的我們。
+        p 在 2014 年全家人一同努力創作之下，我們得到了台南文創商品金獎殊榮，為我們一路上艱辛爬過的路鍍上光彩。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+
+= render "/team/team-page-bottom"
