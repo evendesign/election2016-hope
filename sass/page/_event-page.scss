@@ -54,7 +54,8 @@
     float: right;
     width: calc(100% - 70px);
     .type, .title {
-      @include adjust-font-size-to(21px, 1.4);
+      @include adjust-font-size-to(20px, 1);
+      @include trailer(0.125);
     }
     .description {
       @include adjust-font-size-to(15px);
