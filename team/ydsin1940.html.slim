@@ -1,0 +1,77 @@
+- @team_id = 71
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 大灶底下的星星柴火，六十年來如一日。從前大灶的柴燒，其實是再平凡不過的一種生活，但工業化後的現今，柴燒儼然成為了一種渴望的回憶。
+        p 1958 年那時，原名還是「玉鼎興」的我們，在做醬油的道路上，並不順遂。在過去的傳統觀念，阿祖深信這是因為品牌名稱的關係，阿祖曾說：「我們的醬油是由柴火熬煮而成，而我們的名稱裡頭卻有個怕火燒的『玉』字，當然對事業的發展不好」，就因為如此，在我們第三代慢慢接手後，正式將「玉鼎興」，更名為「御鼎興」。
+        p 身為第三代的我們，從小就跟在父母身旁幫忙做醬油，而我們一直以來都沒有自己的工廠，總擔心著下一次的搬遷，而這一段奔波的歲月終於在第九次結束，歷經了 25 年的時間，在 2011 年 6 月有了屬於自己的第一間柴燒工廠，在經過多次的搬遷經驗後，我們仔細規劃了醬油設備、衛生管理制定以及醬油工藝的提升，為老品牌重新出發。
+        p 在投入醬油產業後，我看到了醬油一直以來所存在的問題，那就是「隨處可見的醬油儼然已成一種『應該廉價』的調味品」，我想這應該就是它身為民生必需品的宿命吧！但在現今的食安風暴下，理所當然的它卻成了另一種看不見的風險。而為了讓大家重新看見醬油工藝背後真正的歷程與價值，我們希望藉由六十年來無數傳承的經驗，用專情的工法與高質量的人力付出，讓黑豆的原味取代所有人工添加物，熬煮出純淨的自然琥珀——御鼎興柴燒醬油，有時間味道的醬油。"
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+
+= render "/team/team-page-bottom"
