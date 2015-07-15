@@ -1753,3 +1753,92 @@
       figure_en_name: "04"
       name: "張家鈞"
       intro: "清大服科所，高雄人，嘗遍台南牛肉湯。"
+-
+  en_name: "8leather"
+  slogan: "素人變達人，用心做出帶有溫度的皮件"
+  name: "八革 Hachi-Kawa Leatherworks"
+  video: false
+  map: "taipei"
+  location: "台北市"
+  address: "台北市松山區延壽街 153 號 4 樓"
+  category: "生活工藝"
+  since: "2011"
+  website: "http://www.pinkoi.com/store/hachi-kawa"
+  facebook_page: "https://www.facebook.com/8leatherWorks"
+  preface: "2011 年 11 月 11 日決定試著將在日本時開始自學的手工皮件慢慢從興趣轉換成職業。像日本的老師傅一般，灌注自我的靈魂在一件物品上，極盡所能的將一個物品作至個人所能為的完美，期許能為台灣塑造出長期耕耘的文化。"
+  member_amount: "超小規模工作室"
+  member:
+    -
+      figure_en_name: "01"
+      name: "張少華＆王映嵐"
+      intro: "張少華，喜歡台灣、喜歡老東西、惜物、念舊。王映嵐從設計的觀點發想各種物件的可能性。建築、文化、人文關懷。"
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: "01"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "02"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "03"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "04"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "05"
+      name: ""
+      intro: ""
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: "01"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "02"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "03"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "04"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "05"
+      name: ""
+      intro: ""
