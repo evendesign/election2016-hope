@@ -152,6 +152,39 @@ if ( $('.member-list').length != 0 ) {
   });
 }
 
+if ( $('.event-nav').length != 0 ) {
+  $('.event-nav').slick({
+    infinite: false,
+    arrows: true,
+    autoplay: false,
+    slidesToShow: 1,
+    centerMode: true,
+    centerPadding: '27.5%',
+    mobileFirst: true,
+    responsive: [
+      {
+        breakpoint: 432,
+        settings: { slidesToShow: 3, centerMode: false}
+      },{
+        breakpoint: 576,
+        settings: { slidesToShow: 4, centerMode: false}
+      },{
+        breakpoint: 720,
+        settings: { slidesToShow: 5, centerMode: false}
+      },{
+        breakpoint: 864,
+        settings: { slidesToShow: 6, centerMode: false}
+      },{
+        breakpoint: 1004,
+        settings: { slidesToShow: 7, centerMode: false}
+      },{
+        breakpoint: 1152,
+        settings: { slidesToShow: 8, centerMode: false}
+      }
+    ]
+  });
+}
+
 if ( $('.gallery-item').length != 0 ) {
   $('.gallery-item').magnificPopup({
     type:'image',
