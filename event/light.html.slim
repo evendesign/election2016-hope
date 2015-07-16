@@ -2,6 +2,7 @@
   title= "在地希望生活節 — #{data['site-title']}"
 
 - @page_name = "event-page"
+- @activity_name = "light"
 
 .page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
   .container
@@ -18,31 +19,7 @@
 
 .activity-group
   .activity-group-header
-    .activity-nav
-      a.activity-nav-item.is-active href="/event/light.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-5.svg"
-        h3.activity-nav-item-title 點亮舞台<br>Light
-      a.activity-nav-item href="/event/color.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-6.svg"
-        h3.activity-nav-item-title 地方縣市特色館<br>Color
-      a.activity-nav-item href="/event/starter.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-7.svg"
-        h3.activity-nav-item-title 在地創新館<br>Starter
-      a.activity-nav-item href="/event/maker.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-2.svg"
-        h3.activity-nav-item-title 手作造物館<br>Maker
-      a.activity-nav-item href="/event/dreamer.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-1.svg"
-        h3.activity-nav-item-title 人生海海館<br>Dreamer
-      a.activity-nav-item href="/event/handicraft.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-3.svg"
-        h3.activity-nav-item-title 創意／二手市集<br>Handicraft
-      a.activity-nav-item href="/event/drinks.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-4.svg"
-        h3.activity-nav-item-title 阿英冰果室<br>Drinks
-      a.activity-nav-item href="/event/donation.html"
-        img.activity-nav-item-icon src="/images/event/activity-icon-7.svg"
-        h3.activity-nav-item-title 在地希望募款小物<br>Donation
+    = render "/event/activity-nav"
 
   .activity
     .activity-cover
