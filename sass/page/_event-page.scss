@@ -70,13 +70,11 @@
   }
   .location-icon-background {
     display: inline-block;
-    background-color: black;
+    background-color: #ddd;
     @include border-radius(50%);
     width: 128px;
     height: 128px;
     @include trailer(.5);
-    // mix-blend-mode: difference;
-    opacity: .3;
   }
   .location-icon {
     display: inline-block;
