@@ -1,5 +1,5 @@
 .booth {
-
+  text-align: center;
 }
 
 .booth-photo {
@@ -7,12 +7,12 @@
   margin: 0 auto 12px;
   @include border-radius(100px);
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .booth-name {
   @include trailer(0);
-  @include adjust-font-size-to(18px);
+  @include adjust-font-size-to(18px, 1);
 }
 
 .booth-intro {
@@ -24,9 +24,6 @@
 .booth_small {
   .booth-photo {
     width: 100%;
-    max-width: 130px;
-  }
-  .booth-name {
-    @include adjust-font-size-to(16px, 3/4);
+    max-width: 120px;
   }
 }
