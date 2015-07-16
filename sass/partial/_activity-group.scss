@@ -86,6 +86,12 @@
     .activity-nav-item-title {
       color: white;
     }
+    .activity-subtitle {
+      color: #aaa;
+    }
+    .activity-text {
+      @include trailer(0);
+    }
   }
 
   .activity-content {
@@ -94,20 +100,22 @@
   }
 
   .activity-title {
-    @include adjust-font-size-to(24px, 1);
-    @include trailer(0.5);
+    @include adjust-font-size-to(24px, 1.25);
+    @include trailer(0.25);
   }
 
   .activity-subtitle {
     @include trailer(1);
-    @include adjust-font-size-to(15px, 2/3);
-    color: #ddd;
+    @include adjust-font-size-to(15px);
   }
 
   .activity-text {
     @include adjust-font-size-to(15px);
     max-width: 400px;
-    margin: 0 auto;
+    margin: 0 auto rhythm(1);
+  }
+  .activity-img {
+    @include trailer(1);
   }
 
   .has-divider:after, .has-divider_black:after {
@@ -150,23 +158,32 @@
       width: 100%;
     }
   }
-
+  .product-setion {
+    @include leader(2);
+  }
+  .product-title {
+    @include adjust-font-size-to(21px, 1.25);
+  }
+  .product-text {
+    @include adjust-font-size-to(15px);
+  }
 
   @include at-breakpoint($pad) {
     .activity-cover {
       padding: rhythm(6) 0 rhythm(5.5);
+      .activity-text {
+        @include adjust-font-size-to(16px, 1.25);
+      }
     }
     .activity-title {
-      @include adjust-font-size-to(28px, 1.2);
+      @include adjust-font-size-to(28px, 1.4);
       @include trailer(0.75);
     }
     .activity-subtitle {
-      @include adjust-font-size-to(18px, 1);
+      @include adjust-font-size-to(20px, 1.2);
     }
     .activity-text {
-      @include adjust-font-size-to(16px, 1.25);
-      max-width: 400px;
-      margin: 0 auto;
+      @include adjust-font-size-to(16px, 1);
     }
     .activity-content {
       padding: rhythm(3) 0;
@@ -185,7 +202,12 @@
         padding: 0 24px;
       }
     }
-
+    .product-setion {
+      @include leader(3);
+    }
+    .product-title {
+      @include leader(0.5);
+    }
 
   }
 
@@ -226,6 +248,12 @@
       .booth-list-item {
         width: 25%;
       }
+    }
+    .product-setion {
+      @include leader(4);
+    }
+    .product-title {
+      @include leader(1);
     }
   }
 
