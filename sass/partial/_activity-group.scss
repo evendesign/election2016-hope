@@ -8,64 +8,30 @@
   }
 
   .activity-nav {
+    position: relative;
     @include reset-list-style;
-    max-width: 1152px;
     margin: 0 auto;
     text-align: center;
-    .slick-track {
-      margin: 0 auto;
-    }
-    .slick-prev, .slick-next {
-      @include reset-box-model;
-      position: absolute;
-      z-index: 1200;
-      top: 0;
-      bottom: 0;
-      width: 64px;
-      @include hide-text(right);
-      background-color: transparent;
-      background-position: center;
-      background-repeat: no-repeat;
-      &:focus { outline: none; }
-      &.slick-disabled { display: none !important; }
-    }
-    .slick-prev {
-      left: 0;
-      background-image: url("/images/member-arrow-prev.png");
-      background-image: none, url("/images/member-arrow-prev.svg"), linear-gradient(to left, rgba(#f1f1f1, 0), rgba(#f1f1f1, 1));
-
-    }
-    .slick-next {
-      right: 0;
-      background-image: url("/images/member-arrow-next.png");
-      background-image: none, url("/images/member-arrow-next.svg"), linear-gradient(to right, rgba(#f1f1f1, 0), rgba(#f1f1f1, 1));
-    }
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; // for ios touch smooth
+    @include nowrap;
   }
   .activity-nav-item {
     position: relative;
     display: inline-block;
-    padding: 24px 12px;
-    color: black;
-    @include nowrap;
-    @include transition(background-color .25s);
-    &:hover {
-      text-decoration: none;
-      background-color: #ddd;
-    }
-    &.is-active {
-      background-color: #ddd;
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -12px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 12px 12px 0 12px;
-        border-color: #dddddd transparent transparent transparent;
+    a {
+      display: block;
+      width: 120px;
+      padding: 24px 12px;
+      color: black;
+      // @include nowrap;
+      @include transition(background-color .25s);
+      &:hover {
+        text-decoration: none;
+        background-color: #ddd;
+      }
+      &.is-active {
+        background-color: #d1d1d1;
       }
     }
   }
@@ -78,7 +44,34 @@
     @include adjust-font-size-to(15px);
     color: black;
   }
+  // .activity-pre-btn, .activity-next-btn {
+  //   @include reset-box-model;
+  //   position: absolute;
+  //   z-index: 1200;
+  //   top: 0;
+  //   bottom: 0;
+  //   width: 64px;
+  //   @include hide-text(right);
+  //   background-color: transparent;
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   &:focus { outline: none; }
+  //   &.slick-disabled { display: none !important; }
+  // }
+  // .activity-pre-btn {
+  //   left: 0;
+  //   background-image: url("/images/member-arrow-prev.png");
+  //   background-image: none, url("/images/member-arrow-prev.svg"), linear-gradient(to left, rgba(#f1f1f1, 0), rgba(#f1f1f1, 1));
 
+  // }
+  // .activity-next-btn {
+  //   right: 0;
+  //   background-image: url("/images/member-arrow-next.png");
+  //   background-image: none, url("/images/member-arrow-next.svg"), linear-gradient(to right, rgba(#f1f1f1, 0), rgba(#f1f1f1, 1));
+  // }
+  .activity {
+    min-height: 768px;
+  }
   .activity-cover {
     position: relative;
     background-color: #444;
@@ -172,6 +165,12 @@
     }
     .activity-content {
       padding: rhythm(3) 0;
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .activity {
+      min-height: 100vh;
     }
   }
 
