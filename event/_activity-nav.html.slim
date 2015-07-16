@@ -34,13 +34,13 @@
   ]
 
 .activity-nav
-  - @activities.each do |activity|
+  - @activities.each_with_index do |activity, i|
     - if @activity_name == activity[:en_name]
-      a.activity-nav-item.is-active href="/event/#{activity[:en_name]}.html"
+      a.activity-nav-item.is-active data-index="#{i}" href="/event/#{activity[:en_name]}.html#activity-group"
         img.activity-nav-item-icon src="/images/event/activity-icon-#{activity[:en_name]}.svg"
         h3.activity-nav-item-title #{activity[:name]}
     - else
-      a.activity-nav-item href="/event/#{activity[:en_name]}.html"
+      a.activity-nav-item data-index="#{i}" href="/event/#{activity[:en_name]}.html#activity-group"
         img.activity-nav-item-icon src="/images/event/activity-icon-#{activity[:en_name]}.svg"
         h3.activity-nav-item-title #{activity[:name]}
 

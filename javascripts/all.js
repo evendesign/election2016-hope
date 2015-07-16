@@ -184,6 +184,17 @@ if ( $('.activity-nav').length != 0 ) {
       }
     ]
   });
+
+  // 切換頁面時，重置當前 tab 位置
+  var current_index = $('.activity-nav-item.is-active').data('index');
+  // $('.activity-nav').slick('slickGoTo', current_index);
+  setTimeout(function() {
+    console.log('xxx');
+    $('.activity-nav').slick('slickGoTo', current_index);
+    console.log('xxx');
+  }, 500)
+
+
 }
 
 if ( $('.gallery-item').length != 0 ) {
