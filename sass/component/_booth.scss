@@ -1,0 +1,32 @@
+.booth {
+
+}
+
+.booth-photo {
+  display: block;
+  margin: 0 auto 12px;
+  @include border-radius(100px);
+  width: 100%;
+  max-width: 200px;
+}
+
+.booth-name {
+  @include trailer(0);
+  @include adjust-font-size-to(18px);
+}
+
+.booth-intro {
+  @include leader(0.5);
+  @include trailer(0);
+  @include adjust-font-size-to(13px);
+}
+
+.booth_small {
+  .booth-photo {
+    width: 100%;
+    max-width: 130px;
+  }
+  .booth-name {
+    @include adjust-font-size-to(16px, 3/4);
+  }
+}
