@@ -1,0 +1,115 @@
+- content_for :title do
+  title= "在地希望生活節 — #{data['site-title']}"
+
+- @page_name = "event-page"
+- @activity_name = "color"
+
+.page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
+  .container
+    h2.page-header-title 在地希望生活節
+    p.page-header-text 今年夏天7月，遇見點亮台灣的100種方式
+
+.content
+  .container
+    .content-inner.content-inner_head
+      img.local-light-life-festival-logo src="/images/local-light-life-festival-big.png"
+      p 活動時間：7/25（六）14:00 至 21:00
+      p 來自全台各地的新創團隊，將於《在地希望生活節》聚首！各路人馬會在「Color 地方縣市特色館」、「Starter 在地創新館」、「Maker 手作造物館」、「Dreamer 人生海海館」四大主題活動區，展現出他們的創意與夢想。《在地希望生活節》也會邀集本地生猛有力的表演團隊，用音樂、舞蹈、脫口秀，唱出這塊土地上新的希望。
+      p.divide 今年夏天，台北市市民廣場，<br>小英與你在《在地希望生活節》，一起遇見點亮台灣的 100 種方式！
+
+.activity-group
+  .activity-group-header
+    = render "/event/activity-nav"
+
+  .activity
+    .activity-cover
+      .container
+        h3.activity-title 地方縣市特色館 Color
+        h4.activity-subtitle.has-divider 各地特色產品、農產品
+        .title-divider
+        p.activity-text 港邊可以聽到討海人高歌，還有沙灘上的音樂歌聲。山林之中可以瞥見婆婆摘取水蜜桃的身影，隨風飄來的果香。採菱的農人身旁佇立著水雉，他們堅持產業要與環境共生。13縣市的豐碩成果，歡迎你一起來品嘗。
+    .activity-content
+      .container
+        p.activity-preface 台灣有形形色色的人們，來源自各地的不同特色。台灣13縣市的當地名品以及特色農產，聚成一條台灣大道，在這裡嚐的到高山的風味，與海邊的氣息，田間的稻香與樹梢的果香交融，也搭起產業與環境共生的橋樑。
+        h4.activity-title.has-divider_black 參展縣市
+        ul.color-attend-location-list
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-keelungcity
+            .name 基隆市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-taoyuan
+            .name 桃園市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-yilan
+            .name 宜蘭縣
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-hsinchu
+            .name 新竹市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-taichung
+            .name 台中市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-changhua
+            .name 彰化縣
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-kaohsiung
+            .name 雲林縣
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-yunlin
+            .name 嘉義縣
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-chiayi
+            .name 嘉義市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-tainan
+            .name 台南市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-kaohsiung
+            .name 高雄市
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-pingtung
+            .name 屏東縣
+          li.attend-location
+            .location-icon-background
+              .location-icon.icon-map-penghu
+            .name 澎湖縣
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

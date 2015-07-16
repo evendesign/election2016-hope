@@ -1,0 +1,87 @@
+- content_for :title do
+  title= "在地希望生活節 — #{data['site-title']}"
+
+- @page_name = "event-page"
+- @activity_name = "maker"
+
+.page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
+  .container
+    h2.page-header-title 在地希望生活節
+    p.page-header-text 今年夏天7月，遇見點亮台灣的100種方式
+
+.content
+  .container
+    .content-inner.content-inner_head
+      img.local-light-life-festival-logo src="/images/local-light-life-festival-big.png"
+      p 活動時間：7/25（六）14:00 至 21:00
+      p 來自全台各地的新創團隊，將於《在地希望生活節》聚首！各路人馬會在「Color 地方縣市特色館」、「Starter 在地創新館」、「Maker 手作造物館」、「Dreamer 人生海海館」四大主題活動區，展現出他們的創意與夢想。《在地希望生活節》也會邀集本地生猛有力的表演團隊，用音樂、舞蹈、脫口秀，唱出這塊土地上新的希望。
+      p.divide 今年夏天，台北市市民廣場，<br>小英與你在《在地希望生活節》，一起遇見點亮台灣的 100 種方式！
+
+.activity-group
+  .activity-group-header
+    = render "/event/activity-nav"
+
+  .activity
+    .activity-cover
+      .container
+        h3.activity-title 手作造物館 Maker
+        h4.activity-subtitle.has-divider 3D列印、雷射切割體驗工作坊、點亮台灣手作專屬名片體驗
+        .title-divider
+        p.activity-text 3D列印、雷射切割機，建構嶄新的生產模式。人人都是生產者，我們可以捲起時代浪潮。全時段皆可免費體驗製作點亮台灣手作專屬名片，另外還有進階體驗課程喔！
+    .activity-content
+      .container
+        h4.activity-title.has-divider_black 進階體驗課程
+        p.activity-note ＊部分進階體驗課程需酌收材料費
+        ul.maker-list
+          li.maker-content
+            .title 《甘丹創新》手作隨身碟
+            .time
+              .label 時間
+              .text 15：00～16：30
+            .intro
+              .label 課程介紹
+              .text 從木料挑選、再拼接打磨、接著拋光上油以及最後再運用雷射雕刻技術，刻上專屬的文字，打造獨一無二的手作隨身碟。
+          li.maker-content
+            .title 《Fablab Tainan》木製手作創意小燈
+            .time
+              .label 時間
+              .text 16：40～18：10
+            .intro
+              .label 課程介紹
+              .text 木製創意小燈飾課程，透過平面的繪圖製作出立體的實品，結合LED燈，打造專屬的燈飾。
+          li.maker-content
+            .title 《Fablab Taipei》立體結構拼圖免費體驗
+            .time
+              .label 時間
+              .text 18：20～19：50
+            .intro
+              .label 課程介紹
+              .text 用簡單的平面基本元素帶來無限變化的立體拼圖，用另一種方式理解平面到立體的概念。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

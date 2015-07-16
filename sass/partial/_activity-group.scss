@@ -89,6 +89,15 @@
     padding: rhythm(2) 0;
   }
 
+  .activity-preface {
+    max-width: 700px;
+    margin: 0 auto 48px;
+  }
+
+  .activity-note {
+    @include adjust-font-size-to(13px);
+  }
+
   .activity-title {
     @include adjust-font-size-to(24px, 1);
     @include trailer(0.5);
