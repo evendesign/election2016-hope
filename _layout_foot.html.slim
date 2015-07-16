@@ -8,6 +8,10 @@
   = javascript_include_tag \
     "/vender/ytplayer/jquery.mb.YTPlayer.js"
 
+- if @page_name == "event-page"
+  = javascript_include_tag \
+    "/vender/jquery.easytabs.js"
+
 - if @page_name == "team-expo-page"
   = javascript_include_tag \
     "/vender/list.js", \

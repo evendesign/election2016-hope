@@ -21,7 +21,7 @@
     },\
     { \
       :en_name => 'handicraft', \
-      :name => '創意／二手市集<br>Handicraft', \
+      :name => '創意二手市集<br>Handicraft', \
     },\
     { \
       :en_name => 'drinks', \
@@ -33,14 +33,9 @@
     },\
   ]
 
-.activity-nav
-  - @activities.each_with_index do |activity, i|
-    - if @activity_name == activity[:en_name]
-      a.activity-nav-item.is-active data-index="#{i}" href="/event/#{activity[:en_name]}.html#activity-group"
+.activity-nav#activity-nav
+  - @activities.each do |activity|
+    .activity-nav-item id="activity-nav-item-#{activity[:en_name]}"
+      a data-target="#activity-#{activity[:en_name]}" href="/event/activity/#{activity[:en_name]}.html"
         img.activity-nav-item-icon src="/images/event/activity-icon-#{activity[:en_name]}.svg"
         h3.activity-nav-item-title #{activity[:name]}
-    - else
-      a.activity-nav-item data-index="#{i}" href="/event/#{activity[:en_name]}.html#activity-group"
-        img.activity-nav-item-icon src="/images/event/activity-icon-#{activity[:en_name]}.svg"
-        h3.activity-nav-item-title #{activity[:name]}
-

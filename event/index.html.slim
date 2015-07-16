@@ -1,0 +1,25 @@
+- content_for :title do
+  title= "在地希望生活節 — #{data['site-title']}"
+
+- @page_name = "event-page"
+- @activity_name = "light"
+
+.page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
+  .container
+    h2.page-header-title 在地希望生活節
+    p.page-header-text 今年夏天7月，遇見點亮台灣的100種方式
+
+= render "/event/event-intro"
+
+.activity-group#activity-group
+  .activity-group-header
+    = render "/event/activity-nav"
+
+  .activity#activity-light
+  .activity#activity-color
+  .activity#activity-starter
+  .activity#activity-maker
+  .activity#activity-dreamer
+  .activity#activity-handicraft
+  .activity#activity-drinks
+  .activity#activity-donation

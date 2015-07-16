@@ -152,51 +152,6 @@ if ( $('.member-list').length != 0 ) {
   });
 }
 
-if ( $('.activity-nav').length != 0 ) {
-  var activity_nav_item_width = 144;
-  $('.activity-nav').slick({
-    infinite: false,
-    arrows: true,
-    autoplay: false,
-    slidesToShow: 1,
-    centerMode: true,
-    centerPadding: '27.5%',
-    mobileFirst: true,
-    responsive: [
-      {
-        breakpoint: activity_nav_item_width * 3,
-        settings: { slidesToShow: 3, centerMode: false}
-      },{
-        breakpoint: activity_nav_item_width * 4,
-        settings: { slidesToShow: 4, centerMode: false}
-      },{
-        breakpoint: activity_nav_item_width * 5,
-        settings: { slidesToShow: 5, centerMode: false}
-      },{
-        breakpoint: activity_nav_item_width * 6,
-        settings: { slidesToShow: 6, centerMode: false}
-      },{
-        breakpoint: activity_nav_item_width * 7,
-        settings: { slidesToShow: 7, centerMode: false}
-      },{
-        breakpoint: activity_nav_item_width * 8,
-        settings: { slidesToShow: 8, centerMode: false}
-      }
-    ]
-  });
-
-  // 切換頁面時，重置當前 tab 位置
-  var current_index = $('.activity-nav-item.is-active').data('index');
-  // $('.activity-nav').slick('slickGoTo', current_index);
-  setTimeout(function() {
-    console.log('xxx');
-    $('.activity-nav').slick('slickGoTo', current_index);
-    console.log('xxx');
-  }, 500)
-
-
-}
-
 if ( $('.gallery-item').length != 0 ) {
   $('.gallery-item').magnificPopup({
     type:'image',
@@ -274,8 +229,12 @@ if ( $('.team-expo').length != 0 ) {
 
 
 // 活動頁的 tab 功能
-// if ( $('.event-group').length != 0 ) {
-  // $('#tab-container').easytabs({
-  //   tabs: '#tab-nav'
-  // });
-// }
+if ( $('#activity-group').length != 0 ) {
+  $('#activity-group').easytabs({
+    defaultTab: '#activity-nav-item-light',
+    tabActiveClass: 'is-active',
+    tabs: '#activity-nav .activity-nav-item',
+  });
+}
+
+
