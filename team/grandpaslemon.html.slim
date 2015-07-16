@@ -1,0 +1,65 @@
+- @team_id = 72
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 逢年過節，我們一家人總是會從桃園開著好幾個小時的長途車到屏東萬巒老家，探望阿公和阿嬤，抵達老家的第一件事，就是到果園裡，追隨雞群的腳步找到在田園裡忙碌的阿公。
+        p 記得以前最喜歡和哥哥一起到阿公的田裡冒險，田園裡有蒲公英、有香蕉樹、龍眼樹、芒果樹各類水果，還有自由走跳的雞群，近幾年更多了充滿香氣的香水檸檬樹。
+        p 小時後其實不懂為什麼阿公的田裡什麼都有，直到大學開始關心土地的議題，對於栽種方式有所瞭解之後，我才知道阿公這種栽種的方式是自然農法，沒有使用化學的農藥和肥料，讓香水檸檬在完全自然的環境下生長，讓土地用本能養育生命，也讓香水檸檬生長出天然的樣子。
+        p 阿公因為知道自己種的檸檬好，所以總是一箱一箱地從屏東寄出去給台灣各地的親友們，讓我們在家裡也能品嚐到香水檸檬。
+        p 然而在檸檬盛產的夏天，是擁有再多親戚都發送不完的，當阿公將檸檬載到當地市場販售時，卻因為價格競爭激烈、香水檸檬的特殊品種大家較不認識，而銷售不如預期，
+        p 於是，我和哥哥決定把天然的檸檬分享出去，規劃在網路上販售阿公的檸檬，研究阿公栽種檸檬的方式，蒐集學術的、民間的研究資料，徹底地知道自然農法種植的香水檸檬對人體的幫助之後，我們更加覺得賣檸檬除了是幫助阿公販售之外，更重要的是提倡自然農法的優點，希望藉由檸檬的推廣，將阿公友善土地的理念告訴每個人，讓這個理念成爲一種實踐，實際發生在每吋土地上。
+        p 憑藉著這份使命感，我們創立了阿公的香水檸檬粉絲團，也透過許多天然、小農的平台的協助，開始得到許多人的支持，成功將香水檸檬分享給大家，而後，我們也將檸檬製程檸檬釀、檸檬乾等食品，讓阿公的檸檬營養能讓每個人直接吃進肚子裡。
+        p 今年開始，我們在台北與新竹的市集中跟大家見面，得到很多熱情朋友們的支持，也認識到很多朋友，真的很開心我們有這麼棒的阿公，讓檸檬帶著我們遇見很多人，我們的團隊期待未來可以有力量去為台灣農業、生活和飲食改變，為這個世界創造更多更美好的事。
+
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+
+= render "/team/team-page-bottom"

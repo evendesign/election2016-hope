@@ -1842,3 +1842,100 @@
       figure_en_name: "05"
       name: "醬油弟弟"
       intro: "黑豆養大的小孩，目前就讀中央大學研究所。御鼎興品牌概念者之一，參與御鼎興的網路經營與文案。"
+-
+  en_name: "grandpaslemon"
+  slogan: "孫子、孫女替阿公規劃網站，推廣自然農法栽植的香水檸檬"
+  name: "阿公的香水檸檬"
+  video: false
+  map: "pingtung"
+  location: "屏東縣"
+  address: "屏東縣"
+  category: "在地滋味"
+  since: "2014"
+  website: ""
+  facebook_page: "https://www.facebook.com/gradpaslemon"
+  preface: "大學開始關心土地的議題，對於栽種方式有所瞭解之後，我才知道阿公這種栽種的方式是自然農法，沒有使用化學的農藥和肥料，讓香水檸檬在完全自然的環境下生長，讓土地用本能養育生命，也讓香水檸檬生長出天然的樣子。"
+  member_amount: "一家人＋兩個朋友"
+  member:
+    -
+      figure_en_name: "01"
+      name: "阿公"
+      intro: "在屏東以自然農法耕作的郭阿公，以善待土地的方式栽種香水檸檬。"
+    -
+      figure_en_name: "02"
+      name: "郭博裕"
+      intro: "阿公的乖孫子，在竹科工作，去年開始將屏東阿公的檸檬在網路上販售。"
+    -
+      figure_en_name: "03"
+      name: "郭雅惠"
+      intro: "阿公的乖孫女，用自己的設計專長，替阿公設計 LOGO。"
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: "01"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "02"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "03"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "04"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "05"
+      name: ""
+      intro: ""
+-
+  en_name: ""
+  slogan: ""
+  name: ""
+  video: ""
+  map: ""
+  location: ""
+  address: ""
+  category: ""
+  since: ""
+  website: ""
+  facebook_page: ""
+  preface: ""
+  member_amount: ""
+  member:
+    -
+      figure_en_name: "01"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "02"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "03"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "04"
+      name: ""
+      intro: ""
+    -
+      figure_en_name: "05"
+      name: ""
+      intro: ""
