@@ -75,6 +75,7 @@
   .activity-nav-item-title {
     @include trailer(0);
     @include adjust-font-size-to(15px);
+    color: black;
   }
 
   .activity-cover {
@@ -82,6 +83,9 @@
     color: white;
     text-align: center;
     padding: rhythm(4) 0 rhythm(3.5);
+    .activity-nav-item-title {
+      color: white;
+    }
   }
 
   .activity-content {
@@ -119,10 +123,12 @@
   .has-divider_black:after {
     background-color: black;
   }
-
+  .timeline {
+    @include leader(2);
+  }
   .booth-list {
     @include reset-list-style;
-    text-align: left;
+    // text-align: left;
     margin: rhythm(2) auto 0;
   }
   .booth-list-item {
@@ -138,12 +144,13 @@
       width: 50%;
     }
   }
-  .booth-list_dreamer {
+  .booth-list_dreamer, .booth-list_drinks {
     max-width: 400px;
     .booth-list-item {
       width: 100%;
     }
   }
+
 
   @include at-breakpoint($pad) {
     .activity-cover {
@@ -157,7 +164,7 @@
       @include adjust-font-size-to(18px, 1);
     }
     .activity-text {
-      @include adjust-font-size-to(16px);
+      @include adjust-font-size-to(16px, 1.25);
       max-width: 400px;
       margin: 0 auto;
     }
@@ -172,7 +179,7 @@
         width: 33.3333%;
       }
     }
-    .booth-list_dreamer {
+    .booth-list_dreamer, .booth-list_drinks {
       .booth-list-item {
         width: 50%;
         padding: 0 24px;
@@ -183,10 +190,16 @@
   }
 
   @include at-breakpoint($desktop) {
-    .booth-list_dreamer {
+    .booth-list_dreamer, .booth-list_drinks {
       max-width: none;
       .booth-list-item {
         width: 25%;
+      }
+    }
+    .booth-list_drinks {
+      max-width: none;
+      .booth-list-item {
+        width: 33.3333%;
       }
     }
   }

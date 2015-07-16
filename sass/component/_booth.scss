@@ -7,7 +7,7 @@
   margin: 0 auto 12px;
   @include border-radius(100px);
   width: 100%;
-  max-width: 180px;
+  max-width: 200px;
 }
 
 .booth-name {
@@ -19,6 +19,7 @@
   @include leader(0.5);
   @include trailer(0);
   @include adjust-font-size-to(13px);
+  text-align: left;
 }
 
 .booth_small {
