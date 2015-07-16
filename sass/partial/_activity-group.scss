@@ -5,33 +5,31 @@
     background-color: #f1f1f1;
     position: relative;
     z-index: 100;
+    width: 100%;
   }
 
   .activity-nav {
-    position: relative;
     @include reset-list-style;
     margin: 0 auto;
     text-align: center;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; // for ios touch smooth
     @include nowrap;
   }
   .activity-nav-item {
     position: relative;
-    display: inline-block;
+    float: left;
     a {
       display: block;
       width: 120px;
       padding: 24px 12px;
       color: black;
-      // @include nowrap;
+      @include nowrap;
       @include transition(background-color .25s);
       &:hover {
         text-decoration: none;
         background-color: #ddd;
       }
       &.is-active {
-        background-color: #d1d1d1;
+        background-color: #ddd;
       }
     }
   }
@@ -44,31 +42,31 @@
     @include adjust-font-size-to(15px);
     color: black;
   }
-  // .activity-pre-btn, .activity-next-btn {
-  //   @include reset-box-model;
-  //   position: absolute;
-  //   z-index: 1200;
-  //   top: 0;
-  //   bottom: 0;
-  //   width: 64px;
-  //   @include hide-text(right);
-  //   background-color: transparent;
-  //   background-position: center;
-  //   background-repeat: no-repeat;
-  //   &:focus { outline: none; }
-  //   &.slick-disabled { display: none !important; }
-  // }
-  // .activity-pre-btn {
-  //   left: 0;
-  //   background-image: url("/images/member-arrow-prev.png");
-  //   background-image: none, url("/images/member-arrow-prev.svg"), linear-gradient(to left, rgba(#f1f1f1, 0), rgba(#f1f1f1, 1));
+  .activity-pre-btn, .activity-next-btn {
+    @include reset-box-model;
+    position: absolute;
+    z-index: 1200;
+    top: 0;
+    bottom: 0;
+    width: 64px;
+    @include hide-text(right);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:focus { outline: none; }
+    &.disabled { display: none !important; }
+  }
+  .activity-pre-btn {
+    left: 0;
+    background-image: url("/images/member-arrow-prev.png");
+    background-image: none, url("/images/member-arrow-prev.svg"), linear-gradient(to left, rgba(#f1f1f1, 0.1), rgba(#f1f1f1, 1));
 
-  // }
-  // .activity-next-btn {
-  //   right: 0;
-  //   background-image: url("/images/member-arrow-next.png");
-  //   background-image: none, url("/images/member-arrow-next.svg"), linear-gradient(to right, rgba(#f1f1f1, 0), rgba(#f1f1f1, 1));
-  // }
+  }
+  .activity-next-btn {
+    right: 0;
+    background-image: url("/images/member-arrow-next.png");
+    background-image: none, url("/images/member-arrow-next.svg"), linear-gradient(to right, rgba(#f1f1f1, 0.1), rgba(#f1f1f1, 1));
+  }
   .activity {
     min-height: 768px;
   }
