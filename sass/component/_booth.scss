@@ -1,5 +1,10 @@
 .booth {
   text-align: center;
+  display: block;
+  color: #444;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .booth-photo {
