@@ -1,4 +1,4 @@
-- @team_id = 71
+- @team_id = 74
 
 - team_en_name = team_data[@team_id]['en_name']
 - team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
@@ -9,7 +9,6 @@
 - team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
 - team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
 - team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
-- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
 
 .team
   .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
@@ -38,10 +37,11 @@
             .member-intro.auto-break-text = "#{team_member['intro']}"
     .container
       .team-intro
-        p 大灶底下的星星柴火，六十年來如一日。從前大灶的柴燒，其實是再平凡不過的一種生活，但工業化後的現今，柴燒儼然成為了一種渴望的回憶。
-        p 1958 年那時，原名還是「玉鼎興」的我們，在做醬油的道路上，並不順遂。在過去的傳統觀念，阿祖深信這是因為品牌名稱的關係，阿祖曾說：「我們的醬油是由柴火熬煮而成，而我們的名稱裡頭卻有個怕火燒的『玉』字，當然對事業的發展不好」，就因為如此，在我們第三代慢慢接手後，正式將「玉鼎興」，更名為「御鼎興」。
-        p 身為第三代的我們，從小就跟在父母身旁幫忙做醬油，而我們一直以來都沒有自己的工廠，總擔心著下一次的搬遷，而這一段奔波的歲月終於在第九次結束，歷經了 25 年的時間，在 2011 年 6 月有了屬於自己的第一間柴燒工廠，在經過多次的搬遷經驗後，我們仔細規劃了醬油設備、衛生管理制定以及醬油工藝的提升，為老品牌重新出發。
-        p 在投入醬油產業後，我看到了醬油一直以來所存在的問題，那就是「隨處可見的醬油儼然已成一種『應該廉價』的調味品」，我想這應該就是它身為民生必需品的宿命吧！但在現今的食安風暴下，理所當然的它卻成了另一種看不見的風險。而為了讓大家重新看見醬油工藝背後真正的歷程與價值，我們希望藉由六十年來無數傳承的經驗，用專情的工法與高質量的人力付出，讓黑豆的原味取代所有人工添加物，熬煮出純淨的自然琥珀——御鼎興柴燒醬油，有時間味道的醬油。"
+        p 清水，依山傍海，一個適合散步的小鎮。
+        p 從高速公路的時速 100 公里，轉換成悠閒走路的 5 公里。在這裡找尋一點生活的樂趣，悠閒才是生活的真理。
+        p 清水散步，前身為華笙音樂城，唱片專賣，創立於 1986 年 9 月，提供台中海線樂迷流行、古典音樂服務、藝文資訊，歷經黑膠唱片、卡帶、CD、DVD 的年代，再到網路數位化時代來臨；當眾人都習慣用網路聽音樂後，2012 年 12 月從唱片行轉型為「清水散步」。
+        p 來到清水散步，可以喝咖啡、吃手工麵線輕食料理，伴隨著書香與音樂聲，還有鄰居、好朋友常常來串門子、聊天，在這裡，享受生活。另外不定期舉辦清水清旅行，規劃多條旅遊動線，包含以濕地環境生態教育為主的「高美溼地尋芳蹤」、騎腳踏車體驗田園風情的「五福圳自行車道追火車」、散步認識族群遷徙與歷史的「清水古道老街」等，帶旅客深度認識清水的不同面貌；近日更舉辦「走海線」的旅行，串聯海線鐵道上的車站、城鎮，並與在地的團隊合作規劃，深度認識海線文化與產業故事。
+        p 清水散步致力於觀光文化旅遊推廣，更進一步以清水、海線等在地的文化元素，發揮創意，轉化成文創產業，發展出許多有特色的商品，例如「廖添丁」，清末日治初期人物，出生在今日的清水區秀水里，因為一生行俠仗義、濟弱扶傾，勇於挑戰當時政權的高壓統治，被說書人賦予許多有趣且神秘的傳奇故事。清水散步團隊透過故事的發現、結合在地的元素與場域，創意發想出旅遊動線、活動與相關的紀念商品，期待能夠透過廖添丁的形象，讓更多人看到清水的特色，創造出更多在地的就業機會，讓清水成為一安居樂業之地。
       .team-info-card
         .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
         .team-info-inner
@@ -52,8 +52,8 @@
 .gallery
   .container
     .gallery-item-block.gallery-item-block_2
-      a.gallery-item href="#{team_photo_06}"
-        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
       a.gallery-item href="#{team_photo_02}"
         .gallery-item-inner style="background-image: url('#{team_photo_02}');"
     .gallery-item-block.gallery-item-block_3
@@ -63,15 +63,13 @@
         .gallery-item-inner style="background-image: url('#{team_photo_04}');"
       a.gallery-item href="#{team_photo_05}"
         .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
     .gallery-item-block.gallery-item-block_2
       a.gallery-item href="#{team_photo_08}"
         .gallery-item-inner style="background-image: url('#{team_photo_08}');"
       a.gallery-item href="#{team_photo_01}"
         .gallery-item-inner style="background-image: url('#{team_photo_01}');"
-    .gallery-item-block.gallery-item-block_2
-      a.gallery-item href="#{team_photo_07}"
-        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
-      a.gallery-item href="#{team_photo_09}"
-        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
 
 = render "/team/team-page-bottom"

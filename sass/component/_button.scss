@@ -37,8 +37,8 @@
   &:disabled , &.is-disabled {
     cursor: default;
     color: $color-gray-dark;
-    border-color: $color-gray-white;
-    background-color: $color-gray-white;
+    border-color: $color-gray-light;
+    background-color: $color-gray-light;
   }
 }
 
