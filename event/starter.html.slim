@@ -1,0 +1,66 @@
+- content_for :title do
+  title= "在地希望生活節 — #{data['site-title']}"
+
+- @page_name = "event-page"
+
+.page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
+  .container
+    h2.page-header-title 在地希望生活節
+    p.page-header-text 今年夏天7月，遇見點亮台灣的100種方式
+
+.content
+  .container
+    .content-inner.content-inner_head
+      img.local-light-life-festival-logo src="/images/local-light-life-festival-big.png"
+      p 活動時間：7/25（六）14:00 至 21:00
+      p 來自全台各地的新創團隊，將於《在地希望生活節》聚首！各路人馬會在「Color 地方縣市特色館」、「Starter 在地創新館」、「Maker 手作造物館」、「Dreamer 人生海海館」四大主題活動區，展現出他們的創意與夢想。《在地希望生活節》也會邀集本地生猛有力的表演團隊，用音樂、舞蹈、脫口秀，唱出這塊土地上新的希望。
+      p.divide 今年夏天，台北市市民廣場，<br>小英與你在《在地希望生活節》，一起遇見點亮台灣的 100 種方式！
+
+.activity-group
+  .activity-group-header
+    .activity-nav
+      a.activity-nav-item href="/event/light.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-5.svg"
+        h3.activity-nav-item-title 點亮舞台<br>Light
+      a.activity-nav-item href="/event/color.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-6.svg"
+        h3.activity-nav-item-title 地方縣市特色館<br>Color
+      a.activity-nav-item.is-active href="/event/starter.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-7.svg"
+        h3.activity-nav-item-title 在地創新館<br>Starter
+      a.activity-nav-item href="/event/maker.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-2.svg"
+        h3.activity-nav-item-title 手作造物館<br>Maker
+      a.activity-nav-item href="/event/dreamer.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-1.svg"
+        h3.activity-nav-item-title 人生海海館<br>Dreamer
+      a.activity-nav-item href="/event/handicraft.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-3.svg"
+        h3.activity-nav-item-title 創意／二手市集<br>Handicraft
+      a.activity-nav-item href="/event/drinks.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-4.svg"
+        h3.activity-nav-item-title 阿英冰果室<br>Drinks
+      a.activity-nav-item href="/event/donation.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-7.svg"
+        h3.activity-nav-item-title 在地希望募款小物<br>Donation
+
+  .activity
+    .activity-cover
+      .container
+        h3.activity-title 在地創新館 Starter
+        h4.activity-subtitle 本土品牌、新創團隊
+        .title-divider
+        p.activity-text 食在地、用在地、活在地。我們相信，生活不是只有一種想像。有人在山林、有人在小巷、有人在田間。用自己的雙手耕耘地方、雙腳踏實夢想。
+    .activity-content
+      .container
+        h4.activity-title 攤位名單
+        .title-divider.title-divider_black
+        / 活動內容
+        ul.booth-list.booth-list_small
+          - 21.times do |i|
+            li.booth-list-item
+              .booth.booth_small
+                img.booth-photo src="http://placehold.it/300x300"
+                h5.booth-name= zh_lorem_words(5 + rand(5))
+                / p.booth-intro= zh_lorem_paragraphs(1)
+
