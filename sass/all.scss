@@ -44,6 +44,13 @@
 @import "page/message-page";
 
 // ==== inbox ====
+.show-pad-up {
+  display: none;
+  @include at-breakpoint($pad) {
+    display: block;
+  }
+}
+
 .show-desktop-up {
   display: none;
   @include at-breakpoint($desktop) {
