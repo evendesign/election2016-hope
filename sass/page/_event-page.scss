@@ -22,73 +22,73 @@
   }
 }
 
-.activity {
-  @include rhythm(1,2,1,0);
-  background-color: #f1f1f1;
-  .container { max-width: 1368px; }
-  .activity-title {
-    @include adjust-font-size-to(28px, 1.2);
-    @include trailer(1);
-    text-align: center;
-    color: black;
-    &:after {
-      content: '';
-      display: block;
-      width: 48px;
-      height: 2px;
-      margin: rhythm(1) auto;
-      background-color: black;
-    }
-  }
-  .activity-item {
-    @include pie-clearfix;
-    @include box-sizing(border-box);
-    padding: 12px 0;
-  }
-  .activity-icon {
-    float: left;
-    width: 64px;
-    padding-right: 6px;
-  }
-  .activity-info {
-    float: right;
-    width: calc(100% - 70px);
-    .type, .title {
-      @include adjust-font-size-to(20px, 1);
-      @include trailer(0.125);
-    }
-    .description {
-      @include adjust-font-size-to(15px);
-      &:before {
-        content: "";
-        display: block;
-        @include rhythm(.4,0,0,.4);
-        border-top: 1px solid $color-gray;
-      }
-    }
-  }
-  @include at-breakpoint($pad) {
-    @include rhythm(3,3,2,0);
-    .activity-title {
-      @include adjust-font-size-to(36px, 1.5);
-      @include trailer(1);
-    }
-    .activity-list {
-      @include pie-clearfix;
-    }
-    .activity-item {
-      float: left;
-      width: 50%;
-      padding: 24px;
-      &:nth-child(2n+1) { clear: left; }
-    }
-  }
-  @include at-breakpoint($desktop) {
-    .activity-list { margin: 0 -72px; }
-    .activity-item {
-      width: 25%;
-      &:nth-child(2n+1) { clear: none; }
-      &:nth-child(4n+1) { clear: left; }
-    }
-  }
-}
+// .activity {
+//   @include rhythm(1,2,1,0);
+//   background-color: #f1f1f1;
+//   .container { max-width: 1368px; }
+//   .activity-title {
+//     @include adjust-font-size-to(28px, 1.2);
+//     @include trailer(1);
+//     text-align: center;
+//     color: black;
+//     &:after {
+//       content: '';
+//       display: block;
+//       width: 48px;
+//       height: 2px;
+//       margin: rhythm(1) auto;
+//       background-color: black;
+//     }
+//   }
+//   .activity-item {
+//     @include pie-clearfix;
+//     @include box-sizing(border-box);
+//     padding: 12px 0;
+//   }
+//   .activity-icon {
+//     float: left;
+//     width: 64px;
+//     padding-right: 6px;
+//   }
+//   .activity-info {
+//     float: right;
+//     width: calc(100% - 70px);
+//     .type, .title {
+//       @include adjust-font-size-to(20px, 1);
+//       @include trailer(0.125);
+//     }
+//     .description {
+//       @include adjust-font-size-to(15px);
+//       &:before {
+//         content: "";
+//         display: block;
+//         @include rhythm(.4,0,0,.4);
+//         border-top: 1px solid $color-gray;
+//       }
+//     }
+//   }
+//   @include at-breakpoint($pad) {
+//     @include rhythm(3,3,2,0);
+//     .activity-title {
+//       @include adjust-font-size-to(36px, 1.5);
+//       @include trailer(1);
+//     }
+//     .activity-list {
+//       @include pie-clearfix;
+//     }
+//     .activity-item {
+//       float: left;
+//       width: 50%;
+//       padding: 24px;
+//       &:nth-child(2n+1) { clear: left; }
+//     }
+//   }
+//   @include at-breakpoint($desktop) {
+//     .activity-list { margin: 0 -72px; }
+//     .activity-item {
+//       width: 25%;
+//       &:nth-child(2n+1) { clear: none; }
+//       &:nth-child(4n+1) { clear: left; }
+//     }
+//   }
+// }

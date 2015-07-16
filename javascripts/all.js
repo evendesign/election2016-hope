@@ -152,8 +152,9 @@ if ( $('.member-list').length != 0 ) {
   });
 }
 
-if ( $('.event-nav').length != 0 ) {
-  $('.event-nav').slick({
+if ( $('.activity-nav').length != 0 ) {
+  var activity_nav_item_width = 144;
+  $('.activity-nav').slick({
     infinite: false,
     arrows: true,
     autoplay: false,
@@ -163,22 +164,22 @@ if ( $('.event-nav').length != 0 ) {
     mobileFirst: true,
     responsive: [
       {
-        breakpoint: 432,
+        breakpoint: activity_nav_item_width * 3,
         settings: { slidesToShow: 3, centerMode: false}
       },{
-        breakpoint: 576,
+        breakpoint: activity_nav_item_width * 4,
         settings: { slidesToShow: 4, centerMode: false}
       },{
-        breakpoint: 720,
+        breakpoint: activity_nav_item_width * 5,
         settings: { slidesToShow: 5, centerMode: false}
       },{
-        breakpoint: 864,
+        breakpoint: activity_nav_item_width * 6,
         settings: { slidesToShow: 6, centerMode: false}
       },{
-        breakpoint: 1004,
+        breakpoint: activity_nav_item_width * 7,
         settings: { slidesToShow: 7, centerMode: false}
       },{
-        breakpoint: 1152,
+        breakpoint: activity_nav_item_width * 8,
         settings: { slidesToShow: 8, centerMode: false}
       }
     ]
@@ -261,4 +262,9 @@ if ( $('.team-expo').length != 0 ) {
 }
 
 
-
+// 活動頁的 tab 功能
+// if ( $('.event-group').length != 0 ) {
+  // $('#tab-container').easytabs({
+  //   tabs: '#tab-nav'
+  // });
+// }
