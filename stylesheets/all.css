@@ -774,15 +774,20 @@ tbody.collapse.in { display: table-row-group; }
 @media (min-width: 1025px) { .page-bottom-illustrator { padding-top: 200px; padding-bottom: 30%; }
   .page-bottom-illustrator:before, .page-bottom-illustrator:after { padding-bottom: 20%; margin-bottom: 10%; } }
 
-.activity-group .activity-group-header { background-color: #f1f1f1; position: relative; z-index: 100; }
+.activity-group .activity-group-header { background-color: #f1f1f1; position: relative; z-index: 100; width: 100%; }
 .activity-group .activity-group-header:after { content: ""; display: table; clear: both; }
-.activity-group .activity-nav { position: relative; margin: 0; padding: 0; border: 0; list-style: none; margin: 0 auto; text-align: center; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
-.activity-group .activity-nav-item { position: relative; display: inline-block; }
-.activity-group .activity-nav-item a { display: block; width: 120px; padding: 24px 12px; color: black; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
+.activity-group .activity-nav { margin: 0; padding: 0; border: 0; list-style: none; margin: 0 auto; text-align: center; white-space: nowrap; }
+.activity-group .activity-nav-item { position: relative; float: left; }
+.activity-group .activity-nav-item a { display: block; width: 120px; padding: 24px 12px; color: black; white-space: nowrap; -webkit-transition: background-color 0.25s; -moz-transition: background-color 0.25s; -o-transition: background-color 0.25s; transition: background-color 0.25s; }
 .activity-group .activity-nav-item a:hover { text-decoration: none; background-color: #ddd; }
-.activity-group .activity-nav-item a.is-active { background-color: #d1d1d1; }
+.activity-group .activity-nav-item a.is-active { background-color: #ddd; }
 .activity-group .activity-nav-item-icon { display: block; margin: 0 auto; }
 .activity-group .activity-nav-item-title { margin-bottom: 0px; font-size: 15px; line-height: 24px; color: black; }
+.activity-group .activity-pre-btn, .activity-group .activity-next-btn { margin: 0; padding: 0; border: 0; position: absolute; z-index: 1200; top: 0; bottom: 0; width: 64px; text-indent: 110%; white-space: nowrap; overflow: hidden; background-color: transparent; background-position: center; background-repeat: no-repeat; }
+.activity-group .activity-pre-btn:focus, .activity-group .activity-next-btn:focus { outline: none; }
+.activity-group .activity-pre-btn.disabled, .activity-group .activity-next-btn.disabled { display: none !important; }
+.activity-group .activity-pre-btn { left: 0; background-image: url("/images/member-arrow-prev.png"); background-image: none, url("/images/member-arrow-prev.svg"), linear-gradient(to left, rgba(241, 241, 241, 0.1), #f1f1f1); }
+.activity-group .activity-next-btn { right: 0; background-image: url("/images/member-arrow-next.png"); background-image: none, url("/images/member-arrow-next.svg"), linear-gradient(to right, rgba(241, 241, 241, 0.1), #f1f1f1); }
 .activity-group .activity { min-height: 768px; }
 .activity-group .activity-cover { position: relative; background-color: #444; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: center; background-repeat: no-repeat; color: white; text-align: center; padding: 96px 0 84px; }
 .activity-group .activity-cover .container { position: relative; z-index: 50; }
