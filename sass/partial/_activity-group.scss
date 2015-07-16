@@ -99,6 +99,10 @@
     padding: rhythm(2) 0;
   }
 
+  .activity-note {
+    @include adjust-font-size-to(13px);
+  }
+
   .activity-title {
     @include adjust-font-size-to(24px, 1.25);
     @include trailer(0.25);
@@ -108,11 +112,13 @@
     @include trailer(1);
     @include adjust-font-size-to(16px);
   }
-
   .activity-text {
     @include adjust-font-size-to(15px);
     max-width: 400px;
     margin: 0 auto rhythm(1);
+    &.lead {
+      @include trailer(2);
+    }
   }
   .activity-img {
     @include trailer(1);
@@ -131,97 +137,23 @@
   .has-divider_black:after {
     background-color: black;
   }
-  .timeline {
-    @include leader(2);
-  }
-  .booth-list {
-    @include reset-list-style;
-    text-align: left;
-    margin: rhythm(2) auto 0;
-  }
-  .booth-list-item {
-    display: inline-block;
-    vertical-align: top;
-    @include trailer(2);
-    @include box-sizing(border-box);
-  }
-  .booth-list_starter {
-    max-width: 480px;
-    .booth-list-item {
-      padding: 0 12px;
-      width: 50%;
-    }
-  }
-  .booth-list_dreamer, .booth-list_drinks {
-    max-width: 400px;
-    .booth-list-item {
-      width: 100%;
-    }
-  }
-  .product-setion {
-    @include leader(2);
-  }
-  .product-title {
-    @include adjust-font-size-to(21px, 1.25);
-  }
-  .product-text {
-    @include adjust-font-size-to(15px);
-  }
 
   @include at-breakpoint($pad) {
     .activity-cover {
       padding: rhythm(6) 0 rhythm(5.5);
-      .activity-text {
-        @include adjust-font-size-to(16px, 1.25);
-      }
     }
     .activity-title {
       @include adjust-font-size-to(28px, 1.4);
-      // @include trailer(0.25);
+      @include trailer(0.4);
     }
     .activity-subtitle {
       @include adjust-font-size-to(18px);
     }
     .activity-text {
-      @include adjust-font-size-to(16px, 1);
+      @include adjust-font-size-to(16px, 1.25);
     }
     .activity-content {
       padding: rhythm(3) 0;
-    }
-    .booth-list {
-      max-width: 720px;
-    }
-    .booth-list_starter {
-      .booth-list-item {
-        width: 33.3333%;
-      }
-    }
-    .booth-list_dreamer, .booth-list_drinks {
-      .booth-list-item {
-        width: 50%;
-        padding: 0 24px;
-      }
-    }
-    .product-setion {
-      @include leader(3);
-    }
-    .product-title {
-      @include leader(0.5);
-    }
-  }
-
-  @include at-breakpoint($desktop) {
-    .booth-list_dreamer, .booth-list_drinks {
-      max-width: none;
-      .booth-list-item {
-        width: 25%;
-      }
-    }
-    .booth-list_drinks {
-      max-width: none;
-      .booth-list-item {
-        width: 33.3333%;
-      }
     }
   }
 
@@ -234,25 +166,6 @@
       .container {
         max-width: 1154px;
       }
-    }
-    .booth-list {
-      max-width: none;
-    }
-    .booth-list_starter {
-      .booth-list-item {
-        width: 25%;
-      }
-    }
-    .booth-list_dreamer {
-      .booth-list-item {
-        width: 25%;
-      }
-    }
-    .product-setion {
-      @include leader(4);
-    }
-    .product-title {
-      @include leader(1);
     }
   }
 

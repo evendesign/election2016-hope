@@ -1,0 +1,79 @@
+- content_for :title do
+  title= "在地希望生活節 — #{data['site-title']}"
+
+- @page_name = "event-page"
+- @activity_name = "handicraft"
+
+.page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
+  .container
+    h2.page-header-title 在地希望生活節
+    p.page-header-text 今年夏天7月，遇見點亮台灣的100種方式
+
+= render "/event/event-intro"
+
+.activity-group
+  .activity-group-header
+    = render "/event/activity-nav"
+
+  .activity
+    .activity-cover
+      .container
+        h3.activity-title 創意二手市集 Handicraft
+        h4.activity-subtitle.has-divider 手手市集 X 在地希望
+        .title-divider
+        p.activity-text 有沒有一種感覺，每次逛市集都像是在尋寶，每一攤不同的手作商品都有各自的精巧與個性，這些手做達人將自己的創意仔仔細細縫進每一塊布、每一張皮中，在這裡，挖到的不只是寶藏，更是最「台灣」的手作溫度！
+    .activity-content
+      .container
+        h4.activity-title.has-divider_black 攤位名單
+        .handicraft-list
+          .col
+            .event-content-block
+              h5.title 展覽
+              ul.list
+                li POST POTATO- 無動物實驗
+                li SHAMLIVE
+                li 林楷恩
+                li 賈茜如
+            .event-content-block
+              h5.title 手作食品
+              ul.list
+                li 果燃實驗室
+                li 愛蜜莉手工果醬
+                li 去野餐 Go Picnicking
+            .event-content-block
+              h5.title 二手＋手作
+              ul.list
+                li 熊喵販賣機
+          .col
+            .event-content-block
+              h5.title 手作
+              ul.list
+                li Avril Jewelry 璦薇兒
+                li 果燃實驗室
+                li bug-eyed
+                li 波破摩佛
+                li We all live in
+                li 山牌
+                li 丹丹 DanDan
+                li 卸指甲
+                li 王卵/Wang Luan
+                li Shade & Honey
+                li 不是忍者龜
+                li 阿公的香水檸檬
+          .col
+            .event-content-block
+              h5.title 台灣二手古董藏家
+              ul.list
+                li 脫臼
+                li 古漾
+                li 丘比特
+                li 一二衫
+                li 老又新
+                li balas後菜園
+                li 香蕉貓。Banana Cats
+                li The MAMA's Closet
+            .event-content-block
+              h5.title 新品
+              ul.list
+                li 夏漪眺
+

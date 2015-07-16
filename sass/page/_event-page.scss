@@ -2,6 +2,9 @@
   .page-header {
     background-position: 50% 10%;
   }
+  .timeline {
+    @include leader(2);
+  }
   .local-light-life-festival-logo {
     display: block;
     max-width: 200px;
@@ -22,73 +25,190 @@
   }
 }
 
-// .activity {
-//   @include rhythm(1,2,1,0);
-//   background-color: #f1f1f1;
-//   .container { max-width: 1368px; }
-//   .activity-title {
-//     @include adjust-font-size-to(28px, 1.2);
-//     @include trailer(1);
-//     text-align: center;
-//     color: black;
-//     &:after {
-//       content: '';
-//       display: block;
-//       width: 48px;
-//       height: 2px;
-//       margin: rhythm(1) auto;
-//       background-color: black;
-//     }
-//   }
-//   .activity-item {
-//     @include pie-clearfix;
-//     @include box-sizing(border-box);
-//     padding: 12px 0;
-//   }
-//   .activity-icon {
-//     float: left;
-//     width: 64px;
-//     padding-right: 6px;
-//   }
-//   .activity-info {
-//     float: right;
-//     width: calc(100% - 70px);
-//     .type, .title {
-//       @include adjust-font-size-to(20px, 1);
-//       @include trailer(0.125);
-//     }
-//     .description {
-//       @include adjust-font-size-to(15px);
-//       &:before {
-//         content: "";
-//         display: block;
-//         @include rhythm(.4,0,0,.4);
-//         border-top: 1px solid $color-gray;
-//       }
-//     }
-//   }
-//   @include at-breakpoint($pad) {
-//     @include rhythm(3,3,2,0);
-//     .activity-title {
-//       @include adjust-font-size-to(36px, 1.5);
-//       @include trailer(1);
-//     }
-//     .activity-list {
-//       @include pie-clearfix;
-//     }
-//     .activity-item {
-//       float: left;
-//       width: 50%;
-//       padding: 24px;
-//       &:nth-child(2n+1) { clear: left; }
-//     }
-//   }
-//   @include at-breakpoint($desktop) {
-//     .activity-list { margin: 0 -72px; }
-//     .activity-item {
-//       width: 25%;
-//       &:nth-child(2n+1) { clear: none; }
-//       &:nth-child(4n+1) { clear: left; }
-//     }
-//   }
-// }
+.handicraft-list {
+  @include pie-clearfix;
+  max-width: 860px;
+  margin: 48px auto;
+  .event-content-block {
+    @include trailer(2);
+  }
+  .title {
+    @include trailer(.5);
+    @include adjust-font-size-to(18px);
+  }
+  .list {
+    @include reset-box-model;
+    list-style: none;
+    @include adjust-font-size-to(13px, 1.25);
+  }
+  @include at-breakpoint($pad) {
+    text-align: left;
+    .col {
+      @include box-sizing(border-box);
+      float: left;
+      width: 33%;
+      padding-left: 24px;
+    }
+    .list {
+      @include adjust-font-size-to(15px, 1.25);
+    }
+  }
+  @include at-breakpoint($desktop) {
+    .title { @include adjust-font-size-to(21px); }
+  }
+}
+
+.color-attend-location-list {
+  @include reset-box-model;
+  @include pie-clearfix;
+  max-width: 700px;
+  margin: 0 auto;
+  list-style: none;
+  .attend-location {
+    float: left;
+    width: 50%;
+    padding: 18px 0;
+  }
+  .location-icon-background {
+    display: inline-block;
+    background-color: black;
+    @include border-radius(50%);
+    width: 128px;
+    height: 128px;
+    @include trailer(.5);
+    // mix-blend-mode: difference;
+    opacity: .3;
+  }
+  .location-icon {
+    display: inline-block;
+    width: 96px;
+    height: 96px;
+    margin: 16px;
+  }
+  @include at-breakpoint($pad) {
+    .attend-location { width: 33.333%; }
+  }
+}
+
+.maker-list {
+  @include reset-box-model;
+  list-style: none;
+
+  .maker-content {
+    @include leader(3);
+    .title {
+      @include adjust-font-size-to(21px, 1.5);
+    }
+    .label {
+      @include trailer(.25);
+      color: $color-gray;
+      @include adjust-font-size-to(15px);
+      font-weight: bold;
+    }
+    .time, .intro {
+      margin: 0 auto;
+      @include leader(.5);
+      max-width: 480px;
+    }
+  }
+}
+
+.booth-list {
+  @include reset-list-style;
+  text-align: left;
+  margin: rhythm(2) auto 0;
+
+  .booth-list-item {
+    display: inline-block;
+    vertical-align: top;
+    @include trailer(2);
+    @include box-sizing(border-box);
+  }
+  &.booth-list_starter {
+    max-width: 480px;
+    .booth-list-item {
+      padding: 0 12px;
+      width: 50%;
+    }
+  }
+  &.booth-list_dreamer, &.booth-list_drinks {
+    max-width: 400px;
+    .booth-list-item {
+      width: 100%;
+    }
+  }
+
+  @include at-breakpoint($pad) {
+    &.booth-list_starter {
+      max-width: 720px;
+      .booth-list-item {
+        width: 33.3333%;
+      }
+    }
+    &.booth-list_dreamer, &.booth-list_drinks {
+      max-width: 720px;
+      .booth-list-item {
+        width: 50%;
+        padding: 0 24px;
+      }
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    &.booth-list_dreamer {
+      max-width: none;
+      .booth-list-item {
+        width: 25%;
+      }
+    }
+    &.booth-list_drinks {
+      max-width: none;
+      .booth-list-item {
+        width: 33.3333%;
+      }
+    }
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    &.booth-list_starter {
+      max-width: none;
+      .booth-list-item {
+        width: 25%;
+      }
+    }
+    &.booth-list_dreamer {
+      .booth-list-item {
+        width: 25%;
+      }
+    }
+  }
+}
+
+.product-setion {
+  @include leader(2);
+  .product-title {
+    @include adjust-font-size-to(21px, 1.25);
+  }
+  .product-text {
+    @include adjust-font-size-to(15px);
+  }
+
+  @include at-breakpoint($pad) {
+    @include leader(3);
+
+    .product-title {
+      @include leader(0.5);
+    }
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    @include leader(4);
+
+    .product-title {
+      @include leader(1);
+    }
+  }
+
+
+}
+

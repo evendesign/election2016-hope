@@ -793,46 +793,23 @@ tbody.collapse.in { display: table-row-group; }
 .activity-group .activity-cover .activity-subtitle { color: #aaa; }
 .activity-group .activity-cover .activity-text { margin-bottom: 0px; }
 .activity-group .activity-content { text-align: center; padding: 48px 0; }
+.activity-group .activity-note { font-size: 13px; line-height: 24px; }
 .activity-group .activity-title { font-size: 24px; line-height: 30px; margin-bottom: 6px; }
 .activity-group .activity-subtitle { margin-bottom: 24px; font-size: 16px; line-height: 24px; }
 .activity-group .activity-text { font-size: 15px; line-height: 24px; max-width: 400px; margin: 0 auto 24px; }
+.activity-group .activity-text.lead { margin-bottom: 48px; }
 .activity-group .activity-img { margin-bottom: 24px; }
 .activity-group .has-divider:after, .activity-group .has-divider_black:after { content: ''; display: block; width: 48px; height: 2px; margin: 24px auto; }
 .activity-group .has-divider:after { background-color: white; }
 .activity-group .has-divider_black:after { background-color: black; }
-.activity-group .timeline { margin-top: 48px; }
-.activity-group .booth-list { margin: 0; padding: 0; border: 0; list-style: none; text-align: left; margin: 48px auto 0; }
-.activity-group .booth-list-item { display: inline-block; vertical-align: top; margin-bottom: 48px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-.activity-group .booth-list_starter { max-width: 480px; }
-.activity-group .booth-list_starter .booth-list-item { padding: 0 12px; width: 50%; }
-.activity-group .booth-list_dreamer, .activity-group .booth-list_drinks { max-width: 400px; }
-.activity-group .booth-list_dreamer .booth-list-item, .activity-group .booth-list_drinks .booth-list-item { width: 100%; }
-.activity-group .product-setion { margin-top: 48px; }
-.activity-group .product-title { font-size: 21px; line-height: 30px; }
-.activity-group .product-text { font-size: 15px; line-height: 24px; }
 @media (min-width: 640px) { .activity-group .activity-cover { padding: 144px 0 132px; }
-  .activity-group .activity-cover .activity-text { font-size: 16px; line-height: 30px; }
-  .activity-group .activity-title { font-size: 28px; line-height: 33px; }
+  .activity-group .activity-title { font-size: 28px; line-height: 33px; margin-bottom: 9px; }
   .activity-group .activity-subtitle { font-size: 18px; line-height: 24px; }
-  .activity-group .activity-text { font-size: 16px; line-height: 24px; }
-  .activity-group .activity-content { padding: 72px 0; }
-  .activity-group .booth-list { max-width: 720px; }
-  .activity-group .booth-list_starter .booth-list-item { width: 33.3333%; }
-  .activity-group .booth-list_dreamer .booth-list-item, .activity-group .booth-list_drinks .booth-list-item { width: 50%; padding: 0 24px; }
-  .activity-group .product-setion { margin-top: 72px; }
-  .activity-group .product-title { margin-top: 12px; } }
-@media (min-width: 1025px) { .activity-group .booth-list_dreamer, .activity-group .booth-list_drinks { max-width: none; }
-  .activity-group .booth-list_dreamer .booth-list-item, .activity-group .booth-list_drinks .booth-list-item { width: 25%; }
-  .activity-group .booth-list_drinks { max-width: none; }
-  .activity-group .booth-list_drinks .booth-list-item { width: 33.3333%; } }
+  .activity-group .activity-text { font-size: 16px; line-height: 30px; }
+  .activity-group .activity-content { padding: 72px 0; } }
 @media (min-width: 1512px) { .activity-group .activity-cover { padding: 192px 0 180px; }
   .activity-group .activity-content { padding: 96px 0; }
-  .activity-group .activity-content .container { max-width: 1154px; }
-  .activity-group .booth-list { max-width: none; }
-  .activity-group .booth-list_starter .booth-list-item { width: 25%; }
-  .activity-group .booth-list_dreamer .booth-list-item { width: 25%; }
-  .activity-group .product-setion { margin-top: 96px; }
-  .activity-group .product-title { margin-top: 24px; } }
+  .activity-group .activity-content .container { max-width: 1154px; } }
 
 .homepage .header .container { max-width: none; }
 .homepage .block-group:after { content: ""; display: table; clear: both; }
@@ -847,9 +824,59 @@ tbody.collapse.in { display: table-row-group; }
   .homepage .event-block { background-color: transparent; } }
 
 .event-page .page-header { background-position: 50% 10%; }
+.event-page .timeline { margin-top: 48px; }
 .event-page .local-light-life-festival-logo { display: block; max-width: 200px; width: 75%; margin: -12px auto 24px; }
 @media (min-width: 640px) { .event-page .local-light-life-festival-logo { max-width: 300px; margin: 0px auto 48px; } }
 @media (min-width: 1512px) { .event-page .local-light-life-festival-logo { max-width: 400px; margin: 0px auto 72px; } }
+
+.handicraft-list { max-width: 860px; margin: 48px auto; }
+.handicraft-list:after { content: ""; display: table; clear: both; }
+.handicraft-list .event-content-block { margin-bottom: 48px; }
+.handicraft-list .title { margin-bottom: 12px; font-size: 18px; line-height: 24px; }
+.handicraft-list .list { margin: 0; padding: 0; border: 0; list-style: none; font-size: 13px; line-height: 30px; }
+@media (min-width: 640px) { .handicraft-list { text-align: left; }
+  .handicraft-list .col { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; float: left; width: 33%; padding-left: 24px; }
+  .handicraft-list .list { font-size: 15px; line-height: 30px; } }
+@media (min-width: 1025px) { .handicraft-list .title { font-size: 21px; line-height: 48px; } }
+
+.color-attend-location-list { margin: 0; padding: 0; border: 0; max-width: 700px; margin: 0 auto; list-style: none; }
+.color-attend-location-list:after { content: ""; display: table; clear: both; }
+.color-attend-location-list .attend-location { float: left; width: 50%; padding: 18px 0; }
+.color-attend-location-list .location-icon-background { display: inline-block; background-color: black; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border-radius: 50%; width: 128px; height: 128px; margin-bottom: 12px; opacity: .3; }
+.color-attend-location-list .location-icon { display: inline-block; width: 96px; height: 96px; margin: 16px; }
+@media (min-width: 640px) { .color-attend-location-list .attend-location { width: 33.333%; } }
+
+.maker-list { margin: 0; padding: 0; border: 0; list-style: none; }
+.maker-list .maker-content { margin-top: 72px; }
+.maker-list .maker-content .title { font-size: 21px; line-height: 36px; }
+.maker-list .maker-content .label { margin-bottom: 6px; color: #aaaaaa; font-size: 15px; line-height: 24px; font-weight: bold; }
+.maker-list .maker-content .time, .maker-list .maker-content .intro { margin: 0 auto; margin-top: 12px; max-width: 480px; }
+
+.booth-list { margin: 0; padding: 0; border: 0; list-style: none; text-align: left; margin: 48px auto 0; }
+.booth-list .booth-list-item { display: inline-block; vertical-align: top; margin-bottom: 48px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.booth-list.booth-list_starter { max-width: 480px; }
+.booth-list.booth-list_starter .booth-list-item { padding: 0 12px; width: 50%; }
+.booth-list.booth-list_dreamer, .booth-list.booth-list_drinks { max-width: 400px; }
+.booth-list.booth-list_dreamer .booth-list-item, .booth-list.booth-list_drinks .booth-list-item { width: 100%; }
+@media (min-width: 640px) { .booth-list.booth-list_starter { max-width: 720px; }
+  .booth-list.booth-list_starter .booth-list-item { width: 33.3333%; }
+  .booth-list.booth-list_dreamer, .booth-list.booth-list_drinks { max-width: 720px; }
+  .booth-list.booth-list_dreamer .booth-list-item, .booth-list.booth-list_drinks .booth-list-item { width: 50%; padding: 0 24px; } }
+@media (min-width: 1025px) { .booth-list.booth-list_dreamer { max-width: none; }
+  .booth-list.booth-list_dreamer .booth-list-item { width: 25%; }
+  .booth-list.booth-list_drinks { max-width: none; }
+  .booth-list.booth-list_drinks .booth-list-item { width: 33.3333%; } }
+@media (min-width: 1512px) { .booth-list.booth-list_starter { max-width: none; }
+  .booth-list.booth-list_starter .booth-list-item { width: 25%; }
+  .booth-list.booth-list_dreamer .booth-list-item { width: 25%; } }
+
+.product-setion { margin-top: 48px; }
+.product-setion .product-title { font-size: 21px; line-height: 30px; }
+.product-setion .product-text { font-size: 15px; line-height: 24px; }
+@media (min-width: 640px) { .product-setion { margin-top: 72px; }
+  .product-setion .product-title { margin-top: 12px; } }
+@media (min-width: 1512px) { .product-setion { margin-top: 96px; }
+  .product-setion .product-title { margin-top: 24px; } }
 
 .submit-page .join-local-light { display: block; max-width: 400px; line-height: 0; text-indent: -119988px; overflow: hidden; text-align: left; margin: 0 auto 24px; max-width: 350px; width: 75%; }
 .submit-page .join-local-light:after { content: ""; display: block; text-indent: -119988px; overflow: hidden; text-align: left; background-image: url('/images/join-local-light-big.png?1435137840'); background-repeat: no-repeat; background-position: 50% 50%; width: 400px; height: 287px; background-image: none, url('/images/join-local-light-big.svg?1435137840'); background-position: center center; -webkit-background-size: contain; -moz-background-size: contain; -o-background-size: contain; background-size: contain; width: 100%; height: 0; padding-top: 71.75%; }
