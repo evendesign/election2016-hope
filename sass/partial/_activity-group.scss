@@ -106,7 +106,7 @@
 
   .activity-subtitle {
     @include trailer(1);
-    @include adjust-font-size-to(15px);
+    @include adjust-font-size-to(16px);
   }
 
   .activity-text {
@@ -136,7 +136,7 @@
   }
   .booth-list {
     @include reset-list-style;
-    // text-align: left;
+    text-align: left;
     margin: rhythm(2) auto 0;
   }
   .booth-list-item {
@@ -177,10 +177,10 @@
     }
     .activity-title {
       @include adjust-font-size-to(28px, 1.4);
-      @include trailer(0.75);
+      // @include trailer(0.25);
     }
     .activity-subtitle {
-      @include adjust-font-size-to(20px, 1.2);
+      @include adjust-font-size-to(18px);
     }
     .activity-text {
       @include adjust-font-size-to(16px, 1);
@@ -208,7 +208,6 @@
     .product-title {
       @include leader(0.5);
     }
-
   }
 
   @include at-breakpoint($desktop) {
