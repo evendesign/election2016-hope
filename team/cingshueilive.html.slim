@@ -1,0 +1,75 @@
+- @team_id = 74
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 新光機構為倡導書香社會的建立，並參與文化傳承的耕耘，於 1982 年 11 月創立允晨文化出版公司，期能為國內文化知識傳播挹注一股源頭活水。
+        p 「出版好書」一直是允晨文化堅持的原則。基於這樣的執著，陸續出版了一系列的「允晨叢刊」，網羅包括余英時、黃仁宇、李亦園、杜正勝、陳其南等當代享有國際聲譽的學界大師的重要代表著作，並曾多次榮獲國家圖書金鼎獎及優良著作物的肯定。不僅提供了一個廣闊的與大師對話的討論園地，匯聚不同學科與文化觀點，更落實了普及學術的理想。
+        p 同時更稟持掌握世界新知的理念，希望塑造全方位的閱讀環境，讓讀者成為全方位的讀書人，開闢不同類型書系︰「當代名家」，以華文作家作品為主，用文學書寫，挖掘華人世界中的不同主題和面向；「當代叢書」，側重觀念及議題，提供政治，經濟，趨勢等現代國家應關注的焦點著作；「生活美學」則讓讀者藉由閱讀，在繁忙的紅塵俗世中，回歸心靈澄明的原點；而展現世界文壇主流風貌的「經典文學」，更是本本佳作，具現大師風采，如馬奎斯、莒哈斯、富安蒂斯、薩巴多、蒙蒂安諾等人作品，皆是當世之選。
+        p 知識是軟實力，出版則是重要平台，有感於近年來台灣出版品的輕薄柔軟，趨近，雷同，甚少人文關懷和世界視野，對中國缺乏真正認識，特著力出版深具重量的著作，如《大國沉淪》、《民主內戰的必要》、《來生不做中國人》、《六四‧我的證詞》、《風和日暖》、《尋覓家國願景》、《鼠年雪獅吼》、《百年風雨》等重要著作，以擴大台灣讀者的閱讀向度，加深人文關懷，認識中國現實，從而追尋台灣的未來。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+
+= render "/team/team-page-bottom"
