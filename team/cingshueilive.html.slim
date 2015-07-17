@@ -1,0 +1,75 @@
+- @team_id = 74
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 清水，依山傍海，一個適合散步的小鎮。
+        p 從高速公路的時速 100 公里，轉換成悠閒走路的 5 公里。在這裡找尋一點生活的樂趣，悠閒才是生活的真理。
+        p 清水散步，前身為華笙音樂城，唱片專賣，創立於 1986 年 9 月，提供台中海線樂迷流行、古典音樂服務、藝文資訊，歷經黑膠唱片、卡帶、CD、DVD 的年代，再到網路數位化時代來臨；當眾人都習慣用網路聽音樂後，2012 年 12 月從唱片行轉型為「清水散步」。
+        p 來到清水散步，可以喝咖啡、吃手工麵線輕食料理，伴隨著書香與音樂聲，還有鄰居、好朋友常常來串門子、聊天，在這裡，享受生活。另外不定期舉辦清水清旅行，規劃多條旅遊動線，包含以濕地環境生態教育為主的「高美溼地尋芳蹤」、騎腳踏車體驗田園風情的「五福圳自行車道追火車」、散步認識族群遷徙與歷史的「清水古道老街」等，帶旅客深度認識清水的不同面貌；近日更舉辦「走海線」的旅行，串聯海線鐵道上的車站、城鎮，並與在地的團隊合作規劃，深度認識海線文化與產業故事。
+        p 清水散步致力於觀光文化旅遊推廣，更進一步以清水、海線等在地的文化元素，發揮創意，轉化成文創產業，發展出許多有特色的商品，例如「廖添丁」，清末日治初期人物，出生在今日的清水區秀水里，因為一生行俠仗義、濟弱扶傾，勇於挑戰當時政權的高壓統治，被說書人賦予許多有趣且神秘的傳奇故事。清水散步團隊透過故事的發現、結合在地的元素與場域，創意發想出旅遊動線、活動與相關的紀念商品，期待能夠透過廖添丁的形象，讓更多人看到清水的特色，創造出更多在地的就業機會，讓清水成為一安居樂業之地。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+
+= render "/team/team-page-bottom"

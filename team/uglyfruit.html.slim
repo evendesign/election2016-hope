@@ -1,0 +1,75 @@
+- @team_id = 70
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 我們是「醜蔬果大翻身」團隊，是致力於推廣友善格外品的平台。我們是由七名台大橫跨農業資源、社會科學、行銷傳播、財務金融背景的學生所組成的團隊，擁有同樣關切社會議題的熱忱，並希望能夠以一己之力來試圖改善我們所處的環境。
+        p 友善指的是友善耕作，包含有機、無毒、自然農法耕作，以永續的方式，試圖減少生產中對環境的負擔。而什麼是格外品？就是市場規格之外的農產品，回想你過去進入超市、菜市場，你並沒有看過長得像這樣的蔬果被擺在架上販售。這些不符合市場規格的農產品高達三成，它們不被消費者接受，自然而然地就被市場淘汰。消費者不購買、通路與盤商不進貨，因此這些格外品就被留在產地，形成產地浪費。農友的解決途徑就是自用、送人、加工、餵豬等，盡量降低醜蔬果的浪費。
+        p 可是非常弔詭的一點是，我們怎麼會期待「這些蔬果要長得一樣漂亮」，人都沒長得一樣了，為什麼農產品要長得一樣？
+        p 在認識了農產品格外品浪費的議題，我們便到台灣各縣市進行農情調查，實際與以有機農法種植的農友互動，試圖了解農業圈的生態。歸納了問題，我們便致力於成為友善格外品的平台，除了建立一個電商平台販售品質一樣好的農產品，也在今年三月時進行市集擺攤，希望能夠推廣理念給更多的消費者，在與民眾接觸的過程，他們都對於這樣的概念十分接受，也會期待未來能夠在一般通路上看到醜蔬果。
+        p 在現代人的飲食經驗中，我們與食物的距離是遙遠的。我們的三餐來自超市、市場，甚至是便當、加工食品，我們對於食物的片面、單向的接觸，更加強化了我們認為食物是可以、也應該要規格化的迷思。
+        p 為什麼我們和食物之間的距離會這麼遙遠？因為現代人的成長經驗，與這片土地是斷裂的。我們每天都會吃到蔬菜水果穀物肉品，但是我們幾乎從來沒有參與過，甚至沒有想像過，他們是如何被生產出來的。
+        p 我們期待能做些什麼，來建立人與土地之間友善的連結。
+        p 因此有了「醜蔬果大翻身」這個品牌。提醒那些被我們視而不見的那些格外品，明明是自然的真實樣貌，卻透過層層的人為篩選而造成不必要的浪費。去思考為何「美」會被當作農產品的重要篩選標準，而不是營養價值、土地友善為我們最在乎的標準。我們希望能讓消費者理解食物從何而來、進而更了解產銷體系、推廣珍惜這片土地、資源不浪費的理念。
+        p 一路走來，無論是和農友博感情還是跟消費者溝通聊天都十分有收獲，也可以從他們正向的回饋中得到讓我們繼續前進的動力，更感謝的是過程中所有幫助過我們的前輩，讓我們得以更快速地認識社會環境，並提供適當的建議讓醜蔬果的價值能夠發揮到最大，當然不能否認的是還有一些批評和指教，我們都虛心接受並回過頭徹底檢討，畢竟是真的希望我們在做的事情能夠精準的解決社會問題。"
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+
+= render "/team/team-page-bottom"
