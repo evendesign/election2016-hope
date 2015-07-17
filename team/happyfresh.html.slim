@@ -1,0 +1,99 @@
+- @team_id = 75
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+- team_photo_10 = "/images/team/#{team_en_name}/10.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+    - if @team_id > 0
+      a.team-prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id - 1]['name']}
+        .thumb-info
+          span 上一個團隊
+          img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
+
+    - if @team_id < team_data.length - 1
+      a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id + 1]['name']}
+        .thumb-info
+          span 下一個團隊
+          img src="/images/team/#{team_data[@team_id + 1]['en_name']}/bg_s.jpg"
+
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 吃好食，做好事
+        p 我們是一群定居臺南的熱血青年，畢業於臺南藝術大學，原先只是基於對土地的熱愛、環境的維護和舊有文化的傳承，成立「米家藝文事業」有限公司，結合在地從事藝文相關事務。
+        p 多年來，我們在臺南官田區大崎村落裡，不斷致力於無農藥概念的推廣，並倡導健康飲食和愛護土地的價值，努力不懈。成功透過學生與當地農民合作，以產地直銷的方式協助農民嘗試種植無農藥柳丁，因為無毒／有機農產，一路走來認識許多善良可愛的農漁民，更能體會辛苦與心酸。
+        p 我們發現照顧當地的產業，並且以最友善環境的方式來養殖與種植，其實才是最為重要的一件事。於是把農漁民當作自己的夥伴，讓他們賺取合理的利潤，讓消費者吃到快樂健康美味的食材成了我們經營的重要理念，並在機緣之下認識一位同樣致力於無毒漁產的養殖師小杜哥，攜手合作打造農漁產品銷售平台「HAPPY FRESH 快樂鱻」。
+        p 未來「HAPPY FRESH 快樂鱻」將以小杜哥為先驅，願此開始讓更多有共同理念的農漁民一起加入，再也不必經過中盤商，得到應有的回饋；推廣友善環境與安心健康的農漁產品，以及每年將 5%的利潤回饋給社福單位，藉由這樣的平台，期望能與消費者一起達成「吃好食，做好事」的理念。
+        p 養殖師小杜哥堅持用生態共生的方法養殖魚蝦，雖然耗費多年的時間才讓漁塭的生態恢復平衡，然而漁塭也開始有螢火蟲和蜻蜓等生物，讓小杜哥看了非常欣慰！雖然家人及老一輩養殖戶常常笑他到底是在養什麼，但他始終堅持自己的想法，堅持養殖最後一定要回歸到生態平衡。
+        p 小杜哥說：「用人的角度去想，這樣魚和蝦才會健康！我都是用乳酸菌養魚蝦，乳酸菌就是顧魚蝦的腸胃，魚蝦健康，自然抵抗力就強，就不用吃雜七雜八的藥，我們也才吃得放心吃得健康！」
+        p 從一開始什麼都不會只堅持不添加化學肥料，經過不斷的試驗與失敗經驗，從被大家嘲笑是笨蛋，到現在臨近養殖戶紛紛向小杜哥請教養殖技術與益生菌培養。小杜哥的「撇步」絕不私藏，自己研究培養的「益生菌」養殖配方，讓他的白蝦吃起來比一般養殖蝦更加鮮甜；不吝嗇得指導更多的養殖戶，希望未來能串聯大家朝向友善生態養殖發展。更期盼自己努力的成果能被更多人看見，並吸引更多年輕人回流家鄉一同打拼復甦養殖業發展。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+      a.gallery-item href="#{team_photo_10}"
+        .gallery-item-inner style="background-image: url('#{team_photo_10}');"
+
+= render "/team/team-page-bottom"
