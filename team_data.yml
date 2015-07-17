@@ -1779,11 +1779,11 @@
   video: "https://www.youtube.com/watch?v=tHBtqCpCwdw"
   map: "newtaipeicity"
   location: "新北市"
-  address: "新北市永和區中正路 388 號 10 樓之一"
+  address: "新北市"
   category: "社會創新"
   since: "2015"
   website: "http://theuglyproduce.strikingly.com"
-  https://www.facebook.com/TheUglyProduce?fref=tsfacebook_page: ""
+  https: "https://www.facebook.com/TheUglyProduce"
   preface: "「醜蔬果大翻身」這個品牌是要提醒那些被我們視而不見的那些格外品，明明是自然的真實樣貌，卻透過層層的人為篩選而造成不必要的浪費。去思考為何「美」會被當作農產品的重要篩選標準，而不是營養價值、土地友善為我們最在乎的標準。我們希望能讓消費者理解食物從何而來、進而更了解產銷體系、推廣珍惜這片土地、資源不浪費的理念。"
   member_amount: "七個年輕人"
   member:
@@ -1807,6 +1807,14 @@
       figure_en_name: "05"
       name: "林志煒"
       intro: "苗栗人。相信只要努力，社會就有可能發生改變！"
+    -
+      figure_en_name: "06"
+      name: "林宜蓁"
+      intro: "時常在矛盾跟拉扯的台北人。"
+    -
+      figure_en_name: "07"
+      name: "戴邵芸"
+      intro: "認真過日子的台南人，在找到自己之前想要擁有一百種生活。"
 -
   en_name: "ydsin1940"
   slogan: "醬油一家子五口人用柴燒做出有時間味道的醬油"
