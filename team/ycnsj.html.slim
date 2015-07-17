@@ -1,0 +1,81 @@
+- @team_id = 77
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+    - if @team_id > 0
+      a.team-prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id - 1]['name']}
+        .thumb-info
+          span 上一個團隊
+          img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
+
+    - if @team_id < team_data.length - 1
+      a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id + 1]['name']}
+        .thumb-info
+          span 下一個團隊
+          img src="/images/team/#{team_data[@team_id + 1]['en_name']}/bg_s.jpg"
+
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 大學念完公共行政與政策學系，很認份地進入職場，努力還完學貸，一邊工作一邊也迷惑著自己是不是要這樣的人生，曾經希望成為畫家的夢想是不是就要消失？心裡小小的不甘心讓我重新進入藝術大學，用雙手創造各種作品也帶我走向完全不同的創作道路。
+        p 打工度假、交換學生、自助旅行、接待來台的交換學生，在各地與其他人交流得到了不同的故事，都成為了我的創作養分。在進入藝術公司歷練之後，真心希望自己能試著用自己的創作生活，所以就這麼開始了，從一開始的害怕跟緊張，隨著許多朋友跟客戶的鼓勵，各種作品也漸漸地長出了自己喜歡的樣子。
+        p 創作是一件快樂的事，而能跟別人分享故事，更是見幸福的事。
+        p 我一直畫著，並尋找適合的勵志話語，希望這樣的創作也可以鼓勵有夢想的人，不要害怕去走自己想要走的路，因為鼓起勇氣往前進，也許不見得會大富大貴，但是能遇見和得到的美好跟充實，往往是自己無法預期的。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+
+= render "/team/team-page-bottom"
