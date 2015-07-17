@@ -1,0 +1,43 @@
+- @activities = [ \
+    { \
+      :en_name => 'light', \
+      :name => '點亮舞台<br>Light', \
+    },\
+    { \
+      :en_name => 'color', \
+      :name => '地方縣市特色館<br>Color', \
+    },\
+    { \
+      :en_name => 'starter', \
+      :name => '在地創新館<br>Starter', \
+    },\
+    { \
+      :en_name => 'maker', \
+      :name => '手作造物館<br>Maker', \
+    },\
+    { \
+      :en_name => 'dreamer', \
+      :name => '人生海海館<br>Dreamer', \
+    },\
+    { \
+      :en_name => 'handicraft', \
+      :name => '創意二手市集<br>Handicraft', \
+    },\
+    { \
+      :en_name => 'drinks', \
+      :name => '阿英冰果室<br>Drinks', \
+    },\
+    { \
+      :en_name => 'donation', \
+      :name => '在地希望募款小物<br>Donation', \
+    },\
+  ]
+
+.activity-nav#activity-nav
+  - @activities.each do |activity|
+    .activity-nav-item id="activity-nav-item-#{activity[:en_name]}"
+      a data-target="#activity-#{activity[:en_name]}" href="/event/activity/#{activity[:en_name]}.html"
+        img.activity-nav-item-icon src="/images/event/activity-icon-#{activity[:en_name]}.svg"
+        h3.activity-nav-item-title #{activity[:name]}
+button.activity-pre-btn
+button.activity-next-btn

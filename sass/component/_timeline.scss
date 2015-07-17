@@ -1,0 +1,113 @@
+.timeline {
+  max-width: 1080px;
+  margin: 0 auto;
+
+  .row-time {
+    position: relative;
+    @include leader();
+    @include trailer();
+    @include adjust-font-size-to(28px);
+    text-align: left;
+
+    &:after {
+      content: "";
+      position: absolute;
+      @include box-sizing(border-box);
+      top: 50%;
+      left: 96px;
+      right: 0;
+      border-top: 1px solid $color-gray;
+    }
+  }
+
+  .row-content {
+    @include pie-clearfix;
+    text-align: left;
+
+    .event-photo {
+      float: left;
+      position: relative;
+      overflow: hidden;
+      width: 72px;
+      height: 0;
+      margin-right: 24px;
+      padding-top: 72px;
+      background-color: $color-gray-light;
+      @include border-radius(50%);
+
+      img {
+        position: absolute;
+        display: block;
+        top: 0;
+        width: 100%;
+        @include border-radius(50%);
+      }
+    }
+
+    .event-content {
+      display: block;
+      overflow: hidden;
+
+      .title {
+        @include trailer(.5);
+        @include adjust-font-size-to(18px, 1.5);
+      }
+
+      .intro { @include adjust-font-size-to(13px); }
+    }
+
+    &.speech {
+      .event-content {
+        .title {
+          @include adjust-font-size-to(21px, 1.25);
+        }
+      }
+    }
+  }
+  @include at-breakpoint($pad) {
+    .row-content {
+      .event-photo {
+        float: left;
+        width: 96px;
+        padding-top: 96px;
+      }
+
+      .event-content {
+        .title { @include adjust-font-size-to(21px, 1.25); }
+        .intro { @include adjust-font-size-to(16px); }
+      }
+
+      &.speech {
+        .event-content {
+          position: relative;
+          min-height: 96px;
+
+          .title {
+            position: absolute;
+            top: 50%;
+            @include trailer(0);
+            @include adjust-font-size-to(28px, 1.5);
+            @include translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+  @include at-breakpoint($desktop) {
+    .row-content {
+
+      .event-photo {
+        width: 128px;
+        margin-left: 96px;
+        margin-right: 36px;
+        padding-top: 128px;
+      }
+
+      &.speech {
+        .event-content {
+          min-height: 128px;
+        }
+      }
+    }
+  }
+}

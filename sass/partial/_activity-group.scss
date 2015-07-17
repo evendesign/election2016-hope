@@ -1,0 +1,188 @@
+.activity-group {
+
+  .activity-group-header {
+    @include pie-clearfix;
+    background-color: #f1f1f1;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .activity-nav {
+    @include reset-list-style;
+    margin: 0 auto;
+    text-align: center;
+    @include nowrap;
+  }
+  .activity-nav-item {
+    position: relative;
+    float: left;
+    a {
+      display: block;
+      width: 120px;
+      padding: 24px 12px;
+      color: black;
+      @include nowrap;
+      @include transition(background-color .25s);
+      &:hover {
+        text-decoration: none;
+        background-color: #ddd;
+      }
+      &.is-active {
+        background-color: #ddd;
+      }
+    }
+  }
+  .activity-nav-item-icon {
+    display: block;
+    margin: 0 auto;
+  }
+  .activity-nav-item-title {
+    @include trailer(0);
+    @include adjust-font-size-to(15px);
+    color: black;
+  }
+  .activity-pre-btn, .activity-next-btn {
+    @include reset-box-model;
+    position: absolute;
+    z-index: 1200;
+    top: 0;
+    bottom: 0;
+    width: 64px;
+    @include hide-text(right);
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:focus { outline: none; }
+    &.disabled { display: none !important; }
+  }
+  .activity-pre-btn {
+    left: 0;
+    background-image: url("/images/member-arrow-prev.png");
+    background-image: none, url("/images/member-arrow-prev.svg"), linear-gradient(to left, rgba(#f1f1f1, 0.1), rgba(#f1f1f1, 1));
+
+  }
+  .activity-next-btn {
+    right: 0;
+    background-image: url("/images/member-arrow-next.png");
+    background-image: none, url("/images/member-arrow-next.svg"), linear-gradient(to right, rgba(#f1f1f1, 0.1), rgba(#f1f1f1, 1));
+  }
+  .activity {
+    min-height: 768px;
+  }
+  .activity-cover {
+    position: relative;
+    background-color: #444;
+    @include background-size(cover);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: rhythm(4) 0 rhythm(3.5);
+    .container {
+      position: relative;
+      z-index: 50;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(black, 0.75);
+    }
+    .activity-nav-item-title {
+      color: white;
+    }
+    .activity-subtitle {
+      color: #aaa;
+    }
+    .activity-text {
+      @include trailer(0);
+    }
+  }
+
+  .activity-content {
+    text-align: center;
+    padding: rhythm(2) 0;
+  }
+
+  .activity-note {
+    @include adjust-font-size-to(13px);
+  }
+
+  .activity-title {
+    @include adjust-font-size-to(24px, 1.25);
+    @include trailer(0.25);
+  }
+
+  .activity-subtitle {
+    @include trailer(1);
+    @include adjust-font-size-to(16px);
+  }
+  .activity-text {
+    @include adjust-font-size-to(15px);
+    max-width: 400px;
+    margin: 0 auto rhythm(1);
+    &.lead {
+      @include trailer(2);
+    }
+  }
+  .activity-img {
+    @include trailer(1);
+  }
+
+  .has-divider:after, .has-divider_black:after {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 2px;
+    margin: rhythm(1) auto;
+  }
+  .has-divider:after {
+    background-color: white;
+  }
+  .has-divider_black:after {
+    background-color: black;
+  }
+
+  @include at-breakpoint($pad) {
+    .activity-cover {
+      padding: rhythm(6) 0 rhythm(5.5);
+    }
+    .activity-title {
+      @include adjust-font-size-to(28px, 1.4);
+      @include trailer(0.4);
+    }
+    .activity-subtitle {
+      @include adjust-font-size-to(18px);
+    }
+    .activity-text {
+      @include adjust-font-size-to(16px, 1.25);
+    }
+    .activity-content {
+      padding: rhythm(3) 0;
+    }
+  }
+
+  @include at-breakpoint($desktop) {
+    .activity {
+      min-height: 100vh;
+    }
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    .activity-cover {
+      padding: rhythm(8) 0 rhythm(7.5);
+    }
+    .activity-content {
+      padding: rhythm(4) 0;
+      .container {
+        max-width: 1154px;
+      }
+    }
+  }
+
+
+}

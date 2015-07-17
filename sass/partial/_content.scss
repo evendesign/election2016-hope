@@ -15,6 +15,9 @@
     font-weight: bold;
     color: $color-gray-dark;
   }
+  p {
+    @include adjust-font-size-to(16px, 1.125);
+  }
   .notice {
     @include rhythm(1,0,0,1);
     @include adjust-font-size-to(15px);

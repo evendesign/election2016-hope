@@ -13,11 +13,13 @@
 @import "component/collapse";
 @import "component/pagination";
 @import "component/member";
+@import "component/booth";
 @import "component/page-header";
 @import "component/block";
 @import "component/tile";
 @import "component/pager";
 @import "component/share-button";
+@import "component/timeline";
 
 // ==== partial ====
 @import "partial/header";
@@ -33,6 +35,7 @@
 @import "partial/submit-box";
 @import "partial/team-list";
 @import "partial/page-bottom-illustrator";
+@import "partial/activity-group";
 
 // ==== page ====
 @import "page/homepage";
@@ -41,6 +44,13 @@
 @import "page/message-page";
 
 // ==== inbox ====
+.show-pad-up {
+  display: none;
+  @include at-breakpoint($pad) {
+    display: block;
+  }
+}
+
 .show-desktop-up {
   display: none;
   @include at-breakpoint($desktop) {
