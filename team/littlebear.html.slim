@@ -1,0 +1,97 @@
+- @team_id = 76
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+- team_photo_07 = "/images/team/#{team_en_name}/07.jpg"
+- team_photo_08 = "/images/team/#{team_en_name}/08.jpg"
+- team_photo_09 = "/images/team/#{team_en_name}/09.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+    - if @team_id > 0
+      a.team-prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id - 1]['name']}
+        .thumb-info
+          span 上一個團隊
+          img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
+
+    - if @team_id < team_data.length - 1
+      a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id + 1]['name']}
+        .thumb-info
+          span 下一個團隊
+          img src="/images/team/#{team_data[@team_id + 1]['en_name']}/bg_s.jpg"
+
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 孩子認識的世界多大，潛力就有多大。閱讀，是孩子認識世界的開始
+        p 2010年 9 月，小熊創辦人 Ruby 來到讀書共和國出版集團成立了小熊出版，一個人獨自奮鬥，在台灣黑熊「威力」（就是公司的 logo 兼吉祥物啦）陪伴下，努力為臺灣所有小朋友與家長們出版最精彩的作品。
+        p 第一年創業艱辛，小熊因出版了日文繪本《蛀牙蟲家族大搬家》一書而讓公司撐過了最困難的關卡，之後小熊秉持「孩子認識的世界多大，潛力就有多大，而閱讀是孩子認識世界的開始」的信念，反覆和讀者交流溝通、舉辦作家講座與小熊姊姊說故事等閱讀推廣活動，漸漸站穩了腳步。
+        p 厚植臺灣兒童文學創作實力，發掘本土優秀創作者
+        p 除了將國外優秀的作品引進臺灣之外，小熊出版的另一個使命就是發掘臺灣本土優秀的創作者，為厚植台灣兒童文學創作實力盡一份力。
+        p 從多年的出版經驗中，小熊發現臺灣其實從來不乏才華洋溢的年輕創作者。他們可能苦無機會，或被生活擠壓而無暇創作，因此小熊無論是與在地知名作者合作企劃，或是從眾多投稿中發掘新銳，都不吝惜投資時間與心力，使在地創作者能發揮實力。目前在小熊出書的臺灣創作者成績斐然，童嘉的《千萬不要告訴別人！》曾入圍金鼎獎、石麗蓉的《我不要打針》曾榮獲金鼎獎、黃麗凰與黃志民的《阿里愛動物》曾榮獲豐子愷兒童圖畫書講佳作獎等等，讓全臺灣以及全世界的人們，見識臺灣在地豐沛的兒童文學創作能量。
+        p 小熊出版，許孩子一個快樂的童年
+        p 2015 年 9 月，小熊的將邁入第六個年頭，總編 Ruby 與她的工作夥伴已經出版了超過一百五十項出版品，類型橫跨繪本、漫畫、橋梁書、少年小說、教養書等。其中更有一半以上，是臺灣創作者的作品。而在 logo 上陪伴大家的臺灣黑熊威力，甚至推出了自己的橋樑書系列作「小熊威力」。
+        p 童年是孵育想像力的溫床，想像力是孩子認識世界的動力，而閱讀能讓想像力馳騁。如同知名詩人楊喚所說：「孩子是株芽，我願意作一名平凡又平凡的小園丁。」小熊出版永遠是孩子拓展視野、認識世界的良伴，更是帶給孩子快樂童年的玩伴。"
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_07}"
+        .gallery-item-inner style="background-image: url('#{team_photo_07}');"
+      a.gallery-item href="#{team_photo_09}"
+        .gallery-item-inner style="background-image: url('#{team_photo_09}');"
+    .gallery-item-block.gallery-item-block_3
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_08}"
+        .gallery-item-inner style="background-image: url('#{team_photo_08}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+
+= render "/team/team-page-bottom"
