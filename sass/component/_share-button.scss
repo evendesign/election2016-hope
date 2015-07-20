@@ -1,7 +1,7 @@
 .share-button {
   text-align: center;
   @include padding-trailer(2);
-  span {
+  .share-button-title {
     position: relative;
     display: block;
     margin: 0 auto;
