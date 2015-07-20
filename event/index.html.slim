@@ -7,7 +7,7 @@
 .page-header.page-header_black-bg style="background-image: url('/images/banner-event.jpg')"
   .container
     h2.page-header-title 在地希望生活節
-    p.page-header-text 今年夏天7月，遇見點亮台灣的100種方式
+    p.page-header-text.auto-break-text 今年夏天7月，遇見點亮台灣的100種方式
 
 = render "/event/event-intro"
 
@@ -23,3 +23,13 @@
   .activity#activity-handicraft
   .activity#activity-drinks
   .activity#activity-donation
+
+.share-button
+  .container
+    span.share-button-title 趕快與你的朋友分享生活節
+    .fb-like data-href="http://light.iing.tw/event/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"
+
+.pager
+  a.pager-item.team-list href="/event/#activity-group" 返回活動導航
+
+= render "/event/fb-like.erb"
