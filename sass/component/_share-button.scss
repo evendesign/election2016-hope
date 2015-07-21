@@ -12,10 +12,10 @@
     &:before {
       content: "";
       display: block;
-      width: 72px;
+      width: 48px;
       margin: 0 auto;
       padding-bottom: 24px;
-      border-top: 2px solid $color-gray-light;
+      border-top: 2px solid #f1f1f1;
     }
   }
   .fb-share, .tweet {
