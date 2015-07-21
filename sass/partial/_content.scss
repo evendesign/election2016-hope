@@ -10,13 +10,16 @@
   }
 
   h3 {
-    @include trailer(.5);
+    @include trailer(.25);
     @include adjust-font-size-to(15px);
     font-weight: bold;
     color: $color-gray-dark;
   }
   p {
     @include adjust-font-size-to(16px, 1.125);
+  }
+  a {
+    text-decoration: underline;
   }
   .notice {
     @include rhythm(1,0,0,1);
@@ -39,9 +42,6 @@
       padding: 6px 72px;
     }
   }
-
-
-
 
   @include at-breakpoint($pad) {
 
@@ -66,9 +66,5 @@
       padding: rhythm(3) rhythm(4) 0;
     }
   }
-
-
-
-
 
 }
