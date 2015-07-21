@@ -1,0 +1,82 @@
+- @team_id = 80
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+    - if @team_id > 0
+      a.team-prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id - 1]['name']}
+        .thumb-info
+          span 上一個團隊
+          img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
+
+    - if @team_id < team_data.length - 1
+      a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id + 1]['name']}
+        .thumb-info
+          span 下一個團隊
+          img src="/images/team/#{team_data[@team_id + 1]['en_name']}/bg_s.jpg"
+
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 我們是一群在台北賃屋而居的人，或是寄人籬下的人。每年都有同事搬家，一次或兩次或三次的差別而已。
+        p 在年復一年的搬家中，我們深切體認到，有些書你搬家時東西再多，也一定會帶走；有些書你會賣給茉莉二手書店、捐給圖書館；有些書你只能送給巷口回收物資的阿婆。
+        p 我們想做的，便是那些你搬家時東西再多，也捨不得不帶走的書。那些不辜負印刷師傅、譯者、設計，不辜負編輯，更不辜負被砍下做成紙張的樹的書。
+        p 宏大的主題、足以立下典範的寫作，因為如此，這些書常常不薄。因為內容都是作者畢生心血，為了要有足以匹配的封面裝幀，設計及印製成本常常爆掉。目前已為台灣讀者引進出版，包括以「a better book makes life better」為選書指引的生活經典如《食物與廚藝》、《瑜伽解剖書》、《家事的撫慰》及麥可‧弗里曼《攝影師之眼》系列的 Better 書系；Art 書系則為國際大師級的作品，如森山大道、荒木經惟、杉本博司、川內倫子、塔可夫斯基等攝影文集；Common 書系出版品則側重人類的共同關懷，如美國首屈一指的飲食文學作家麥可‧波倫《雜食者的兩難》、《烹》與《聖母峰之死》、《永遠的戰爭》，並挖掘台灣新作家陳德政，也嘗試與台灣學界合作出版《巷仔口社會學》。
+        p 我們希望這些書讀者不買則已，一買，就會一直留在書架上。
+        a target="_blank" href="https://www.youtube.com/user/commonmaster/videos"書介影片集錦
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+
+
+= render "/team/team-page-bottom"
