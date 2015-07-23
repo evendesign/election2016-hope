@@ -1,0 +1,85 @@
+- @team_id = 85
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+- team_photo_05 = "/images/team/#{team_en_name}/05.jpg"
+- team_photo_06 = "/images/team/#{team_en_name}/06.jpg"
+
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+    - if @team_id > 0
+      a.team-prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id - 1]['name']}
+        .thumb-info
+          span 上一個團隊
+          img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
+
+    - if @team_id < team_data.length - 1
+      a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id + 1]['name']}
+        .thumb-info
+          span 下一個團隊
+          img src="/images/team/#{team_data[@team_id + 1]['en_name']}/bg_s.jpg"
+
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 溪州是一個平凡的小鄉鎮，濁水溪日夜流過平原上寧靜的稻田，肥沃的土壤生產出飽滿的濁水米。
+        p 但在國際貿易的政策影響之下，台灣稻農必須依賴公糧收購才能勉強維持溫飽，因此越來越多年輕人離開農村，或者轉作成高經濟價值的作物。有著稻作文化的水田被視為是沒有價值的產業，於是越來越多高汙染產業進駐這塊沃土。
+        p 從1990年代，六輕在下游進駐之後，搶走了每日數萬公噸的水源，後來又陸續搶進了中科四期、二林機密機械園區、彰南產業園區等等高污染的工業區，彷彿這塊土地只剩下廠房和機械才能存活。
+        p 但是農民還在、稻田還在，水田的文化與歲時祭儀都還在啊，溪州每天太陽升起，勤樸的農民就會下田去照顧他的水土和稻苗。每天夏秋收割之時，農村總是會看見大小繁忙的收割機來來去去，收成上萬噸的金黃穀粒，幾百年來，一代又一代的台灣人就是在這種勞動的節奏，米糖的餵養下長大的。稻作不僅是我們營養的來源，也是文化的母土啊。
+        p 為了守護這塊土地，溪洲的鄉民從幾年前就開始反對中科四期的搶水工程，因為濁水溪河岸枯水期長，又因為工業區的關係地下水位逐年下降，因此農民取水非常辛苦，他們反對的不只是沒有合理性的科學園區，而是千百年來農民勞動文化的尊嚴。
+        p 後來護水運動告一段落之後，溪州子弟吳音寧和幾個在鄉青年一起成立了「溪州尚水農產公司」和農用書店。想透過更友善土地的生產方式、友善農民的產銷方式，來推廣溪州優質的農產品。
+        p 後來溪州尚水農產因為口碑關係，契作農友陸續增加，但因為是友善農法，這些青年必須一包一包米慢慢地賣，過程非常辛苦，銷售狀況並不如預期。希望未來有更多台灣消費者可以來溪州產地參觀購買，順便支持這裡最美的風景：稻米、農鄉和人情。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+      a.gallery-item href="#{team_photo_05}"
+        .gallery-item-inner style="background-image: url('#{team_photo_05}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+      a.gallery-item href="#{team_photo_06}"
+        .gallery-item-inner style="background-image: url('#{team_photo_06}');"
+
+= render "/team/team-page-bottom"
