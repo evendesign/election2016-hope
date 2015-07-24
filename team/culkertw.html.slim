@@ -1,0 +1,81 @@
+- @team_id = 86
+
+- team_en_name = team_data[@team_id]['en_name']
+- team_photo_01 = "/images/team/#{team_en_name}/01.jpg"
+- team_photo_02 = "/images/team/#{team_en_name}/02.jpg"
+- team_photo_03 = "/images/team/#{team_en_name}/03.jpg"
+- team_photo_04 = "/images/team/#{team_en_name}/04.jpg"
+
+.team
+  .team-cover style="background-image:url('/images/team/#{team_en_name}/bg.jpg');"
+    .team-title
+      h2.team-slogan.auto-break-text #{team_data[@team_id]['slogan']}
+      h2.team-name #{team_data[@team_id]['name']}
+      - if team_data[@team_id]['video'] != false
+        a.team-video-play href="#{team_data[@team_id]['video']}" 播放影片
+    .team-info
+      .location-icon class="icon-map-#{team_data[@team_id]['map']}" #{team_data[@team_id]['map']}
+      span.location-text #{team_data[@team_id]['location']}
+      span.industry #{team_data[@team_id]['category']}
+      span.since= "成立於 #{team_data[@team_id]['since']} 年"
+    - if @team_id > 0
+      a.team-prev href="/team/#{team_data[@team_id - 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id - 1]['name']}
+        .thumb-info
+          span 上一個團隊
+          img src="/images/team/#{team_data[@team_id - 1]['en_name']}/bg_s.jpg"
+
+    - if @team_id < team_data.length - 1
+      a.team-next href="/team/#{team_data[@team_id + 1]['en_name']}.html"
+        .arrow-icon #{team_data[@team_id + 1]['name']}
+        .thumb-info
+          span 下一個團隊
+          img src="/images/team/#{team_data[@team_id + 1]['en_name']}/bg_s.jpg"
+
+  .team-content
+    .container
+      .fb-like-block: .fb-like data-href="http://light.iing.tw/team/#{team_data[@team_id]['en_name']}.html" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"
+      p.team-preface #{team_data[@team_id]['preface']}
+    .team-member
+      h3 團隊介紹
+      .member-list
+        - team_data[@team_id]['member'].each do |team_member|
+          .member
+            .member-avatar
+              img src="/images/team/#{team_en_name}/figure_#{team_member['figure_en_name']}.jpg"
+            .member-name = "#{team_member['name']}"
+            .member-intro.auto-break-text = "#{team_member['intro']}"
+    .container
+      .team-intro
+        p 一個人在台灣，一個人在香港，開始發起了創業的理念，旅遊，能否有其他的選擇？
+        p 團隊目前有六個人，有資訊背景、地理背景、語文背景等，但大家同樣都對現有觀光旅遊業有許多的期許並期望改變。起初是發現許多旅行者在台灣常常都會不知所措，資訊多、選擇多、困擾多，更重要的是往往好像沒辦法很實際的瞭解在地人的文化，這都是令人相當惋惜的。
+        p 而台灣其實有許多人正在努力發展深度旅遊、文化旅遊的方向，但卻又受限國際貨幣、語言隔閡，無法很方便的與外國觀光客互動。因此我們便發起了 CULKER 的想法。
+        p CULKER 的意思是 Culture Walker，我們希望讓在我們平台上能夠認識到的朋友們都是 CULKER，而不是只是帶你去採買或是走訪觀光勝地的盲目旅行者，所以我們發展出這套讓大家都可以容易的找到在地朋友的旅行方式，就是轉化自這個概念，希望讓大家，無論是台灣人或外國人，都能經由在地朋友認識不同的、道地的台灣。
+        p 我們相信：
+        p 文化是人們日常生活的實踐，在地人的廚藝、在地人才知道的小吃和景點、在地的日常生活、信仰，透過我們，旅行者將會與在地人接觸，使得旅行不只是到異地走馬看花、不只是到地標式建築前拍照打卡。透過我們，翻轉觀光，讓旅行者以最貼近在地的視角進入地方，一起感受一個地方的日常文化。
+        p Uber 讓我們坐進了陌生人的車，
+        p Airbnb 讓我們住進了陌生人的房。
+        p CULKER TAIWAN 將讓我們跟陌生人成為朋友，將讓我們走進在地人的生活。
+      .team-info-card
+        .team-photo style="background-image: url('/images/team/#{team_en_name}/bg_s.jpg');"
+        .team-info-inner
+          .team-name #{team_data[@team_id]['name']}
+          .team-location #{team_data[@team_id]['location']}
+          = render "/team/team-info-list"
+
+.gallery
+  .container
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_04}"
+        .gallery-item-inner style="background-image: url('#{team_photo_04}');"
+    .gallery-item-block.gallery-item-block_2
+      a.gallery-item href="#{team_photo_01}"
+        .gallery-item-inner style="background-image: url('#{team_photo_01}');"
+      a.gallery-item href="#{team_photo_02}"
+        .gallery-item-inner style="background-image: url('#{team_photo_02}');"
+    .gallery-item-block
+      a.gallery-item href="#{team_photo_03}"
+        .gallery-item-inner style="background-image: url('#{team_photo_03}');"
+
+
+= render "/team/team-page-bottom"
